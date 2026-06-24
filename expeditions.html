@@ -1746,8 +1746,13 @@ function handleEnquiry(e){
   e.preventDefault();
   var form=e.target;
   var btn=form.querySelector('button');
-  var body=new URLSearchParams(new FormData(form)).toString();
-  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body}).catch(function(){});
+  var fd=new FormData(form);
+  fd.append('_subject','New expedition enquiry — freedivingbrain.com');
+  fd.append('_template','table');
+  fd.append('_captcha','false');
+  fd.append('_autoresponse','Thanks for reaching out to Freediving Brain! We have your message and will reply within 48 hours. — Shebl');
+  var body=new URLSearchParams(fd).toString();
+  fetch('https://formsubmit.co/ajax/abdelrhmanmostafa15@gmail.com',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded','Accept':'application/json'},body:body}).catch(function(){});
   btn.textContent='Sent — we\'ll be in touch within 48 hours.';
   btn.style.background='#4aaa86';
   btn.disabled=true;

@@ -3890,9 +3890,9 @@ function bkReset(){
 function bkSubmitReservation(){
   try{
     var g=function(id){var el=document.getElementById(id);return el?(el.value||'').trim():'';};
-    var data={'form-name':'reservation',course:bkState.course,price:bkState.price,experience:bkState.experience,month:bkState.month,name:bkState.name,email:bkState.email,phone:g('bkPhone'),notes:g('bkNotes')};
+    var data={course:bkState.course,price:bkState.price,experience:bkState.experience,month:bkState.month,name:bkState.name,email:bkState.email,phone:g('bkPhone'),notes:g('bkNotes'),_subject:'New reservation — freedivingbrain.com',_template:'table',_captcha:'false',_autoresponse:'Thanks for reserving with Freediving Brain! We have your request and will be in touch within 48 hours to confirm your place. — Shebl'};
     var body=Object.keys(data).map(function(k){return encodeURIComponent(k)+'='+encodeURIComponent(data[k]);}).join('&');
-    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body}).catch(function(){});
+    fetch('https://formsubmit.co/ajax/abdelrhmanmostafa15@gmail.com',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded','Accept':'application/json'},body:body}).catch(function(){});
   }catch(e){}
 }
 function openModal(course){
