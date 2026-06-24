@@ -3581,6 +3581,10 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
   </div><!-- /bk-body -->
 </div><!-- /modal -->
 
+<!-- GSAP (animation) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+
 <script>
 /* ─── CURSOR ─── */
 /* cursor effect removed */
@@ -3654,12 +3658,30 @@ document.querySelectorAll('.faq-a').forEach(a=>{
   a.appendChild(inner);
 });
 
-/* ─── REVEAL ON SCROLL ─── */
-const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-fast');
-const ro = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('vis'); });
-}, { threshold:.07, rootMargin:'0px 0px -40px 0px' });
-reveals.forEach(r=>ro.observe(r));
+/* ─── REVEAL ON SCROLL + HERO ENTRANCE (GSAP, reduced-motion safe) ─── */
+(function(){
+  var motionOK = window.matchMedia && matchMedia('(prefers-reduced-motion: no-preference)').matches;
+  function revealAll(){ document.querySelectorAll('.reveal, .reveal-left, .reveal-fast').forEach(function(el){ el.classList.add('vis'); }); }
+  // Fallback: if GSAP didn't load or motion is reduced, just show everything (no stuck-hidden content).
+  if(!window.gsap || !window.ScrollTrigger || !motionOK){ revealAll(); return; }
+  gsap.registerPlugin(ScrollTrigger);
+  // Staggered scroll reveals — GSAP batches the timing; existing CSS transitions do the motion.
+  ScrollTrigger.batch('.reveal, .reveal-left, .reveal-fast', {
+    start: 'top 88%',
+    once: true,
+    onEnter: function(batch){ batch.forEach(function(el,i){ gsap.delayedCall(i*0.09, function(){ el.classList.add('vis'); }); }); }
+  });
+  // Hero entrance timeline.
+  gsap.timeline({ defaults:{ ease:'power3.out' } })
+    .from('.hero-eyebrow',   { opacity:0, y:24, duration:.7 }, 0.15)
+    .from('.hero h1',         { opacity:0, y:36, duration:1.0 }, '-=0.45')
+    .from('.hero-tagline',    { opacity:0, y:24, duration:.8 }, '-=0.7')
+    .from('.hero-sub',        { opacity:0, y:24, duration:.8 }, '-=0.6')
+    .from('.hero-actions',    { opacity:0, y:20, duration:.7 }, '-=0.6')
+    .from('.hero-early-bird', { opacity:0, y:16, duration:.6 }, '-=0.55');
+  // Recalculate trigger positions once images/fonts settle.
+  window.addEventListener('load', function(){ ScrollTrigger.refresh(); });
+})();
 
 /* ─── COURSE ACCORDION ─── */
 function toggleCourse(id){
