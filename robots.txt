@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://freedivingbrain.com/sitemap.xml

@@ -1,0 +1,41 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/blog"
+  to = "/blog/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/"
+  to = "/blog/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/:slug"
+  to = "/blog/:slug/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/:slug/"
+  to = "/blog/:slug/index.html"
+  status = 200
+
+# Method depth consolidated into the MDR blog article (301 for SEO)
+[[redirects]]
+  from = "/method"
+  to = "/blog/mammalian-dive-response"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/method/"
+  to = "/blog/mammalian-dive-response"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/method.html"
+  to = "/blog/mammalian-dive-response"
+  status = 301
+  force = true

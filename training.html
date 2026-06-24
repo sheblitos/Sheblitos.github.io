@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VR5PT4F97R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VR5PT4F97R');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Training Sessions — Freediving Brain Barcelona</title>
+<meta name="description" content="On-demand freediving training sessions in Barcelona. Open water Mediterranean sessions and pool training — static and dynamic. For certified freedivers of all levels.">
+<link rel="canonical" href="https://freedivingbrain.com/training">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freedivingbrain.com/training">
+<meta property="og:title" content="Training Sessions — Freediving Brain Barcelona">
+<meta property="og:description" content="On-demand open water and pool training sessions for certified freedivers. Mediterranean and Barcelona indoor pool.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* ── Variables ── */
+:root {
+  --deep:  #060d09;
+  --deep2: #0c1a0f;
+  --deep3: #152719;
+  --teal:  #7ecdb0;
+  --teal2: #9fd9c4;
+  --teal3: #4fa888;
+  --txt:   #e8f0ec;
+  --txt2:  #b5cebe;
+  --txt3:  #7ea090;
+  --ln:    rgba(126,205,176,.08);
+  --ln2:   rgba(126,205,176,.15);
+  --ease:  cubic-bezier(.4,0,.2,1);
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+html { font-size:16px; overflow-x:hidden; scroll-behavior:smooth; }
+body {
+  background:var(--deep); color:var(--txt);
+  font-family:'Mulish',sans-serif; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── Nav ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:.875rem 2.5rem;
+  transition:background .3s var(--ease), backdrop-filter .3s;
+}
+nav.scrolled {
+  background:rgba(12,26,21,.9);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--ln);
+}
+.nav-logo {
+  display:flex; align-items:center; gap:.875rem;
+  text-decoration:none; font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem; font-weight:300; color:var(--txt);
+  letter-spacing:.06em;
+}
+.nav-logo svg { width:36px; height:36px; }
+.nav-logo strong { font-weight:400; color:var(--teal); }
+.nav-links { display:flex; gap:2.5rem; align-items:center; }
+.nav-links a {
+  font-family:'Mulish',sans-serif;
+  font-size:.62rem; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--txt2); text-decoration:none; transition:color .2s;
+}
+.nav-links a:hover, .nav-links a.active { color:var(--teal); }
+.nav-cta {
+  font-family:'Mulish',sans-serif;
+  font-size:.6rem; letter-spacing:.1em; text-transform:uppercase;
+  background:var(--teal); color:var(--deep);
+  padding:.55rem 1.25rem; border-radius:2px;
+  text-decoration:none;
+  transition:background .2s, transform .15s;
+}
+.nav-cta:hover { background:var(--teal2); transform:translateY(-1px); }
+
+/* ── Hamburger ── */
+.nav-ham {
+  display:none; flex-direction:column; gap:5px;
+  background:none; border:none; cursor:pointer;
+  padding:.5rem; z-index:110;
+}
+.nav-ham span {
+  display:block; width:22px; height:1.5px;
+  background:var(--txt); border-radius:1px;
+  transition:transform .25s var(--ease), opacity .2s;
+}
+.nav-ham.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+.nav-ham.open span:nth-child(2) { opacity:0; }
+.nav-ham.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+
+/* ── Mobile nav drawer ── */
+.nav-mobile {
+  position:fixed; top:0; left:0; right:0; bottom:0;
+  background:var(--deep2); z-index:99;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:2rem; transform:translateX(100%);
+  transition:transform .35s var(--ease);
+}
+.nav-mobile.open { transform:translateX(0); }
+.nav-mobile a {
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem; font-weight:300; color:var(--txt);
+  text-decoration:none; letter-spacing:.06em;
+  transition:color .2s;
+}
+.nav-mobile a:hover, .nav-mobile a.active { color:var(--teal); }
+.nav-mobile-cta {
+  font-family:'Mulish',sans-serif !important;
+  font-size:.65rem !important; letter-spacing:.12em;
+  background:var(--teal); color:var(--deep) !important;
+  padding:.75rem 2rem; border-radius:2px;
+}
+
+/* ── Shared typography ── */
+.section-tag {
+  display:flex; align-items:center; gap:.75rem;
+  font-family:'Mulish',sans-serif;
+  font-size:.55rem; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--teal3); margin-bottom:1.25rem;
+}
+.section-tag::before { content:''; width:24px; height:1px; background:var(--teal3); }
+.section-h {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.2rem, 5vw, 3.75rem);
+  font-weight:300; line-height:1.1; color:var(--txt);
+  margin-bottom:1.25rem;
+}
+.section-h em { color:var(--teal); font-style:italic; }
+
+/* ── Reveal animation ── */
+.reveal {
+  opacity:0; transform:translateY(20px);
+  transition:opacity .7s var(--ease), transform .7s var(--ease);
+}
+.reveal.visible { opacity:1; transform:translateY(0); }
+
+/* ── Buttons ── */
+.btn-primary {
+  display:inline-block;
+  font-family:'Mulish',sans-serif;
+  font-size:.62rem; letter-spacing:.12em; text-transform:uppercase;
+  background:var(--teal); color:var(--deep);
+  padding:.75rem 1.75rem; border-radius:2px;
+  border:none; cursor:pointer; text-decoration:none;
+  transition:background .2s, transform .15s;
+}
+.btn-primary:hover { background:var(--teal2); transform:translateY(-1px); }
+.btn-ghost {
+  display:inline-block;
+  font-family:'Mulish',sans-serif;
+  font-size:.62rem; letter-spacing:.12em; text-transform:uppercase;
+  background:transparent; color:var(--txt2);
+  padding:.75rem 1.75rem; border-radius:2px;
+  border:1px solid var(--ln2); cursor:pointer; text-decoration:none;
+  transition:border-color .2s, color .2s, transform .15s;
+}
+.btn-ghost:hover { border-color:var(--teal3); color:var(--teal); transform:translateY(-1px); }
+
+/* ─────────────────────────────────────────────────
+   HERO
+───────────────────────────────────────────────── */
+.tr-hero {
+  padding:10rem 5rem 5rem;
+  max-width:1200px; margin:0 auto;
+}
+.tr-hero-inner {
+  display:grid; grid-template-columns:1.2fr 1fr;
+  gap:5rem; align-items:center;
+}
+.tr-hero-kicker {
+  font-family:'Mulish',sans-serif;
+  font-size:.65rem; letter-spacing:.04em;
+  color:var(--txt3); line-height:1.9;
+  max-width:44ch; margin-top:1.25rem;
+}
+.tr-hero-stats {
+  display:flex; flex-direction:column; gap:2rem;
+  padding-left:3rem; border-left:1px solid var(--ln2);
+}
+.tr-stat-num {
+  font-family:'Cormorant Garamond',serif;
+  font-size:3.5rem; font-weight:300; color:var(--teal); line-height:1;
+}
+.tr-stat-label {
+  font-family:'Mulish',sans-serif;
+  font-size:.55rem; letter-spacing:.12em; color:var(--txt3);
+  margin-top:.3rem; text-transform:uppercase;
+}
+
+/* ─────────────────────────────────────────────────
+   REQUIREMENTS BAR
+───────────────────────────────────────────────── */
+.tr-req-wrap {
+  padding:0 5rem 4.5rem;
+  max-width:1200px; margin:0 auto;
+}
+.tr-req-inner {
+  background:var(--deep2); border:1px solid var(--ln2);
+  border-radius:16px; padding:1.75rem 2.25rem;
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap:1.75rem;
+}
+.tr-req-item {
+  display:flex; align-items:flex-start; gap:.75rem;
+}
+.tr-req-icon {
+  width:22px; height:22px; border-radius:50%;
+  background:rgba(126,205,176,.08); border:1px solid var(--teal3);
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; margin-top:.1rem;
+  font-family:'Mulish',sans-serif; font-size:.5rem; color:var(--teal);
+}
+.tr-req-text {
+  font-family:'Mulish',sans-serif;
+  font-size:.58rem; letter-spacing:.03em; color:var(--txt3); line-height:1.7;
+}
+.tr-req-text strong {
+  display:block; color:var(--txt2); margin-bottom:.2rem; font-weight:400;
+}
+
+/* ─────────────────────────────────────────────────
+   SESSION SECTIONS
+───────────────────────────────────────────────── */
+.tr-session {
+  padding:5rem 5rem;
+  max-width:1200px; margin:0 auto;
+}
+.tr-session + .tr-session { border-top:1px solid var(--ln); }
+.tr-session-head {
+  display:grid; grid-template-columns:1fr auto;
+  align-items:end; gap:2rem; margin-bottom:3.5rem;
+}
+.tr-session-intro {
+  font-family:'Mulish',sans-serif; font-size:.65rem;
+  letter-spacing:.04em; color:var(--txt3); line-height:1.85;
+  max-width:48ch; margin-top:.875rem;
+}
+.tr-badge {
+  font-family:'Mulish',sans-serif; font-size:.55rem;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--teal3);
+  border:1px solid var(--ln2); border-radius:4px;
+  padding:.4rem .875rem; white-space:nowrap; align-self:flex-start;
+  margin-top:.5rem;
+}
+
+/* ─────────────────────────────────────────────────
+   PACKAGE CARDS
+───────────────────────────────────────────────── */
+.pkg-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem;
+}
+.pkg-card {
+  background:var(--deep2); border:1px solid var(--ln2);
+  border-radius:20px; padding:2rem 1.75rem;
+  display:flex; flex-direction:column;
+  position:relative; overflow:hidden;
+  transition:border-color .3s, transform .25s;
+}
+.pkg-card::before {
+  content:''; position:absolute; top:-50px; left:-50px;
+  width:150px; height:150px;
+  background:radial-gradient(circle, rgba(126,205,176,.05) 0%, transparent 70%);
+  pointer-events:none;
+}
+.pkg-card:hover { border-color:var(--teal3); transform:translateY(-4px); }
+.pkg-card.featured {
+  border-color:var(--teal3);
+  background:linear-gradient(160deg, var(--deep3) 0%, var(--deep2) 100%);
+}
+.pkg-card.featured::after {
+  content:'Most popular';
+  position:absolute; top:1.25rem; right:1.25rem;
+  font-family:'Mulish',sans-serif; font-size:.45rem;
+  letter-spacing:.12em; text-transform:uppercase;
+  color:var(--deep); background:var(--teal);
+  padding:.3rem .7rem; border-radius:2px;
+}
+.pkg-tier {
+  font-family:'Mulish',sans-serif; font-size:.5rem;
+  letter-spacing:.15em; text-transform:uppercase;
+  color:var(--teal3); margin-bottom:1.5rem;
+}
+.pkg-price {
+  font-family:'Cormorant Garamond',serif;
+  font-size:3.5rem; font-weight:300; color:var(--txt);
+  line-height:1; letter-spacing:-.02em;
+}
+.pkg-price sup {
+  font-size:1.35rem; color:var(--txt3);
+  font-family:'Mulish',sans-serif; font-weight:300;
+  letter-spacing:0; vertical-align:super;
+}
+.pkg-per {
+  font-family:'Mulish',sans-serif; font-size:.55rem;
+  letter-spacing:.06em; color:var(--txt3);
+  margin-top:.4rem; min-height:1.1em;
+}
+.pkg-save {
+  display:inline-block; margin-top:.5rem; margin-bottom:1.5rem;
+  font-family:'Mulish',sans-serif; font-size:.5rem;
+  letter-spacing:.08em; color:var(--teal);
+  background:rgba(126,205,176,.08); border:1px solid rgba(126,205,176,.2);
+  border-radius:2px; padding:.2rem .55rem;
+}
+.pkg-nosave { margin-bottom:calc(1.5rem + 1.4em + .5rem); }
+.pkg-divider { height:1px; background:var(--ln2); margin-bottom:1.5rem; }
+.pkg-features {
+  list-style:none; display:flex; flex-direction:column;
+  gap:.65rem; flex:1; margin-bottom:1.75rem;
+}
+.pkg-features li {
+  font-family:'Mulish',sans-serif; font-size:.58rem;
+  letter-spacing:.03em; color:var(--txt3); line-height:1.6;
+  display:flex; gap:.625rem; align-items:flex-start;
+}
+.pkg-features li::before {
+  content:'—'; color:var(--teal3); flex-shrink:0;
+}
+.pkg-book {
+  display:block; width:100%; text-align:center;
+  font-family:'Mulish',sans-serif; font-size:.6rem;
+  letter-spacing:.1em; text-transform:uppercase;
+  background:transparent; color:var(--teal);
+  border:1px solid var(--teal3); border-radius:4px;
+  padding:.8rem 1rem; cursor:pointer;
+  transition:background .2s, color .2s, border-color .2s;
+}
+.pkg-book:hover { background:var(--teal); color:var(--deep); border-color:var(--teal); }
+.pkg-card.featured .pkg-book {
+  background:var(--teal); color:var(--deep); border-color:var(--teal);
+}
+.pkg-card.featured .pkg-book:hover {
+  background:var(--teal2); border-color:var(--teal2);
+}
+
+/* ─────────────────────────────────────────────────
+   BACK STRIP
+───────────────────────────────────────────────── */
+.tr-back-strip {
+  padding:4rem 5rem 6rem;
+  max-width:1200px; margin:0 auto;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:2rem; border-top:1px solid var(--ln); flex-wrap:wrap;
+}
+.tr-back-text {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.9rem; font-weight:300; color:var(--txt2); line-height:1.2;
+}
+.tr-back-text em { color:var(--teal); font-style:italic; }
+.tr-back-ctas { display:flex; gap:1rem; flex-wrap:wrap; }
+
+/* ─────────────────────────────────────────────────
+   BOOKING MODAL
+───────────────────────────────────────────────── */
+.tr-modal {
+  position:fixed; inset:0; z-index:200;
+  background:rgba(12,26,21,.88); backdrop-filter:blur(8px);
+  display:none; align-items:center; justify-content:center;
+  padding:1.5rem;
+}
+.tr-modal.open { display:flex; }
+.tr-modal-box {
+  background:var(--deep2); border:1px solid var(--ln2);
+  border-radius:24px; width:100%; max-width:480px;
+  padding:2.5rem 2.25rem; position:relative;
+  max-height:90vh; overflow-y:auto;
+}
+.tr-modal-close {
+  position:absolute; top:1.25rem; right:1.25rem;
+  background:none; border:none; cursor:pointer;
+  font-family:'Mulish',sans-serif; font-size:.62rem;
+  letter-spacing:.08em; color:var(--txt3); transition:color .2s;
+}
+.tr-modal-close:hover { color:var(--txt); }
+.tr-modal-eyebrow {
+  font-family:'Mulish',sans-serif; font-size:.5rem;
+  letter-spacing:.15em; text-transform:uppercase;
+  color:var(--teal3); margin-bottom:.75rem;
+}
+.tr-modal-title {
+  font-family:'Cormorant Garamond',serif; font-size:1.9rem;
+  font-weight:300; color:var(--txt); line-height:1.2;
+  margin-bottom:.5rem;
+}
+.tr-modal-sub {
+  font-family:'Mulish',sans-serif; font-size:.58rem;
+  letter-spacing:.03em; color:var(--txt3); line-height:1.75;
+  margin-bottom:1.75rem;
+}
+.tr-selected-pkg {
+  background:rgba(126,205,176,.06); border:1px solid var(--teal3);
+  border-radius:8px; padding:.875rem 1rem;
+  font-family:'Mulish',sans-serif; font-size:.62rem;
+  color:var(--teal); margin-bottom:1.75rem; letter-spacing:.04em;
+}
+.tr-field { margin-bottom:1.25rem; }
+.tr-field label {
+  display:block; font-family:'Mulish',sans-serif;
+  font-size:.52rem; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--txt3); margin-bottom:.5rem;
+}
+.tr-field input, .tr-field select, .tr-field textarea {
+  width:100%; background:var(--deep); color:var(--txt);
+  border:1px solid var(--ln2); border-radius:8px;
+  padding:.75rem 1rem; font-family:'Mulish',sans-serif;
+  font-size:.65rem; letter-spacing:.03em; line-height:1.5;
+  transition:border-color .2s; outline:none; appearance:none;
+}
+.tr-field input:focus, .tr-field select:focus, .tr-field textarea:focus {
+  border-color:var(--teal3);
+}
+.tr-field textarea { resize:vertical; min-height:80px; }
+.tr-field select option { background:var(--deep2); }
+.tr-modal-submit {
+  width:100%; padding:.875rem;
+  font-family:'Mulish',sans-serif; font-size:.62rem;
+  letter-spacing:.1em; text-transform:uppercase;
+  background:var(--teal); color:var(--deep);
+  border:none; border-radius:6px; cursor:pointer;
+  transition:background .2s; margin-top:.5rem;
+}
+.tr-modal-submit:hover { background:var(--teal2); }
+.tr-modal-submit:disabled {
+  background:var(--deep3); color:var(--txt3); cursor:not-allowed;
+}
+.tr-confirm { display:none; text-align:center; padding:1rem 0; }
+.tr-confirm-wave {
+  font-size:2.75rem; margin-bottom:1.25rem;
+}
+.tr-confirm-title {
+  font-family:'Cormorant Garamond',serif; font-size:1.65rem;
+  font-weight:300; color:var(--txt); margin-bottom:.75rem;
+}
+.tr-confirm-msg {
+  font-family:'Mulish',sans-serif; font-size:.6rem;
+  letter-spacing:.03em; color:var(--txt3); line-height:1.85;
+}
+
+/* ─────────────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────────────── */
+footer {
+  border-top:1px solid var(--ln);
+  padding:3.5rem 5rem 2.5rem;
+  max-width:1200px; margin:0 auto;
+}
+.tr-footer-row {
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:1.5rem;
+}
+.tr-footer-brand {
+  font-family:'Cormorant Garamond',serif; font-size:1.1rem;
+  font-weight:300; color:var(--txt2); letter-spacing:.06em;
+  text-decoration:none;
+}
+.tr-footer-brand span { color:var(--teal); }
+.tr-footer-links {
+  display:flex; gap:2rem; flex-wrap:wrap;
+}
+.tr-footer-links a {
+  font-family:'Mulish',sans-serif; font-size:.55rem;
+  letter-spacing:.08em; text-transform:uppercase;
+  color:var(--txt3); text-decoration:none; transition:color .2s;
+}
+.tr-footer-links a:hover { color:var(--teal); }
+.tr-footer-copy {
+  font-family:'Mulish',sans-serif; font-size:.52rem;
+  letter-spacing:.05em; color:var(--txt3);
+  margin-top:2rem; padding-top:1.5rem;
+  border-top:1px solid var(--ln); text-align:center;
+}
+
+/* ── Back to top ── */
+.back-to-top {
+  position:fixed; bottom:2rem; right:1.75rem; z-index:50;
+  width:44px; height:44px; border-radius:50%;
+  background:var(--deep2); border:1px solid var(--ln2);
+  color:var(--teal3); cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; transform:translateY(10px); pointer-events:none;
+  transition:opacity .3s, transform .3s, border-color .2s;
+}
+.back-to-top.visible { opacity:1; transform:translateY(0); pointer-events:auto; }
+.back-to-top:hover { border-color:var(--teal3); }
+.back-to-top svg { width:18px; height:18px; stroke:currentColor; }
+
+/* ─────────────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────────────── */
+@media (max-width:900px) {
+  nav { padding:.75rem 1.75rem; }
+  .nav-links { display:none; }
+  .nav-ham { display:flex; }
+  .tr-hero { padding:8rem 1.75rem 4rem; }
+  .tr-hero-inner { grid-template-columns:1fr; gap:2.5rem; }
+  .tr-hero-stats {
+    flex-direction:row; padding-left:0; border-left:none;
+    padding-top:2rem; border-top:1px solid var(--ln2);
+    flex-wrap:wrap; gap:2rem;
+  }
+  .tr-req-wrap { padding:0 1.75rem 3.5rem; }
+  .tr-req-inner { grid-template-columns:1fr 1fr; gap:1.25rem; }
+  .tr-session { padding:3.5rem 1.75rem; }
+  .tr-session-head { grid-template-columns:1fr; }
+  .pkg-grid { grid-template-columns:1fr; gap:1rem; }
+  .pkg-card.featured::after { top:.875rem; right:.875rem; }
+  .tr-back-strip { padding:3rem 1.75rem 4.5rem; }
+  footer { padding:3rem 1.75rem 2rem; }
+}
+@media (max-width:680px) {
+  .tr-hero { padding:7rem 1.25rem 3.5rem; }
+  .tr-req-wrap { padding:0 1.25rem 2.5rem; }
+  .tr-req-inner { grid-template-columns:1fr; padding:1.25rem; gap:1.25rem; }
+  .tr-session { padding:3rem 1.25rem; }
+  .pkg-grid { gap:.875rem; }
+  .tr-back-strip { padding:2.5rem 1.25rem 4rem; flex-direction:column; align-items:flex-start; }
+  footer { padding:2.5rem 1.25rem 2rem; }
+  .tr-footer-links { gap:1.25rem; }
+}
+/* === site-wide warm + readable system (Mulish body, Cormorant headings) === */
+:root{--deep:#0c1a15;--deep2:#112620;--deep3:#16291f;--surface:#1c3026;--txt:#ece8e0;--txt2:rgba(236,232,224,.80);--txt3:rgba(236,232,224,.60);--ln:rgba(236,232,224,.10);--ln2:rgba(236,232,224,.18)}
+body{font-family:'Mulish',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
+.nav-links a,.nav-cta,.nav-mobile a,.nav-mobile-cta,.btn-primary,.btn-ghost,button{font-family:'Mulish',sans-serif !important;font-weight:600}
+
+/* prose -> readable sans */
+.tr-hero-kicker,.tr-session-intro,.tr-modal-sub,.tr-footer-copy,.pkg-features li,.pkg-features li *,.tr-req-text,.tr-req-text *{font-family:'Mulish',sans-serif !important;letter-spacing:normal}
+/* ── Training photos ── */
+.tr-hero{background-image:linear-gradient(180deg,rgba(12,26,21,.8) 0%,rgba(12,26,21,.72) 40%,rgba(12,26,21,.96) 100%),url('./tr-hero.jpg');background-size:cover;background-position:center}
+.tr-photoband{position:relative;height:clamp(220px,42vh,440px);background-size:cover;background-position:center;border-top:1px solid rgba(236,232,224,.10);border-bottom:1px solid rgba(236,232,224,.10)}
+.tr-photoband::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,26,21,.12),rgba(12,26,21,.66))}
+.tr-photoband span{position:absolute;bottom:1.25rem;left:clamp(1.75rem,5vw,3.5rem);z-index:1;font-family:'Mulish',sans-serif;font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(236,232,224,.85)}
+</style>
+<style>
+.nav-dd{position:relative;display:flex;align-items:center}
+.nav-dd>.nav-dd-toggle{display:inline-flex;align-items:center;gap:.4rem;cursor:pointer}
+.nav-dd>.nav-dd-toggle::after{content:'';width:5px;height:5px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px;opacity:.6;transition:transform .2s}
+.nav-dd:hover>.nav-dd-toggle::after,.nav-dd:focus-within>.nav-dd-toggle::after{transform:rotate(225deg);margin-top:1px}
+.nav-dd::after{content:'';position:absolute;top:100%;left:-1rem;right:-1rem;height:14px}
+.nav-dd-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(10px);margin-top:8px;background:rgba(12,26,21,.97);backdrop-filter:blur(18px);border:1px solid var(--ln2);border-radius:8px;padding:.45rem;min-width:215px;display:flex;flex-direction:column;gap:.1rem;opacity:0;visibility:hidden;transition:opacity .2s,transform .2s;box-shadow:0 18px 44px rgba(0,0,0,.45);z-index:300}
+.nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.nav-dd-menu a{padding:.65rem .85rem !important;border-radius:5px;white-space:nowrap;text-transform:none !important;letter-spacing:.02em !important;font-size:.82rem !important;color:var(--txt) !important}
+.nav-dd-menu a span{display:block;font-size:.62rem;letter-spacing:.04em;color:var(--txt3);margin-top:.15rem;text-transform:none}
+.nav-dd-menu a:hover{background:rgba(126,205,176,.1);color:var(--teal) !important}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════ NAV ═══════════════ -->
+<nav id="navbar" role="navigation" aria-label="Primary navigation">
+  <a href="/" class="nav-logo" aria-label="Freediving Brain home">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="nav-geo" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"   stop-color="#7ecdb0" stop-opacity="0.88"/>
+          <stop offset="55%"  stop-color="#7ecdb0" stop-opacity="0.48"/>
+          <stop offset="100%" stop-color="#3d9e7a" stop-opacity="0.05"/>
+        </linearGradient>
+      </defs>
+      <circle cx="50" cy="50"   r="23" stroke="url(#nav-geo)" stroke-width="0.82" fill="none"/>
+      <circle cx="50" cy="27"   r="23" stroke="url(#nav-geo)" stroke-width="0.68" fill="none"/>
+      <circle cx="69.9" cy="38.5" r="23" stroke="url(#nav-geo)" stroke-width="0.68" fill="none"/>
+      <circle cx="69.9" cy="61.5" r="23" stroke="url(#nav-geo)" stroke-width="0.68" fill="none"/>
+      <circle cx="50" cy="73"   r="23" stroke="url(#nav-geo)" stroke-width="0.68" fill="none"/>
+      <circle cx="30.1" cy="61.5" r="23" stroke="url(#nav-geo)" stroke-width="0.68" fill="none"/>
+      <circle cx="30.1" cy="38.5" r="23" stroke="url(#nav-geo)" stroke-width="0.68" fill="none"/>
+    </svg>
+    Freediving <strong>Brain</strong>
+  </a>
+  <div class="nav-links">
+    <div class="nav-dd">
+      <a href="/#courses" class="nav-dd-toggle">Courses &amp; Pricing</a>
+      <div class="nav-dd-menu">
+        <a href="/#courses">AIDA courses<span>AIDA 1 to Instructor</span></a>
+        <a href="/packages">Packages &amp; memberships<span>Bundles, combos, monthly</span></a>
+        <a href="/training">Drop-in training<span>For certified divers</span></a>
+      </div>
+    </div>
+    <a href="/expeditions">Expeditions</a>
+    <a href="/programmes">For Teams</a>
+    <a href="/blog">Blog</a>
+    <a href="/" class="nav-cta">Reserve a place</a>
+  </div>
+  <button class="nav-ham" id="navHam" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMobileNav()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE NAV DRAWER -->
+<div class="nav-mobile" id="navMobile" role="dialog" aria-label="Mobile navigation">
+  <a href="/#courses"    onclick="closeMobileNav()">Courses</a>
+  <a href="/training" class="active" onclick="closeMobileNav()">Drop-in training</a>
+  <a href="/expeditions" onclick="closeMobileNav()">Expeditions</a>
+  <a href="/packages"    onclick="closeMobileNav()">Packages &amp; memberships</a>
+  <a href="/programmes"  onclick="closeMobileNav()">For Teams</a>
+  <a href="/blog"        onclick="closeMobileNav()">Blog</a>
+  <a href="/#faq"        onclick="closeMobileNav()">FAQ</a>
+  <a href="/#booking" class="nav-mobile-cta" onclick="closeMobileNav()">Join waitlist</a>
+</div>
+
+<!-- ═══════════════════════════ HERO ══════════════ -->
+<div class="tr-hero">
+  <div class="tr-hero-inner">
+    <div class="tr-hero-text">
+      <p class="section-tag reveal">Training sessions</p>
+      <h1 class="section-h reveal">Train deeper.<br>Think <em>clearer.</em></h1>
+      <p class="tr-hero-kicker reveal">For certified freedivers of any level. On-demand sessions — open water and pool. Build the practice, deepen the calm. No fixed schedule. Book when you're ready.</p>
+    </div>
+    <div class="tr-hero-stats reveal">
+      <div>
+        <p class="tr-stat-num">~2h</p>
+        <p class="tr-stat-label">Open water session</p>
+      </div>
+      <div>
+        <p class="tr-stat-num">~1.5h</p>
+        <p class="tr-stat-label">Pool session</p>
+      </div>
+      <div>
+        <p class="tr-stat-num">All</p>
+        <p class="tr-stat-label">Certified levels</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ REQUIREMENTS ══════ -->
+<div class="tr-req-wrap">
+  <div class="tr-req-inner reveal">
+    <div class="tr-req-item">
+      <div class="tr-req-icon">✓</div>
+      <div class="tr-req-text">
+        <strong>Certification required</strong>
+        Valid freediving cert from any recognised agency — AIDA, SSI, CMAS, or equivalent.
+      </div>
+    </div>
+    <div class="tr-req-item">
+      <div class="tr-req-icon">✓</div>
+      <div class="tr-req-text">
+        <strong>On-demand booking</strong>
+        No fixed schedule. Book when it fits you. Sessions confirmed within 24 hours.
+      </div>
+    </div>
+    <div class="tr-req-item">
+      <div class="tr-req-icon">✓</div>
+      <div class="tr-req-text">
+        <strong>Lanyard — open water</strong>
+        Safety lanyard required for all open water sessions. Available to rent on-site.
+      </div>
+    </div>
+    <div class="tr-req-item">
+      <div class="tr-req-icon">✓</div>
+      <div class="tr-req-text">
+        <strong>Minimum 2 participants</strong>
+        Sessions run with a minimum of 2 freedivers. Solo bookings joined to a shared session.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ OPEN WATER ════════ -->
+<div class="tr-photoband reveal" style="background-image:url('./tr-openwater.jpg');background-position:center 40%"><span>Open water &middot; buddy &amp; safety</span></div>
+
+<section class="tr-session" id="open-water" aria-labelledby="ow-heading">
+  <div class="tr-session-head">
+    <div>
+      <p class="section-tag reveal">Open water</p>
+      <h2 class="section-h reveal" id="ow-heading">Mediterranean<br><em>Sessions</em></h2>
+      <p class="tr-session-intro reveal">Buoy, line, and open sea. Depth repetitions, technique refinement, and the mental work of being in the real environment. All certified levels — beginner through advanced. Barcelona's Mediterranean coast.</p>
+    </div>
+    <span class="tr-badge reveal">~2 hours · Mediterranean</span>
+  </div>
+
+  <div class="pkg-grid">
+
+    <!-- Single -->
+    <div class="pkg-card reveal">
+      <p class="pkg-tier">Single session</p>
+      <p class="pkg-price"><sup>€</sup>60</p>
+      <p class="pkg-per">&nbsp;</p>
+      <div class="pkg-nosave"></div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>Mediterranean, buoy + line</li>
+        <li>All certified levels welcome</li>
+        <li>Safety lanyard included</li>
+        <li>Shebl in the water with you</li>
+        <li>Confirmed within 24 hours</li>
+      </ul>
+      <button class="pkg-book" onclick="openTrModal('Open Water · Single Session · €60')">Book session</button>
+    </div>
+
+    <!-- Pack × 3 — featured -->
+    <div class="pkg-card featured reveal" style="transition-delay:.1s">
+      <p class="pkg-tier">Pack · 3 sessions</p>
+      <p class="pkg-price"><sup>€</sup>165</p>
+      <p class="pkg-per">€55 per session</p>
+      <span class="pkg-save">Save €15</span>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>3 open water sessions</li>
+        <li>Sessions valid indefinitely</li>
+        <li>Book one at a time</li>
+        <li>All certified levels welcome</li>
+        <li>Safety lanyard included</li>
+      </ul>
+      <button class="pkg-book" onclick="openTrModal('Open Water · Pack × 3 · €165')">Book pack</button>
+    </div>
+
+    <!-- Pack × 6 -->
+    <div class="pkg-card reveal" style="transition-delay:.2s">
+      <p class="pkg-tier">Pack · 6 sessions</p>
+      <p class="pkg-price"><sup>€</sup>300</p>
+      <p class="pkg-per">€50 per session</p>
+      <span class="pkg-save">Save €60</span>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>6 open water sessions</li>
+        <li>Sessions valid indefinitely</li>
+        <li>One per week = 6-week practice</li>
+        <li>All certified levels welcome</li>
+        <li>Safety lanyard included</li>
+      </ul>
+      <button class="pkg-book" onclick="openTrModal('Open Water · Pack × 6 · €300')">Book pack</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════ POOL ══════════════ -->
+<div class="tr-photoband reveal" style="background-image:url('./tr-pool.jpg')"><span>Pool &middot; static &amp; dynamic</span></div>
+
+<section class="tr-session" id="pool" aria-labelledby="pool-heading">
+  <div class="tr-session-head">
+    <div>
+      <p class="section-tag reveal">Pool</p>
+      <h2 class="section-h reveal" id="pool-heading">Pool<br><em>Training</em></h2>
+      <p class="tr-session-intro reveal">Static breath holds and dynamic sessions in Barcelona's indoor pool. Controlled environment — full focus on technique and breath. Static, dynamic, or a mix depending on your goals and level.</p>
+    </div>
+    <span class="tr-badge reveal">~1.5 hours · Barcelona pool</span>
+  </div>
+
+  <div class="pkg-grid">
+
+    <!-- Single -->
+    <div class="pkg-card reveal">
+      <p class="pkg-tier">Single session</p>
+      <p class="pkg-price"><sup>€</sup>40</p>
+      <p class="pkg-per">&nbsp;</p>
+      <div class="pkg-nosave"></div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>Barcelona indoor pool</li>
+        <li>Static or dynamic — your choice</li>
+        <li>All certified levels welcome</li>
+        <li>Guided by Shebl</li>
+        <li>Confirmed within 24 hours</li>
+      </ul>
+      <button class="pkg-book" onclick="openTrModal('Pool Training · Single Session · €40')">Book session</button>
+    </div>
+
+    <!-- Pack × 3 — featured -->
+    <div class="pkg-card featured reveal" style="transition-delay:.1s">
+      <p class="pkg-tier">Pack · 3 sessions</p>
+      <p class="pkg-price"><sup>€</sup>108</p>
+      <p class="pkg-per">€36 per session</p>
+      <span class="pkg-save">Save €12</span>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>3 pool sessions</li>
+        <li>Sessions valid indefinitely</li>
+        <li>Mix static and dynamic freely</li>
+        <li>All certified levels welcome</li>
+        <li>Guided by Shebl</li>
+      </ul>
+      <button class="pkg-book" onclick="openTrModal('Pool Training · Pack × 3 · €108')">Book pack</button>
+    </div>
+
+    <!-- Pack × 6 -->
+    <div class="pkg-card reveal" style="transition-delay:.2s">
+      <p class="pkg-tier">Pack · 6 sessions</p>
+      <p class="pkg-price"><sup>€</sup>198</p>
+      <p class="pkg-per">€33 per session</p>
+      <span class="pkg-save">Save €42</span>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>6 pool sessions</li>
+        <li>Sessions valid indefinitely</li>
+        <li>One per week = 6-week practice</li>
+        <li>Mix static and dynamic freely</li>
+        <li>All certified levels welcome</li>
+      </ul>
+      <button class="pkg-book" onclick="openTrModal('Pool Training · Pack × 6 · €198')">Book pack</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════ BACK STRIP ════════ -->
+<div class="tr-back-strip reveal">
+  <p class="tr-back-text">Ready to start a<br><em>full course?</em></p>
+  <div class="tr-back-ctas">
+    <a href="/#courses" class="btn-primary">View AIDA courses</a>
+    <a href="/" class="btn-ghost">Back to homepage</a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ FOOTER ═══════════ -->
+<footer>
+  <div class="tr-footer-row">
+    <a href="/" class="tr-footer-brand">Freediving <span>Brain</span></a>
+    <div class="tr-footer-links">
+      <a href="/#courses">Courses</a>
+      <a href="/training">Training</a>
+      <a href="/expeditions">Expeditions</a>
+      <a href="/packages">Packages</a>
+      <a href="/blog">Blog</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#booking">Join waitlist</a>
+    </div>
+  </div>
+  <p class="tr-footer-copy">© 2026 Freediving Brain. Barcelona, Spain. AIDA Certified School.</p>
+</footer>
+
+<!-- ═══════════════════════════ BOOKING MODAL ════ -->
+<div class="tr-modal" id="trModal" role="dialog" aria-modal="true" aria-label="Book a training session">
+  <div class="tr-modal-box">
+    <button class="tr-modal-close" onclick="closeTrModal()" aria-label="Close">Close ×</button>
+
+    <div id="trModalForm">
+      <p class="tr-modal-eyebrow">Book a session</p>
+      <p class="tr-modal-title">Reserve your spot.</p>
+      <p class="tr-modal-sub">Shebl will confirm availability and schedule your session within 24 hours.</p>
+      <div class="tr-selected-pkg" id="trSelectedPkg"></div>
+
+      <div class="tr-field">
+        <label for="trName">First name</label>
+        <input type="text" id="trName" placeholder="Your name" oninput="trCheckForm()" autocomplete="given-name">
+      </div>
+      <div class="tr-field">
+        <label for="trEmail">Email</label>
+        <input type="email" id="trEmail" placeholder="your@email.com" oninput="trCheckForm()" autocomplete="email">
+      </div>
+      <div class="tr-field">
+        <label for="trCert">Your certification</label>
+        <select id="trCert">
+          <option value="" disabled selected>Select your current certification</option>
+          <option>AIDA 1</option>
+          <option>AIDA 2</option>
+          <option>AIDA 3</option>
+          <option>AIDA 4</option>
+          <option>SSI Level 1</option>
+          <option>SSI Level 2</option>
+          <option>CMAS ★</option>
+          <option>CMAS ★★</option>
+          <option>CMAS ★★★</option>
+          <option>Other recognised certification</option>
+        </select>
+      </div>
+      <div class="tr-field">
+        <label for="trNotes">Anything to add? (optional)</label>
+        <textarea id="trNotes" placeholder="Training goals, preferred days, any questions..."></textarea>
+      </div>
+      <button class="tr-modal-submit" id="trSubmit" onclick="trSubmit()" disabled>Send booking request</button>
+    </div>
+
+    <div class="tr-confirm" id="trConfirm">
+      <div class="tr-confirm-wave">🌊</div>
+      <p class="tr-confirm-title">Request received.</p>
+      <p class="tr-confirm-msg" id="trConfirmMsg"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ BACK TO TOP ══════ -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
+<script>
+// ── Nav scroll ──
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', ()=>{
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive:true });
+
+// ── Mobile nav ──
+function toggleMobileNav(){
+  const nav = document.getElementById('navMobile');
+  const ham = document.getElementById('navHam');
+  const open = nav.classList.toggle('open');
+  ham.classList.toggle('open', open);
+  ham.setAttribute('aria-expanded', String(open));
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+function closeMobileNav(){
+  document.getElementById('navMobile').classList.remove('open');
+  document.getElementById('navHam').classList.remove('open');
+  document.getElementById('navHam').setAttribute('aria-expanded','false');
+  document.body.style.overflow = '';
+}
+
+// ── Reveal animation ──
+const revealEls = document.querySelectorAll('.reveal');
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){ e.target.classList.add('visible'); revealObs.unobserve(e.target); }
+  });
+}, { threshold:0.08 });
+revealEls.forEach(el => revealObs.observe(el));
+
+// ── Back to top ──
+const btt = document.getElementById('backToTop');
+window.addEventListener('scroll', ()=>{
+  btt.classList.toggle('visible', window.scrollY > 500);
+}, { passive:true });
+btt.addEventListener('click', ()=> window.scrollTo({ top:0, behavior:'smooth' }));
+
+// ── Keyboard close ──
+document.addEventListener('keydown', e=>{
+  if(e.key==='Escape'){ closeTrModal(); closeMobileNav(); }
+});
+
+// ── Training booking modal ──
+function openTrModal(pkg){
+  document.getElementById('trSelectedPkg').textContent = pkg;
+  document.getElementById('trModalForm').style.display = 'block';
+  document.getElementById('trConfirm').style.display = 'none';
+  document.getElementById('trName').value = '';
+  document.getElementById('trEmail').value = '';
+  document.getElementById('trNotes').value = '';
+  document.getElementById('trCert').selectedIndex = 0;
+  document.getElementById('trSubmit').disabled = true;
+  document.getElementById('trModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeTrModal(){
+  document.getElementById('trModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function trCheckForm(){
+  const name  = document.getElementById('trName').value.trim();
+  const email = document.getElementById('trEmail').value.includes('@');
+  document.getElementById('trSubmit').disabled = !(name && email);
+}
+function trSubmit(){
+  const name = document.getElementById('trName').value.trim();
+  const pkg  = document.getElementById('trSelectedPkg').textContent;
+  document.getElementById('trModalForm').style.display = 'none';
+  document.getElementById('trConfirmMsg').textContent =
+    `Thanks ${name}. Shebl will reach out within 24 hours to confirm your ${pkg} and schedule your first session.`;
+  document.getElementById('trConfirm').style.display = 'block';
+}
+document.getElementById('trModal').addEventListener('click', e=>{
+  if(e.target === e.currentTarget) closeTrModal();
+});
+</script>
+</body>
+</html>
