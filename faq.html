@@ -532,8 +532,5 @@ function toggleFaq(btn) {
 function toggleMobileNav(){var ham=document.getElementById('navHam'),menu=document.getElementById('navMobile');var isOpen=menu.classList.contains('open');ham.classList.toggle('open');menu.classList.toggle('open');ham.setAttribute('aria-expanded',String(!isOpen));document.body.style.overflow=isOpen?'':'hidden';}
 function closeMobileNav(){var ham=document.getElementById('navHam'),menu=document.getElementById('navMobile');if(!ham||!menu)return;ham.classList.remove('open');menu.classList.remove('open');ham.setAttribute('aria-expanded','false');document.body.style.overflow='';}
 (function(){var m=document.getElementById('navMobile');if(m)m.addEventListener('click',function(e){if(e.target===e.currentTarget)closeMobileNav();});window.addEventListener('resize',function(){if(window.innerWidth>900)closeMobileNav();});})();
-</script><script>
-(function(){var l;try{l=localStorage.getItem("fdb-loc");}catch(e){}var h=l==="dahab"?"/dahab":(l==="barcelona"?"/barcelona":null);if(!h)return;document.querySelectorAll('a[href^="/#"]').forEach(function(a){a.setAttribute("href",h+a.getAttribute("href").slice(1));});document.querySelectorAll('a[href="/"]').forEach(function(a){a.setAttribute("href",h);});})();
-</script>
-</body>
+</script></body>
 </html>

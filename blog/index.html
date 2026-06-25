@@ -272,8 +272,5 @@ window.addEventListener('scroll',()=>{document.getElementById('nav').classList.t
 const ham=document.getElementById('ham'),mob=document.getElementById('mob');
 ham.addEventListener('click',()=>{ham.classList.toggle('open');mob.classList.toggle('open')});
 </script>
-<script>
-(function(){var l;try{l=localStorage.getItem("fdb-loc");}catch(e){}var h=l==="dahab"?"/dahab":(l==="barcelona"?"/barcelona":null);if(!h)return;document.querySelectorAll('a[href^="/#"]').forEach(function(a){a.setAttribute("href",h+a.getAttribute("href").slice(1));});document.querySelectorAll('a[href="/"]').forEach(function(a){a.setAttribute("href",h);});})();
-</script>
 </body>
 </html>
