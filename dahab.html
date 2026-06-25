@@ -113,7 +113,7 @@
       "name": "How much do AIDA freediving courses cost in Dahab?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "AIDA 1 — €120. AIDA 2 — €300. AIDA 3 — €360. AIDA 4 — €480. AIDA Instructor Course — €1,200. All equipment is included in the course price. Waitlist members receive a 15% early-bird discount on any certification. No payment is required to join the waitlist."
+        "text": "AIDA 1 — €120. AIDA 2 — €300. AIDA 3 — €360. AIDA 4 — €480. AIDA Instructor Course — €1,200. All equipment is included in the course price. Open year-round in Dahab — book online and we confirm your dates within 24 hours."
       }
     },
     {
@@ -2455,7 +2455,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
 <!-- STICKY MOBILE CTA -->
 <div class="sticky-cta" id="stickyCta">
   <span class="sticky-cta-label">Find the quiet below.</span>
-  <a href="#" class="sticky-cta-btn" onclick="openModal('Waitlist');return false;">Book your spot — 15% off</a>
+  <a href="#" class="sticky-cta-btn" onclick="openModal();return false;">Book now</a>
   <button class="sticky-cta-close" onclick="dismissStickyCta()" aria-label="Dismiss">×</button>
 </div>
 
@@ -2496,7 +2496,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
     <a href="/expeditions">Expeditions</a>
     <a href="/programmes">For Teams</a>
     <a href="/blog">Blog</a>
-    <a href="#" onclick="openModal('Waitlist');return false;" class="nav-cta">Book now</a>
+    <a href="#" onclick="openModal();return false;" class="nav-cta">Book now</a>
   </div>
 
   <button class="nav-ham" id="navHam" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMobileNav()">
@@ -2515,7 +2515,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
   <a href="/programmes"   onclick="closeMobileNav()">For Teams</a>
   <a href="/blog"         onclick="closeMobileNav()">Blog</a>
   <a href="#faq"          onclick="closeMobileNav()">FAQ</a>
-  <a href="#" class="nav-mobile-cta" onclick="closeMobileNav(); openModal('Waitlist'); return false;">Book now</a>
+  <a href="#" class="nav-mobile-cta" onclick="closeMobileNav(); openModal(); return false;">Book now</a>
 </div>
 
 <!-- ═══════════════════════════════ HERO ═══════════ -->
@@ -2702,7 +2702,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
   <p class="section-tag reveal" id="courses-heading">AIDA certification pathway</p>
   <h2 class="section-h reveal">Five levels.<br>Each one takes you <em>further.</em></h2>
   <p class="section-intro reveal">Five levels, from your first breath to instructor — each with its own skills and challenge. AIDA certified, taught with the mental game from day one.</p>
-  <p class="reveal" style="display:inline-flex;align-items:center;gap:.6rem;margin-top:1.4rem;padding:.65rem 1.15rem;border:1px solid var(--ln2);border-radius:100px;font-family:'Mulish',sans-serif;font-size:.6rem;letter-spacing:.11em;text-transform:uppercase;color:var(--teal2);background:rgba(126,205,176,.06);">First Dahab cohort · 2026 · limited places — reserve free &amp; lock in 15% off</p>
+  <p class="reveal" style="display:inline-flex;align-items:center;gap:.6rem;margin-top:1.4rem;padding:.65rem 1.15rem;border:1px solid var(--ln2);border-radius:100px;font-family:'Mulish',sans-serif;font-size:.6rem;letter-spacing:.11em;text-transform:uppercase;color:var(--teal2);background:rgba(126,205,176,.06);">Year-round in Dahab · Red Sea open water · small groups, all gear included</p>
 
   <!-- ── MOBILE COURSE CAROUSEL ── visible ≤680px, hidden on desktop ── -->
   <!-- ── DESKTOP COURSE CARD CAROUSEL ── -->
@@ -2779,7 +2779,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
         <div class="mob-card-rule"></div>
         <div class="mob-card-bottom">
           <span class="mob-card-price">€120</span>
-          <a class="mob-card-cta" href="#" onclick="openModal('AIDA 1');return false;">Reserve →</a>
+          <a class="mob-card-cta" href="#" onclick="openModal('AIDA 1');return false;">Book →</a>
         </div>
       </div>
 
@@ -2795,7 +2795,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
         <div class="mob-card-rule"></div>
         <div class="mob-card-bottom">
           <span class="mob-card-price">€300</span>
-          <a class="mob-card-cta" href="#" onclick="openModal('AIDA 2');return false;">Reserve →</a>
+          <a class="mob-card-cta" href="#" onclick="openModal('AIDA 2');return false;">Book →</a>
         </div>
       </div>
 
@@ -2811,7 +2811,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
         <div class="mob-card-rule"></div>
         <div class="mob-card-bottom">
           <span class="mob-card-price">€360</span>
-          <a class="mob-card-cta" href="#" onclick="openModal('AIDA 3');return false;">Reserve →</a>
+          <a class="mob-card-cta" href="#" onclick="openModal('AIDA 3');return false;">Book →</a>
         </div>
       </div>
 
@@ -2827,7 +2827,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
         <div class="mob-card-rule"></div>
         <div class="mob-card-bottom">
           <span class="mob-card-price">€480</span>
-          <a class="mob-card-cta" href="#" onclick="openModal('AIDA 4');return false;">Reserve →</a>
+          <a class="mob-card-cta" href="#" onclick="openModal('AIDA 4');return false;">Book →</a>
         </div>
       </div>
 
@@ -2843,7 +2843,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
         <div class="mob-card-rule"></div>
         <div class="mob-card-bottom">
           <span class="mob-card-price">€1,200</span>
-          <a class="mob-card-cta" href="#" onclick="openModal('Instructor');return false;">Reserve →</a>
+          <a class="mob-card-cta" href="#" onclick="openModal('Instructor');return false;">Book →</a>
         </div>
       </div>
 
@@ -2899,7 +2899,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
             </ul>
           </div>
         </div>
-        <div class="cb-cta"><a class="btn-primary" onclick="openModal('AIDA 1');return false;" href="#">Reserve AIDA 1 — €120</a></div>
+        <div class="cb-cta"><a class="btn-primary" onclick="openModal('AIDA 1');return false;" href="#">Book AIDA 1 — €120</a></div>
       </div>
     </article>
 
@@ -2941,7 +2941,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
             </ul>
           </div>
         </div>
-        <div class="cb-cta"><a class="btn-primary" onclick="openModal('AIDA 2');return false;" href="#">Reserve AIDA 2 — €300</a></div>
+        <div class="cb-cta"><a class="btn-primary" onclick="openModal('AIDA 2');return false;" href="#">Book AIDA 2 — €300</a></div>
       </div>
     </article>
 
@@ -2983,7 +2983,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
             </ul>
           </div>
         </div>
-        <div class="cb-cta"><a class="btn-primary" onclick="openModal('AIDA 3');return false;" href="#">Reserve AIDA 3 — €360</a></div>
+        <div class="cb-cta"><a class="btn-primary" onclick="openModal('AIDA 3');return false;" href="#">Book AIDA 3 — €360</a></div>
       </div>
     </article>
 
@@ -3025,7 +3025,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
             </ul>
           </div>
         </div>
-        <div class="cb-cta"><a class="btn-primary" onclick="openModal('AIDA 4');return false;" href="#">Reserve AIDA 4 — €480</a></div>
+        <div class="cb-cta"><a class="btn-primary" onclick="openModal('AIDA 4');return false;" href="#">Book AIDA 4 — €480</a></div>
       </div>
     </article>
 
@@ -3205,7 +3205,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
         <p class="reveal">I didn't start as a freediver — four years in marketing before the Red Sea changed everything. My first course in Dahab made it clear: this isn't a sport, it's a way to understand the mind.</p>
         <p class="reveal">I became an instructor, then an Instructor Trainer — I don't just teach freediving, I teach instructors how to teach it. That goes into every course.</p>
         <p class="reveal">My technical specialisation is CNF — Constant Weight No Fins — and Static Apnea. The purest forms of freediving: no equipment, no propulsion, no shortcuts. Just the body, the mind, and the water. They taught me that depth is always a mental event first.</p>
-        <p class="reveal">Now I'm bringing Freediving Brain from Dahab to Dahab for year-round. The first courses will fill before we open — reserve early.</p>
+        <p class="reveal">Now I run Freediving Brain year-round here in Dahab, on the Red Sea that changed everything for me. Whenever you're ready, the line is waiting.</p>
         <p class="about-sig reveal">— Shebl</p>
       </div>
     </div>
@@ -3222,8 +3222,8 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
       <blockquote class="instructor-card-quote">
         "Depth is always a mental event first. The body is just listening."
       </blockquote>
-      <a class="instructor-card-cta" href="#" onclick="openModal('Waitlist');return false;">
-        Book your spot — free
+      <a class="instructor-card-cta" href="#" onclick="openModal();return false;">
+        Book your course
       </a>
     </div>
   </div>
@@ -3247,15 +3247,15 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
   <div class="booking-content">
     <p class="section-tag reveal" style="justify-content:center;" id="booking-heading">Dahab · Open year-round</p>
     <h2 class="reveal" id="booking-heading">Ready to find<br>the <em>quiet below?</em></h2>
-    <p class="booking-sub reveal">Book your spot in the first Dahab sessions — priority dates and 15% early-bird off any AIDA course. Free, no payment now.</p>
+    <p class="booking-sub reveal">Pick your course and dates in Dahab. We'll confirm your place on the Red Sea within 24 hours — all equipment included.</p>
     <div class="booking-actions reveal">
-      <a href="#" class="btn-primary" onclick="openModal('Waitlist');return false;">Book your spot — free</a>
+      <a href="#" class="btn-primary" onclick="openModal();return false;">Book your spot</a>
       <a href="#" class="btn-ghost" onclick="openModal('General Inquiry');return false;">Ask a question</a>
     </div>
     <p class="reveal" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--teal);max-width:600px;margin:0 auto 1.5rem;line-height:1.65;text-align:center">
       "The ocean tests your body, but the dive is won in your mind. Master the psychology of the breath, and the depth will follow naturally."
     </p>
-    <p class="booking-note reveal">No payment required. Waitlist members receive first access to course dates, early-bird pricing, and pre-launch content.</p>
+    <p class="booking-note reveal">No payment online — reserve your dates now and settle in person. Small groups, so spaces on each course are limited.</p>
   </div>
 </section>
 
@@ -3292,7 +3292,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
         <span class="faq-tog" aria-hidden="true">+</span>
       </button>
       <div class="faq-a">
-        <p>AIDA 1 — €120 · AIDA 2 — €300 · AIDA 3 — €360 · AIDA 4 — €480 · Instructor Course — €1,200. All equipment included. Waitlist members receive 15% early-bird discount. No payment required to join the waitlist.</p>
+        <p>AIDA 1 — €120 · AIDA 2 — €300 · AIDA 3 — €360 · AIDA 4 — €480 · Instructor Course — €1,200. All equipment included. Open year-round in Dahab — book online and we confirm your dates within 24 hours.</p>
       </div>
     </div>
 
@@ -3337,13 +3337,13 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
         <a href="#">LinkedIn</a>
         <a href="#">YouTube</a>
         <a href="#" onclick="openModal('General Inquiry')">Contact</a>
-        <a href="#" onclick="openModal('Waitlist')">Book now</a>
+        <a href="#" onclick="openModal()">Book now</a>
         <a href="/faq">FAQ</a>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <p class="footer-copy">© 2026 Freediving Brain. Dahab, Spain. All rights reserved.</p>
+    <p class="footer-copy">© 2026 Freediving Brain. Dahab, Egypt. All rights reserved.</p>
     <div class="footer-langs">
       <a href="#" class="active">EN</a>
       <a href="#">ES</a>
@@ -3512,7 +3512,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
     <div class="bk-step" id="bk-step4">
       <p class="bk-step-label">Step 4 of 4 · Contact</p>
       <h2 class="bk-step-heading">How do we<br>reach <em>you?</em></h2>
-      <p class="bk-step-sub">No payment. No commitment. Just a conversation about your first dive.</p>
+      <p class="bk-step-sub">No payment online — we'll confirm your dates and the details within 24 hours.</p>
       <div class="bk-field-group">
         <div class="bk-field-row">
           <div class="bk-field">
@@ -3932,7 +3932,7 @@ function bkReset(){
 function bkSubmitReservation(){
   try{
     var g=function(id){var el=document.getElementById(id);return el?(el.value||'').trim():'';};
-    var data={location:"Dahab",course:bkState.course,price:bkState.price,experience:bkState.experience,month:bkState.month,name:bkState.name,email:bkState.email,phone:g('bkPhone'),notes:g('bkNotes'),_subject:'New reservation — freedivingbrain.com',_template:'table',_captcha:'false',_autoresponse:'Thanks for reserving with Freediving Brain! We have your request and will be in touch within 48 hours to confirm your place. — Shebl'};
+    var data={location:"Dahab",course:bkState.course,price:bkState.price,experience:bkState.experience,month:bkState.month,name:bkState.name,email:bkState.email,phone:g('bkPhone'),notes:g('bkNotes'),_subject:'New reservation — freedivingbrain.com',_template:'table',_captcha:'false',_autoresponse:'Thanks for booking with Freediving Brain! We have your request and will be in touch within 24 hours to confirm your dates in Dahab. — Shebl'};
     var body=Object.keys(data).map(function(k){return encodeURIComponent(k)+'='+encodeURIComponent(data[k]);}).join('&');
     fetch('https://formsubmit.co/ajax/hello@freedivingbrain.com',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded','Accept':'application/json'},body:body}).catch(function(){});
   }catch(e){}
