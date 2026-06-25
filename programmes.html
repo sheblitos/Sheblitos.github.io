@@ -592,7 +592,7 @@ function handleEnquiry(e){
   fd.append('_captcha','false');
   fd.append('_autoresponse','Thanks for reaching out to Freediving Brain! We have your message and will reply within 48 hours. — Shebl');
   var body=new URLSearchParams(fd).toString();
-  fetch('https://formsubmit.co/ajax/abdelrhmanmostafa15@gmail.com',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded','Accept':'application/json'},body:body}).catch(function(){});
+  fetch('https://formsubmit.co/ajax/hello@freedivingbrain.com',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded','Accept':'application/json'},body:body}).catch(function(){});
   btn.textContent='Sent — we\'ll be in touch within 48 hours.';
   btn.style.background='#4aaa86';
   btn.disabled=true;

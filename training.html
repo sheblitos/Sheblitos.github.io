@@ -957,11 +957,21 @@ function trCheckForm(){
   document.getElementById('trSubmit').disabled = !(name && email);
 }
 function trSubmit(){
-  const name = document.getElementById('trName').value.trim();
+  const g = id => { const el = document.getElementById(id); return el ? (el.value||'').trim() : ''; };
+  const name = g('trName');
   const pkg  = document.getElementById('trSelectedPkg').textContent;
+  const data = {
+    name: name, email: g('trEmail'), cert: g('trCert'), session: pkg, notes: g('trNotes'),
+    _subject: 'New training booking — freedivingbrain.com', _template: 'table', _captcha: 'false',
+    _autoresponse: "Thanks for booking a training session with Freediving Brain! We have your request and will reach out within 24 hours to confirm and schedule your first session."
+  };
+  const body = Object.keys(data).map(k => encodeURIComponent(k)+'='+encodeURIComponent(data[k])).join('&');
+  fetch('https://formsubmit.co/ajax/hello@freedivingbrain.com', {
+    method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded','Accept':'application/json'}, body: body
+  }).catch(()=>{});
   document.getElementById('trModalForm').style.display = 'none';
   document.getElementById('trConfirmMsg').textContent =
-    `Thanks ${name}. Shebl will reach out within 24 hours to confirm your ${pkg} and schedule your first session.`;
+    `Thanks ${name}. We'll reach out to you within 24 hours to confirm your ${pkg} and schedule your first session.`;
   document.getElementById('trConfirm').style.display = 'block';
 }
 document.getElementById('trModal').addEventListener('click', e=>{
