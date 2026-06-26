@@ -2356,6 +2356,12 @@ body.fx-off .dive-fx{ display:none; }
   .course-carousel{padding-left:1.25rem;padding-right:1.25rem;gap:.9rem}
   .course-carousel-wrap{margin-top:1.75rem}
 }
+/* ── Desktop/tablet: show all course cards at once, no horizontal scroll ── */
+@media(min-width:681px){
+  .course-carousel{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:1rem;overflow:visible;scroll-snap-type:none;padding:.6rem .1rem 1rem}
+  .course-card{flex:none;width:auto;scroll-snap-align:none}
+  .course-nav{display:none}
+}
 /* ── Why-freedive: compact ── */
 .why{padding-top:3.25rem;padding-bottom:3.25rem}
 .why .section-h{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:.45rem}
