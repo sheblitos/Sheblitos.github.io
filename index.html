@@ -2408,8 +2408,18 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
 .dr-diver{position:absolute;right:18px;top:88px;height:auto;filter:drop-shadow(0 2px 7px rgba(0,0,0,.5));transition:top .12s linear,transform .45s cubic-bezier(.16,1,.3,1);transform-origin:center;transform:scaleX(0.78) scaleY(-1);z-index:2}
 .dr-pill{position:absolute;right:55px;top:94px;font-family:'Mulish',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.03em;color:var(--deep);background:var(--teal);border-radius:20px;padding:2px 8px;white-space:nowrap;transition:top .12s linear;z-index:2;box-shadow:0 2px 8px rgba(0,0,0,.35)}
 .dr-bubble{position:absolute;border-radius:50%;border:1px solid rgba(236,232,224,.3);background:rgba(236,232,224,.05)}
-@media(max-width:820px){.dive-rope-panel{width:62px}.dr-rope{right:24px}.dr-tick{width:62px;padding-right:16px}.dr-tick-label{display:none}.dr-dash{width:6px}.dr-diver{right:9px}.dr-pill{right:40px;font-size:.5rem;padding:2px 6px}}
-@media(prefers-reduced-motion:reduce){.dive-rope-panel{display:none}}
+@media(max-width:820px){.dive-rope-panel{width:62px}.dr-rope{right:24px}.dr-tick{width:62px;padding-right:16px}.dr-tick-label{display:none}.dr-dash{width:6px}.dr-diver{right:9px}.dr-pill{right:40px;font-size:.5rem;padding:2px 6px}.dr-rail{right:14px;width:26px}.dr-grab{right:0;width:44px;height:56px}}
+/* Interactive scrubber: drag the diver (or click the rope) to move through the page */
+.dr-rail{position:fixed;right:20px;width:30px;z-index:95;pointer-events:auto;cursor:pointer;touch-action:none}
+.dr-grab{position:fixed;right:5px;width:48px;height:60px;z-index:96;pointer-events:auto;cursor:grab;touch-action:none;background:transparent;border:0;padding:0;border-radius:24px;-webkit-tap-highlight-color:transparent}
+.dr-grab::before{content:"";position:absolute;inset:7px;border-radius:22px;border:1px dashed rgba(126,205,176,0);transition:border-color .25s,box-shadow .25s}
+.dr-grab:hover::before{border-color:rgba(126,205,176,.6)}
+.dr-grab:focus-visible{outline:none}
+.dr-grab:focus-visible::before{border-color:var(--teal);box-shadow:0 0 0 2px rgba(126,205,176,.3)}
+.dr-grab:active{cursor:grabbing}
+.dive-rope-panel.dragging .dr-diver,.dive-rope-panel.dragging .dr-pill{transition:none}
+@media (hover:none){.dr-grab::before{border-color:rgba(126,205,176,.3)}}
+@media(prefers-reduced-motion:reduce){.dive-rope-panel,.dr-rail,.dr-grab{display:none}}
 /* ── Photos in sections 2 & 3 ── */
 .why{background-image:linear-gradient(180deg,rgba(12,26,21,.9) 0%,rgba(12,26,21,.82) 45%,rgba(12,26,21,.93) 100%),url('./training-line.jpg');background-size:cover;background-position:center 26%}
 .funnel::before{display:none}
@@ -4140,31 +4150,37 @@ function openCourse(id){
   </svg>
   <div class="dr-pill" id="drPill">0m</div>
 </div>
+<div class="dr-rail" id="drRail"></div>
+<div class="dr-grab" id="drGrab" role="slider" tabindex="0" aria-label="Page position. Drag, or use arrow keys, to move through the page." aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" title="Drag to move through the page"></div>
 <script>
 (function(){
   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var panel=document.getElementById('diveRope'); if(!panel) return;
   var diver=document.getElementById('drDiver'), pill=document.getElementById('drPill');
   var bubbles=document.getElementById('drBubbles');
+  var grab=document.getElementById('drGrab'), rail=document.getElementById('drRail');
   var ticks=[].slice.call(panel.querySelectorAll('.dr-tick'));
   var TOP=88, diverH=63, travelBot, travelH, raf, lastSY=0, facing=-1;
+  var dragging=false, grabOffset=0;
+  function maxScroll(){ return Math.max(0, document.documentElement.scrollHeight - window.innerHeight); }
   function layout(){ travelBot=window.innerHeight-88; travelH=Math.max(140, travelBot-TOP);
     ticks.forEach(function(t){ t.style.top=(TOP+(+t.dataset.depth/60)*travelH-1)+'px'; });
+    if(rail){ rail.style.top=TOP+'px'; rail.style.height=travelH+'px'; }
   }
+  function diverY(prog){ return TOP+prog*(travelH-diverH); }
   function update(){
     var sy=window.scrollY;
-    var max=document.documentElement.scrollHeight-window.innerHeight;
+    var max=maxScroll();
     var prog=max>0?(sy/max):0; prog=Math.max(0,Math.min(1,prog));
     var depth=prog*60;
-    
-    
-    var y=TOP+prog*(travelH-diverH);
+    var y=diverY(prog);
     diver.style.top=y+'px';
-    if(sy>lastSY+1) facing=-1; else if(sy<lastSY-1) facing=1;
+    if(!dragging){ if(sy>lastSY+1) facing=-1; else if(sy<lastSY-1) facing=1; }
     lastSY=sy;
     diver.style.transform='scaleX(0.78) scaleY('+facing+')';
     pill.style.top=(y+diverH*0.5-7)+'px';
     pill.textContent=Math.round(depth)+'m';
+    if(grab){ grab.style.top=y+'px'; grab.setAttribute('aria-valuenow', Math.round(prog*100)); }
     ticks.forEach(function(t){ t.classList.toggle('on', depth>=(+t.dataset.depth-1)); });
     if(depth>3 && Math.random()<0.16) spawn(y);
   }
@@ -4176,6 +4192,41 @@ function openCourse(id){
     var dur=1800+Math.random()*1400, t0=performance.now();
     (function tick(now){ var p=(now-t0)/dur; if(p>=1){b.remove();return;} b.style.transform='translate('+(Math.sin(p*Math.PI*3)*drift)+'px,'+(-p*92)+'px)'; b.style.opacity=Math.max(0,.5*(1-p)); requestAnimationFrame(tick); })(t0);
   }
+  /* ── Interaction: drag the diver / click the rope to scrub the page ── */
+  function progFromY(clientY){
+    var yMin=TOP, yMax=TOP+(travelH-diverH);
+    var prog=((clientY-grabOffset)-yMin)/Math.max(1,(yMax-yMin));
+    return Math.max(0,Math.min(1,prog));
+  }
+  function scrollToProg(prog, smooth){ window.scrollTo({top:prog*maxScroll(), behavior: smooth?'smooth':'auto'}); }
+  function startDrag(clientY, onHandle){
+    dragging=true; panel.classList.add('dragging');
+    var curProg = maxScroll()>0 ? (window.scrollY/maxScroll()) : 0;
+    grabOffset = onHandle ? (clientY - diverY(curProg)) : (diverH*0.5);
+    if(!onHandle) scrollToProg(progFromY(clientY), false);
+  }
+  function moveDrag(clientY){ if(!dragging) return; scrollToProg(progFromY(clientY), false); update(); }
+  function endDrag(){ if(!dragging) return; dragging=false; panel.classList.remove('dragging'); }
+  if(grab){
+    grab.addEventListener('pointerdown', function(e){ e.preventDefault(); try{grab.focus({preventScroll:true});}catch(_){grab.focus();} try{grab.setPointerCapture(e.pointerId);}catch(_){} startDrag(e.clientY, true); });
+    grab.addEventListener('keydown', function(e){
+      var max=maxScroll(), sy=window.scrollY, step=window.innerHeight*0.15, page=window.innerHeight*0.9, done=true;
+      switch(e.key){
+        case 'ArrowDown': case 'ArrowRight': window.scrollTo({top:Math.min(max,sy+step),behavior:'smooth'}); break;
+        case 'ArrowUp':   case 'ArrowLeft':  window.scrollTo({top:Math.max(0,sy-step),behavior:'smooth'}); break;
+        case 'PageDown': window.scrollTo({top:Math.min(max,sy+page),behavior:'smooth'}); break;
+        case 'PageUp':   window.scrollTo({top:Math.max(0,sy-page),behavior:'smooth'}); break;
+        case 'Home': window.scrollTo({top:0,behavior:'smooth'}); break;
+        case 'End':  window.scrollTo({top:max,behavior:'smooth'}); break;
+        default: done=false;
+      }
+      if(done) e.preventDefault();
+    });
+  }
+  if(rail){ rail.addEventListener('pointerdown', function(e){ e.preventDefault(); try{rail.setPointerCapture(e.pointerId);}catch(_){} startDrag(e.clientY, false); }); }
+  window.addEventListener('pointermove', function(e){ if(dragging){ e.preventDefault(); moveDrag(e.clientY); } }, {passive:false});
+  window.addEventListener('pointerup', endDrag);
+  window.addEventListener('pointercancel', endDrag);
   function onScroll(){ if(raf)cancelAnimationFrame(raf); raf=requestAnimationFrame(update); }
   layout(); update();
   window.addEventListener('scroll', onScroll, {passive:true});
