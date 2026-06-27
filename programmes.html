@@ -82,7 +82,9 @@ nav.scrolled{background:rgba(12,26,21,.96);backdrop-filter:blur(20px);padding:1r
 .hero-rule{width:60px;height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:1.5rem 0}
 .hero-sub{font-size:1.05rem;font-weight:300;color:var(--txt2);max-width:520px;line-height:1.85;margin-bottom:2.5rem}
 .hero-sub strong{color:var(--txt);font-weight:400}
-.hero-pills{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:3rem}
+.hero-pills{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:2.25rem}
+.lab-cta{display:inline-flex;align-items:center;gap:.5rem;font-family:'Mulish',sans-serif;font-weight:700;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--deep);background:var(--gold);padding:.95rem 2rem;border-radius:3px;text-decoration:none;transition:background .2s,transform .15s}
+.lab-cta:hover{background:#d4b86a;transform:translateY(-1px)}
 .pill{font-family:'Mulish',sans-serif;font-size:.52rem;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--ln2);padding:.55rem 1.25rem;border-radius:20px;color:var(--txt2);background:transparent;cursor:pointer;transition:border-color .2s,color .2s,background .2s}
 .pill:hover,.pill.on{border-color:var(--gold);color:var(--deep);background:var(--gold)}
 .hero-stats{display:flex;gap:3rem;border-top:1px solid var(--ln);padding-top:2rem}
@@ -292,7 +294,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
     <a href="/expeditions">Travel with us</a>
     <a href="/programmes">Teams Workshops</a>
     <a href="/blog">Blog</a>
-    <a href="/" class="nav-cta">Reserve a place</a>
+    <a href="#enquire" class="nav-cta">Book your team</a>
   </div>
   <button class="nav-ham" id="navHam" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMobileNav()"><span></span><span></span><span></span></button></nav>
 <div class="nav-mobile" id="navMobile" role="dialog" aria-label="Mobile navigation">
@@ -303,7 +305,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
   <a href="/programmes" onclick="closeMobileNav()">Teams Workshops</a>
   <a href="/blog" onclick="closeMobileNav()">Blog</a>
   <a href="/faq" onclick="closeMobileNav()">FAQ</a>
-  <a href="/" class="nav-mobile-cta" onclick="closeMobileNav()">Join waitlist</a>
+  <a href="#enquire" class="nav-mobile-cta" onclick="closeMobileNav()">Book your team</a>
 </div>
 
 <!-- HERO -->
@@ -329,6 +331,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
       <span class="pill">Startups</span>
       <span class="pill">Sports teams</span>
     </div>
+    <a href="#enquire" class="lab-cta">Book your team day →</a>
   </div>
 
   <div class="hero-stats reveal">
@@ -506,22 +509,26 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
         <input type="email" name="email" placeholder="your@email.com" required>
       </div>
       <div class="eq-field">
-        <label class="eq-label">Organisation / Team</label>
-        <input type="text" name="organisation" placeholder="Company or team name">
+        <label class="eq-label">Company / team name</label>
+        <input type="text" name="organisation" placeholder="Who are we hosting?">
       </div>
       <div class="eq-field">
         <label class="eq-label">Type of team</label>
-        <select name="team-type">
+        <select name="team-type" required>
           <option value="">Select one</option>
-          <option>Corporate team</option>
+          <option>Company / corporate</option>
           <option>Startup</option>
-          <option>Sports team</option>
-          <option>Not sure yet</option>
+          <option>Sports / athletic team</option>
+          <option>Other group</option>
         </select>
       </div>
       <div class="eq-field full">
+        <label class="eq-label">Group size</label>
+        <input type="text" name="group-size" placeholder="Roughly how many people? e.g. 8–12">
+      </div>
+      <div class="eq-field full">
         <label class="eq-label">Tell us about your team and what you're looking for</label>
-        <textarea name="message" rows="2" placeholder="Size of group, goals, timing, any questions — the more context the better."></textarea>
+        <textarea name="message" rows="2" placeholder="Goals, timing, location, any questions — the more context the better."></textarea>
       </div>
       <div class="eq-submit">
         <button type="submit">Send enquiry →</button>
