@@ -97,7 +97,7 @@ footer{background:var(--deep2);padding:4rem 3.5rem 2rem;border-top:1px solid var
 body{font-family:'Mulish',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
 h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
 .nav-links a,.nav-cta,.nav-mobile a,.nav-mobile-cta,.btn-primary,.btn-ghost,button{font-family:'Mulish',sans-serif !important;font-weight:600}
-.nav-logo{gap:0 !important}.nav-logo svg{display:none !important}.nav-logo::before{content:"";width:38px;height:38px;flex:0 0 auto;margin-right:.6rem;background:url(/logo-mark.png) center/contain no-repeat}.nav-logo strong{margin-left:.3em}.footer-social{display:flex;gap:1rem;margin-bottom:1rem}.footer-social a{color:var(--txt2);line-height:0;transition:color .2s,transform .2s}.footer-social a:hover{color:var(--teal);transform:translateY(-2px)}.footer-social svg{width:20px;height:20px;display:block;fill:currentColor}</style>
+.nav-logo{gap:0 !important}.nav-logo svg{display:none !important}.nav-logo::before{content:"";width:38px;height:38px;flex:0 0 auto;margin-right:.6rem;background:url(/logo-mark.png) center/contain no-repeat}.nav-logo strong{margin-left:.3em}.footer-social{display:flex;gap:1rem;margin-bottom:1rem}.footer-social a{color:var(--txt2);line-height:0;transition:color .2s,transform .2s}.footer-social a:hover{color:var(--teal);transform:translateY(-2px)}.footer-social svg{width:20px;height:20px;display:block;fill:currentColor}.footer-logo{display:flex;align-items:center;gap:.6rem}.footer-logo img{width:44px;height:44px;display:block;flex:0 0 auto}.footer-watermark{position:absolute;right:-70px;bottom:-90px;width:360px;height:360px;background:url(/logo-mark.png) center/contain no-repeat;opacity:.05;pointer-events:none;z-index:-1}footer{position:relative;overflow:hidden;isolation:isolate}</style>
 <link rel="icon" type="image/png" href="/logo-mark.png"><link rel="apple-touch-icon" href="/logo-mark.png"></head>
 <body>
 
@@ -232,10 +232,10 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
   <a href="/" class="btn-primary">Reserve your spot — it's free</a>
 </section>
 
-<footer>
+<footer><div class="footer-watermark" aria-hidden="true"></div>
   <div class="footer-grid">
     <div>
-      <p class="footer-logo">Freediving <span>Brain</span></p>
+      <p class="footer-logo"><img src="/logo-mark.png" alt="" width="44" height="44">Freediving <span>Brain</span></p>
       <p class="footer-tagline">Barcelona's freediving school built on the science of the mental game. AIDA certified. Mediterranean based.</p>
     </div>
     <div>
