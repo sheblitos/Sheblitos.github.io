@@ -1013,6 +1013,50 @@ section { padding: 4.5rem 3.5rem; position:relative; }
 }
 
 /* ─────────────────────────────────────────────────
+   FOUNDERS CAROUSEL — Shebl / Rimi swipe
+───────────────────────────────────────────────── */
+.about-carousel { position:relative; }
+.about-track { display:flex; transition:transform .55s cubic-bezier(.16,1,.3,1); }
+.about-slide { flex:0 0 100%; min-width:100%; }
+.about-arrow {
+  position:absolute; top:16%; transform:translateY(-50%); z-index:6;
+  width:42px; height:42px; border-radius:50%;
+  background:rgba(12,26,21,.72); border:1px solid var(--ln2); color:var(--txt);
+  font-size:1.4rem; line-height:1; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  backdrop-filter:blur(6px); transition:background .2s,color .2s;
+}
+.about-arrow:hover { background:var(--teal); color:var(--deep); }
+.about-arrow.prev { left:-14px; }
+.about-arrow.next { right:-14px; }
+.about-dots { display:flex; align-items:center; gap:.6rem; margin-top:2rem; }
+.about-dot {
+  width:8px; height:8px; border-radius:50%; padding:0; border:none; cursor:pointer;
+  background:var(--ln2); transition:background .2s,transform .2s;
+}
+.about-dot.active { background:var(--teal); transform:scale(1.35); }
+.about-dot-label { font-family:'Mulish',sans-serif; font-size:.6rem; letter-spacing:.1em; text-transform:uppercase; color:var(--txt3); margin-left:.4rem; }
+@media (max-width:900px) { .about-arrow { display:none; } }
+
+.instructor-carousel { display:none; position:relative; margin-top:3rem; }
+.instructor-track { display:flex; transition:transform .5s cubic-bezier(.16,1,.3,1); }
+.instructor-carousel .instructor-card { flex:0 0 100%; min-width:100%; margin-top:0; }
+@media (max-width:680px) { .instructor-carousel { display:block; } }
+.instructor-arrow {
+  position:absolute; top:36%; transform:translateY(-50%); z-index:6;
+  width:38px; height:38px; border-radius:50%;
+  background:rgba(12,26,21,.78); border:1px solid var(--ln2); color:var(--txt);
+  font-size:1.3rem; line-height:1; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  backdrop-filter:blur(6px);
+}
+.instructor-arrow.prev { left:.6rem; }
+.instructor-arrow.next { right:.6rem; }
+.instructor-dots { display:flex; justify-content:center; gap:.6rem; padding:1rem 0 1.5rem; background:var(--deep2); }
+.instructor-dot { width:8px; height:8px; border-radius:50%; padding:0; border:none; cursor:pointer; background:var(--ln2); }
+.instructor-dot.active { background:var(--teal); }
+
+/* ─────────────────────────────────────────────────
    BOOKING / CTA
 ───────────────────────────────────────────────── */
 .booking {
@@ -3195,45 +3239,119 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
 
 <!-- ═══════════════════════════ ABOUT ══════════════ -->
 <section class="about" id="about" aria-labelledby="about-heading">
-  <div class="about-grid">
-    <div class="about-left">
-      <div class="portrait reveal-left">
-        <img class="portrait-img" src="./shebl.jpg" alt="Abdelrahman Shebl, AIDA Instructor Trainer" loading="lazy" decoding="async">
+
+  <!-- ── DESKTOP/TABLET CAROUSEL (>680px) ── -->
+  <div class="about-carousel">
+    <button class="about-arrow prev" id="aboutPrev" aria-label="Previous founder">‹</button>
+    <button class="about-arrow next" id="aboutNext" aria-label="Next founder">›</button>
+    <div class="about-track" id="aboutTrack">
+
+      <!-- SLIDE 1 — SHEBL -->
+      <div class="about-slide">
+        <div class="about-grid">
+          <div class="about-left">
+            <div class="portrait reveal-left">
+              <img class="portrait-img" src="./shebl.jpg" alt="Shebl - Founder & Head Instructor Trainer" decoding="async">
+            </div>
+            <div class="creds-grid reveal">
+              <div class="cred-item"><p class="cred-label">Certification</p><p class="cred-val">AIDA Instructor Trainer · SSI Instructor Trainer</p></div>
+              <div class="cred-item"><p class="cred-label">Specialisation</p><p class="cred-val">CNF · Constant Weight No Fins · Static Apnea</p></div>
+              <div class="cred-item"><p class="cred-label">Experience</p><p class="cred-val">5+ years based in Dahab, Egypt</p></div>
+              <div class="cred-item"><p class="cred-label">Languages</p><p class="cred-val">Arabic · English · Spanish (learning)</p></div>
+            </div>
+          </div>
+          <div>
+            <p class="section-tag reveal" id="about-heading">The founders</p>
+            <h2 class="section-h reveal">Shebl.<br>"Freediving isn't about fighting the water — it's about retraining your mind to find peace<br>where the world tells you to <em>panic.</em>"</h2>
+            <div class="about-body">
+              <p class="reveal" style="color:var(--teal);font-style:italic;font-size:1.05rem;line-height:1.75;margin-bottom:1.5rem">The depth is just a mirror for how calm you can keep your inner world.</p>
+              <p class="reveal">The Red Sea changed everything for me. My first course made it clear: freediving isn't a sport — it's a way to understand the mind.</p>
+              <p class="reveal">Today I'm an AIDA Instructor Trainer — I teach instructors how to teach. My craft is the purest form of it, No-Fins and Static Apnea, where depth is always a mental event first.</p>
+              <p class="reveal"><a href="/about" style="color:var(--teal2);text-decoration:none;border-bottom:1px solid rgba(126,205,176,.35)">Read our full story →</a></p>
+              <p class="about-sig reveal">— Shebl</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="creds-grid reveal">
-        <div class="cred-item"><p class="cred-label">Certification</p><p class="cred-val">AIDA Instructor Trainer · SSI Instructor Trainer</p></div>
-        <div class="cred-item"><p class="cred-label">Specialisation</p><p class="cred-val">CNF · Constant Weight No Fins · Static Apnea</p></div>
-        <div class="cred-item"><p class="cred-label">Experience</p><p class="cred-val">5+ years based in Dahab, Egypt</p></div>
-        <div class="cred-item"><p class="cred-label">Languages</p><p class="cred-val">Arabic · English · Spanish (learning)</p></div>
+
+      <!-- SLIDE 2 — RIMI -->
+      <div class="about-slide">
+        <div class="about-grid">
+          <div class="about-left">
+            <div class="portrait">
+              <img class="portrait-img" src="./rimi.jpg" alt="Rimi - Co-Organizer & Freediving Instructor Candidate" decoding="async">
+            </div>
+            <div class="creds-grid">
+              <div class="cred-item"><p class="cred-label">Role</p><p class="cred-val">Co-Organizer · Instructor Candidate</p></div>
+              <div class="cred-item"><p class="cred-label">Distinction</p><p class="cred-val">First Iraqi female freediver</p></div>
+              <div class="cred-item"><p class="cred-label">Background</p><p class="cred-val">Architect, then UX Designer</p></div>
+              <div class="cred-item"><p class="cred-label">Based</p><p class="cred-val">Dahab, Egypt → Barcelona</p></div>
+            </div>
+          </div>
+          <div>
+            <p class="section-tag">The founders</p>
+            <h2 class="section-h">Rimi.<br>"The water doesn't ask you to be strong — it asks you to be <em>present.</em>"</h2>
+            <div class="about-body">
+              <p style="color:var(--teal);font-style:italic;font-size:1.05rem;line-height:1.75;margin-bottom:1.5rem">Someone has to keep the joy as organised as the itinerary.</p>
+              <p>I was an Iraqi architect, then a UX designer and team lead — a different kind of high-performance life. I came to Dahab just to try freediving, and the ocean kept me.</p>
+              <p>I'm the first Iraqi female freediver, and the logistical mastermind behind every expedition. My real job is keeping the laughter loud and the whole tribe close.</p>
+              <p><a href="/about" style="color:var(--teal2);text-decoration:none;border-bottom:1px solid rgba(126,205,176,.35)">Read our full story →</a></p>
+              <p class="about-sig">— Rimi</p>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
-    <div>
-      <p class="section-tag reveal" id="about-heading">The founders</p>
-      <h2 class="section-h reveal">Shebl &amp; Rimi.<br>"Freediving isn't about fighting the water — it's about retraining your mind to find peace<br>where the world tells you to <em>panic.</em>"</h2>
-      <div class="about-body">
-        <p class="reveal" style="color:var(--teal);font-style:italic;font-size:1.05rem;line-height:1.75;margin-bottom:1.5rem">The depth is just a mirror for how calm you can keep your inner world.</p>
-        <p class="reveal">We're Shebl and Rimi — partners in life and in the water. We met in the blue of Dahab, fell for the deep, and built Freediving Brain to share it with the world.</p>
-        <p class="reveal">Shebl is an AIDA Instructor Trainer who teaches the mental game; Rimi is the spark and architect behind every expedition. Together we guide a global tribe — from Barcelona to Egypt, Bali and beyond.</p>
-        <p class="reveal"><a href="/about" style="color:var(--teal2);text-decoration:none;border-bottom:1px solid rgba(126,205,176,.35)">Read our full story →</a></p>
-        <p class="about-sig reveal">— Shebl &amp; Rimi</p>
-      </div>
+    <div class="about-dots" id="aboutDots">
+      <button class="about-dot active" data-slide="0" aria-label="Shebl"></button>
+      <button class="about-dot" data-slide="1" aria-label="Rimi"></button>
+      <span class="about-dot-label" id="aboutDotLabel">Shebl</span>
     </div>
   </div>
 
-  <!-- ── INSTRUCTOR CARD — mobile only (≤680px) ── -->
-  <div class="instructor-card reveal">
-    <div class="instructor-card-photo"><img src="./shebl.jpg" alt="Abdelrahman Shebl, AIDA Instructor Trainer" loading="lazy" decoding="async">
+  <!-- ── MOBILE CAROUSEL (≤680px) ── -->
+  <div class="instructor-carousel">
+    <button class="instructor-arrow prev" id="instructorPrev" aria-label="Previous founder">‹</button>
+    <button class="instructor-arrow next" id="instructorNext" aria-label="Next founder">›</button>
+    <div class="instructor-track" id="instructorTrack">
+
+      <div class="instructor-card">
+        <div class="instructor-card-photo"><img src="./shebl.jpg" alt="Shebl - Founder & Head Instructor Trainer" decoding="async">
+        </div>
+        <div class="instructor-card-body">
+          <p class="instructor-card-tag">The founders</p>
+          <p class="instructor-card-name">Shebl</p>
+          <p class="instructor-card-title">Founder &amp; Head Instructor Trainer</p>
+          <blockquote class="instructor-card-quote">
+            "Depth is always a mental event first. The body is just listening."
+          </blockquote>
+          <a class="instructor-card-cta" href="/about">
+            Read our story →
+          </a>
+        </div>
+      </div>
+
+      <div class="instructor-card">
+        <div class="instructor-card-photo"><img src="./rimi.jpg" alt="Rimi - Co-Organizer & Freediving Instructor Candidate" decoding="async">
+        </div>
+        <div class="instructor-card-body">
+          <p class="instructor-card-tag">The founders</p>
+          <p class="instructor-card-name">Rimi</p>
+          <p class="instructor-card-title">Co-Organizer &amp; Instructor Candidate</p>
+          <blockquote class="instructor-card-quote">
+            "Someone has to keep the joy as organised as the itinerary."
+          </blockquote>
+          <a class="instructor-card-cta" href="/about">
+            Read our story →
+          </a>
+        </div>
+      </div>
+
     </div>
-    <div class="instructor-card-body">
-      <p class="instructor-card-tag">The founders</p>
-      <p class="instructor-card-name">Shebl &amp; Rimi</p>
-      <p class="instructor-card-title">AIDA Instructor Trainer &amp; Co-Organizer</p>
-      <blockquote class="instructor-card-quote">
-        "Depth is always a mental event first. The body is just listening."
-      </blockquote>
-      <a class="instructor-card-cta" href="/about">
-        Read our story →
-      </a>
+    <div class="instructor-dots" id="instructorDots">
+      <button class="instructor-dot active" data-slide="0" aria-label="Shebl"></button>
+      <button class="instructor-dot" data-slide="1" aria-label="Rimi"></button>
     </div>
   </div>
 
@@ -4066,6 +4184,37 @@ function openCourse(id){
   requestAnimationFrame(function(){var y=el.getBoundingClientRect().top+window.pageYOffset-80;window.scrollTo({top:y,behavior:'smooth'});});
 }
 (function(){var c=document.querySelector('[data-course-carousel]');if(!c)return;var wrap=c.closest('.course-carousel-wrap');if(!wrap)return;var prev=wrap.querySelector('.course-nav.prev'),next=wrap.querySelector('.course-nav.next');function step(){var card=c.querySelector('.course-card');return card?card.getBoundingClientRect().width+18:240;}if(prev)prev.addEventListener('click',function(){c.scrollBy({left:-step(),behavior:'smooth'});});if(next)next.addEventListener('click',function(){c.scrollBy({left:step(),behavior:'smooth'});});})();
+/* ── Founders carousel: Shebl / Rimi (desktop grid + mobile card) ── */
+(function(){
+  function makeCarousel(opts){
+    var track=document.getElementById(opts.track); if(!track) return;
+    var slides=track.children;
+    var prev=document.getElementById(opts.prev), next=document.getElementById(opts.next);
+    var dots=opts.dots?document.querySelectorAll('#'+opts.dots+' [data-slide]'):[];
+    var label=opts.label?document.getElementById(opts.label):null;
+    var names=opts.names||[];
+    var idx=0;
+    function go(i){
+      idx=(i+slides.length)%slides.length;
+      track.style.transform='translateX(-'+(idx*100)+'%)';
+      dots.forEach(function(d,j){ d.classList.toggle('active', j===idx); });
+      if(label && names[idx]) label.textContent=names[idx];
+    }
+    if(prev) prev.addEventListener('click',function(){ go(idx-1); });
+    if(next) next.addEventListener('click',function(){ go(idx+1); });
+    dots.forEach(function(d){ d.addEventListener('click',function(){ go(+d.dataset.slide); }); });
+    var startX=null;
+    track.addEventListener('touchstart',function(e){ startX=e.touches[0].clientX; },{passive:true});
+    track.addEventListener('touchend',function(e){
+      if(startX===null) return;
+      var dx=e.changedTouches[0].clientX-startX;
+      if(Math.abs(dx)>40){ go(dx<0?idx+1:idx-1); }
+      startX=null;
+    },{passive:true});
+  }
+  makeCarousel({track:'aboutTrack', prev:'aboutPrev', next:'aboutNext', dots:'aboutDots', label:'aboutDotLabel', names:['Shebl','Rimi']});
+  makeCarousel({track:'instructorTrack', prev:'instructorPrev', next:'instructorNext', dots:'instructorDots'});
+})();
 </script>
 <script>
 (function(){
