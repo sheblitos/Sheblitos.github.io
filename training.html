@@ -18,9 +18,6 @@
 <meta property="og:url" content="https://freedivingbrain.com/training">
 <meta property="og:title" content="Training Sessions — Freediving Brain Barcelona">
 <meta property="og:description" content="On-demand open water and pool training sessions for certified freedivers. Mediterranean and Barcelona indoor pool.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 
 /* ── Variables ── */
@@ -41,10 +38,10 @@
 
 /* ── Reset ── */
 *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
-html { font-size:16px; overflow-x:hidden; scroll-behavior:smooth; }
+html { font-size:100%; overflow-x:hidden; scroll-behavior:smooth; }
 body {
   background:var(--deep); color:var(--txt);
-  font-family:'Mulish',sans-serif; line-height:1.6;
+  font-family:var(--font-body); line-height:1.6;
   -webkit-font-smoothing:antialiased;
 }
 
@@ -62,7 +59,7 @@ nav.scrolled {
 }
 .nav-logo {
   display:flex; align-items:center; gap:.875rem;
-  text-decoration:none; font-family:'Cormorant Garamond',serif;
+  text-decoration:none; font-family:var(--font-display);
   font-size:1.15rem; font-weight:300; color:var(--txt);
   letter-spacing:.06em;
 }
@@ -70,14 +67,14 @@ nav.scrolled {
 .nav-logo strong { font-weight:400; color:var(--teal); }
 .nav-links { display:flex; gap:2.5rem; align-items:center; }
 .nav-links a {
-  font-family:'Mulish',sans-serif;
-  font-size:.62rem; letter-spacing:.1em; text-transform:uppercase;
+  font-family:var(--font-body);
+  font-size:var(--text-xs); letter-spacing:.1em; text-transform:uppercase;
   color:var(--txt2); text-decoration:none; transition:color .2s;
 }
 .nav-links a:hover, .nav-links a.active { color:var(--teal); }
 .nav-cta {
-  font-family:'Mulish',sans-serif;
-  font-size:.6rem; letter-spacing:.1em; text-transform:uppercase;
+  font-family:var(--font-body);
+  font-size:var(--text-xs); letter-spacing:.1em; text-transform:uppercase;
   background:var(--teal); color:var(--deep);
   padding:.55rem 1.25rem; border-radius:2px;
   text-decoration:none;
@@ -110,15 +107,15 @@ nav.scrolled {
 }
 .nav-mobile.open { transform:translateX(0); }
 .nav-mobile a {
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:2rem; font-weight:300; color:var(--txt);
   text-decoration:none; letter-spacing:.06em;
   transition:color .2s;
 }
 .nav-mobile a:hover, .nav-mobile a.active { color:var(--teal); }
 .nav-mobile-cta {
-  font-family:'Mulish',sans-serif !important;
-  font-size:.65rem !important; letter-spacing:.12em;
+  font-family:var(--font-body) !important;
+  font-size:var(--text-xs) !important; letter-spacing:.12em;
   background:var(--teal); color:var(--deep) !important;
   padding:.75rem 2rem; border-radius:2px;
 }
@@ -126,13 +123,13 @@ nav.scrolled {
 /* ── Shared typography ── */
 .section-tag {
   display:flex; align-items:center; gap:.75rem;
-  font-family:'Mulish',sans-serif;
-  font-size:.55rem; letter-spacing:.2em; text-transform:uppercase;
+  font-family:var(--font-body);
+  font-size:var(--text-xs); letter-spacing:.2em; text-transform:uppercase;
   color:var(--teal3); margin-bottom:1.25rem;
 }
 .section-tag::before { content:''; width:24px; height:1px; background:var(--teal3); }
 .section-h {
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:clamp(2.2rem, 5vw, 3.75rem);
   font-weight:300; line-height:1.1; color:var(--txt);
   margin-bottom:1.25rem;
@@ -149,8 +146,8 @@ nav.scrolled {
 /* ── Buttons ── */
 .btn-primary {
   display:inline-block;
-  font-family:'Mulish',sans-serif;
-  font-size:.62rem; letter-spacing:.12em; text-transform:uppercase;
+  font-family:var(--font-body);
+  font-size:var(--text-xs); letter-spacing:.12em; text-transform:uppercase;
   background:var(--teal); color:var(--deep);
   padding:.75rem 1.75rem; border-radius:2px;
   border:none; cursor:pointer; text-decoration:none;
@@ -159,8 +156,8 @@ nav.scrolled {
 .btn-primary:hover { background:var(--teal2); transform:translateY(-1px); }
 .btn-ghost {
   display:inline-block;
-  font-family:'Mulish',sans-serif;
-  font-size:.62rem; letter-spacing:.12em; text-transform:uppercase;
+  font-family:var(--font-body);
+  font-size:var(--text-xs); letter-spacing:.12em; text-transform:uppercase;
   background:transparent; color:var(--txt2);
   padding:.75rem 1.75rem; border-radius:2px;
   border:1px solid var(--ln2); cursor:pointer; text-decoration:none;
@@ -180,8 +177,8 @@ nav.scrolled {
   gap:5rem; align-items:center;
 }
 .tr-hero-kicker {
-  font-family:'Mulish',sans-serif;
-  font-size:.65rem; letter-spacing:.04em;
+  font-family:var(--font-body);
+  font-size:var(--text-xs); letter-spacing:.04em;
   color:var(--txt3); line-height:1.9;
   max-width:44ch; margin-top:1.25rem;
 }
@@ -190,12 +187,12 @@ nav.scrolled {
   padding-left:3rem; border-left:1px solid var(--ln2);
 }
 .tr-stat-num {
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:3.5rem; font-weight:300; color:var(--teal); line-height:1;
 }
 .tr-stat-label {
-  font-family:'Mulish',sans-serif;
-  font-size:.55rem; letter-spacing:.12em; color:var(--txt3);
+  font-family:var(--font-body);
+  font-size:var(--text-xs); letter-spacing:.12em; color:var(--txt3);
   margin-top:.3rem; text-transform:uppercase;
 }
 
@@ -220,11 +217,11 @@ nav.scrolled {
   background:rgba(126,205,176,.08); border:1px solid var(--teal3);
   display:flex; align-items:center; justify-content:center;
   flex-shrink:0; margin-top:.1rem;
-  font-family:'Mulish',sans-serif; font-size:.5rem; color:var(--teal);
+  font-family:var(--font-body); font-size:var(--text-xs); color:var(--teal);
 }
 .tr-req-text {
-  font-family:'Mulish',sans-serif;
-  font-size:.58rem; letter-spacing:.03em; color:var(--txt3); line-height:1.7;
+  font-family:var(--font-body);
+  font-size:var(--text-xs); letter-spacing:.03em; color:var(--txt3); line-height:1.7;
 }
 .tr-req-text strong {
   display:block; color:var(--txt2); margin-bottom:.2rem; font-weight:400;
@@ -243,12 +240,12 @@ nav.scrolled {
   align-items:end; gap:2rem; margin-bottom:3.5rem;
 }
 .tr-session-intro {
-  font-family:'Mulish',sans-serif; font-size:.65rem;
+  font-family:var(--font-body); font-size:var(--text-xs);
   letter-spacing:.04em; color:var(--txt3); line-height:1.85;
   max-width:48ch; margin-top:.875rem;
 }
 .tr-badge {
-  font-family:'Mulish',sans-serif; font-size:.55rem;
+  font-family:var(--font-body); font-size:var(--text-xs);
   letter-spacing:.1em; text-transform:uppercase; color:var(--teal3);
   border:1px solid var(--ln2); border-radius:4px;
   padding:.4rem .875rem; white-space:nowrap; align-self:flex-start;
@@ -282,34 +279,34 @@ nav.scrolled {
 .pkg-card.featured::after {
   content:'Most popular';
   position:absolute; top:1.25rem; right:1.25rem;
-  font-family:'Mulish',sans-serif; font-size:.45rem;
+  font-family:var(--font-body); font-size:var(--text-xs);
   letter-spacing:.12em; text-transform:uppercase;
   color:var(--deep); background:var(--teal);
   padding:.3rem .7rem; border-radius:2px;
 }
 .pkg-tier {
-  font-family:'Mulish',sans-serif; font-size:.5rem;
+  font-family:var(--font-body); font-size:var(--text-xs);
   letter-spacing:.15em; text-transform:uppercase;
   color:var(--teal3); margin-bottom:1.5rem;
 }
 .pkg-price {
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:3.5rem; font-weight:300; color:var(--txt);
   line-height:1; letter-spacing:-.02em;
 }
 .pkg-price sup {
   font-size:1.35rem; color:var(--txt3);
-  font-family:'Mulish',sans-serif; font-weight:300;
+  font-family:var(--font-body); font-weight:400;
   letter-spacing:0; vertical-align:super;
 }
 .pkg-per {
-  font-family:'Mulish',sans-serif; font-size:.55rem;
+  font-family:var(--font-body); font-size:var(--text-xs);
   letter-spacing:.06em; color:var(--txt3);
   margin-top:.4rem; min-height:1.1em;
 }
 .pkg-save {
   display:inline-block; margin-top:.5rem; margin-bottom:1.5rem;
-  font-family:'Mulish',sans-serif; font-size:.5rem;
+  font-family:var(--font-body); font-size:var(--text-xs);
   letter-spacing:.08em; color:var(--teal);
   background:rgba(126,205,176,.08); border:1px solid rgba(126,205,176,.2);
   border-radius:2px; padding:.2rem .55rem;
@@ -321,7 +318,7 @@ nav.scrolled {
   gap:.65rem; flex:1; margin-bottom:1.75rem;
 }
 .pkg-features li {
-  font-family:'Mulish',sans-serif; font-size:.58rem;
+  font-family:var(--font-body); font-size:var(--text-xs);
   letter-spacing:.03em; color:var(--txt3); line-height:1.6;
   display:flex; gap:.625rem; align-items:flex-start;
 }
@@ -330,7 +327,7 @@ nav.scrolled {
 }
 .pkg-book {
   display:block; width:100%; text-align:center;
-  font-family:'Mulish',sans-serif; font-size:.6rem;
+  font-family:var(--font-body); font-size:var(--text-xs);
   letter-spacing:.1em; text-transform:uppercase;
   background:transparent; color:var(--teal);
   border:1px solid var(--teal3); border-radius:4px;
@@ -355,7 +352,7 @@ nav.scrolled {
   gap:2rem; border-top:1px solid var(--ln); flex-wrap:wrap;
 }
 .tr-back-text {
-  font-family:'Cormorant Garamond',serif;
+  font-family:var(--font-display);
   font-size:1.9rem; font-weight:300; color:var(--txt2); line-height:1.2;
 }
 .tr-back-text em { color:var(--teal); font-style:italic; }
@@ -380,42 +377,42 @@ nav.scrolled {
 .tr-modal-close {
   position:absolute; top:1.25rem; right:1.25rem;
   background:none; border:none; cursor:pointer;
-  font-family:'Mulish',sans-serif; font-size:.62rem;
+  font-family:var(--font-body); font-size:var(--text-xs);
   letter-spacing:.08em; color:var(--txt3); transition:color .2s;
 }
 .tr-modal-close:hover { color:var(--txt); }
 .tr-modal-eyebrow {
-  font-family:'Mulish',sans-serif; font-size:.5rem;
+  font-family:var(--font-body); font-size:var(--text-xs);
   letter-spacing:.15em; text-transform:uppercase;
   color:var(--teal3); margin-bottom:.75rem;
 }
 .tr-modal-title {
-  font-family:'Cormorant Garamond',serif; font-size:1.9rem;
+  font-family:var(--font-display); font-size:1.9rem;
   font-weight:300; color:var(--txt); line-height:1.2;
   margin-bottom:.5rem;
 }
 .tr-modal-sub {
-  font-family:'Mulish',sans-serif; font-size:.58rem;
+  font-family:var(--font-body); font-size:var(--text-xs);
   letter-spacing:.03em; color:var(--txt3); line-height:1.75;
   margin-bottom:1.75rem;
 }
 .tr-selected-pkg {
   background:rgba(126,205,176,.06); border:1px solid var(--teal3);
   border-radius:8px; padding:.875rem 1rem;
-  font-family:'Mulish',sans-serif; font-size:.62rem;
+  font-family:var(--font-body); font-size:var(--text-xs);
   color:var(--teal); margin-bottom:1.75rem; letter-spacing:.04em;
 }
 .tr-field { margin-bottom:1.25rem; }
 .tr-field label {
-  display:block; font-family:'Mulish',sans-serif;
-  font-size:.52rem; letter-spacing:.1em; text-transform:uppercase;
+  display:block; font-family:var(--font-body);
+  font-size:var(--text-xs); letter-spacing:.1em; text-transform:uppercase;
   color:var(--txt3); margin-bottom:.5rem;
 }
 .tr-field input, .tr-field select, .tr-field textarea {
   width:100%; background:var(--deep); color:var(--txt);
   border:1px solid var(--ln2); border-radius:8px;
-  padding:.75rem 1rem; font-family:'Mulish',sans-serif;
-  font-size:.65rem; letter-spacing:.03em; line-height:1.5;
+  padding:.75rem 1rem; font-family:var(--font-body);
+  font-size:var(--text-xs); letter-spacing:.03em; line-height:1.5;
   transition:border-color .2s; outline:none; appearance:none;
 }
 .tr-field input:focus, .tr-field select:focus, .tr-field textarea:focus {
@@ -425,7 +422,7 @@ nav.scrolled {
 .tr-field select option { background:var(--deep2); }
 .tr-modal-submit {
   width:100%; padding:.875rem;
-  font-family:'Mulish',sans-serif; font-size:.62rem;
+  font-family:var(--font-body); font-size:var(--text-xs);
   letter-spacing:.1em; text-transform:uppercase;
   background:var(--teal); color:var(--deep);
   border:none; border-radius:6px; cursor:pointer;
@@ -440,11 +437,11 @@ nav.scrolled {
   font-size:2.75rem; margin-bottom:1.25rem;
 }
 .tr-confirm-title {
-  font-family:'Cormorant Garamond',serif; font-size:1.65rem;
+  font-family:var(--font-display); font-size:1.65rem;
   font-weight:300; color:var(--txt); margin-bottom:.75rem;
 }
 .tr-confirm-msg {
-  font-family:'Mulish',sans-serif; font-size:.6rem;
+  font-family:var(--font-body); font-size:var(--text-xs);
   letter-spacing:.03em; color:var(--txt3); line-height:1.85;
 }
 
@@ -461,7 +458,7 @@ footer {
   flex-wrap:wrap; gap:1.5rem;
 }
 .tr-footer-brand {
-  font-family:'Cormorant Garamond',serif; font-size:1.1rem;
+  font-family:var(--font-display); font-size:1.1rem;
   font-weight:300; color:var(--txt2); letter-spacing:.06em;
   text-decoration:none;
 }
@@ -470,13 +467,13 @@ footer {
   display:flex; gap:2rem; flex-wrap:wrap;
 }
 .tr-footer-links a {
-  font-family:'Mulish',sans-serif; font-size:.55rem;
+  font-family:var(--font-body); font-size:var(--text-xs);
   letter-spacing:.08em; text-transform:uppercase;
   color:var(--txt3); text-decoration:none; transition:color .2s;
 }
 .tr-footer-links a:hover { color:var(--teal); }
 .tr-footer-copy {
-  font-family:'Mulish',sans-serif; font-size:.52rem;
+  font-family:var(--font-body); font-size:var(--text-xs);
   letter-spacing:.05em; color:var(--txt3);
   margin-top:2rem; padding-top:1.5rem;
   border-top:1px solid var(--ln); text-align:center;
@@ -531,17 +528,17 @@ footer {
 }
 /* === site-wide warm + readable system (Mulish body, Cormorant headings) === */
 :root{--deep:#0c1a15;--deep2:#112620;--deep3:#16291f;--surface:#1c3026;--txt:#ece8e0;--txt2:rgba(236,232,224,.80);--txt3:rgba(236,232,224,.60);--ln:rgba(236,232,224,.10);--ln2:rgba(236,232,224,.18)}
-body{font-family:'Mulish',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
-h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
-.nav-links a,.nav-cta,.nav-mobile a,.nav-mobile-cta,.btn-primary,.btn-ghost,button{font-family:'Mulish',sans-serif !important;font-weight:600}
+body{font-family:var(--font-body);line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--font-display)}
+.nav-links a,.nav-cta,.nav-mobile a,.nav-mobile-cta,.btn-primary,.btn-ghost,button{font-family:var(--font-body) !important;font-weight:600}
 
 /* prose -> readable sans */
-.tr-hero-kicker,.tr-session-intro,.tr-modal-sub,.tr-footer-copy,.pkg-features li,.pkg-features li *,.tr-req-text,.tr-req-text *{font-family:'Mulish',sans-serif !important;letter-spacing:normal}
+.tr-hero-kicker,.tr-session-intro,.tr-modal-sub,.tr-footer-copy,.pkg-features li,.pkg-features li *,.tr-req-text,.tr-req-text *{font-family:var(--font-body) !important;letter-spacing:normal}
 /* ── Training photos ── */
 .tr-hero{background-image:linear-gradient(180deg,rgba(12,26,21,.8) 0%,rgba(12,26,21,.72) 40%,rgba(12,26,21,.96) 100%),url('./tr-hero.jpg');background-size:cover;background-position:center}
 .tr-photoband{position:relative;height:clamp(220px,42vh,440px);background-size:cover;background-position:center;border-top:1px solid rgba(236,232,224,.10);border-bottom:1px solid rgba(236,232,224,.10)}
 .tr-photoband::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,26,21,.12),rgba(12,26,21,.66))}
-.tr-photoband span{position:absolute;bottom:1.25rem;left:clamp(1.75rem,5vw,3.5rem);z-index:1;font-family:'Mulish',sans-serif;font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(236,232,224,.85)}
+.tr-photoband span{position:absolute;bottom:1.25rem;left:clamp(1.75rem,5vw,3.5rem);z-index:1;font-family:var(--font-body);font-size:var(--text-xs);font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(236,232,224,.85)}
 .nav-logo{gap:0 !important}.nav-logo svg{display:none !important}.nav-logo::before{content:"";width:38px;height:38px;flex:0 0 auto;margin-right:.6rem;background:url(/logo-mark.png) center/contain no-repeat}.nav-logo strong{margin-left:.3em}.footer-logo{display:flex;align-items:center;gap:.6rem}.footer-logo img{width:44px;height:44px;display:block;flex:0 0 auto}.footer-watermark{position:absolute;right:-70px;bottom:-90px;width:360px;height:360px;background:url(/logo-mark.png) center/contain no-repeat;opacity:.05;pointer-events:none;z-index:-1}footer{position:relative;overflow:hidden;isolation:isolate}</style>
 <style>
 .nav-dd{position:relative;display:flex;align-items:center}
@@ -551,11 +548,15 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif}
 .nav-dd::after{content:'';position:absolute;top:100%;left:-1rem;right:-1rem;height:14px}
 .nav-dd-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(10px);margin-top:8px;background:rgba(12,26,21,.97);backdrop-filter:blur(18px);border:1px solid var(--ln2);border-radius:8px;padding:.45rem;min-width:215px;display:flex;flex-direction:column;gap:.1rem;opacity:0;visibility:hidden;transition:opacity .2s,transform .2s;box-shadow:0 18px 44px rgba(0,0,0,.45);z-index:300}
 .nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
-.nav-dd-menu a{padding:.65rem .85rem !important;border-radius:5px;white-space:nowrap;text-transform:none !important;letter-spacing:.02em !important;font-size:.82rem !important;color:var(--txt) !important}
-.nav-dd-menu a span{display:block;font-size:.62rem;letter-spacing:.04em;color:var(--txt3);margin-top:.15rem;text-transform:none}
+.nav-dd-menu a{padding:.65rem .85rem !important;border-radius:5px;white-space:nowrap;text-transform:none !important;letter-spacing:.02em !important;font-size:var(--text-xs) !important;color:var(--txt) !important}
+.nav-dd-menu a span{display:block;font-size:var(--text-xs);letter-spacing:.04em;color:var(--txt3);margin-top:.15rem;text-transform:none}
 .nav-dd-menu a:hover{background:rgba(126,205,176,.1);color:var(--teal) !important}
 </style>
-<link rel="icon" type="image/png" href="/logo-mark.png"><link rel="apple-touch-icon" href="/logo-mark.png"></head>
+<link rel="icon" type="image/png" href="/logo-mark.png"><link rel="apple-touch-icon" href="/logo-mark.png"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/type-system.css">
+</head>
 <body>
 
 <!-- ═══════════════════════════ NAV ═══════════════ -->

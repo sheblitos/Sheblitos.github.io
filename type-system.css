@@ -1,0 +1,73 @@
+/* =====================================================================
+   FREEDIVING BRAIN — UNIFIED TYPOGRAPHY SYSTEM
+   Single source of truth for fonts, type scale, and text a11y.
+   Custom properties are global (defined on :root) so every page's
+   inline <style> can reference them via var(), regardless of order.
+   WCAG 2.2 AA: body >=16px, labels/captions >=14px, rem units,
+   fluid headings, line-height >=1.5 body, line length <=70ch.
+   ===================================================================== */
+
+:root {
+  /* ---- 2 TYPEFACES (unified fallback stacks) ---- */
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-body:    'Mulish', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* ---- MODULAR TYPE SCALE (base 16px; nothing below 14px) ---- */
+  --text-xs:   0.875rem;   /* 14px — eyebrow labels, captions, meta (FLOOR) */
+  --text-sm:   1rem;       /* 16px — secondary / small body */
+  --text-base: 1.0625rem;  /* 17px — default body copy */
+  --text-md:   1.25rem;    /* 20px — lead paragraphs, small headings */
+  --text-lg:   1.5rem;     /* 24px — h4 / card titles */
+  --text-xl:   clamp(1.5rem, 1.10rem + 2.0vw, 2rem);        /* 24 -> 32 */
+  --text-2xl:  clamp(1.875rem, 1.30rem + 2.9vw, 2.75rem);   /* 30 -> 44  (h2) */
+  --text-3xl:  clamp(2.25rem, 1.40rem + 4.2vw, 3.5rem);     /* 36 -> 56  (h1) */
+  --text-4xl:  clamp(2.5rem, 1.30rem + 6.0vw, 4.25rem);     /* 40 -> 68  (hero) */
+
+  /* ---- LINE HEIGHTS ---- */
+  --lh-body:    1.6;   /* >= 1.5 for readability (WCAG 1.4.8-friendly) */
+  --lh-snug:    1.35;
+  --lh-heading: 1.15;  /* tight for large display type */
+
+  /* ---- MEASURE (line length) ---- */
+  --measure: 68ch;     /* <= 70ch */
+
+  /* ---- TRACKING for the uppercase micro-labels (kept small & legible) ---- */
+  --track-label: 0.14em;
+}
+
+/* Respect the user's browser default font size (WCAG 1.4.4 / 1.4.12). */
+html { font-size: 100%; }
+
+/* Base body typography — >=16px, comfortable line-height. */
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--lh-body);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Display font for real headings. */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: var(--lh-heading);
+}
+
+/* Keep reading columns within a legible measure. */
+p { max-width: var(--measure); }
+
+/* Form controls at >=16px so iOS Safari never auto-zooms on focus,
+   and tap targets meet the 44x44 minimum (WCAG 2.5.8). */
+input, select, textarea, button {
+  font-family: var(--font-body);
+  font-size: max(1rem, var(--text-sm));
+}
+button, .btn, [role="button"], input[type="submit"], input[type="button"], a.btn {
+  min-height: 44px;
+}
+
+/* Utility: the smallest allowed text — never below 14px. */
+.u-label, .caption, small {
+  font-size: var(--text-xs);
+  line-height: var(--lh-snug);
+}

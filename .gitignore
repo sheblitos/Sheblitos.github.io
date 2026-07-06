@@ -1,3 +1,4 @@
 *.bak
 *.bak2
 .netlify/
+_type-backup/
