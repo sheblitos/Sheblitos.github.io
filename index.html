@@ -1723,7 +1723,7 @@ footer > .footer-grid, footer > .footer-bottom { position:relative; z-index:1; }
 
 /* Hero — your split-water surface shot */
 .hero {
-  background-image: url('./hero-surface.jpg');
+  background-image: url('./hero-surface.jpg');background-image: image-set(url('./hero-surface.avif') type('image/avif'), url('./hero-surface.webp') type('image/webp'), url('./hero-surface.jpg') type('image/jpeg'));
   background-size: cover;
   background-position: center 40%;
 }
@@ -1814,7 +1814,9 @@ footer > .footer-grid, footer > .footer-bottom { position:relative; z-index:1; }
   .science {
     background-image:
       linear-gradient(180deg, rgba(12,26,21,.82) 0%, rgba(12,26,21,.6) 45%, rgba(12,26,21,.92) 100%),
-      url('./method-bg.jpg');
+      url('./method-bg.jpg');background-image:
+      linear-gradient(180deg, rgba(12,26,21,.82) 0%, rgba(12,26,21,.6) 45%, rgba(12,26,21,.92) 100%),
+      image-set(url('./method-bg.avif') type('image/avif'), url('./method-bg.webp') type('image/webp'), url('./method-bg.jpg') type('image/jpeg'));
     background-size: cover;
     background-position: center 32%;
     background-attachment: scroll;
@@ -1903,7 +1905,9 @@ footer > .footer-grid, footer > .footer-bottom { position:relative; z-index:1; }
 .booking {
   background-image:
     linear-gradient(180deg, rgba(12,26,21,.84) 0%, rgba(12,26,21,.72) 40%, rgba(12,26,21,.92) 100%),
-    url('./students-buoy-1.jpg');
+    url('./students-buoy-1.jpg');background-image:
+    linear-gradient(180deg, rgba(12,26,21,.84) 0%, rgba(12,26,21,.72) 40%, rgba(12,26,21,.92) 100%),
+    image-set(url('./students-buoy-1.avif') type('image/avif'), url('./students-buoy-1.webp') type('image/webp'), url('./students-buoy-1.jpg') type('image/jpeg'));
   background-size: cover;
   background-position: center;
 }
@@ -1976,33 +1980,45 @@ footer > .footer-grid, footer > .footer-bottom { position:relative; z-index:1; }
 .mob-exp-card.dahab {
   background:
     linear-gradient(rgba(12,26,21,.78) 0%, rgba(12,26,21,.92) 100%),
-    url('./expedition-ras-mohamed.jpg') center / cover no-repeat;
+    url('./expedition-ras-mohamed.jpg') center / cover no-repeat;background:
+    linear-gradient(rgba(12,26,21,.78) 0%, rgba(12,26,21,.92) 100%),
+    image-set(url('./expedition-ras-mohamed.avif') type('image/avif'), url('./expedition-ras-mohamed.webp') type('image/webp'), url('./expedition-ras-mohamed.jpg') type('image/jpeg')) center / cover no-repeat;
 }
 .mob-exp-card.bali {
   background:
     linear-gradient(rgba(12,26,21,.68) 0%, rgba(12,26,21,.88) 100%),
-    url('./bali-manta-rays.jpg') center bottom / cover no-repeat;
+    url('./bali-manta-rays.jpg') center bottom / cover no-repeat;background:
+    linear-gradient(rgba(12,26,21,.68) 0%, rgba(12,26,21,.88) 100%),
+    image-set(url('./bali-manta-rays.avif') type('image/avif'), url('./bali-manta-rays.webp') type('image/webp'), url('./bali-manta-rays.jpg') type('image/jpeg')) center bottom / cover no-repeat;
 }
 /* Photo-backed expedition cards */
 .exp-card.dahab {
   background:
     linear-gradient(rgba(12,26,21,.82) 0%, rgba(12,26,21,.91) 100%),
-    url('./expedition-ras-mohamed.jpg') center / cover no-repeat;
+    url('./expedition-ras-mohamed.jpg') center / cover no-repeat;background:
+    linear-gradient(rgba(12,26,21,.82) 0%, rgba(12,26,21,.91) 100%),
+    image-set(url('./expedition-ras-mohamed.avif') type('image/avif'), url('./expedition-ras-mohamed.webp') type('image/webp'), url('./expedition-ras-mohamed.jpg') type('image/jpeg')) center / cover no-repeat;
 }
 .exp-card.dahab:hover {
   background:
     linear-gradient(rgba(12,26,21,.66) 0%, rgba(12,26,21,.80) 100%),
-    url('./expedition-ras-mohamed.jpg') center / cover no-repeat;
+    url('./expedition-ras-mohamed.jpg') center / cover no-repeat;background:
+    linear-gradient(rgba(12,26,21,.66) 0%, rgba(12,26,21,.80) 100%),
+    image-set(url('./expedition-ras-mohamed.avif') type('image/avif'), url('./expedition-ras-mohamed.webp') type('image/webp'), url('./expedition-ras-mohamed.jpg') type('image/jpeg')) center / cover no-repeat;
 }
 .exp-card.bali {
   background:
     linear-gradient(rgba(12,26,21,.74) 0%, rgba(12,26,21,.88) 100%),
-    url('./bali-manta-rays.jpg') center bottom / cover no-repeat;
+    url('./bali-manta-rays.jpg') center bottom / cover no-repeat;background:
+    linear-gradient(rgba(12,26,21,.74) 0%, rgba(12,26,21,.88) 100%),
+    image-set(url('./bali-manta-rays.avif') type('image/avif'), url('./bali-manta-rays.webp') type('image/webp'), url('./bali-manta-rays.jpg') type('image/jpeg')) center bottom / cover no-repeat;
 }
 .exp-card.bali:hover {
   background:
     linear-gradient(rgba(12,26,21,.56) 0%, rgba(12,26,21,.78) 100%),
-    url('./bali-manta-rays.jpg') center bottom / cover no-repeat;
+    url('./bali-manta-rays.jpg') center bottom / cover no-repeat;background:
+    linear-gradient(rgba(12,26,21,.56) 0%, rgba(12,26,21,.78) 100%),
+    image-set(url('./bali-manta-rays.avif') type('image/avif'), url('./bali-manta-rays.webp') type('image/webp'), url('./bali-manta-rays.jpg') type('image/jpeg')) center bottom / cover no-repeat;
 }
 .exp-card-flag  { font-size: 1.75rem; line-height: 1; }
 .exp-card-num {
@@ -2256,24 +2272,32 @@ footer > .footer-grid, footer > .footer-bottom { position:relative; z-index:1; }
 .tp-card.ow-photo {
   background:
     linear-gradient(rgba(12,26,21,.80) 0%, rgba(12,26,21,.92) 100%),
-    url('./students-buoy-openwater.jpg') center / cover no-repeat;
+    url('./students-buoy-openwater.jpg') center / cover no-repeat;background:
+    linear-gradient(rgba(12,26,21,.80) 0%, rgba(12,26,21,.92) 100%),
+    image-set(url('./students-buoy-openwater.avif') type('image/avif'), url('./students-buoy-openwater.webp') type('image/webp'), url('./students-buoy-openwater.jpg') type('image/jpeg')) center / cover no-repeat;
 }
 .tp-card.ow-photo:hover {
   border-color:var(--teal3);
   background:
     linear-gradient(rgba(12,26,21,.65) 0%, rgba(12,26,21,.82) 100%),
-    url('./students-buoy-openwater.jpg') center / cover no-repeat;
+    url('./students-buoy-openwater.jpg') center / cover no-repeat;background:
+    linear-gradient(rgba(12,26,21,.65) 0%, rgba(12,26,21,.82) 100%),
+    image-set(url('./students-buoy-openwater.avif') type('image/avif'), url('./students-buoy-openwater.webp') type('image/webp'), url('./students-buoy-openwater.jpg') type('image/jpeg')) center / cover no-repeat;
 }
 .tp-card.pool-photo {
   background:
     linear-gradient(rgba(12,26,21,.80) 0%, rgba(12,26,21,.92) 100%),
-    url('./pool-coaching-session.jpg') center / cover no-repeat;
+    url('./pool-coaching-session.jpg') center / cover no-repeat;background:
+    linear-gradient(rgba(12,26,21,.80) 0%, rgba(12,26,21,.92) 100%),
+    image-set(url('./pool-coaching-session.avif') type('image/avif'), url('./pool-coaching-session.webp') type('image/webp'), url('./pool-coaching-session.jpg') type('image/jpeg')) center / cover no-repeat;
 }
 .tp-card.pool-photo:hover {
   border-color:var(--teal3);
   background:
     linear-gradient(rgba(12,26,21,.65) 0%, rgba(12,26,21,.82) 100%),
-    url('./pool-coaching-session.jpg') center / cover no-repeat;
+    url('./pool-coaching-session.jpg') center / cover no-repeat;background:
+    linear-gradient(rgba(12,26,21,.65) 0%, rgba(12,26,21,.82) 100%),
+    image-set(url('./pool-coaching-session.avif') type('image/avif'), url('./pool-coaching-session.webp') type('image/webp'), url('./pool-coaching-session.jpg') type('image/jpeg')) center / cover no-repeat;
 }
 @media (max-width:680px) {
   .tp-cards { grid-template-columns:1fr; gap:1rem; }
@@ -2476,7 +2500,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 @media (hover:none){.dr-grab::before{border-color:rgba(126,205,176,.3)}}
 @media(prefers-reduced-motion:reduce){.dive-rope-panel,.dr-rail,.dr-grab{display:none}}
 /* ── Photos in sections 2 & 3 ── */
-.why{background-image:linear-gradient(180deg,rgba(12,26,21,.9) 0%,rgba(12,26,21,.82) 45%,rgba(12,26,21,.93) 100%),url('./training-line.jpg');background-size:cover;background-position:center 26%}
+.why{background-image:linear-gradient(180deg,rgba(12,26,21,.9) 0%,rgba(12,26,21,.82) 45%,rgba(12,26,21,.93) 100%),url('./training-line.jpg');background-image:linear-gradient(180deg,rgba(12,26,21,.9) 0%,rgba(12,26,21,.82) 45%,rgba(12,26,21,.93) 100%),image-set(url('./training-line.avif') type('image/avif'), url('./training-line.webp') type('image/webp'), url('./training-line.jpg') type('image/jpeg'));background-size:cover;background-position:center 26%}
 .funnel::before{display:none}
 .f-step{padding:0 1rem}
 .f-photo{width:100%;aspect-ratio:4/3;border-radius:12px;background-size:cover;background-position:center;margin-bottom:1.4rem;box-shadow:0 14px 30px rgba(0,0,0,.42);filter:brightness(.93) saturate(1.08)}
@@ -2532,6 +2556,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/type-system.css">
+<link rel="preload" as="image" href="./hero-surface.avif" type="image/avif" fetchpriority="high">
 </head>
 <body>
 <form name="reservation" data-netlify="true" netlify-honeypot="bot-field" hidden aria-hidden="true">
@@ -2707,21 +2732,21 @@ h1,h2,h3,h4{font-family:var(--font-display)}
   <p class="section-intro reveal" style="text-align:center;margin:0 auto 0;">Never held your breath underwater? Perfect. Three steps — land, pool, then the open sea. Nothing is ever a leap.</p>
   <div class="funnel">
     <div class="f-step reveal">
-      <div class="f-photo" style="background-image:url('./c2s-dry.jpg')"></div>
+      <div class="f-photo" style="background-image:image-set(url('./c2s-dry.avif') type('image/avif'), url('./c2s-dry.webp') type('image/webp'), url('./c2s-dry.jpg') type('image/jpeg'))"></div>
       <div class="f-num" aria-hidden="true">1</div>
       <p class="f-tag">No water</p>
       <p class="f-title">Dry Masterclass</p>
       <p class="f-desc">Dry land first: breathing, mastering equalization techniques, and your first breath-hold. Most people shock themselves at how long they can go.</p>
     </div>
     <div class="f-step reveal" style="transition-delay:.15s">
-      <div class="f-photo" style="background-image:url('./c2s-pool.jpg')"></div>
+      <div class="f-photo" style="background-image:image-set(url('./c2s-pool.avif') type('image/avif'), url('./c2s-pool.webp') type('image/webp'), url('./c2s-pool.jpg') type('image/jpeg'))"></div>
       <div class="f-num" aria-hidden="true">2</div>
       <p class="f-tag">Pool sessions</p>
       <p class="f-title">Pool Freedive</p>
       <p class="f-desc">Then the pool — shallow, calm, fully guided. Until one breath underwater feels completely natural.</p>
     </div>
     <div class="f-step reveal" style="transition-delay:.3s">
-      <div class="f-photo" style="background-image:url('./c2s-sea.jpg')"></div>
+      <div class="f-photo" style="background-image:image-set(url('./c2s-sea.avif') type('image/avif'), url('./c2s-sea.webp') type('image/webp'), url('./c2s-sea.jpg') type('image/jpeg'))"></div>
       <div class="f-num" aria-hidden="true">3</div>
       <p class="f-tag">Open water</p>
       <p class="f-title">Into the Deep</p>
@@ -2742,21 +2767,21 @@ h1,h2,h3,h4{font-family:var(--font-display)}
   <div class="mob-c2s-strip">
     <div class="mob-course-track" id="mobC2sTrack">
       <div class="mob-c2s-card">
-        <div class="mob-c2s-photo" style="background-image:url('./c2s-dry.jpg')"></div>
+        <div class="mob-c2s-photo" style="background-image:image-set(url('./c2s-dry.avif') type('image/avif'), url('./c2s-dry.webp') type('image/webp'), url('./c2s-dry.jpg') type('image/jpeg'))"></div>
         <span class="mob-c2s-step">Step 01 · No water</span>
         <p class="mob-c2s-title">Dry Masterclass</p>
         <p class="mob-c2s-desc">Dry land first: breathing, mastering equalization techniques, and your first breath-hold. Most people shock themselves at how long they can go.</p>
         <span class="mob-c2s-prog">1 / 3</span>
       </div>
       <div class="mob-c2s-card">
-        <div class="mob-c2s-photo" style="background-image:url('./c2s-pool.jpg')"></div>
+        <div class="mob-c2s-photo" style="background-image:image-set(url('./c2s-pool.avif') type('image/avif'), url('./c2s-pool.webp') type('image/webp'), url('./c2s-pool.jpg') type('image/jpeg'))"></div>
         <span class="mob-c2s-step">Step 02 · Pool sessions</span>
         <p class="mob-c2s-title">Pool Freedive</p>
         <p class="mob-c2s-desc">Then the pool — shallow, calm, fully guided. Until one breath underwater feels completely natural.</p>
         <span class="mob-c2s-prog">2 / 3</span>
       </div>
       <div class="mob-c2s-card">
-        <div class="mob-c2s-photo" style="background-image:url('./c2s-sea.jpg')"></div>
+        <div class="mob-c2s-photo" style="background-image:image-set(url('./c2s-sea.avif') type('image/avif'), url('./c2s-sea.webp') type('image/webp'), url('./c2s-sea.jpg') type('image/jpeg'))"></div>
         <span class="mob-c2s-step">Step 03 · Open water</span>
         <p class="mob-c2s-title">Into the Deep</p>
         <p class="mob-c2s-desc">Then the sea — a buoy, a line, everything you've trained. Arrive ready, and depth is the easy part.</p>
@@ -2785,7 +2810,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
       <a href="/blog/mammalian-dive-response" class="sci-method-link reveal">Read more about the dive reflex →</a>
     </div>
     <figure class="method-photo reveal">
-      <img src="./method-bg.jpg" alt="Freediver floating weightless underwater, fully relaxed, as sunlight filters down from the surface" loading="lazy">
+      <picture><source srcset="./method-bg.avif" type="image/avif"><source srcset="./method-bg.webp" type="image/webp"><img src="./method-bg.jpg" alt="Freediver floating weightless underwater, fully relaxed, as sunlight filters down from the surface" loading="lazy" width="1600" height="1200"></picture>
       <figcaption class="method-photo-cap">Relaxed. Weightless. The dive reflex at work.</figcaption>
     </figure>
   </div>
@@ -2812,7 +2837,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
   <div class="course-carousel-wrap reveal">
     <button class="course-nav prev" type="button" aria-label="Previous course">&#8249;</button>
     <div class="course-carousel" data-course-carousel>
-      <article class="course-card" data-ci="ci1" style="background-image:url('./course-1.jpg')" onclick="openCourse('ci1')">
+      <article class="course-card" data-ci="ci1" style="background-image:image-set(url('./course-1.avif') type('image/avif'), url('./course-1.webp') type('image/webp'), url('./course-1.jpg') type('image/jpeg'))" onclick="openCourse('ci1')">
         <div class="cc-grad"></div>
         <div class="cc-body">
           <span class="cc-badge">Entry &middot; Pool only</span>
@@ -2822,7 +2847,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
           <span class="cc-cta">See details &rarr;</span>
         </div>
       </article>
-      <article class="course-card" data-ci="ci2" style="background-image:url('./training-line.jpg')" onclick="openCourse('ci2')">
+      <article class="course-card" data-ci="ci2" style="background-image:image-set(url('./training-line.avif') type('image/avif'), url('./training-line.webp') type('image/webp'), url('./training-line.jpg') type('image/jpeg'))" onclick="openCourse('ci2')">
         <div class="cc-grad"></div>
         <div class="cc-body">
           <span class="cc-badge">Foundational &middot; Open water</span>
@@ -2832,7 +2857,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
           <span class="cc-cta">See details &rarr;</span>
         </div>
       </article>
-      <article class="course-card" data-ci="ci3" style="background-image:url('./course-3.jpg')" onclick="openCourse('ci3')">
+      <article class="course-card" data-ci="ci3" style="background-image:image-set(url('./course-3.avif') type('image/avif'), url('./course-3.webp') type('image/webp'), url('./course-3.jpg') type('image/jpeg'))" onclick="openCourse('ci3')">
         <div class="cc-grad"></div>
         <div class="cc-body">
           <span class="cc-badge">Advanced</span>
@@ -2842,7 +2867,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
           <span class="cc-cta">See details &rarr;</span>
         </div>
       </article>
-      <article class="course-card" data-ci="ci4" style="background-image:url('./course-4.jpg')" onclick="openCourse('ci4')">
+      <article class="course-card" data-ci="ci4" style="background-image:image-set(url('./course-4.avif') type('image/avif'), url('./course-4.webp') type('image/webp'), url('./course-4.jpg') type('image/jpeg'))" onclick="openCourse('ci4')">
         <div class="cc-grad"></div>
         <div class="cc-body">
           <span class="cc-badge">Performance</span>
@@ -2852,7 +2877,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
           <span class="cc-cta">See details &rarr;</span>
         </div>
       </article>
-      <article class="course-card" data-ci="ci5" style="background-image:url('./course-5.jpg')" onclick="openCourse('ci5')">
+      <article class="course-card" data-ci="ci5" style="background-image:image-set(url('./course-5.avif') type('image/avif'), url('./course-5.webp') type('image/webp'), url('./course-5.jpg') type('image/jpeg'))" onclick="openCourse('ci5')">
         <div class="cc-grad"></div>
         <div class="cc-body">
           <span class="cc-badge">Professional</span>
@@ -3183,17 +3208,17 @@ h1,h2,h3,h4{font-family:var(--font-display)}
   <p class="section-tag reveal" style="justify-content:center;" id="mw-heading">Beyond the courses</p>
   <h2 class="section-h reveal" style="text-align:center;margin:0 auto 2.25rem;">More ways to <em>dive with us.</em></h2>
   <div class="mw-grid">
-    <a class="mw-card reveal" href="/training"><img class="mw-thumb" src="./training-line.jpg" alt="Two freedivers training on the line" loading="lazy"><div class="mw-body">
+    <a class="mw-card reveal" href="/training"><picture><source srcset="./training-line.avif" type="image/avif"><source srcset="./training-line.webp" type="image/webp"><img class="mw-thumb" src="./training-line.jpg" alt="Two freedivers training on the line" loading="lazy" width="1080" height="1206"></picture><div class="mw-body">
       <h3>Training Sessions</h3>
       <p>Drop-in pool &amp; open-water sessions for certified freedivers of any level. From &euro;25.</p>
       <span class="mw-link">View packages &rarr;</span></div>
     </a>
-    <a class="mw-card reveal" href="/expeditions" style="transition-delay:.08s"><img class="mw-thumb" src="./bali-manta-rays.jpg" alt="A manta ray gliding past a freediver in Bali" loading="lazy"><div class="mw-body">
+    <a class="mw-card reveal" href="/expeditions" style="transition-delay:.08s"><picture><source srcset="./bali-manta-rays.avif" type="image/avif"><source srcset="./bali-manta-rays.webp" type="image/webp"><img class="mw-thumb" src="./bali-manta-rays.jpg" alt="A manta ray gliding past a freediver in Bali" loading="lazy" width="1400" height="1371"></picture><div class="mw-body">
       <h3>Travel with us</h3>
       <p>Dahab, Bali, Sri Lanka, Tenerife &mdash; dive trips led personally by Shebl &amp; Rimi.</p>
       <span class="mw-link">See destinations &rarr;</span></div>
     </a>
-    <a class="mw-card reveal" href="/programmes" style="transition-delay:.16s"><img class="mw-thumb" src="./dt-card.jpg" alt="The whole crew smiling together on the buoy after an open-water session" loading="lazy"><div class="mw-body">
+    <a class="mw-card reveal" href="/programmes" style="transition-delay:.16s"><picture><source srcset="./dt-card.avif" type="image/avif"><source srcset="./dt-card.webp" type="image/webp"><img class="mw-thumb" src="./dt-card.jpg" alt="The whole crew smiling together on the buoy after an open-water session" loading="lazy" width="1200" height="600"></picture><div class="mw-body">
       <h3>Deeper Together</h3>
       <p>Team experiences in the water &mdash; trust, calm and connection for companies, startups &amp; sports teams.</p>
       <span class="mw-link">Teams Workshops &rarr;</span></div>
@@ -3210,27 +3235,27 @@ h1,h2,h3,h4{font-family:var(--font-display)}
   </div>
   <div class="comm-grid reveal">
     <figure class="comm-item">
-      <img src="./comm-happy-students.jpg" alt="Freediving Brain students celebrating together after a course" loading="lazy">
+      <picture><source srcset="./comm-happy-students.avif" type="image/avif"><source srcset="./comm-happy-students.webp" type="image/webp"><img src="./comm-happy-students.jpg" alt="Freediving Brain students celebrating together after a course" loading="lazy" width="825" height="1100"></picture>
       <figcaption class="comm-cap">After the course</figcaption>
     </figure>
     <figure class="comm-item">
-      <img src="./comm-boat-smiles.jpg" alt="Students smiling on the boat after a dive in the Red Sea" loading="lazy">
+      <picture><source srcset="./comm-boat-smiles.avif" type="image/avif"><source srcset="./comm-boat-smiles.webp" type="image/webp"><img src="./comm-boat-smiles.jpg" alt="Students smiling on the boat after a dive in the Red Sea" loading="lazy" width="1100" height="825"></picture>
       <figcaption class="comm-cap">Boat day · Red Sea</figcaption>
     </figure>
     <figure class="comm-item">
-      <img src="./comm-sunset.jpg" alt="Surfacing high-five after a personal-best dive, Dahab" loading="lazy">
+      <picture><source srcset="./comm-sunset.avif" type="image/avif"><source srcset="./comm-sunset.webp" type="image/webp"><img src="./comm-sunset.jpg" alt="Surfacing high-five after a personal-best dive, Dahab" loading="lazy" width="1100" height="619"></picture>
       <figcaption class="comm-cap">Sunset session</figcaption>
     </figure>
     <figure class="comm-item">
-      <img src="./comm-celebration.jpg" alt="The group celebrating at the Ras Mohamed monument, Sinai" loading="lazy">
+      <picture><source srcset="./comm-celebration.avif" type="image/avif"><source srcset="./comm-celebration.webp" type="image/webp"><img src="./comm-celebration.jpg" alt="The group celebrating at the Ras Mohamed monument, Sinai" loading="lazy" width="878" height="1100"></picture>
       <figcaption class="comm-cap">First depth, celebrated</figcaption>
     </figure>
     <figure class="comm-item">
-      <img src="./comm-bluehole.jpg" alt="A student and Shebl after a session at the Lighthouse, Dahab" loading="lazy">
+      <picture><source srcset="./comm-bluehole.avif" type="image/avif"><source srcset="./comm-bluehole.webp" type="image/webp"><img src="./comm-bluehole.jpg" alt="A student and Shebl after a session at the Lighthouse, Dahab" loading="lazy" width="1200" height="675"></picture>
       <figcaption class="comm-cap">The Blue Hole · Dahab</figcaption>
     </figure>
     <figure class="comm-item">
-      <img src="./comm-pool-laughter.jpg" alt="A pool static breath-hold session with the group" loading="lazy">
+      <picture><source srcset="./comm-pool-laughter.avif" type="image/avif"><source srcset="./comm-pool-laughter.webp" type="image/webp"><img src="./comm-pool-laughter.jpg" alt="A pool static breath-hold session with the group" loading="lazy" width="1200" height="900"></picture>
       <figcaption class="comm-cap">Pool sessions</figcaption>
     </figure>
   </div>
@@ -3300,7 +3325,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
         <div class="about-grid">
           <div class="about-left">
             <div class="portrait reveal-left">
-              <img class="portrait-img" src="./shebl.jpg" alt="Shebl - Founder & Head Instructor Trainer" decoding="async">
+              <picture><source srcset="./shebl.avif" type="image/avif"><source srcset="./shebl.webp" type="image/webp"><img class="portrait-img" src="./shebl.jpg" alt="Shebl - Founder & Head Instructor Trainer" decoding="async" width="1000" height="1250"></picture>
             </div>
             <div class="creds-grid reveal">
               <div class="cred-item"><p class="cred-label">Certification</p><p class="cred-val">AIDA Instructor Trainer · SSI Instructor Trainer</p></div>
@@ -3328,7 +3353,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
         <div class="about-grid">
           <div class="about-left">
             <div class="portrait">
-              <img class="portrait-img" src="./rimi.jpg" alt="Rimi - Co-Organizer & Freediving Instructor Candidate" decoding="async">
+              <picture><source srcset="./rimi.avif" type="image/avif"><source srcset="./rimi.webp" type="image/webp"><img class="portrait-img" src="./rimi.jpg" alt="Rimi - Co-Organizer & Freediving Instructor Candidate" decoding="async" width="769" height="1024"></picture>
             </div>
             <div class="creds-grid">
               <div class="cred-item"><p class="cred-label">Role</p><p class="cred-val">Co-Organizer · Instructor Candidate</p></div>
@@ -3366,7 +3391,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
     <div class="instructor-track" id="instructorTrack">
 
       <div class="instructor-card">
-        <div class="instructor-card-photo"><img src="./shebl.jpg" alt="Shebl - Founder & Head Instructor Trainer" decoding="async">
+        <div class="instructor-card-photo"><picture><source srcset="./shebl.avif" type="image/avif"><source srcset="./shebl.webp" type="image/webp"><img src="./shebl.jpg" alt="Shebl - Founder & Head Instructor Trainer" decoding="async" width="1000" height="1250"></picture>
         </div>
         <div class="instructor-card-body">
           <p class="instructor-card-tag">The founders</p>
@@ -3382,7 +3407,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
       </div>
 
       <div class="instructor-card">
-        <div class="instructor-card-photo"><img src="./rimi.jpg" alt="Rimi - Co-Organizer & Freediving Instructor Candidate" decoding="async">
+        <div class="instructor-card-photo"><picture><source srcset="./rimi.avif" type="image/avif"><source srcset="./rimi.webp" type="image/webp"><img src="./rimi.jpg" alt="Rimi - Co-Organizer & Freediving Instructor Candidate" decoding="async" width="769" height="1024"></picture>
         </div>
         <div class="instructor-card-body">
           <p class="instructor-card-tag">The founders</p>
@@ -3440,7 +3465,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
   <div class="footer-watermark" aria-hidden="true"></div>
   <div class="footer-grid">
     <div>
-      <p class="footer-logo"><img src="/logo-mark.png" alt="" width="44" height="44">Freediving <span>Brain</span></p>
+      <p class="footer-logo"><picture><source srcset="/logo-mark.webp" type="image/webp"><img src="/logo-mark.png" alt="" width="44" height="44"></picture>Freediving <span>Brain</span></p>
       <p class="footer-tagline">Barcelona's freediving school built on the mental game. AIDA certified. Mediterranean based. Mind-first methodology.</p>
     </div>
     <div>

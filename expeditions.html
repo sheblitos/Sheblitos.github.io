@@ -223,6 +223,13 @@ nav.scrolled{
       rgba(12,26,21,.72) 74%,
       rgba(12,26,21,.98) 100%),
     url('./exp-hero.jpg'),
+    var(--deep);background:
+    linear-gradient(180deg,
+      rgba(12,26,21,.5) 0%,
+      rgba(12,26,21,.28) 38%,
+      rgba(12,26,21,.72) 74%,
+      rgba(12,26,21,.98) 100%),
+    image-set(url('./exp-hero.avif') type('image/avif'), url('./exp-hero.webp') type('image/webp'), url('./exp-hero.jpg') type('image/jpeg')),
     var(--deep);
   background-size: cover;
   background-position: center 52%;
@@ -915,6 +922,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/type-system.css">
+<link rel="preload" as="image" href="./exp-hero.avif" type="image/avif" fetchpriority="high">
 </head>
 <body>
 
@@ -1028,7 +1036,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
   <div class="exp-carousel-wrap reveal">
     <button class="exp-nav exp-nav-prev" type="button" aria-label="Previous destination">&#8249;</button>
     <div class="exp-carousel" data-exp-carousel>
-      <article class="exp-card" style="background-image:url('./dahab-2.jpg')">
+      <article class="exp-card" style="background-image:image-set(url('./dahab-2.avif') type('image/avif'), url('./dahab-2.webp') type('image/webp'), url('./dahab-2.jpg') type('image/jpeg'))">
         <div class="exp-card-grad"></div>
         <div class="exp-card-body">
           <h3 class="exp-card-title">Dahab<span>Red Sea &middot; Egypt</span></h3>
@@ -1036,7 +1044,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
           <a class="exp-card-cta" href="#dahab" data-trip="dahab" onclick="openTrip('dahab',event)">Learn more <span>&#8594;</span></a>
         </div>
       </article>
-      <article class="exp-card" style="background-image:url('./bali-1.jpg')">
+      <article class="exp-card" style="background-image:image-set(url('./bali-1.avif') type('image/avif'), url('./bali-1.webp') type('image/webp'), url('./bali-1.jpg') type('image/jpeg'))">
         <div class="exp-card-grad"></div>
         <div class="exp-card-body">
           <h3 class="exp-card-title">Bali<span>Indonesia &middot; Bali to Flores</span></h3>
@@ -1044,7 +1052,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
           <a class="exp-card-cta" href="#bali" data-trip="bali" onclick="openTrip('bali',event)">Learn more <span>&#8594;</span></a>
         </div>
       </article>
-      <article class="exp-card" style="background-image:url('./sl-mirissa.jpg')">
+      <article class="exp-card" style="background-image:image-set(url('./sl-mirissa.avif') type('image/avif'), url('./sl-mirissa.webp') type('image/webp'), url('./sl-mirissa.jpg') type('image/jpeg'))">
         <div class="exp-card-grad"></div>
         <div class="exp-card-body">
           <h3 class="exp-card-title">Sri Lanka<span>Blue whales &middot; Mirissa</span></h3>
@@ -1052,7 +1060,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
           <a class="exp-card-cta" href="#srilanka" data-trip="srilanka" onclick="openTrip('srilanka',event)">Learn more <span>&#8594;</span></a>
         </div>
       </article>
-      <article class="exp-card" style="background-image:url('./ten-beach.jpg')">
+      <article class="exp-card" style="background-image:image-set(url('./ten-beach.avif') type('image/avif'), url('./ten-beach.webp') type('image/webp'), url('./ten-beach.jpg') type('image/jpeg'))">
         <div class="exp-card-grad"></div>
         <div class="exp-card-body">
           <h3 class="exp-card-title">Tenerife<span>Canary Islands &middot; Atlantic</span></h3>
@@ -1069,11 +1077,11 @@ h1,h2,h3,h4{font-family:var(--font-display)}
   <div class="dest" id="dahab">
     <div class="dest-visual dahab">
       <div class="dest-slider" data-slider aria-label="Dahab photo slideshow">
-        <div class="ds-slide active" style="background-image:url('./dahab-1.jpg')" role="img" aria-label="Freediver descending into the deep blue at Dahab"></div>
-        <div class="ds-slide" style="background-image:url('./dahab-2.jpg')" role="img" aria-label="Cave dive at Ras Mohamed, Red Sea"></div>
-        <div class="ds-slide" style="background-image:url('./dahab-3.jpg')" role="img" aria-label="Surfacing high-five after a personal-best dive, Dahab"></div>
-        <div class="ds-slide" style="background-image:url('./dahab-4.jpg')" role="img" aria-label="Student and instructor after a session at the Lighthouse, Dahab"></div>
-        <div class="ds-slide" style="background-image:url('./wadi-genai.jpg')" role="img" aria-label="Desert hike near Wadi Genai, Sinai"></div>
+        <div class="ds-slide active" style="background-image:image-set(url('./dahab-1.avif') type('image/avif'), url('./dahab-1.webp') type('image/webp'), url('./dahab-1.jpg') type('image/jpeg'))" role="img" aria-label="Freediver descending into the deep blue at Dahab"></div>
+        <div class="ds-slide" style="background-image:image-set(url('./dahab-2.avif') type('image/avif'), url('./dahab-2.webp') type('image/webp'), url('./dahab-2.jpg') type('image/jpeg'))" role="img" aria-label="Cave dive at Ras Mohamed, Red Sea"></div>
+        <div class="ds-slide" style="background-image:image-set(url('./dahab-3.avif') type('image/avif'), url('./dahab-3.webp') type('image/webp'), url('./dahab-3.jpg') type('image/jpeg'))" role="img" aria-label="Surfacing high-five after a personal-best dive, Dahab"></div>
+        <div class="ds-slide" style="background-image:image-set(url('./dahab-4.avif') type('image/avif'), url('./dahab-4.webp') type('image/webp'), url('./dahab-4.jpg') type('image/jpeg'))" role="img" aria-label="Student and instructor after a session at the Lighthouse, Dahab"></div>
+        <div class="ds-slide" style="background-image:image-set(url('./wadi-genai.avif') type('image/avif'), url('./wadi-genai.webp') type('image/webp'), url('./wadi-genai.jpg') type('image/jpeg'))" role="img" aria-label="Desert hike near Wadi Genai, Sinai"></div>
         <button class="ds-arrow ds-prev" type="button" aria-label="Previous photo">‹</button>
         <button class="ds-arrow ds-next" type="button" aria-label="Next photo">›</button>
         <div class="ds-dots"></div>
@@ -1152,14 +1160,14 @@ h1,h2,h3,h4{font-family:var(--font-display)}
   <div class="dest" id="bali">
     <div class="dest-visual bali">
       <div class="dest-slider" data-slider aria-label="Bali photo slideshow">
-        <div class="ds-slide active" style="background-image:url('./bali-1.jpg')" role="img" aria-label="Freediver with manta rays in Bali"></div>
-        <div class="ds-slide" style="background-image:url('./bali-2.jpg')" role="img" aria-label="Sea turtle in Bali"></div>
-        <div class="ds-slide" style="background-image:url('./bali-3.jpg')" role="img" aria-label="Freediver over the reef at Gili Air, Bali"></div>
-        <div class="ds-slide" style="background-image:url('./bali-komodo.jpg')" role="img" aria-label="Komodo dragons on the beach, Komodo National Park"></div>
-        <div class="ds-slide" style="background-image:url('./bali-whaleshark.jpg')" role="img" aria-label="Swimming with whale sharks"></div>
-        <div class="ds-slide" style="background-image:url('./bali-pinkbeach.jpg')" role="img" aria-label="Pink Beach, Komodo"></div>
-        <div class="ds-slide" style="background-image:url('./bali-amed.jpg')" role="img" aria-label="Black-sand coast at Amed, Bali"></div>
-        <div class="ds-slide" style="background-image:url('./bali-ubud.jpg')" role="img" aria-label="Jungle valley and natural rock pool, Bali"></div>
+        <div class="ds-slide active" style="background-image:image-set(url('./bali-1.avif') type('image/avif'), url('./bali-1.webp') type('image/webp'), url('./bali-1.jpg') type('image/jpeg'))" role="img" aria-label="Freediver with manta rays in Bali"></div>
+        <div class="ds-slide" style="background-image:image-set(url('./bali-2.avif') type('image/avif'), url('./bali-2.webp') type('image/webp'), url('./bali-2.jpg') type('image/jpeg'))" role="img" aria-label="Sea turtle in Bali"></div>
+        <div class="ds-slide" style="background-image:image-set(url('./bali-3.avif') type('image/avif'), url('./bali-3.webp') type('image/webp'), url('./bali-3.jpg') type('image/jpeg'))" role="img" aria-label="Freediver over the reef at Gili Air, Bali"></div>
+        <div class="ds-slide" style="background-image:image-set(url('./bali-komodo.avif') type('image/avif'), url('./bali-komodo.webp') type('image/webp'), url('./bali-komodo.jpg') type('image/jpeg'))" role="img" aria-label="Komodo dragons on the beach, Komodo National Park"></div>
+        <div class="ds-slide" style="background-image:image-set(url('./bali-whaleshark.avif') type('image/avif'), url('./bali-whaleshark.webp') type('image/webp'), url('./bali-whaleshark.jpg') type('image/jpeg'))" role="img" aria-label="Swimming with whale sharks"></div>
+        <div class="ds-slide" style="background-image:image-set(url('./bali-pinkbeach.avif') type('image/avif'), url('./bali-pinkbeach.webp') type('image/webp'), url('./bali-pinkbeach.jpg') type('image/jpeg'))" role="img" aria-label="Pink Beach, Komodo"></div>
+        <div class="ds-slide" style="background-image:image-set(url('./bali-amed.avif') type('image/avif'), url('./bali-amed.webp') type('image/webp'), url('./bali-amed.jpg') type('image/jpeg'))" role="img" aria-label="Black-sand coast at Amed, Bali"></div>
+        <div class="ds-slide" style="background-image:image-set(url('./bali-ubud.avif') type('image/avif'), url('./bali-ubud.webp') type('image/webp'), url('./bali-ubud.jpg') type('image/jpeg'))" role="img" aria-label="Jungle valley and natural rock pool, Bali"></div>
         <button class="ds-arrow ds-prev" type="button" aria-label="Previous photo">‹</button>
         <button class="ds-arrow ds-next" type="button" aria-label="Next photo">›</button>
         <div class="ds-dots"></div>
@@ -1245,11 +1253,11 @@ h1,h2,h3,h4{font-family:var(--font-display)}
   <div class="dest" id="srilanka">
     <div class="dest-visual srilanka">
       <div class="dest-slider" data-slider aria-label="Sri Lanka photo slideshow">
-        <div class="ds-slide active" style="background-image:url('./sl-bluewhale.jpg')" role="img" aria-label="Blue whale watching off Mirissa"></div>
-        <div class="ds-slide" style="background-image:url('./sl-mirissa.jpg')" role="img" aria-label="Mirissa coast, Sri Lanka"></div>
-        <div class="ds-slide" style="background-image:url('./sl-surf.jpg')" role="img" aria-label="South-coast surf at Weligama and Hiriketiya"></div>
-        <div class="ds-slide" style="background-image:url('./sl-sigiriya.jpg')" role="img" aria-label="Wild elephants on safari at Yala, Sri Lanka"></div>
-        <div class="ds-slide" style="background-image:url('./sl-ella.jpg')" role="img" aria-label="Nine Arch Bridge, Ella"></div>
+        <div class="ds-slide active" style="background-image:image-set(url('./sl-bluewhale.avif') type('image/avif'), url('./sl-bluewhale.webp') type('image/webp'), url('./sl-bluewhale.jpg') type('image/jpeg'))" role="img" aria-label="Blue whale watching off Mirissa"></div>
+        <div class="ds-slide" style="background-image:image-set(url('./sl-mirissa.avif') type('image/avif'), url('./sl-mirissa.webp') type('image/webp'), url('./sl-mirissa.jpg') type('image/jpeg'))" role="img" aria-label="Mirissa coast, Sri Lanka"></div>
+        <div class="ds-slide" style="background-image:image-set(url('./sl-surf.avif') type('image/avif'), url('./sl-surf.webp') type('image/webp'), url('./sl-surf.jpg') type('image/jpeg'))" role="img" aria-label="South-coast surf at Weligama and Hiriketiya"></div>
+        <div class="ds-slide" style="background-image:image-set(url('./sl-sigiriya.avif') type('image/avif'), url('./sl-sigiriya.webp') type('image/webp'), url('./sl-sigiriya.jpg') type('image/jpeg'))" role="img" aria-label="Wild elephants on safari at Yala, Sri Lanka"></div>
+        <div class="ds-slide" style="background-image:image-set(url('./sl-ella.avif') type('image/avif'), url('./sl-ella.webp') type('image/webp'), url('./sl-ella.jpg') type('image/jpeg'))" role="img" aria-label="Nine Arch Bridge, Ella"></div>
         <button class="ds-arrow ds-prev" type="button" aria-label="Previous photo">&#8249;</button>
         <button class="ds-arrow ds-next" type="button" aria-label="Next photo">&#8250;</button>
         <div class="ds-dots"></div>
@@ -1328,9 +1336,9 @@ h1,h2,h3,h4{font-family:var(--font-display)}
   <div class="dest" id="tenerife">
     <div class="dest-visual tenerife">
       <div class="dest-slider" data-slider aria-label="Tenerife and Gran Canaria photo slideshow">
-        <div class="ds-slide active" style="background-image:url('./ten-beach.jpg')" role="img" aria-label="Beach on Tenerife, Canary Islands"></div>
-        <div class="ds-slide" style="background-image:url('./ten-diving.jpg')" role="img" aria-label="Diving the volcanic reefs of the Canaries"></div>
-        <div class="ds-slide" style="background-image:url('./gc-sunset.jpg')" role="img" aria-label="Sunset over Gran Canaria"></div>
+        <div class="ds-slide active" style="background-image:image-set(url('./ten-beach.avif') type('image/avif'), url('./ten-beach.webp') type('image/webp'), url('./ten-beach.jpg') type('image/jpeg'))" role="img" aria-label="Beach on Tenerife, Canary Islands"></div>
+        <div class="ds-slide" style="background-image:image-set(url('./ten-diving.avif') type('image/avif'), url('./ten-diving.webp') type('image/webp'), url('./ten-diving.jpg') type('image/jpeg'))" role="img" aria-label="Diving the volcanic reefs of the Canaries"></div>
+        <div class="ds-slide" style="background-image:image-set(url('./gc-sunset.avif') type('image/avif'), url('./gc-sunset.webp') type('image/webp'), url('./gc-sunset.jpg') type('image/jpeg'))" role="img" aria-label="Sunset over Gran Canaria"></div>
         <button class="ds-arrow ds-prev" type="button" aria-label="Previous photo">&#8249;</button>
         <button class="ds-arrow ds-next" type="button" aria-label="Next photo">&#8250;</button>
         <div class="ds-dots"></div>
@@ -1445,12 +1453,12 @@ h1,h2,h3,h4{font-family:var(--font-display)}
   <p class="section-tag reveal">From past trips</p>
   <h2 class="reveal" style="font-size:clamp(2rem,3.5vw,3rem);font-weight:300;letter-spacing:-.02em;line-height:1.1">Real moments.<br>Real <em>places.</em></h2>
   <div class="tripgal reveal">
-    <figure class="tg-item"><img src="./expg-cave.jpg" alt="Cave dive at Ras Mohamed, Red Sea" loading="lazy"><figcaption>Ras Mohamed · cave dive</figcaption></figure>
-    <figure class="tg-item"><img src="./expg-gili.jpg" alt="Snorkelling the reef at Gili Air, Bali" loading="lazy"><figcaption>Gili Air · Bali</figcaption></figure>
-    <figure class="tg-item"><img src="./expg-desert.jpg" alt="Desert hike near Wadi Genai, Sinai" loading="lazy"><figcaption>Wadi Genai · desert hike</figcaption></figure>
-    <figure class="tg-item"><img src="./expg-snacks.jpg" alt="Freedivers smiling on the boat between dives, Red Sea" loading="lazy"><figcaption>Red Sea · between dives</figcaption></figure>
-    <figure class="tg-item"><img src="./expg-sunset.jpg" alt="Surfacing high-five after a dive, Dahab" loading="lazy"><figcaption>Dahab · surfacing high-five</figcaption></figure>
-    <figure class="tg-item"><img src="./expg-bluehole.jpg" alt="Student and instructor after a session, Dahab" loading="lazy"><figcaption>Dahab · after the session</figcaption></figure>
+    <figure class="tg-item"><picture><source srcset="./expg-cave.avif" type="image/avif"><source srcset="./expg-cave.webp" type="image/webp"><img src="./expg-cave.jpg" alt="Cave dive at Ras Mohamed, Red Sea" loading="lazy" width="735" height="1300"></picture><figcaption>Ras Mohamed · cave dive</figcaption></figure>
+    <figure class="tg-item"><picture><source srcset="./expg-gili.avif" type="image/avif"><source srcset="./expg-gili.webp" type="image/webp"><img src="./expg-gili.jpg" alt="Snorkelling the reef at Gili Air, Bali" loading="lazy" width="1100" height="1467"></picture><figcaption>Gili Air · Bali</figcaption></figure>
+    <figure class="tg-item"><picture><source srcset="./expg-desert.avif" type="image/avif"><source srcset="./expg-desert.webp" type="image/webp"><img src="./expg-desert.jpg" alt="Desert hike near Wadi Genai, Sinai" loading="lazy" width="975" height="1300"></picture><figcaption>Wadi Genai · desert hike</figcaption></figure>
+    <figure class="tg-item"><picture><source srcset="./expg-snacks.avif" type="image/avif"><source srcset="./expg-snacks.webp" type="image/webp"><img src="./expg-snacks.jpg" alt="Freedivers smiling on the boat between dives, Red Sea" loading="lazy" width="1300" height="975"></picture><figcaption>Red Sea · between dives</figcaption></figure>
+    <figure class="tg-item"><picture><source srcset="./expg-sunset.avif" type="image/avif"><source srcset="./expg-sunset.webp" type="image/webp"><img src="./expg-sunset.jpg" alt="Surfacing high-five after a dive, Dahab" loading="lazy" width="1300" height="731"></picture><figcaption>Dahab · surfacing high-five</figcaption></figure>
+    <figure class="tg-item"><picture><source srcset="./expg-bluehole.avif" type="image/avif"><source srcset="./expg-bluehole.webp" type="image/webp"><img src="./expg-bluehole.jpg" alt="Student and instructor after a session, Dahab" loading="lazy" width="543" height="1300"></picture><figcaption>Dahab · after the session</figcaption></figure>
   </div>
 </section>
 
@@ -1680,7 +1688,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 
 <!-- ═══ FOOTER ═══ -->
 <footer><div class="footer-watermark" aria-hidden="true"></div>
-  <p class="footer-logo"><img src="/logo-mark.png" alt="" width="44" height="44">Freediving <span>Brain</span></p>
+  <p class="footer-logo"><picture><source srcset="/logo-mark.webp" type="image/webp"><img src="/logo-mark.png" alt="" width="44" height="44"></picture>Freediving <span>Brain</span></p>
   <div class="footer-links">
     <a href="/">Home</a>
     <a href="/#courses">Courses</a>

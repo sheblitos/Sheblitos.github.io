@@ -51,7 +51,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-mobile a{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.1em;text-transform:uppercase;color:var(--txt2);text-decoration:none;padding:1rem 0;border-bottom:1px solid var(--ln)}
 
 /* HERO */
-.story-hero{min-height:82vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 1.5rem 4rem;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(12,26,21,.35) 0%,rgba(12,26,21,.28) 42%,rgba(12,26,21,.92) 100%),url('./about-hero.jpg');background-size:cover;background-position:center 60%}
+.story-hero{min-height:82vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 1.5rem 4rem;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(12,26,21,.35) 0%,rgba(12,26,21,.28) 42%,rgba(12,26,21,.92) 100%),url('./about-hero.jpg');background:linear-gradient(180deg,rgba(12,26,21,.35) 0%,rgba(12,26,21,.28) 42%,rgba(12,26,21,.92) 100%),image-set(url('./about-hero.avif') type('image/avif'), url('./about-hero.webp') type('image/webp'), url('./about-hero.jpg') type('image/jpeg'));background-size:cover;background-position:center 60%}
 .story-hero-inner{max-width:720px;margin:0 auto;width:100%}
 .story-eyebrow{font-family:var(--font-body);font-size:var(--text-xs);font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
 .story-hero h1{font-size:clamp(2.4rem,8vw,4.5rem);font-weight:300;line-height:1.02;letter-spacing:-.02em;max-width:14ch}
@@ -145,12 +145,13 @@ footer{background:var(--deep2);border-top:1px solid var(--ln);padding:4rem 3.5re
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/type-system.css">
+<link rel="preload" as="image" href="./about-hero.avif" type="image/avif" fetchpriority="high">
 </head>
 <body>
 
 <nav id="navbar">
   <a href="/" class="nav-logo" aria-label="Freediving Brain home">
-    <img src="/logo-mark.png" alt="" width="38" height="38">
+    <picture><source srcset="/logo-mark.webp" type="image/webp"><img src="/logo-mark.png" alt="" width="38" height="38"></picture>
     Freediving <strong>Brain</strong>
   </a>
   <div class="nav-links">
@@ -206,7 +207,7 @@ footer{background:var(--deep2);border-top:1px solid var(--ln);padding:4rem 3.5re
 
     <article class="founder">
       <div class="founder-photo" data-initial="S">
-        <img src="./shebl.jpg" alt="Shebl - Founder & Head Instructor Trainer" loading="lazy" decoding="async">
+        <picture><source srcset="./shebl.avif" type="image/avif"><source srcset="./shebl.webp" type="image/webp"><img src="./shebl.jpg" alt="Shebl - Founder & Head Instructor Trainer" loading="lazy" decoding="async" width="1000" height="1250"></picture>
       </div>
       <div>
         <p class="founder-name">Shebl</p>
@@ -224,7 +225,7 @@ footer{background:var(--deep2);border-top:1px solid var(--ln);padding:4rem 3.5re
 
     <article class="founder">
       <div class="founder-photo" data-initial="R">
-        <img src="./rimi.jpg" alt="Rimi - Co-Organizer" loading="lazy" decoding="async" onerror="this.style.display='none'">
+        <picture><source srcset="./rimi.avif" type="image/avif"><source srcset="./rimi.webp" type="image/webp"><img src="./rimi.jpg" alt="Rimi - Co-Organizer" loading="lazy" decoding="async" onerror="this.style.display='none'" width="769" height="1024"></picture>
       </div>
       <div>
         <p class="founder-name">Rimi</p>
@@ -269,7 +270,7 @@ footer{background:var(--deep2);border-top:1px solid var(--ln);padding:4rem 3.5re
 
   <div class="pg-grid">
     <article class="pg-card">
-      <div class="pg-card-bg" style="background-image:url('./dahab-1.jpg')"></div>
+      <div class="pg-card-bg" style="background-image:image-set(url('./dahab-1.avif') type('image/avif'), url('./dahab-1.webp') type('image/webp'), url('./dahab-1.jpg') type('image/jpeg'))"></div>
       <div class="pg-card-grad"></div>
       <div class="pg-card-body">
         <div class="pg-flag">🇪🇬</div>
@@ -279,7 +280,7 @@ footer{background:var(--deep2);border-top:1px solid var(--ln);padding:4rem 3.5re
     </article>
 
     <article class="pg-card">
-      <div class="pg-card-bg" style="background-image:url('./bali-1.jpg')"></div>
+      <div class="pg-card-bg" style="background-image:image-set(url('./bali-1.avif') type('image/avif'), url('./bali-1.webp') type('image/webp'), url('./bali-1.jpg') type('image/jpeg'))"></div>
       <div class="pg-card-grad"></div>
       <div class="pg-card-body">
         <div class="pg-flag">🇮🇩</div>
@@ -289,7 +290,7 @@ footer{background:var(--deep2);border-top:1px solid var(--ln);padding:4rem 3.5re
     </article>
 
     <article class="pg-card">
-      <div class="pg-card-bg" style="background-image:url('./sl-mirissa.jpg')"></div>
+      <div class="pg-card-bg" style="background-image:image-set(url('./sl-mirissa.avif') type('image/avif'), url('./sl-mirissa.webp') type('image/webp'), url('./sl-mirissa.jpg') type('image/jpeg'))"></div>
       <div class="pg-card-grad"></div>
       <div class="pg-card-body">
         <div class="pg-flag">🇱🇰</div>
@@ -299,7 +300,7 @@ footer{background:var(--deep2);border-top:1px solid var(--ln);padding:4rem 3.5re
     </article>
 
     <article class="pg-card">
-      <div class="pg-card-bg" style="background-image:url('./ten-beach.jpg')"></div>
+      <div class="pg-card-bg" style="background-image:image-set(url('./ten-beach.avif') type('image/avif'), url('./ten-beach.webp') type('image/webp'), url('./ten-beach.jpg') type('image/jpeg'))"></div>
       <div class="pg-card-grad"></div>
       <div class="pg-card-body">
         <div class="pg-flag">🇪🇸</div>
@@ -322,7 +323,7 @@ footer{background:var(--deep2);border-top:1px solid var(--ln);padding:4rem 3.5re
   <div class="footer-watermark" aria-hidden="true"></div>
   <div class="footer-grid">
     <div>
-      <p class="footer-logo"><img src="/logo-mark.png" alt="" width="44" height="44">Freediving <span>Brain</span></p>
+      <p class="footer-logo"><picture><source srcset="/logo-mark.webp" type="image/webp"><img src="/logo-mark.png" alt="" width="44" height="44"></picture>Freediving <span>Brain</span></p>
       <p class="footer-tagline">A freediving school and travel tribe built on the mental game. Founded by Shebl &amp; Rimi. Barcelona based, ocean bound.</p>
     </div>
     <div>

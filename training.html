@@ -535,7 +535,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 /* prose -> readable sans */
 .tr-hero-kicker,.tr-session-intro,.tr-modal-sub,.tr-footer-copy,.pkg-features li,.pkg-features li *,.tr-req-text,.tr-req-text *{font-family:var(--font-body) !important;letter-spacing:normal}
 /* ── Training photos ── */
-.tr-hero{background-image:linear-gradient(180deg,rgba(12,26,21,.8) 0%,rgba(12,26,21,.72) 40%,rgba(12,26,21,.96) 100%),url('./tr-hero.jpg');background-size:cover;background-position:center}
+.tr-hero{background-image:linear-gradient(180deg,rgba(12,26,21,.8) 0%,rgba(12,26,21,.72) 40%,rgba(12,26,21,.96) 100%),url('./tr-hero.jpg');background-image:linear-gradient(180deg,rgba(12,26,21,.8) 0%,rgba(12,26,21,.72) 40%,rgba(12,26,21,.96) 100%),image-set(url('./tr-hero.avif') type('image/avif'), url('./tr-hero.webp') type('image/webp'), url('./tr-hero.jpg') type('image/jpeg'));background-size:cover;background-position:center}
 .tr-photoband{position:relative;height:clamp(220px,42vh,440px);background-size:cover;background-position:center;border-top:1px solid rgba(236,232,224,.10);border-bottom:1px solid rgba(236,232,224,.10)}
 .tr-photoband::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,26,21,.12),rgba(12,26,21,.66))}
 .tr-photoband span{position:absolute;bottom:1.25rem;left:clamp(1.75rem,5vw,3.5rem);z-index:1;font-family:var(--font-body);font-size:var(--text-xs);font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(236,232,224,.85)}
@@ -556,6 +556,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/type-system.css">
+<link rel="preload" as="image" href="./tr-hero.avif" type="image/avif" fetchpriority="high">
 </head>
 <body>
 
@@ -672,7 +673,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 </div>
 
 <!-- ═══════════════════════════ OPEN WATER ════════ -->
-<div class="tr-photoband reveal" style="background-image:url('./tr-openwater.jpg');background-position:center 40%"><span>Open water &middot; buddy &amp; safety</span></div>
+<div class="tr-photoband reveal" style="background-image:image-set(url('./tr-openwater.avif') type('image/avif'), url('./tr-openwater.webp') type('image/webp'), url('./tr-openwater.jpg') type('image/jpeg'));background-position:center 40%"><span>Open water &middot; buddy &amp; safety</span></div>
 
 <section class="tr-session" id="open-water" aria-labelledby="ow-heading">
   <div class="tr-session-head">
@@ -741,7 +742,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 </section>
 
 <!-- ═══════════════════════════ POOL ══════════════ -->
-<div class="tr-photoband reveal" style="background-image:url('./tr-pool.jpg')"><span>Pool &middot; static &amp; dynamic</span></div>
+<div class="tr-photoband reveal" style="background-image:image-set(url('./tr-pool.avif') type('image/avif'), url('./tr-pool.webp') type('image/webp'), url('./tr-pool.jpg') type('image/jpeg'))"><span>Pool &middot; static &amp; dynamic</span></div>
 
 <section class="tr-session" id="pool" aria-labelledby="pool-heading">
   <div class="tr-session-head">

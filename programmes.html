@@ -232,7 +232,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 .tracks-hint{font-family:var(--font-body);font-size:var(--text-xs);color:var(--txt3);max-width:520px;margin-bottom:2.25rem}
 @media(max-width:900px){.tracks-header{padding:3.5rem 1.75rem 0}}
 /* ── Deeper Together photos ── */
-.hero{background-image:linear-gradient(180deg,rgba(12,26,21,.72) 0%,rgba(12,26,21,.55) 42%,rgba(12,26,21,.95) 100%),url('./dt-buoy.jpg');background-size:cover;background-position:center 40%}
+.hero{background-image:linear-gradient(180deg,rgba(12,26,21,.72) 0%,rgba(12,26,21,.55) 42%,rgba(12,26,21,.95) 100%),url('./dt-buoy.jpg');background-image:linear-gradient(180deg,rgba(12,26,21,.72) 0%,rgba(12,26,21,.55) 42%,rgba(12,26,21,.95) 100%),image-set(url('./dt-buoy.avif') type('image/avif'), url('./dt-buoy.webp') type('image/webp'), url('./dt-buoy.jpg') type('image/jpeg'));background-size:cover;background-position:center 40%}
 .pl-strip-head{padding:4.5rem 3.5rem 1.75rem}
 .pl-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;background:var(--deep)}
 .pl-gsi{position:relative;height:clamp(240px,40vh,420px);background-size:cover;background-position:center;overflow:hidden}
@@ -476,9 +476,9 @@ h1,h2,h3,h4{font-family:var(--font-display)}
     <h2 class="tracks-title">Dry on the mat.<br><em>Calm in the water.</em></h2>
   </div>
   <div class="pl-strip">
-    <div class="pl-gsi reveal" style="background-image:url('./pl-band-1.jpg')"><span>Pool · together</span></div>
-    <div class="pl-gsi reveal" style="background-image:url('./pl-band-2.jpg')"><span>Breath &amp; trust</span></div>
-    <div class="pl-gsi reveal" style="background-image:url('./pl-band-3.jpg')"><span>The whole crew</span></div>
+    <div class="pl-gsi reveal" style="background-image:image-set(url('./pl-band-1.avif') type('image/avif'), url('./pl-band-1.webp') type('image/webp'), url('./pl-band-1.jpg') type('image/jpeg'))"><span>Pool · together</span></div>
+    <div class="pl-gsi reveal" style="background-image:image-set(url('./pl-band-2.avif') type('image/avif'), url('./pl-band-2.webp') type('image/webp'), url('./pl-band-2.jpg') type('image/jpeg'))"><span>Breath &amp; trust</span></div>
+    <div class="pl-gsi reveal" style="background-image:image-set(url('./pl-band-3.avif') type('image/avif'), url('./pl-band-3.webp') type('image/webp'), url('./pl-band-3.jpg') type('image/jpeg'))"><span>The whole crew</span></div>
   </div>
 </div>
 <!-- ENQUIRY -->
@@ -542,7 +542,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 
 <!-- FOOTER -->
 <footer><div class="footer-watermark" aria-hidden="true"></div>
-  <p class="footer-logo"><img src="/logo-mark.png" alt="" width="44" height="44">Freediving <span>Brain</span></p>
+  <p class="footer-logo"><picture><source srcset="/logo-mark.webp" type="image/webp"><img src="/logo-mark.png" alt="" width="44" height="44"></picture>Freediving <span>Brain</span></p>
   <div class="footer-links">
     <a href="/">Home</a>
     <a href="/#courses">Courses</a>
