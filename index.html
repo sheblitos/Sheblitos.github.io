@@ -2566,7 +2566,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 <link rel="icon" type="image/png" href="/logo-mark.png"><link rel="apple-touch-icon" href="/logo-mark.png"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/type-system.css?v=3">
+<link rel="stylesheet" href="/type-system.css?v=4">
 <link rel="preload" as="image" href="./hero-surface.avif" type="image/avif" fetchpriority="high">
 <script>try{if(!window.matchMedia||matchMedia('(prefers-reduced-motion:no-preference)').matches){document.documentElement.className+=' anim';}}catch(e){}</script>
 <meta name="twitter:image" content="https://freedivingbrain.com/og-image.jpg">
@@ -3003,7 +3003,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 
     <!-- AIDA 1 -->
     <article class="course-item reveal" id="ci1">
-      <div class="course-head" onclick="toggleCourse('ci1')" role="button" aria-expanded="false" aria-controls="cb1">
+      <div class="course-head" onclick="toggleCourse('ci1')" role="button" aria-expanded="false" aria-controls="cb1" tabindex="0">
         <div class="ch-left">
           <span class="ch-num" aria-hidden="true">1</span>
           <div>
@@ -3047,7 +3047,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 
     <!-- AIDA 2 -->
     <article class="course-item reveal" id="ci2">
-      <div class="course-head" onclick="toggleCourse('ci2')" role="button" aria-expanded="false" aria-controls="cb2">
+      <div class="course-head" onclick="toggleCourse('ci2')" role="button" aria-expanded="false" aria-controls="cb2" tabindex="0">
         <div class="ch-left">
           <span class="ch-num" aria-hidden="true">2</span>
           <div>
@@ -3089,7 +3089,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 
     <!-- AIDA 3 -->
     <article class="course-item reveal" id="ci3">
-      <div class="course-head" onclick="toggleCourse('ci3')" role="button" aria-expanded="false" aria-controls="cb3">
+      <div class="course-head" onclick="toggleCourse('ci3')" role="button" aria-expanded="false" aria-controls="cb3" tabindex="0">
         <div class="ch-left">
           <span class="ch-num" aria-hidden="true">3</span>
           <div>
@@ -3131,7 +3131,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 
     <!-- AIDA 4 -->
     <article class="course-item reveal" id="ci4">
-      <div class="course-head" onclick="toggleCourse('ci4')" role="button" aria-expanded="false" aria-controls="cb4">
+      <div class="course-head" onclick="toggleCourse('ci4')" role="button" aria-expanded="false" aria-controls="cb4" tabindex="0">
         <div class="ch-left">
           <span class="ch-num" aria-hidden="true">4</span>
           <div>
@@ -3173,7 +3173,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 
     <!-- INSTRUCTOR -->
     <article class="course-item reveal" id="ci5">
-      <div class="course-head" onclick="toggleCourse('ci5')" role="button" aria-expanded="false" aria-controls="cb5">
+      <div class="course-head" onclick="toggleCourse('ci5')" role="button" aria-expanded="false" aria-controls="cb5" tabindex="0">
         <div class="ch-left">
           <span class="ch-num" aria-hidden="true">∞</span>
           <div>
@@ -3583,42 +3583,42 @@ h1,h2,h3,h4{font-family:var(--font-display)}
       <p class="bk-step-sub">Select the course you're interested in. Not sure which level? We'll help you find out.</p>
 
       <div class="bk-course-grid" id="bkCourseGrid">
-        <div class="bk-course-card" data-course="AIDA 1" data-price="120" onclick="bkSelectCourse(this)">
+        <div class="bk-course-card" data-course="AIDA 1" data-price="120" onclick="bkSelectCourse(this)" role="button" tabindex="0" aria-label="Select AIDA 1 course, 120 euros">
           <p class="bk-cc-level">Beginner · AIDA 1</p>
           <p class="bk-cc-name">First Breath</p>
           <p class="bk-cc-price">€120</p>
           <p class="bk-cc-desc">Your introduction to freediving — safety, technique, and the first dive into stillness.</p>
           <p class="bk-cc-req">Prerequisite: <span>None. Just curiosity.</span></p>
         </div>
-        <div class="bk-course-card" data-course="AIDA 2" data-price="300" onclick="bkSelectCourse(this)">
+        <div class="bk-course-card" data-course="AIDA 2" data-price="300" onclick="bkSelectCourse(this)" role="button" tabindex="0" aria-label="Select AIDA 2 course, 300 euros">
           <p class="bk-cc-level">Foundation · AIDA 2</p>
           <p class="bk-cc-name">First Certification</p>
           <p class="bk-cc-price">€300</p>
           <p class="bk-cc-desc">Pool and open water. Your first internationally recognised freediving certification.</p>
           <p class="bk-cc-req">Prerequisite: <span>Basic swimming ability</span></p>
         </div>
-        <div class="bk-course-card" data-course="AIDA 3" data-price="360" onclick="bkSelectCourse(this)">
+        <div class="bk-course-card" data-course="AIDA 3" data-price="360" onclick="bkSelectCourse(this)" role="button" tabindex="0" aria-label="Select AIDA 3 course, 360 euros">
           <p class="bk-cc-level">Intermediate · AIDA 3</p>
           <p class="bk-cc-name">Break the Ceiling</p>
           <p class="bk-cc-price">€360</p>
           <p class="bk-cc-desc">Where the mental game begins in earnest. Freefall, mouthfill, deep rescue. Max 4 students.</p>
           <p class="bk-cc-req">Prerequisite: <span>AIDA 2 certified</span></p>
         </div>
-        <div class="bk-course-card" data-course="AIDA 4" data-price="480" onclick="bkSelectCourse(this)">
+        <div class="bk-course-card" data-course="AIDA 4" data-price="480" onclick="bkSelectCourse(this)" role="button" tabindex="0" aria-label="Select AIDA 4 course, 480 euros">
           <p class="bk-cc-level">Advanced · AIDA 4</p>
           <p class="bk-cc-name">Elite Depth</p>
           <p class="bk-cc-price">€480</p>
           <p class="bk-cc-desc">Competition simulation, advanced psychology, and instructor-level methodology. One to one.</p>
           <p class="bk-cc-req">Prerequisite: <span>AIDA 3 certified</span></p>
         </div>
-        <div class="bk-course-card" data-course="Instructor" data-price="1200" onclick="bkSelectCourse(this)">
+        <div class="bk-course-card" data-course="Instructor" data-price="1200" onclick="bkSelectCourse(this)" role="button" tabindex="0" aria-label="Select Instructor course, 1200 euros">
           <p class="bk-cc-level">Professional · Instructor</p>
           <p class="bk-cc-name">Teach the Method</p>
           <p class="bk-cc-price">€1,200</p>
           <p class="bk-cc-desc">The Freediving Brain teaching framework. Train instructors in the mental game, not just the dives.</p>
           <p class="bk-cc-req">Prerequisite: <span>AIDA 4 + 50 logged dives</span></p>
         </div>
-        <div class="bk-help-card" id="bkHelpCard" onclick="bkSelectHelp()">
+        <div class="bk-help-card" id="bkHelpCard" onclick="bkSelectHelp()" role="button" tabindex="0">
           <div class="bk-help-icon">◎</div>
           <p class="bk-help-title">Help me choose</p>
           <p class="bk-help-sub">Answer 2 quick questions and we'll match you to the right level</p>
@@ -3656,15 +3656,15 @@ h1,h2,h3,h4{font-family:var(--font-display)}
       <h2 class="bk-step-heading">When are you<br>thinking of <em>diving?</em></h2>
       <p class="bk-step-sub">We open mid-2026. Pick the month that works best — or tell us you're flexible.</p>
       <div class="bk-month-grid">
-        <div class="bk-month-btn" data-month="June 2026" onclick="bkSelectMonth(this)"><p class="bk-mb-month">June</p><p class="bk-mb-year">2026</p><p class="bk-mb-note">Launch month</p></div>
-        <div class="bk-month-btn" data-month="July 2026" onclick="bkSelectMonth(this)"><p class="bk-mb-month">July</p><p class="bk-mb-year">2026</p></div>
-        <div class="bk-month-btn" data-month="August 2026" onclick="bkSelectMonth(this)"><p class="bk-mb-month">August</p><p class="bk-mb-year">2026</p></div>
-        <div class="bk-month-btn" data-month="September 2026" onclick="bkSelectMonth(this)"><p class="bk-mb-month">September</p><p class="bk-mb-year">2026</p></div>
-        <div class="bk-month-btn" data-month="October 2026" onclick="bkSelectMonth(this)"><p class="bk-mb-month">October</p><p class="bk-mb-year">2026</p></div>
-        <div class="bk-month-btn" data-month="November 2026" onclick="bkSelectMonth(this)"><p class="bk-mb-month">November</p><p class="bk-mb-year">2026</p></div>
-        <div class="bk-month-btn" data-month="December 2026" onclick="bkSelectMonth(this)"><p class="bk-mb-month">December</p><p class="bk-mb-year">2026</p></div>
-        <div class="bk-month-btn" data-month="Flexible" onclick="bkSelectMonth(this)"><p class="bk-mb-month">I'm flexible</p><p class="bk-mb-year">Anytime 2026</p></div>
-        <div class="bk-month-btn" data-month="Just exploring" onclick="bkSelectMonth(this)"><p class="bk-mb-month">Just exploring</p><p class="bk-mb-year">For now</p></div>
+        <div class="bk-month-btn" data-month="June 2026" onclick="bkSelectMonth(this)" role="button" tabindex="0" aria-label="Choose June 2026"><p class="bk-mb-month">June</p><p class="bk-mb-year">2026</p><p class="bk-mb-note">Launch month</p></div>
+        <div class="bk-month-btn" data-month="July 2026" onclick="bkSelectMonth(this)" role="button" tabindex="0" aria-label="Choose July 2026"><p class="bk-mb-month">July</p><p class="bk-mb-year">2026</p></div>
+        <div class="bk-month-btn" data-month="August 2026" onclick="bkSelectMonth(this)" role="button" tabindex="0" aria-label="Choose August 2026"><p class="bk-mb-month">August</p><p class="bk-mb-year">2026</p></div>
+        <div class="bk-month-btn" data-month="September 2026" onclick="bkSelectMonth(this)" role="button" tabindex="0" aria-label="Choose September 2026"><p class="bk-mb-month">September</p><p class="bk-mb-year">2026</p></div>
+        <div class="bk-month-btn" data-month="October 2026" onclick="bkSelectMonth(this)" role="button" tabindex="0" aria-label="Choose October 2026"><p class="bk-mb-month">October</p><p class="bk-mb-year">2026</p></div>
+        <div class="bk-month-btn" data-month="November 2026" onclick="bkSelectMonth(this)" role="button" tabindex="0" aria-label="Choose November 2026"><p class="bk-mb-month">November</p><p class="bk-mb-year">2026</p></div>
+        <div class="bk-month-btn" data-month="December 2026" onclick="bkSelectMonth(this)" role="button" tabindex="0" aria-label="Choose December 2026"><p class="bk-mb-month">December</p><p class="bk-mb-year">2026</p></div>
+        <div class="bk-month-btn" data-month="Flexible" onclick="bkSelectMonth(this)" role="button" tabindex="0" aria-label="Choose Flexible"><p class="bk-mb-month">I'm flexible</p><p class="bk-mb-year">Anytime 2026</p></div>
+        <div class="bk-month-btn" data-month="Just exploring" onclick="bkSelectMonth(this)" role="button" tabindex="0" aria-label="Choose Just exploring"><p class="bk-mb-month">Just exploring</p><p class="bk-mb-year">For now</p></div>
       </div>
       <div class="bk-actions">
         <button class="bk-btn-primary" id="bkStep3Next" onclick="bkGoTo(4)" disabled>Continue →</button>
@@ -4099,6 +4099,7 @@ function bkSubmitReservation(){
     fetch('https://formsubmit.co/ajax/hello@freedivingbrain.com',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded','Accept':'application/json'},body:body}).catch(function(){});
   }catch(e){}
 }
+var bkLastFocus=null;
 function openModal(course){
   bkReset();
   track('reserve_started',{course: course||'general'});
@@ -4113,15 +4114,34 @@ function openModal(course){
       }
     });
   }
-  document.getElementById('modal').classList.add('open');
+  var m=document.getElementById('modal');
+  bkLastFocus=document.activeElement;
+  m.classList.add('open');
   document.body.style.overflow='hidden';
+  var first=m.querySelector('button:not([disabled]),a[href],input:not([disabled]),[tabindex]:not([tabindex="-1"])');
+  if(first){ setTimeout(function(){ first.focus(); },40); }
 }
 
 function closeModal(){
   document.getElementById('modal').classList.remove('open');
   document.body.style.overflow='';
+  if(bkLastFocus&&bkLastFocus.focus){ bkLastFocus.focus(); bkLastFocus=null; }
 }
 
+// A11y: activate role=button divs with Enter/Space (keyboard parity with click).
+document.addEventListener('keydown',function(e){
+  if((e.key==='Enter'||e.key===' ')&&e.target&&e.target.matches&&e.target.matches('[role="button"]:not(button):not(a)')){
+    e.preventDefault(); e.target.click();
+  }
+});
+// A11y: focus trap inside the booking modal (WCAG 2.4.3).
+document.getElementById('modal').addEventListener('keydown',function(e){
+  if(e.key!=='Tab'||!this.classList.contains('open'))return;
+  var f=[].slice.call(this.querySelectorAll('a[href],button:not([disabled]),input:not([disabled]),select,textarea,[tabindex]:not([tabindex="-1"])')).filter(function(el){return el.offsetParent!==null;});
+  if(!f.length)return; var first=f[0],last=f[f.length-1];
+  if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+  else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+});
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(); });
 // Close on backdrop click (not on modal content)
 document.getElementById('modal').addEventListener('click',e=>{

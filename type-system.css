@@ -98,3 +98,12 @@ button, .btn, [role="button"], input[type="submit"], input[type="button"], a.btn
   font-size: var(--text-xs);
   line-height: var(--lh-snug);
 }
+
+/* Site-wide keyboard focus indication (WCAG 2.4.7). Visible for keyboard
+   users, suppressed for mouse/touch. Teal ring with fallback colour. */
+:focus-visible {
+  outline: 2px solid var(--teal, #7ecdb0);
+  outline-offset: 3px;
+  border-radius: var(--r-xs, 2px);
+}
+:focus:not(:focus-visible) { outline: none; }
