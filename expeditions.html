@@ -1651,15 +1651,15 @@ h1,h2,h3,h4{font-family:var(--font-display)}
       <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
       <div class="eq-field">
         <label class="eq-label">First name</label>
-        <input type="text" name="name" id="eq-name" placeholder="Your name" required>
+        <input type="text" name="name" id="eq-name" placeholder="Your name" required aria-label="Your name">
       </div>
       <div class="eq-field">
         <label class="eq-label">Email</label>
-        <input type="email" name="email" id="eq-email" placeholder="your@email.com" required>
+        <input type="email" name="email" id="eq-email" placeholder="your@email.com" required aria-label="Your email address">
       </div>
       <div class="eq-field">
         <label class="eq-label">Destination</label>
-        <select name="destination" id="eq-dest">
+        <select name="destination" id="eq-dest" aria-label="Destination">
           <option value="">Select a destination</option>
           <option>Dahab, Egypt</option>
           <option>Bali, Indonesia</option>
@@ -1670,7 +1670,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
       </div>
       <div class="eq-field">
         <label class="eq-label">Current AIDA level</label>
-        <select name="level" id="eq-level">
+        <select name="level" id="eq-level" aria-label="Your freediving level">
           <option value="">Your current level</option>
           <option>No certification yet</option>
           <option>AIDA 1</option>
@@ -1681,7 +1681,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
       </div>
       <div class="eq-field full">
         <label class="eq-label">Anything else — goals, timing, questions</label>
-        <textarea name="message" id="eq-notes" rows="2" placeholder="Tell us what you're looking for. We read every message."></textarea>
+        <textarea name="message" id="eq-notes" rows="2" placeholder="Tell us what you're looking for. We read every message." aria-label="Your message"></textarea>
       </div>
       <div class="enquiry-submit">
         <button type="submit">Send enquiry →</button>

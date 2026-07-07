@@ -510,19 +510,19 @@ h1,h2,h3,h4{font-family:var(--font-display)}
       <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
       <div class="eq-field">
         <label class="eq-label">Name</label>
-        <input type="text" name="name" placeholder="Your name" required>
+        <input type="text" name="name" placeholder="Your name" required aria-label="Your name">
       </div>
       <div class="eq-field">
         <label class="eq-label">Email</label>
-        <input type="email" name="email" placeholder="your@email.com" required>
+        <input type="email" name="email" placeholder="your@email.com" required aria-label="Your email address">
       </div>
       <div class="eq-field">
         <label class="eq-label">Company / team name</label>
-        <input type="text" name="organisation" placeholder="Who are we hosting?">
+        <input type="text" name="organisation" placeholder="Who are we hosting?" aria-label="Organisation name">
       </div>
       <div class="eq-field">
         <label class="eq-label">Type of team</label>
-        <select name="team-type" required>
+        <select name="team-type" required aria-label="Type of team">
           <option value="">Select one</option>
           <option>Company / corporate</option>
           <option>Startup</option>
@@ -532,11 +532,11 @@ h1,h2,h3,h4{font-family:var(--font-display)}
       </div>
       <div class="eq-field full">
         <label class="eq-label">Group size</label>
-        <input type="text" name="group-size" placeholder="Roughly how many people? e.g. 8–12">
+        <input type="text" name="group-size" placeholder="Roughly how many people? e.g. 8–12" aria-label="Group size">
       </div>
       <div class="eq-field full">
         <label class="eq-label">Tell us about your team and what you're looking for</label>
-        <textarea name="message" rows="2" placeholder="Goals, timing, location, any questions — the more context the better."></textarea>
+        <textarea name="message" rows="2" placeholder="Goals, timing, location, any questions — the more context the better." aria-label="Your message"></textarea>
       </div>
       <div class="eq-submit">
         <button type="submit">Send enquiry →</button>
