@@ -2543,6 +2543,16 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 @keyframes bWobble{from{transform:translateX(calc(var(--w) * -1))}to{transform:translateX(var(--w))}}
 @media (prefers-reduced-motion:reduce){.bubbles{display:none}}
 @media (max-width:680px){.bubble:nth-child(n+8){display:none}}
+
+/* Hero entrance — pure CSS, only active when JS added .anim (never leaves content hidden). */
+@keyframes fdbHeroIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+.anim .hero-eyebrow,.anim .hero h1,.anim .hero-tagline,.anim .hero-sub,.anim .hero-actions{opacity:0;animation:fdbHeroIn .9s var(--ease) both}
+.anim .hero-eyebrow{animation-delay:.15s}
+.anim .hero h1{animation-delay:.30s}
+.anim .hero-tagline{animation-delay:.50s}
+.anim .hero-sub{animation-delay:.62s}
+.anim .hero-actions{animation-delay:.74s}
+@media (prefers-reduced-motion:reduce){.anim .hero-eyebrow,.anim .hero h1,.anim .hero-tagline,.anim .hero-sub,.anim .hero-actions{opacity:1;animation:none}}
 </style>
 <!-- Analytics (GA4) — paste your G-XXXXXXXXXX id into GA_ID to activate -->
 <script>
@@ -2557,6 +2567,7 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/type-system.css">
 <link rel="preload" as="image" href="./hero-surface.avif" type="image/avif" fetchpriority="high">
+<script>try{if(!window.matchMedia||matchMedia('(prefers-reduced-motion:no-preference)').matches){document.documentElement.className+=' anim';}}catch(e){}</script>
 </head>
 <body>
 <form name="reservation" data-netlify="true" netlify-honeypot="bot-field" hidden aria-hidden="true">
@@ -3732,8 +3743,6 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 </div><!-- /modal -->
 
 <!-- GSAP (animation) — self-hosted -->
-<script src="/gsap.min.js"></script>
-<script src="/ScrollTrigger.min.js"></script>
 
 <script>
 /* ─── CURSOR ─── */
@@ -3808,49 +3817,49 @@ document.querySelectorAll('.faq-a').forEach(a=>{
   a.appendChild(inner);
 });
 
-/* ─── REVEAL + HERO ENTRANCE + PARALLAX (GSAP, reduced-motion safe) ─── */
+/* ─── REVEAL + PARALLAX (native, reduced-motion safe; hero entrance is pure CSS) ─── */
 (function(){
   var motionOK = window.matchMedia && matchMedia('(prefers-reduced-motion: no-preference)').matches;
-  function revealAll(){ document.querySelectorAll('.reveal, .reveal-left, .reveal-fast').forEach(function(el){ el.classList.add('vis'); }); }
-  // Fallback: if GSAP didn't load or motion is reduced, just show everything (no stuck-hidden content).
-  if(!window.gsap || !window.ScrollTrigger || !motionOK){ revealAll(); return; }
-  gsap.registerPlugin(ScrollTrigger);
+  var rev = Array.prototype.slice.call(document.querySelectorAll('.reveal, .reveal-left, .reveal-fast'));
+  function revealAll(){ rev.forEach(function(el){ el.classList.add('vis'); }); }
+  if(!motionOK){ revealAll(); return; }
+  try {
+    if('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(entries, obs){
+        entries.filter(function(e){ return e.isIntersecting; }).forEach(function(e, i){
+          var el = e.target;
+          setTimeout(function(){ el.classList.add('vis'); }, i * 90);
+          obs.unobserve(el);
+        });
+      }, { rootMargin: '0px 0px -12% 0px' });   // ~ trigger near bottom of viewport
+      rev.forEach(function(el){ io.observe(el); });
+      // Safety net: once loaded, reveal anything already in view (covers the initial fold).
+      window.addEventListener('load', function(){
+        var vh = window.innerHeight || document.documentElement.clientHeight;
+        rev.forEach(function(el){ if(el.getBoundingClientRect().top < vh * 0.92){ el.classList.add('vis'); } });
+      });
+    } else { revealAll(); }
+  } catch(e){ revealAll(); }
 
-  // Staggered scroll reveals.
-  ScrollTrigger.batch('.reveal, .reveal-left, .reveal-fast', {
-    start: 'top 86%',
-    once: true,
-    onEnter: function(batch){ batch.forEach(function(el,i){ gsap.delayedCall(i*0.09, function(){ el.classList.add('vis'); }); }); }
-  });
-
-  // Hero entrance.
-  gsap.timeline({ defaults:{ ease:'power3.out' } })
-    .from('.hero-geo',       { opacity:0, scale:.85, duration:1.6, ease:'power2.out' }, 0)
-    .from('.hero-eyebrow',   { opacity:0, y:26, duration:.7 }, 0.2)
-    .from('.hero h1',         { opacity:0, y:42, duration:1.0 }, '-=0.4')
-    .from('.hero-tagline',    { opacity:0, y:26, duration:.8 }, '-=0.7')
-    .from('.hero-sub',        { opacity:0, y:24, duration:.8 }, '-=0.6')
-    .from('.hero-actions',    { opacity:0, y:22, duration:.7 }, '-=0.6')
-    .from('.hero-early-bird', { opacity:0, y:16, duration:.6 }, '-=0.55')
-    .from('.hero-scroll',     { opacity:0, y:12, duration:.6 }, '-=0.35');
-
-  // Scroll parallax — desktop + motion only (background images drift slower than scroll).
-  var mm = gsap.matchMedia();
-  mm.add('(prefers-reduced-motion: no-preference) and (min-width: 900px)', function(){
-    gsap.fromTo('.hero', { backgroundPosition:'center 38%' }, { backgroundPosition:'center 60%', ease:'none',
-      scrollTrigger:{ trigger:'.hero', start:'top top', end:'bottom top', scrub:true } });
-    if(document.querySelector('.why')){
-      gsap.fromTo('.why', { backgroundPosition:'center 34%' }, { backgroundPosition:'center 66%', ease:'none',
-        scrollTrigger:{ trigger:'.why', start:'top bottom', end:'bottom top', scrub:true } });
+  // Soft background parallax — desktop + motion only (rAF, passive scroll).
+  if(matchMedia('(min-width: 900px)').matches){
+    var layers = [];
+    ['.hero','.why'].forEach(function(sel){ var el=document.querySelector(sel); if(el) layers.push([el,38,60]); });
+    document.querySelectorAll('.f-photo').forEach(function(el){ layers.push([el,42,58]); });
+    if(layers.length){
+      var ticking=false;
+      function update(){
+        ticking=false; var vh=window.innerHeight;
+        layers.forEach(function(l){
+          var el=l[0], from=l[1], to=l[2], r=el.getBoundingClientRect();
+          var prog=Math.min(1, Math.max(0, (vh - r.top)/(vh + r.height)));
+          el.style.backgroundPositionY = (from + (to-from)*prog).toFixed(1) + '%';
+        });
+      }
+      window.addEventListener('scroll', function(){ if(!ticking){ ticking=true; requestAnimationFrame(update); } }, {passive:true});
+      update();
     }
-    gsap.utils.toArray('.f-photo').forEach(function(el){
-      gsap.fromTo(el, { backgroundPosition:'center 42%' }, { backgroundPosition:'center 58%', ease:'none',
-        scrollTrigger:{ trigger:el, start:'top bottom', end:'bottom top', scrub:true } });
-    });
-  });
-
-  // Recalculate trigger positions once images/fonts settle.
-  window.addEventListener('load', function(){ ScrollTrigger.refresh(); });
+  }
 })();
 
 /* ─── COURSE ACCORDION ─── */
