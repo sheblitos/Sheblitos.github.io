@@ -1050,7 +1050,7 @@ section { padding: 4.5rem 3.5rem; position:relative; }
 .instructor-arrow.prev { left:.6rem; }
 .instructor-arrow.next { right:.6rem; }
 .instructor-dots { display:flex; justify-content:center; gap:.6rem; padding:1rem 0 1.5rem; background:var(--deep2); }
-.instructor-dot { width:8px; height:8px; border-radius:var(--r-round); padding:0; border:none; cursor:pointer; background:var(--ln2); }
+.instructor-dot { width:8px; height:8px; border-radius:var(--r-round); padding:8px; box-sizing:content-box; background-clip:content-box; border:none; cursor:pointer; background-color:var(--ln2); }
 .instructor-dot.active { background:var(--teal); }
 
 /* ─────────────────────────────────────────────────
@@ -2472,9 +2472,9 @@ body.fx-off .dive-fx{ display:none; }
 }
 h1,h2,h3,h4{font-family:var(--font-display)}
 /* ── Swipe dots for mobile carousels ── */
-.cdots{display:none;justify-content:center;align-items:center;gap:8px;margin-top:14px}
-.cdots .cdot{width:7px;height:7px;border-radius:var(--r-round);background:rgba(236,232,224,.28);border:none;padding:0;cursor:pointer;transition:background .3s,transform .3s}
-.cdots .cdot.active{background:var(--teal);transform:scale(1.4)}
+.cdots{display:none;justify-content:center;align-items:center;gap:2px;margin-top:8px}
+.cdots .cdot{position:relative;width:24px;height:24px;border-radius:var(--r-round);background:transparent;border:none;padding:0;cursor:pointer}.cdots .cdot::before{content:'';position:absolute;top:50%;left:50%;width:7px;height:7px;border-radius:50%;background:rgba(236,232,224,.28);transform:translate(-50%,-50%);transition:background .3s,transform .3s}
+.cdots .cdot.active::before{background:var(--teal);transform:translate(-50%,-50%) scale(1.4)}
 @media(max-width:680px){.cdots-680{display:flex}}
 @media(max-width:860px){.cdots-860{display:flex}}
 /* ── Dive-depth scroll indicator (rope + descending diver) ── */
@@ -2547,25 +2547,30 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 
 /* Hero entrance — pure CSS, only active when JS added .anim (never leaves content hidden). */
 @keyframes fdbHeroIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
-.anim .hero-eyebrow,.anim .hero h1,.anim .hero-tagline,.anim .hero-sub,.anim .hero-actions{opacity:0;animation:fdbHeroIn .9s var(--ease) both}
+.anim .hero-eyebrow,.anim .hero-tagline,.anim .hero-sub,.anim .hero-actions{opacity:0;animation:fdbHeroIn .9s var(--ease) both}
 .anim .hero-eyebrow{animation-delay:.15s}
-.anim .hero h1{animation-delay:.30s}
+
 .anim .hero-tagline{animation-delay:.50s}
 .anim .hero-sub{animation-delay:.62s}
 .anim .hero-actions{animation-delay:.74s}
 @media (prefers-reduced-motion:reduce){.anim .hero-eyebrow,.anim .hero h1,.anim .hero-tagline,.anim .hero-sub,.anim .hero-actions{opacity:1;animation:none}}
+.about-dots .about-dot{width:8px;height:8px;padding:8px;box-sizing:content-box;background-clip:content-box}
+.instructor-dots .instructor-dot{background-clip:content-box}
+
+/* LCP: hero headline paints immediately (supporting elements still animate). */
+.hero h1{opacity:1 !important;animation:none !important}
 </style>
 <!-- Analytics (GA4) — paste your G-XXXXXXXXXX id into GA_ID to activate -->
 <script>
   window.dataLayer=window.dataLayer||[];
   function gtag(){dataLayer.push(arguments);}
   var GA_ID='G-VR5PT4F97R';/* GA4 Measurement ID */
-  if(GA_ID){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;document.head.appendChild(s);gtag('js',new Date());gtag('config',GA_ID,{anonymize_ip:true});}
+  if(GA_ID){var loadGA=function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;document.head.appendChild(s);gtag('js',new Date());gtag('config',GA_ID,{anonymize_ip:true});};if(document.readyState==='complete'){setTimeout(loadGA,1200);}else{window.addEventListener('load',function(){setTimeout(loadGA,1200);});}}
   function track(n,p){try{if(window.gtag)gtag('event',n,p||{});if(window.plausible)window.plausible(n,{props:p||{}});}catch(e){}}
 </script>
 <link rel="icon" type="image/png" href="/logo-mark.png"><link rel="apple-touch-icon" href="/logo-mark.png"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Mulish:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Mulish:wght@400;500;600;700&display=swap"></noscript>
 <link rel="stylesheet" href="/type-system.css?v=4">
 <link rel="preload" as="image" href="./hero-surface.avif" type="image/avif" fetchpriority="high">
 <script>try{if(!window.matchMedia||matchMedia('(prefers-reduced-motion:no-preference)').matches){document.documentElement.className+=' anim';}}catch(e){}</script>
