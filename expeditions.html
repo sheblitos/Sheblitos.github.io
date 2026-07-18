@@ -957,26 +957,19 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
     Freediving <strong>Brain</strong>
   </a>
   <div class="nav-links">
-    <div class="nav-dd">
-      <a href="/#courses" class="nav-dd-toggle">Courses &amp; Pricing</a>
-      <div class="nav-dd-menu">
-        <a href="/#courses">AIDA courses<span>AIDA 1 to Instructor</span></a>
-        <a href="/packages">Packages &amp; memberships<span>Bundles, combos, monthly</span></a>
-        <a href="/training">Drop-in training<span>For certified divers</span></a>
-      </div>
-    </div>
-    <a href="/expeditions">Travel with us</a>
-    <a href="/programmes">Teams Workshops</a>
+    <a href="/packages">Courses</a>
+    <a href="/training">Training</a>
+    <a href="/expeditions">Travel</a>
+    <a href="/programmes">Teams</a>
     <a href="/about">Our Story</a><a href="/blog">Blog</a><a href="/faq">FAQ</a>
     <a href="#enquire" class="nav-cta">Enquire</a>
   </div>
   <button class="nav-ham" id="navHam" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMobileNav()"><span></span><span></span><span></span></button></nav>
 <div class="nav-mobile" id="navMobile" role="dialog" aria-label="Mobile navigation">
-  <a href="/#courses" onclick="closeMobileNav()">Courses</a>
-  <a href="/training" onclick="closeMobileNav()">Drop-in training</a>
-  <a href="/expeditions" onclick="closeMobileNav()">Travel with us</a>
-  <a href="/packages" onclick="closeMobileNav()">Packages &amp; memberships</a>
-  <a href="/programmes" onclick="closeMobileNav()">Teams Workshops</a>
+  <a href="/packages" onclick="closeMobileNav()">Courses</a>
+  <a href="/training" onclick="closeMobileNav()">Training</a>
+  <a href="/expeditions" onclick="closeMobileNav()">Travel</a>
+  <a href="/programmes" onclick="closeMobileNav()">Teams</a>
   <a href="/about" onclick="closeMobileNav()">Our Story</a>
   <a href="/blog" onclick="closeMobileNav()">Blog</a>
   <a href="/faq" onclick="closeMobileNav()">FAQ</a>
@@ -1418,6 +1411,49 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 
 </section>
 
+<!-- ═══ CERTIFY & DIVE (course + trip) ═══ -->
+<section class="cd-section" id="certify-and-dive">
+  <style>
+    .cd-section{padding:6rem 3.5rem;border-bottom:1px solid rgba(226,221,212,.07);background:#0a1410}
+    .cd-head{max-width:640px;margin:0 auto 3rem;text-align:center}
+    .cd-head h2{font-size:clamp(2rem,3.4vw,3rem);font-weight:600;line-height:1.12;letter-spacing:-.02em;margin:.6rem 0 1rem}
+    .cd-head h2 em{color:#c9a84c;font-style:italic}
+    .cd-head p{font-size:.98rem;color:rgba(226,221,212,.6);line-height:1.8}
+    .cd-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:900px;margin:0 auto}
+    @media(max-width:760px){.cd-section{padding:4rem 1.5rem}.cd-grid{grid-template-columns:1fr}}
+    .cd-card{border:1px solid rgba(226,221,212,.14);border-radius:8px;padding:2rem 1.75rem;background:#0f1c14}
+    .cd-tag{font-family:var(--font-body);font-size:.82rem;letter-spacing:.02em;color:#7ecdb0;margin-bottom:.5rem}
+    .cd-name{font-size:1.4rem;font-weight:600;margin-bottom:.6rem}
+    .cd-desc{font-size:.9rem;color:rgba(226,221,212,.6);line-height:1.7;margin-bottom:1.2rem}
+    .cd-price{font-family:var(--font-body);font-size:1rem;color:#e2ddd4;margin-bottom:1.4rem}
+    .cd-price strong{color:#c9a84c;font-size:1.25rem}
+    .cd-card a{display:inline-block;font-family:var(--font-body);font-size:.82rem;letter-spacing:.02em;color:#0a1410;background:#c9a84c;padding:.7rem 1.5rem;border-radius:4px;text-decoration:none;transition:background .2s}
+    .cd-card a:hover{background:#d4b86a}
+  </style>
+  <div class="cd-head reveal">
+    <p class="section-tag" style="justify-content:center">Certify &amp; dive</p>
+    <h2>New to freediving?<br><em>Get certified on the trip.</em></h2>
+    <p>Pair an AIDA course with a guided trip to warm, blue water. Learn, get certified, and log unforgettable dives, all in one journey. Flights aside, everything is handled.</p>
+  </div>
+  <div class="cd-grid">
+    <div class="cd-card reveal">
+      <p class="cd-tag">Egypt · Red Sea</p>
+      <p class="cd-name">Certify &amp; Dive · Dahab</p>
+      <p class="cd-desc">An AIDA course plus a week in Dahab, the Blue Hole, deep lines, and desert evenings.</p>
+      <p class="cd-price">from <strong>€890</strong></p>
+      <a href="#enquire">Enquire →</a>
+    </div>
+    <div class="cd-card reveal">
+      <p class="cd-tag">Indonesia</p>
+      <p class="cd-name">Certify &amp; Dive · Bali</p>
+      <p class="cd-desc">A course paired with a Bali expedition, mantas, warm reefs, and depth in paradise.</p>
+      <p class="cd-price">from <strong>€1,490</strong></p>
+      <a href="#enquire">Enquire →</a>
+    </div>
+  </div>
+  <p style="text-align:center;font-family:var(--font-body);font-size:.8rem;color:rgba(226,221,212,.32);margin-top:2rem">Indicative pricing, per person, course + trip. Flights not included. Final prices confirmed on enquiry.</p>
+</section>
+
 <!-- ═══ METHODOLOGY ═══ -->
 <div class="method-strip">
   <div class="reveal-left">
@@ -1697,10 +1733,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
   <p class="footer-logo"><picture><source srcset="/logo-mark.webp" type="image/webp"><img src="/logo-mark.png" alt="" width="44" height="44"></picture>Freediving <span>Brain</span></p>
   <div class="footer-links">
     <a href="/">Home</a>
-    <a href="/#courses">Courses</a>
-    <a href="/expeditions">Travel with us</a>
-    <a href="/packages">Packages</a>
-    <a href="/programmes">Teams Workshops</a>
+    <a href="/packages">Courses</a>
+    <a href="/training">Training</a>
+    <a href="/expeditions">Travel</a>
+    <a href="/programmes">Teams</a>
     <a href="/#about">About</a>
   </div>
   <p class="footer-copy">© 2026 Freediving Brain · Barcelona</p>
