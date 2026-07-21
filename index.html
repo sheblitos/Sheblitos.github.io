@@ -4344,7 +4344,6 @@ function openCourse(id){
       <image id="drBody" xlink:href="./diver-body.png" href="./diver-body.png" x="-205.5" y="-27.3" width="207" height="39"/>
     </g>
   </svg>
-  <div class="dr-pill" id="drPill">0m</div>
 </div>
 <script>
 (function(){
@@ -4352,7 +4351,7 @@ function openCourse(id){
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
   var diver=document.getElementById('drDiver'), rig=document.getElementById('drRig'),
       legsG=document.getElementById('drLegs'), legImg=document.getElementById('drLegImg'),
-      pill=document.getElementById('drPill'), bubbles=document.getElementById('drBubbles');
+      bubbles=document.getElementById('drBubbles');
   var ticks=[].slice.call(panel.querySelectorAll('.dr-tick'));
   var XL='http://www.w3.org/1999/xlink';
   var TOP=88, halfH=40, travelH=300, KICK=[0,1,2,1];
@@ -4369,7 +4368,7 @@ function openCourse(id){
     legImg.setAttribute('width',L.w); legImg.setAttribute('height',L.ht); }
   function maxScroll(){ return Math.max(1, document.documentElement.scrollHeight - window.innerHeight); }
   function put(prog){ var hy=TOP+prog*travelH; diver.style.top=(hy-halfH)+'px';
-    pill.style.top=(hy-7)+'px'; var d=prog*60; pill.textContent=Math.round(d)+'m';
+    var d=prog*60;
     ticks.forEach(function(t){ t.classList.toggle('on', d>=(+t.dataset.depth-1)); }); return hy; }
   layout(); window.addEventListener('resize',layout);
   if(reduce){ function su(){ var p=Math.max(0,Math.min(1,window.scrollY/maxScroll()));
