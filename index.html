@@ -4355,7 +4355,7 @@ function openCourse(id){
       pill=document.getElementById('drPill'), bubbles=document.getElementById('drBubbles');
   var ticks=[].slice.call(panel.querySelectorAll('.dr-tick'));
   var XL='http://www.w3.org/1999/xlink';
-  var TOP=88, halfH=40, travelH=300, DUCK=0.07;
+  var TOP=88, halfH=40, travelH=300, KICK=[0,1,2,1];
   var LEGS=[{h:'./diver-legs-1.png',x:-1.8,y:-42.0,w:175,ht:63},
             {h:'./diver-legs-2.png',x:-1.8,y:-17.7,w:167,ht:34},
             {h:'./diver-legs-3.png',x:-1.8,y:-42.3,w:163,ht:82}];
@@ -4367,34 +4367,32 @@ function openCourse(id){
     try{legImg.setAttributeNS(XL,'href',L.h);}catch(e){} legImg.setAttribute('href',L.h);
     legImg.setAttribute('x',L.x); legImg.setAttribute('y',L.y);
     legImg.setAttribute('width',L.w); legImg.setAttribute('height',L.ht); }
-  function ease(k){return k*k*(3-2*k);}
   function maxScroll(){ return Math.max(1, document.documentElement.scrollHeight - window.innerHeight); }
-  function orient(prog){
-    // Only transition is the first duck-dive over the first DUCK of the page; then head-down up & down.
-    var dz=Math.max(0,Math.min(1, prog/DUCK));
-    var Ru=-90*ease(dz), Rl=40*Math.sin(Math.PI*dz);   // gentle human pike into the dive
-    rig.setAttribute('transform','rotate('+Ru.toFixed(2)+')');
-    legsG.setAttribute('transform','rotate('+Rl.toFixed(2)+')');
-  }
-  function put(prog,kickI){
-    var hy=TOP+prog*travelH; diver.style.top=(hy-halfH)+'px';
-    pill.style.top=(hy-7)+'px'; var depth=prog*60; pill.textContent=Math.round(depth)+'m';
-    ticks.forEach(function(t){ t.classList.toggle('on', depth>=(+t.dataset.depth-1)); });
-    setLeg(kickI); return hy;
-  }
+  function put(prog){ var hy=TOP+prog*travelH; diver.style.top=(hy-halfH)+'px';
+    pill.style.top=(hy-7)+'px'; var d=prog*60; pill.textContent=Math.round(d)+'m';
+    ticks.forEach(function(t){ t.classList.toggle('on', d>=(+t.dataset.depth-1)); }); return hy; }
   layout(); window.addEventListener('resize',layout);
-  if(reduce){
-    function su(){ var p=Math.max(0,Math.min(1, window.scrollY/maxScroll())); orient(p); put(p,1); }
-    su(); window.addEventListener('scroll',su,{passive:true}); return;
-  }
-  var prog=0;
+  if(reduce){ function su(){ var p=Math.max(0,Math.min(1,window.scrollY/maxScroll()));
+      rig.setAttribute('transform','rotate('+(p<=0.02?0:-90)+')'); setLeg(1); put(p); }
+    su(); window.addEventListener('scroll',su,{passive:true}); return; }
+  var prog=0, Ru=0, dirDown=true, kickE=0, phase=0, lastTs=0;
   function step(ts){
+    var dt=lastTs?Math.min(50,ts-lastTs):16; lastTs=ts;
     var target=Math.max(0,Math.min(1, window.scrollY/maxScroll()));
-    prog += (target-prog)*0.06;                       // eased glide = slow, smooth
-    if(Math.abs(target-prog)<0.0003) prog=target;
-    orient(prog);
-    var hy=put(prog, [0,1,2,1][Math.floor((ts%560)/140)]);   // continuous finning
-    if(prog*60>4 && Math.random()<0.045) spawn(hy);
+    var prev=prog; prog += (target-prog)*0.06; if(Math.abs(target-prog)<0.0003) prog=target;
+    var vel=prog-prev, speed=Math.abs(vel), depth=prog*60;
+    if(speed>0.00018) dirDown = vel>0;
+    // orientation: flat at surface; else face travel direction (head-down / head-up)
+    var oriT = (prog<=0.02) ? 0 : (dirDown ? -90 : 90);
+    Ru += (oriT-Ru)*0.09;
+    rig.setAttribute('transform','rotate('+Ru.toFixed(2)+')');
+    // finning only while moving AND deeper than ~5m; ramps up/down smoothly
+    var kt = (speed>0.0004 && depth>5) ? 1 : 0;
+    kickE += (kt-kickE)*0.05;
+    if(kickE>0.06){ phase += dt*0.010*(0.25+kickE); setLeg(KICK[Math.floor(phase)%4]); }
+    else setLeg(1);
+    var hy=put(prog);
+    if(kickE>0.3 && depth>6 && Math.random()<0.05) spawn(hy);
     requestAnimationFrame(step);
   }
   function spawn(y){ if(!bubbles)return; var b=document.createElement('div'); b.className='dr-bubble';
