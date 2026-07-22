@@ -1885,11 +1885,22 @@ font-weight:600}
 
 /* ── Community gallery ── */
 .community-head { max-width:660px; margin-bottom:3rem; }
-.comm-grid { display:grid; grid-template-columns:repeat(3,1fr); grid-auto-rows:248px; gap:10px; }
-.comm-item { position:relative; overflow:hidden; border-radius:var(--r); margin:0; }
+.comm-scroll{
+  display:grid; grid-auto-flow:column;
+  grid-template-rows:repeat(2, clamp(150px,19vw,196px));
+  grid-auto-columns:clamp(170px,22vw,236px);
+  gap:10px; overflow-x:auto; overflow-y:hidden;
+  scroll-snap-type:x proximity; padding-bottom:1.1rem;
+  scrollbar-width:thin; scrollbar-color:var(--ln2) transparent;
+  -webkit-overflow-scrolling:touch;
+}
+.comm-scroll::-webkit-scrollbar{height:6px}
+.comm-scroll::-webkit-scrollbar-track{background:transparent}
+.comm-scroll::-webkit-scrollbar-thumb{background:var(--ln2);border-radius:3px}
+.comm-item { position:relative; overflow:hidden; border-radius:var(--r); margin:0; scroll-snap-align:start; }
 .comm-item img {
   width:100%; height:100%; object-fit:cover; display:block;
-  filter:brightness(.82) saturate(1.08);
+  filter:brightness(.9) saturate(1.1);
   transition:transform .7s cubic-bezier(.16,1,.3,1), filter .5s;
 }
 .comm-item:hover img { transform:scale(1.05); filter:brightness(1) saturate(1.22); }
@@ -1903,15 +1914,7 @@ font-weight:600}
    color:rgba(236,232,224,.72);
 }
 @media (max-width:900px){
-  .comm-grid { grid-template-columns:repeat(2,1fr); grid-auto-rows:200px; }
-}
-@media (max-width:680px){
-  .comm-grid {
-    grid-template-columns:none; grid-auto-flow:column; grid-auto-columns:78%;
-    grid-auto-rows:220px; overflow-x:auto; scroll-snap-type:x mandatory;
-    margin:0 -1.75rem; padding:0 1.75rem; -webkit-overflow-scrolling:touch;
-  }
-  .comm-item { scroll-snap-align:start; }
+  .comm-scroll{ grid-template-rows:repeat(2, clamp(126px,31vw,168px)); grid-auto-columns:clamp(146px,42vw,196px); }
 }
 
 /* Booking — your students at the buoy, sunny Red Sea */
@@ -3224,31 +3227,33 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
     <h2 class="section-h reveal">You don't just learn to dive.<br>You join a <em>community.</em></h2>
     <p class="section-intro reveal">Every course ends the same way: laughter on the boat, photos at the buoy, dinner under the stars. The diving is why you come. The people are why you stay.</p>
   </div>
-  <div class="comm-grid reveal">
-    <figure class="comm-item">
-      <picture><source srcset="./comm-happy-students.avif" type="image/avif"><source srcset="./comm-happy-students.webp" type="image/webp"><img src="./comm-happy-students.jpg" alt="Freediving Brain students celebrating together after a course" loading="lazy" width="825" height="1100"></picture>
-      
-    </figure>
-    <figure class="comm-item">
-      <picture><source srcset="./comm-boat-smiles.avif" type="image/avif"><source srcset="./comm-boat-smiles.webp" type="image/webp"><img src="./comm-boat-smiles.jpg" alt="Students smiling on the boat after a dive in the Red Sea" loading="lazy" width="1100" height="825"></picture>
-      
-    </figure>
-    <figure class="comm-item">
-      <picture><source srcset="./comm-sunset.avif" type="image/avif"><source srcset="./comm-sunset.webp" type="image/webp"><img src="./comm-sunset.jpg" alt="Surfacing high-five after a personal-best dive, Dahab" loading="lazy" width="1100" height="619"></picture>
-      
-    </figure>
-    <figure class="comm-item">
-      <picture><source srcset="./comm-celebration.avif" type="image/avif"><source srcset="./comm-celebration.webp" type="image/webp"><img src="./comm-celebration.jpg" alt="The group celebrating at the Ras Mohamed monument, Sinai" loading="lazy" width="878" height="1100"></picture>
-      
-    </figure>
-    <figure class="comm-item">
-      <picture><source srcset="./comm-bluehole.avif" type="image/avif"><source srcset="./comm-bluehole.webp" type="image/webp"><img src="./comm-bluehole.jpg" alt="A student and Shebl after a session at the Lighthouse, Dahab" loading="lazy" width="1200" height="675"></picture>
-      
-    </figure>
-    <figure class="comm-item">
-      <picture><source srcset="./comm-pool-laughter.avif" type="image/avif"><source srcset="./comm-pool-laughter.webp" type="image/webp"><img src="./comm-pool-laughter.jpg" alt="A pool static breath-hold session with the group" loading="lazy" width="1200" height="900"></picture>
-      
-    </figure><figure class="comm-item"><picture><source srcset="./comm-dahab-buoy.avif" type="image/avif"><source srcset="./comm-dahab-buoy.webp" type="image/webp"><img src="./comm-dahab-buoy.jpg" alt="Rimi and two students celebrating in the water after a freediving session in Dahab" loading="lazy" width="1100" height="825"></picture></figure><figure class="comm-item"><picture><source srcset="./comm-bluehole-crew.avif" type="image/avif"><source srcset="./comm-bluehole-crew.webp" type="image/webp"><img src="./comm-bluehole-crew.jpg" alt="Shebl with two students after a Blue Hole freediving session in Dahab" loading="lazy" width="619" height="1100"></picture></figure><figure class="comm-item"><picture><source srcset="./comm-rimi-student.avif" type="image/avif"><source srcset="./comm-rimi-student.webp" type="image/webp"><img src="./comm-rimi-student.jpg" alt="Rimi with a smiling freediving student at a Dahab beach camp" loading="lazy" width="825" height="1100"></picture></figure><figure class="comm-item"><picture><source srcset="./comm-base-smiles.avif" type="image/avif"><source srcset="./comm-base-smiles.webp" type="image/webp"><img src="./comm-base-smiles.jpg" alt="Shebl with a student and a friendly dog at the Dahab dive base" loading="lazy" width="825" height="1100"></picture></figure>
+  <div class="comm-scroll reveal">
+    <figure class="comm-item"><picture><source srcset="./commx-01.avif" type="image/avif"><source srcset="./commx-01.webp" type="image/webp"><img src="./commx-01.jpg" alt="The whole group celebrating on the boat" loading="lazy" width="1100" height="825"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-02.avif" type="image/avif"><source srcset="./commx-02.webp" type="image/webp"><img src="./commx-02.jpg" alt="Freediver descending into the blue at Ras Mohamed" loading="lazy" width="1100" height="589"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-03.avif" type="image/avif"><source srcset="./commx-03.webp" type="image/webp"><img src="./commx-03.jpg" alt="The group around the fire at a desert dinner" loading="lazy" width="825" height="1100"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-04.avif" type="image/avif"><source srcset="./commx-04.webp" type="image/webp"><img src="./commx-04.jpg" alt="Two freedivers dancing through the freefall" loading="lazy" width="1100" height="825"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-05.avif" type="image/avif"><source srcset="./commx-05.webp" type="image/webp"><img src="./commx-05.jpg" alt="Students celebrating together after a course" loading="lazy" width="1100" height="825"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-06.avif" type="image/avif"><source srcset="./commx-06.webp" type="image/webp"><img src="./commx-06.jpg" alt="Swimming with a manta ray in Bali" loading="lazy" width="1100" height="1077"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-07.avif" type="image/avif"><source srcset="./commx-07.webp" type="image/webp"><img src="./commx-07.jpg" alt="The group on the buoy at sunset" loading="lazy" width="960" height="1097"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-08.avif" type="image/avif"><source srcset="./commx-08.webp" type="image/webp"><img src="./commx-08.jpg" alt="Freediver over the reef at Ras Mohamed" loading="lazy" width="1100" height="596"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-09.avif" type="image/avif"><source srcset="./commx-09.webp" type="image/webp"><img src="./commx-09.jpg" alt="Horse riding through Wadi Genai" loading="lazy" width="825" height="1100"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-10.avif" type="image/avif"><source srcset="./commx-10.webp" type="image/webp"><img src="./commx-10.jpg" alt="A group selfie of smiles after a session" loading="lazy" width="564" height="1100"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-11.avif" type="image/avif"><source srcset="./commx-11.webp" type="image/webp"><img src="./commx-11.jpg" alt="Surfing on the Bali expedition" loading="lazy" width="619" height="1100"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-12.avif" type="image/avif"><source srcset="./commx-12.webp" type="image/webp"><img src="./commx-12.jpg" alt="The group posing together underwater" loading="lazy" width="680" height="1100"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-13.avif" type="image/avif"><source srcset="./commx-13.webp" type="image/webp"><img src="./commx-13.jpg" alt="Elephants on the Sri Lanka expedition" loading="lazy" width="1100" height="729"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-14.avif" type="image/avif"><source srcset="./commx-14.webp" type="image/webp"><img src="./commx-14.jpg" alt="The group celebrating at the Ras Mohamed monument" loading="lazy" width="878" height="1100"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-15.avif" type="image/avif"><source srcset="./commx-15.webp" type="image/webp"><img src="./commx-15.jpg" alt="Bi-fins descent on the line" loading="lazy" width="962" height="1100"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-16.avif" type="image/avif"><source srcset="./commx-16.webp" type="image/webp"><img src="./commx-16.jpg" alt="Laughing together after a session in Dahab" loading="lazy" width="825" height="1100"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-17.avif" type="image/avif"><source srcset="./commx-17.webp" type="image/webp"><img src="./commx-17.jpg" alt="Freediver in the sun rays over the reef" loading="lazy" width="1100" height="626"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-18.avif" type="image/avif"><source srcset="./commx-18.webp" type="image/webp"><img src="./commx-18.jpg" alt="A pair celebrating arms-up in the shallows" loading="lazy" width="460" height="1100"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-19.avif" type="image/avif"><source srcset="./commx-19.webp" type="image/webp"><img src="./commx-19.jpg" alt="A desert camp with lanterns at Wadi Genai" loading="lazy" width="825" height="1100"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-20.avif" type="image/avif"><source srcset="./commx-20.webp" type="image/webp"><img src="./commx-20.jpg" alt="High-five after a personal-best dive" loading="lazy" width="1100" height="619"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-21.avif" type="image/avif"><source srcset="./commx-21.webp" type="image/webp"><img src="./commx-21.jpg" alt="Two freedivers on the line" loading="lazy" width="985" height="1100"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-22.avif" type="image/avif"><source srcset="./commx-22.webp" type="image/webp"><img src="./commx-22.jpg" alt="Rimi with students in the water" loading="lazy" width="1100" height="825"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-23.avif" type="image/avif"><source srcset="./commx-23.webp" type="image/webp"><img src="./commx-23.jpg" alt="Sunset on a Wadi Genai hike" loading="lazy" width="825" height="1100"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-24.avif" type="image/avif"><source srcset="./commx-24.webp" type="image/webp"><img src="./commx-24.jpg" alt="The group smiling on the boat after a dive" loading="lazy" width="1100" height="825"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-25.avif" type="image/avif"><source srcset="./commx-25.webp" type="image/webp"><img src="./commx-25.jpg" alt="Shebl and Rimi at Ras Mohamed" loading="lazy" width="884" height="1100"></picture></figure>
+    <figure class="comm-item"><picture><source srcset="./commx-26.avif" type="image/avif"><source srcset="./commx-26.webp" type="image/webp"><img src="./commx-26.jpg" alt="Three freedivers smiling in the water" loading="lazy" width="825" height="1100"></picture></figure>
   </div>
 </section>
 
@@ -4317,7 +4322,7 @@ function openCourse(id){
     window.addEventListener('resize',function(){if(raf)cancelAnimationFrame(raf);raf=requestAnimationFrame(upd);});
   }
   window.__carouselDots=dots;
-  [{c:'.course-carousel',i:'.course-card',bp:680},{c:'.why-grid',i:'.why-item',bp:680},{c:'.comm-grid',i:'.comm-item',bp:680},{c:'.mw-grid',i:'.mw-card',bp:860}].forEach(function(o){
+  [{c:'.course-carousel',i:'.course-card',bp:680},{c:'.why-grid',i:'.why-item',bp:680},{c:'.mw-grid',i:'.mw-card',bp:860}].forEach(function(o){
     var sc=document.querySelector(o.c);if(!sc)return;
     var items=[].slice.call(sc.querySelectorAll(o.i));if(items.length<2)return;
     var box=document.createElement('div');box.className='cdots cdots-'+o.bp;
