@@ -2640,6 +2640,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
     <a href="/about">Our Story</a>
     <a href="/blog">Blog</a>
     <a href="/faq">FAQ</a>
+    <a href="#" class="nav-cta" onclick="openModal('Waitlist');return false;">Reserve a spot</a>
   </div>
 
   <button class="nav-ham" id="navHam" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMobileNav()">
@@ -2658,6 +2659,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
   <a href="/about"        onclick="closeMobileNav()">Our Story</a>
   <a href="/blog"         onclick="closeMobileNav()">Blog</a>
   <a href="/faq"          onclick="closeMobileNav()">FAQ</a>
+  <a href="#" class="nav-mobile-cta" onclick="closeMobileNav();openModal('Waitlist');return false;">Reserve a spot</a>
 </div>
 
 <!-- ═══════════════════════════════ HERO ═══════════ -->
@@ -2694,6 +2696,8 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
       <a href="#courses" class="btn-primary">Explore Courses</a>
       <a href="/training" class="btn-ghost">Training Packages</a>
     </div>
+
+    <p class="hero-trust" style="margin-top:1.4rem;font-size:var(--text-xs);letter-spacing:.03em;color:rgba(255,255,255,.72);">AIDA certified · 160+ divers trained · Beginners welcome, no payment to reserve</p>
 
   </div>
 
@@ -3456,6 +3460,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
       <a href="#" class="btn-primary" onclick="openModal('Waitlist');return false;">Reserve your place, free</a>
       <a href="#" class="btn-ghost" onclick="openModal('General Inquiry');return false;">Ask a question</a>
     </div>
+    <p class="booking-note reveal">No payment now. No obligation. We reply personally, usually within a day.</p>
   </div>
 </section>
 
