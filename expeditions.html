@@ -838,14 +838,23 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 /* ── Trip moments gallery ── */
 .trip-moments{ padding:4.5rem 2.5rem; max-width:1240px; margin:0 auto; }
 .trip-moments h2{ margin-bottom:2.5rem; }
-.tripgal{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
-.tg-item{ position:relative; margin:0; overflow:hidden; border-radius:var(--r-md); aspect-ratio:4/3; }
-.tg-item img{ width:100%; height:100%; object-fit:cover; display:block; filter:brightness(.84) saturate(1.1); transition:transform .7s cubic-bezier(.16,1,.3,1), filter .5s; }
+.tripgal{
+  display:grid; grid-auto-flow:column;
+  grid-template-rows:repeat(2, clamp(120px,15vw,158px));
+  grid-auto-columns:clamp(140px,17.5vw,188px);
+  gap:8px; overflow-x:auto; overflow-y:hidden;
+  scroll-snap-type:x proximity; padding-bottom:1rem;
+  scrollbar-width:thin; scrollbar-color:var(--ln2) transparent;
+  -webkit-overflow-scrolling:touch;
+}
+.tripgal::-webkit-scrollbar{ height:6px }
+.tripgal::-webkit-scrollbar-track{ background:transparent }
+.tripgal::-webkit-scrollbar-thumb{ background:var(--ln2); border-radius:3px }
+.tg-item{ position:relative; margin:0; overflow:hidden; border-radius:var(--r-md); scroll-snap-align:start; }
+.tg-item img{ width:100%; height:100%; object-fit:cover; display:block; filter:brightness(.86) saturate(1.1); transition:transform .7s cubic-bezier(.16,1,.3,1), filter .5s; }
 .tg-item:hover img{ transform:scale(1.05); filter:brightness(1) saturate(1.2); }
-.tg-item figcaption{ position:absolute; bottom:.75rem; left:1rem; z-index:1; font-family:var(--font-body); font-size:var(--text-xs); letter-spacing:.02em;  color:rgba(236,232,224,.82); }
-.tg-item::after{ content:''; position:absolute; inset:0; background:linear-gradient(180deg,transparent 55%,rgba(12,26,21,.7)); pointer-events:none; }
-@media(max-width:860px){ .tripgal{ grid-template-columns:repeat(2,1fr); } .trip-moments{ padding:4rem 1.5rem; } }
-@media(max-width:520px){ .tripgal{ grid-template-columns:1fr; } }
+.tg-item::after{ content:''; position:absolute; inset:0; background:linear-gradient(180deg,transparent 60%,rgba(12,26,21,.55)); pointer-events:none; }
+@media(max-width:900px){ .tripgal{ grid-template-rows:repeat(2, clamp(104px,26vw,146px)); grid-auto-columns:clamp(124px,34vw,168px); } .trip-moments{ padding:4rem 1.5rem; } }
 /* ── Destination slider + visual height fix ── */
 .dest{ align-items:start; }
 .dest-visual{ position:sticky; top:80px; height:min(62vh,480px); align-self:start; }
@@ -1441,12 +1450,27 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
   <p class="section-tag reveal">From past trips</p>
   <h2 class="reveal" style="font-size:clamp(2rem,3.5vw,3rem);font-weight:300;letter-spacing:-.02em;line-height:1.1">Real moments.<br>Real <em>places.</em></h2>
   <div class="tripgal reveal">
-    <figure class="tg-item"><picture><source srcset="./expg-cave.avif" type="image/avif"><source srcset="./expg-cave.webp" type="image/webp"><img src="./expg-cave.jpg" alt="Cave dive at Ras Mohamed, Red Sea" loading="lazy" width="735" height="1300"></picture><figcaption>Ras Mohamed · cave dive</figcaption></figure>
-    <figure class="tg-item"><picture><source srcset="./expg-gili.avif" type="image/avif"><source srcset="./expg-gili.webp" type="image/webp"><img src="./expg-gili.jpg" alt="Snorkelling the reef at Gili Air, Bali" loading="lazy" width="1100" height="1467"></picture><figcaption>Gili Air · Bali</figcaption></figure>
-    <figure class="tg-item"><picture><source srcset="./expg-desert.avif" type="image/avif"><source srcset="./expg-desert.webp" type="image/webp"><img src="./expg-desert.jpg" alt="Desert hike near Wadi Genai, Sinai" loading="lazy" width="975" height="1300"></picture><figcaption>Wadi Genai · desert hike</figcaption></figure>
-    <figure class="tg-item"><picture><source srcset="./expg-snacks.avif" type="image/avif"><source srcset="./expg-snacks.webp" type="image/webp"><img src="./expg-snacks.jpg" alt="Freedivers smiling on the boat between dives, Red Sea" loading="lazy" width="1300" height="975"></picture><figcaption>Red Sea · between dives</figcaption></figure>
-    <figure class="tg-item"><picture><source srcset="./expg-sunset.avif" type="image/avif"><source srcset="./expg-sunset.webp" type="image/webp"><img src="./expg-sunset.jpg" alt="Surfacing high-five after a dive, Dahab" loading="lazy" width="1300" height="731"></picture><figcaption>Dahab · surfacing high-five</figcaption></figure>
-    <figure class="tg-item"><picture><source srcset="./expg-bluehole.avif" type="image/avif"><source srcset="./expg-bluehole.webp" type="image/webp"><img src="./expg-bluehole.jpg" alt="Student and instructor after a session, Dahab" loading="lazy" width="543" height="1300"></picture><figcaption>Dahab · after the session</figcaption></figure>
+    <figure class="tg-item"><picture><source srcset="./expg-cave.avif" type="image/avif"><source srcset="./expg-cave.webp" type="image/webp"><img src="./expg-cave.jpg" alt="Cave dive at Ras Mohamed, Red Sea" loading="lazy"></picture></figure>
+    <figure class="tg-item"><picture><source srcset="./sl-real-1.avif" type="image/avif"><source srcset="./sl-real-1.webp" type="image/webp"><img src="./sl-real-1.jpg" alt="Sigiriya rock, Sri Lanka" loading="lazy"></picture></figure>
+    <figure class="tg-item"><picture><source srcset="./bali-real-13.avif" type="image/avif"><source srcset="./bali-real-13.webp" type="image/webp"><img src="./bali-real-13.jpg" alt="Diamond Beach, Nusa Penida, Bali" loading="lazy"></picture></figure>
+    <figure class="tg-item"><picture><source srcset="./expg-gili.avif" type="image/avif"><source srcset="./expg-gili.webp" type="image/webp"><img src="./expg-gili.jpg" alt="Snorkelling the reef at Gili Air, Bali" loading="lazy"></picture></figure>
+    <figure class="tg-item"><picture><source srcset="./sl-real-2.avif" type="image/avif"><source srcset="./sl-real-2.webp" type="image/webp"><img src="./sl-real-2.jpg" alt="Tea country, Sri Lanka" loading="lazy"></picture></figure>
+    <figure class="tg-item"><picture><source srcset="./bali-real-2.avif" type="image/avif"><source srcset="./bali-real-2.webp" type="image/webp"><img src="./bali-real-2.jpg" alt="On the jungle swing, Bali" loading="lazy"></picture></figure>
+    <figure class="tg-item"><picture><source srcset="./expg-desert.avif" type="image/avif"><source srcset="./expg-desert.webp" type="image/webp"><img src="./expg-desert.jpg" alt="Desert hike near Wadi Genai, Sinai" loading="lazy"></picture></figure>
+    <figure class="tg-item"><picture><source srcset="./sl-real-5.avif" type="image/avif"><source srcset="./sl-real-5.webp" type="image/webp"><img src="./sl-real-5.jpg" alt="Safari at Yala, Sri Lanka" loading="lazy"></picture></figure>
+    <figure class="tg-item"><picture><source srcset="./bali-real-11.avif" type="image/avif"><source srcset="./bali-real-11.webp" type="image/webp"><img src="./bali-real-11.jpg" alt="Snorkelling with fish, Bali" loading="lazy"></picture></figure>
+    <figure class="tg-item"><picture><source srcset="./expg-snacks.avif" type="image/avif"><source srcset="./expg-snacks.webp" type="image/webp"><img src="./expg-snacks.jpg" alt="Between dives on the boat, Red Sea" loading="lazy"></picture></figure>
+    <figure class="tg-item"><picture><source srcset="./sl-real-6.avif" type="image/avif"><source srcset="./sl-real-6.webp" type="image/webp"><img src="./sl-real-6.jpg" alt="On the road in the hills, Sri Lanka" loading="lazy"></picture></figure>
+    <figure class="tg-item"><picture><source srcset="./bali-real-5.avif" type="image/avif"><source srcset="./bali-real-5.webp" type="image/webp"><img src="./bali-real-5.jpg" alt="The water ceremony at Tirta Empul, Bali" loading="lazy"></picture></figure>
+    <figure class="tg-item"><picture><source srcset="./expg-sunset.avif" type="image/avif"><source srcset="./expg-sunset.webp" type="image/webp"><img src="./expg-sunset.jpg" alt="Surfacing high-five after a dive, Dahab" loading="lazy"></picture></figure>
+    <figure class="tg-item"><picture><source srcset="./sl-real-3.avif" type="image/avif"><source srcset="./sl-real-3.webp" type="image/webp"><img src="./sl-real-3.jpg" alt="The hill-country train, Sri Lanka" loading="lazy"></picture></figure>
+    <figure class="tg-item"><picture><source srcset="./bali-real-14.avif" type="image/avif"><source srcset="./bali-real-14.webp" type="image/webp"><img src="./bali-real-14.jpg" alt="The three wise monkeys, Bali" loading="lazy"></picture></figure>
+    <figure class="tg-item"><picture><source srcset="./expg-bluehole.avif" type="image/avif"><source srcset="./expg-bluehole.webp" type="image/webp"><img src="./expg-bluehole.jpg" alt="After the session, Dahab" loading="lazy"></picture></figure>
+    <figure class="tg-item"><picture><source srcset="./sl-real-9.avif" type="image/avif"><source srcset="./sl-real-9.webp" type="image/webp"><img src="./sl-real-9.jpg" alt="By the falls, Sri Lanka" loading="lazy"></picture></figure>
+    <figure class="tg-item"><picture><source srcset="./bali-real-15.avif" type="image/avif"><source srcset="./bali-real-15.webp" type="image/webp"><img src="./bali-real-15.jpg" alt="On the scooter, Bali" loading="lazy"></picture></figure>
+    <figure class="tg-item"><picture><source srcset="./sl-real-13.avif" type="image/avif"><source srcset="./sl-real-13.webp" type="image/webp"><img src="./sl-real-13.jpg" alt="The lake below Sigiriya, Sri Lanka" loading="lazy"></picture></figure>
+    <figure class="tg-item"><picture><source srcset="./bali-real-3.avif" type="image/avif"><source srcset="./bali-real-3.webp" type="image/webp"><img src="./bali-real-3.jpg" alt="Over the rice terraces, Bali" loading="lazy"></picture></figure>
+    <figure class="tg-item"><picture><source srcset="./bali-real-7.avif" type="image/avif"><source srcset="./bali-real-7.webp" type="image/webp"><img src="./bali-real-7.jpg" alt="Beach sunset, Bali" loading="lazy"></picture></figure>
   </div>
 </section>
 
