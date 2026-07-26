@@ -284,7 +284,7 @@ nav.scrolled{
    METHODOLOGY STRIP
 ═══════════════════════════════════════ */
 .method-strip{
-  padding:4.5rem 3.5rem;
+  padding:3.25rem 3.5rem;
   border-bottom:1px solid var(--ln);
   display:block;
 }
@@ -296,18 +296,18 @@ nav.scrolled{
 .method-heading em{color:var(--teal);font-style:italic}
 .method-body{
   font-size:1rem;font-weight:400;
-  color:var(--txt2);line-height:1.9;max-width:640px;margin-top:1.1rem;
+  color:var(--txt2);line-height:1.7;max-width:640px;margin-top:1rem;
 }
-.method-body p+p{margin-top:1rem}
+.method-body p+p{margin-top:.75rem}
 .method-pillars{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:1px;margin-top:3rem;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;margin-top:2rem;
   border:1px solid var(--ln);border-radius:var(--r);
   overflow:hidden;
 }
 .method-pill{
   background:var(--deep2);
-  padding:1.5rem;
+  padding:1.4rem;
 }
 .mp-num{
   font-family:var(--font-body);
@@ -315,8 +315,10 @@ nav.scrolled{
   color:var(--teal);
   margin-bottom:.5rem;
 }
-.mp-title{font-size:1.1rem;font-weight:600;margin-bottom:.4rem}
-.mp-body{font-size:var(--text-base);color:var(--txt2);line-height:1.7}
+.mp-title{font-size:1rem;font-weight:600;margin-bottom:.4rem}
+.mp-body{font-size:var(--text-sm);color:var(--txt2);line-height:1.6}
+@media(max-width:1080px){.method-pillars{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.method-pillars{grid-template-columns:1fr}}
 
 /* ═══════════════════════════════════════
    DESTINATIONS
@@ -1418,29 +1420,29 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
   </div>
   <div class="reveal">
     <div class="method-body">
-      <p>Take these before or after you learn to freedive, no certifications, no performance pressure. Just Shebl &amp; Rimi, a small group, and some extraordinary places.</p>
-      <p>Half the magic is underwater. The other half is at a table at sunset, talking about what you saw.</p>
+      <p>Before or after you learn to freedive. No certifications, no pressure. Just Shebl &amp; Rimi, a small group, and extraordinary places.</p>
+      <p>Half the magic is underwater. The other half is at a table at sunset.</p>
     </div>
     <div class="method-pillars">
       <div class="method-pill">
         <p class="mp-num">01</p>
         <p class="mp-title">Beautiful dives</p>
-        <p class="mp-body">Sites chosen for the water, visibility, marine life and reef health. We go where it's worth getting wet.</p>
+        <p class="mp-body">Chosen for water, visibility and marine life. Worth getting wet.</p>
       </div>
       <div class="method-pill">
         <p class="mp-num">02</p>
         <p class="mp-title">The land is half the story</p>
-        <p class="mp-body">Deserts, volcanoes, ancient ruins, safaris, jungle hikes. Every trip pairs the diving with real adventures above the surface.</p>
+        <p class="mp-body">Deserts, volcanoes, ruins, safaris, jungle hikes. Adventure above the surface too.</p>
       </div>
       <div class="method-pill">
         <p class="mp-num">03</p>
         <p class="mp-title">Led personally by Shebl &amp; Rimi</p>
-        <p class="mp-body">On every dive and every dinner, with a local network of guides and operators that opens doors tourists don't find.</p>
+        <p class="mp-body">On every dive and dinner, with locals who open hidden doors.</p>
       </div>
       <div class="method-pill">
         <p class="mp-num">04</p>
         <p class="mp-title">All levels, always safe</p>
-        <p class="mp-body">Beginners to experienced freedivers welcome, no expert needed. Full protocols, buddy diving and emergency O&#8322; on every session, there when you need it, never in the way.</p>
+        <p class="mp-body">Beginners to experts. Full safety protocols on every session.</p>
       </div>
     </div>
   </div>
