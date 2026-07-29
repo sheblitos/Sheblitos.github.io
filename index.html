@@ -1050,7 +1050,7 @@ section { padding: 4.5rem 3.5rem; position:relative; }
 .instructor-carousel { display:none; position:relative; margin-top:3rem; }
 .instructor-track { display:flex; transition:transform .5s cubic-bezier(.16,1,.3,1); }
 .instructor-carousel .instructor-card { flex:0 0 100%; min-width:100%; margin-top:0; }
-@media (max-width:680px) { .instructor-carousel { display:block; } }
+@media (max-width:680px) { .instructor-carousel { display:block; } .about-carousel { display:none; } }
 .instructor-arrow {
   position:absolute; top:36%; transform:translateY(-50%); z-index:6;
   width:38px; height:38px; border-radius:var(--r-round);
@@ -2571,6 +2571,8 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 @media (prefers-reduced-motion:reduce){.anim .hero-eyebrow,.anim .hero h1,.anim .hero-tagline,.anim .hero-sub,.anim .hero-actions{opacity:1;animation:none}}
 .about-dots .about-dot{width:8px;height:8px;padding:8px;box-sizing:content-box;background-clip:content-box}
 .instructor-dots .instructor-dot{background-clip:content-box}
+/* Keep swap dots round (neutralize flex-stretch / min-height ovalising) */
+.about-dots .about-dot, .instructor-dots .instructor-dot{ width:9px; height:9px; min-width:0; min-height:0; align-self:center; padding:8px; box-sizing:content-box; border-radius:50%; }
 
 /* LCP: hero headline paints immediately (supporting elements still animate). */
 .hero h1{opacity:1 !important;animation:none !important}
@@ -3333,6 +3335,8 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 <!-- ═══════════════════════════ ABOUT ══════════════ -->
 <section class="about" id="about" aria-labelledby="about-heading">
 
+  <h2 id="about-heading" class="section-h reveal" style="text-align:center;margin:0 auto 2.25rem;">Meet our <em>team.</em></h2>
+
   <!-- ── DESKTOP/TABLET CAROUSEL (>680px) ── -->
   <div class="about-carousel">
     <button class="about-arrow prev" id="aboutPrev" aria-label="Previous founder">‹</button>
@@ -3403,7 +3407,6 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
     <div class="about-dots" id="aboutDots">
       <button class="about-dot active" data-slide="0" aria-label="Shebl"></button>
       <button class="about-dot" data-slide="1" aria-label="Rimi"></button>
-      <span class="about-dot-label" id="aboutDotLabel">Shebl</span>
     </div>
   </div>
 
