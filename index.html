@@ -2488,7 +2488,7 @@ body.fx-off .dive-fx{ display:none; }
 h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 /* ── Swipe dots for mobile carousels ── */
 .cdots{display:none;justify-content:center;align-items:center;gap:2px;margin-top:8px}
-.cdots .cdot{position:relative;width:24px;height:24px;border-radius:var(--r-round);background:transparent;border:none;padding:0;cursor:pointer}.cdots .cdot::before{content:'';position:absolute;top:50%;left:50%;width:7px;height:7px;border-radius:50%;background:rgba(236,232,224,.28);transform:translate(-50%,-50%);transition:background .3s,transform .3s}
+.cdots .cdot{position:relative;width:24px;height:24px;min-width:0;min-height:0;align-self:center;border-radius:var(--r-round);background:transparent;border:none;padding:0;cursor:pointer}.cdots .cdot::before{content:'';position:absolute;top:50%;left:50%;width:7px;height:7px;border-radius:50%;background:rgba(236,232,224,.28);transform:translate(-50%,-50%);transition:background .3s,transform .3s}
 .cdots .cdot.active::before{background:var(--teal);transform:translate(-50%,-50%) scale(1.4)}
 @media(max-width:680px){.cdots-680{display:flex}}
 @media(max-width:860px){.cdots-860{display:flex}}
