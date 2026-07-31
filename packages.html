@@ -26,7 +26,7 @@ html{scroll-behavior:smooth;font-size:100%}
 :root{
   --deep:#060d09;--deep2:#0a1410;--deep3:#0f1c14;
   --teal:#7ecdb0;--teal2:#a8e8cc;--teal3:#4aaa86;
-  --gold:#c9a84c;--gold2:rgba(201,168,76,.55);--gold3:rgba(201,168,76,.1);
+  --gold:#7ecdb0;--gold2:rgba(126,205,176,.55);--gold3:rgba(126,205,176,.1);
   --txt:#e2ddd4;--txt2:rgba(226,221,212,.58);--txt3:rgba(226,221,212,.32);
   --ln:rgba(226,221,212,.07);--ln2:rgba(226,221,212,.14);
   --r:4px;--ease:cubic-bezier(.16,1,.3,1);
@@ -37,7 +37,7 @@ body{font-family:var(--font-display);background:var(--deep);color:var(--txt);ove
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:.028;pointer-events:none;z-index:9999}
 
 .cur-dot{position:fixed;width:6px;height:6px;background:var(--gold);border-radius:var(--r-round);pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s}
-.cur-ring{position:fixed;width:32px;height:32px;border:1px solid rgba(201,168,76,.3);border-radius:var(--r-round);pointer-events:none;z-index:9997;transform:translate(-50%,-50%);transition:width .3s,height .3s,opacity .3s}
+.cur-ring{position:fixed;width:32px;height:32px;border:1px solid rgba(126,205,176,.3);border-radius:var(--r-round);pointer-events:none;z-index:9997;transform:translate(-50%,-50%);transition:width .3s,height .3s,opacity .3s}
 .cur-dot.hov{width:10px;height:10px;background:var(--teal)}
 .cur-ring.hov{width:48px;height:48px;opacity:.45}
 
@@ -70,7 +70,7 @@ nav.scrolled{background:rgba(12,26,21,.96);backdrop-filter:blur(20px);padding:1r
 .reveal-left.vis{opacity:1;transform:none}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 3.5rem 4.5rem;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(12,26,21,.7) 0%,rgba(12,26,21,.3) 35%,rgba(12,26,21,.8) 75%,rgba(12,26,21,.98) 100%),radial-gradient(ellipse at 55% 45%,rgba(201,168,76,.05) 0%,transparent 60%),var(--deep)}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 3.5rem 4.5rem;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(12,26,21,.7) 0%,rgba(12,26,21,.3) 35%,rgba(12,26,21,.8) 75%,rgba(12,26,21,.98) 100%),radial-gradient(ellipse at 55% 45%,rgba(126,205,176,.05) 0%,transparent 60%),var(--deep)}
 .lab-eyebrow{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--gold);opacity:.7;margin-bottom:1rem}
 .hero h1{font-size:clamp(3.2rem,8vw,7rem);font-weight:600;line-height:.95;letter-spacing:-.03em;margin-bottom:.4rem}
 .hero-rule{width:60px;height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:1.5rem 0}
@@ -191,7 +191,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 @media(max-width:900px){.nav-links{display:none !important}.nav-ham{display:flex !important}}
 
 /* hero photo */
-.hero{background-image:linear-gradient(180deg,rgba(12,26,21,.8) 0%,rgba(12,26,21,.66) 42%,rgba(12,26,21,.96) 100%),url('./tr-hero.jpg');background-image:linear-gradient(180deg,rgba(12,26,21,.8) 0%,rgba(12,26,21,.66) 42%,rgba(12,26,21,.96) 100%),image-set(url('./tr-hero.avif') type('image/avif'), url('./tr-hero.webp') type('image/webp'), url('./tr-hero.jpg') type('image/jpeg'));background-size:cover;background-position:center}
+.hero{background-image:linear-gradient(180deg,rgba(12,26,21,.8) 0%,rgba(12,26,21,.66) 42%,rgba(12,26,21,.96) 100%),url('./pkg-hero.jpg?v=1');background-image:linear-gradient(180deg,rgba(12,26,21,.8) 0%,rgba(12,26,21,.66) 42%,rgba(12,26,21,.96) 100%),image-set(url('./pkg-hero.avif?v=1') type('image/avif'), url('./pkg-hero.webp?v=1') type('image/webp'), url('./pkg-hero.jpg?v=1') type('image/jpeg'));background-size:cover;background-position:center 42%}
 .nav-logo{gap:0 !important}.nav-logo svg{display:none !important}.nav-logo::before{content:"";width:38px;height:38px;flex:0 0 auto;margin-right:.6rem;background:url(/logo-mark.png) center/contain no-repeat}.nav-logo strong{margin-left:.3em}/*HEROFIX*/.hero{padding-top:96px}@media(max-width:900px){.hero{justify-content:flex-start}}.footer-logo{display:flex;align-items:center;gap:.6rem}.footer-logo img{width:44px;height:44px;display:block;flex:0 0 auto}.footer-watermark{position:absolute;right:-70px;bottom:-90px;width:360px;height:360px;background:url(/logo-mark.png) center/contain no-repeat;opacity:.05;pointer-events:none;z-index:-1}footer{position:relative;overflow:hidden;isolation:isolate}</style>
 <style>
 .nav-dd{position:relative;display:flex;align-items:center}
@@ -209,7 +209,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap"></noscript>
 <link rel="stylesheet" href="/type-system.css?v=5">
-<link rel="preload" as="image" href="./tr-hero.avif" type="image/avif" fetchpriority="high">
+<link rel="preload" as="image" href="./pkg-hero.avif?v=1" type="image/avif" fetchpriority="high">
 <meta property="og:image" content="https://freedivingbrain.com/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Freediving Courses & Pricing, Freediving Brain">
