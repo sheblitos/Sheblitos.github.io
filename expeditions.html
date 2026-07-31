@@ -1613,8 +1613,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
     <h2 class="reveal">Every trip starts<br>with a <em>conversation.</em></h2>
     <p class="enquiry-sub reveal">Tell us which destination caught your eye, roughly when you're free, and what your experience in the water is like. No payment, no commitment, just a conversation to see if it's a good fit.</p>
 
-    <form class="enquiry-form reveal" name="expeditions-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleEnquiry(event)">
-      <input type="hidden" name="form-name" value="expeditions-enquiry">
+    <form class="enquiry-form reveal" name="expeditions-enquiry" method="POST" onsubmit="handleEnquiry(event)">
       <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
       <div class="eq-field">
         <label class="eq-label">First name</label>
@@ -1727,6 +1726,7 @@ function toggleFaq(btn){
 function handleEnquiry(e){
   e.preventDefault();
   var form=e.target;
+  if((form.querySelector('[name="bot-field"]')||{}).value) return;   // honeypot: silently drop bots
   var btn=form.querySelector('button');
   var fd=new FormData(form);
   fd.append('_subject','New expedition enquiry — freedivingbrain.com');

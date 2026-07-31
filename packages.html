@@ -469,8 +469,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
     <h2 class="eq-h2 reveal">Lock in your<br><em>place &amp; price.</em></h2>
     <p class="eq-sub reveal">Tell us which course or bundle you're eyeing and we'll hold your spot in the first Barcelona cohort, with early-bird pricing.</p>
 
-    <form class="eq-form reveal" name="packages-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleEnquiry(event)">
-      <input type="hidden" name="form-name" value="packages-enquiry">
+    <form class="eq-form reveal" name="packages-enquiry" method="POST" onsubmit="handleEnquiry(event)">
       <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
       <div class="eq-field">
         <label class="eq-label">Name</label>
@@ -534,10 +533,11 @@ window.addEventListener('scroll',()=>document.getElementById('navbar').classList
 const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')}),{threshold:.1});
 document.querySelectorAll('.reveal,.reveal-left').forEach(r=>ro.observe(r));
 
-/* ENQUIRY → Netlify Forms */
+/* ENQUIRY → FormSubmit (emails hello@freedivingbrain.com) */
 function handleEnquiry(e){
   e.preventDefault();
   var form=e.target;
+  if((form.querySelector('[name="bot-field"]')||{}).value) return;   // honeypot: silently drop bots
   var btn=form.querySelector('button');
   var fd=new FormData(form);
   fd.append('_subject','New packages enquiry — freedivingbrain.com');
