@@ -1215,100 +1215,81 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
   </div>
 
   <!-- ── BALI ── -->
-  <div class="dest" id="bali">
-    <div class="dest-visual bali">
-      <div class="dest-slider" data-slider aria-label="Bali photo slideshow">
-        <div class="ds-slide active" style="--img:image-set(url('./bali-1.avif') type('image/avif'), url('./bali-1.webp') type('image/webp'), url('./bali-1.jpg') type('image/jpeg'))" role="img" aria-label="Freediving with manta rays, Bali"></div>
-        <div class="ds-slide" style="--img:image-set(url('./bali-real-8.avif') type('image/avif'), url('./bali-real-8.webp') type('image/webp'), url('./bali-real-8.jpg') type('image/jpeg'))" role="img" aria-label="Kelingking Beach, Nusa Penida, Bali"></div>
-        <div class="ds-slide" style="--img:image-set(url('./bali-real-4.avif') type('image/avif'), url('./bali-real-4.webp') type('image/webp'), url('./bali-real-4.jpg') type('image/jpeg'))" role="img" aria-label="Floating in an infinity pool above the jungle, Bali"></div>
-        <div class="ds-slide" style="--img:image-set(url('./bali-whaleshark.avif') type('image/avif'), url('./bali-whaleshark.webp') type('image/webp'), url('./bali-whaleshark.jpg') type('image/jpeg'))" role="img" aria-label="Swimming with whale sharks, Bali to Flores"></div>
-        <div class="ds-slide" style="--img:image-set(url('./bali-real-2.avif') type('image/avif'), url('./bali-real-2.webp') type('image/webp'), url('./bali-real-2.jpg') type('image/jpeg'))" role="img" aria-label="On the jungle swing over the valley, Bali"></div>
-        <div class="ds-slide" style="--img:image-set(url('./bali-real-9.avif') type('image/avif'), url('./bali-real-9.webp') type('image/webp'), url('./bali-real-9.jpg') type('image/jpeg'))" role="img" aria-label="The lake temple of Ulun Danu Beratan, Bali"></div>
-        <div class="ds-slide" style="--img:image-set(url('./bali-real-5.avif') type('image/avif'), url('./bali-real-5.webp') type('image/webp'), url('./bali-real-5.jpg') type('image/jpeg'))" role="img" aria-label="The water purification ceremony at Tirta Empul, Bali"></div>
-        <div class="ds-slide" style="--img:image-set(url('./bali-real-10.avif') type('image/avif'), url('./bali-real-10.webp') type('image/webp'), url('./bali-real-10.jpg') type('image/jpeg'))" role="img" aria-label="Rice terraces in the morning light, Bali"></div>
-        <div class="ds-slide" style="--img:image-set(url('./bali-real-7.avif') type('image/avif'), url('./bali-real-7.webp') type('image/webp'), url('./bali-real-7.jpg') type('image/jpeg'))" role="img" aria-label="Sunset on the beach, Bali"></div>
-        <button class="ds-arrow ds-prev" type="button" aria-label="Previous photo">‹</button>
-        <button class="ds-arrow ds-next" type="button" aria-label="Next photo">›</button>
-        <div class="ds-dots"></div>
+  <div class="dest trip" id="bali">
+    <div class="trip-hero" style="background-image:image-set(url('./blj-hero.avif') type('image/avif'), url('./blj-hero.webp') type('image/webp'), url('./blj-hero.jpg') type('image/jpeg'))">
+      <button type="button" class="trip-back" onclick="closeTrips()">&#8592; All destinations</button>
+      <p class="trip-eyebrow">Expedition 02 &middot; Bali &rarr; Labuan Bajo</p>
+      <h3 class="trip-name">Bali</h3>
+      <p class="trip-tagline">"A journey across the Indonesian archipelago."</p>
+      <p class="trip-lead">Bali to Labuan Bajo, 600km east. Ubud temples, world-class freediving, and a 4-day liveaboard with guaranteed mantas and whale sharks, ending at Komodo.</p>
+      <div class="trip-facts">
+        <span class="trip-fact">600km east</span>
+        <span class="trip-fact">4-day liveaboard</span>
+        <span class="trip-fact">Mantas guaranteed</span>
+        <span class="trip-fact">Whale sharks guaranteed</span>
+        <span class="trip-fact">Any water level</span>
       </div>
-      <svg class="dest-geo" viewBox="0 0 500 500" fill="none">
-        <circle cx="250" cy="250" r="200" stroke="#7ecdb0" stroke-width="1"/>
-        <circle cx="250" cy="150" r="100" stroke="#7ecdb0" stroke-width="1"/>
-        <circle cx="250" cy="350" r="100" stroke="#7ecdb0" stroke-width="1"/>
-        <circle cx="163" cy="200" r="100" stroke="#7ecdb0" stroke-width="1"/>
-        <circle cx="337" cy="200" r="100" stroke="#7ecdb0" stroke-width="1"/>
-        <circle cx="163" cy="300" r="100" stroke="#7ecdb0" stroke-width="1"/>
-        <circle cx="337" cy="300" r="100" stroke="#7ecdb0" stroke-width="1"/>
-      </svg>
-      <div class="dest-flag-wrap">
-        <span class="dest-flag">🇮🇩</span>
-        <span class="dest-country">Indonesia · Bali to Flores</span>
-      </div>
-      <div class="dest-depth-mark">Mantas · Whale Sharks · Guaranteed</div>
-    </div>
-    <div class="dest-content reveal">
-      <button type="button" class="dest-close" onclick="closeTrips()">&#8592; All destinations</button>
-      <p class="dest-number">Expedition 02 · Bali → Labuan Bajo</p>
-      <h3 class="dest-name">Bali</h3>
-      <p class="dest-tagline">"A journey across the Indonesian archipelago."</p>
-      <p class="dest-desc">Bali to Labuan Bajo, 600km east, Ubud temples, world-class freediving, and a 4-day liveaboard with guaranteed mantas and whale sharks, ending at Komodo.</p>
-
-      <div class="dest-route">
-        <div class="route-stop"><span class="route-name">Ubud</span><span class="route-arrow">→</span></div>
-        <div class="route-stop"><span class="route-name">Amed</span><span class="route-arrow">→</span></div>
-        <div class="route-stop"><span class="route-name">Gili Air</span><span class="route-arrow">→</span></div>
-        <div class="route-stop"><span class="route-name">Liveaboard</span><span class="route-arrow">→</span></div>
-        <div class="route-stop"><span class="route-name">Labuan Bajo</span></div>
-      </div>
-
-      <div class="dest-sites">
-        <p class="ds-label">The journey</p>
-        <div class="ds-list">
-          <div class="ds-item">
-            <div class="ds-dot"></div>
-            <div><span class="ds-name">Ubud</span><br><span class="ds-sub">Start here. Temples, rice terraces, morning markets, good food. Bali at its most Balinese before the islands take over.</span></div>
-          </div>
-          <div class="ds-item">
-            <div class="ds-dot"></div>
-            <div><span class="ds-name">Amed, with Ocean Prana Bali</span><br><span class="ds-sub">Freediving on the quiet northeast coast. Ten minutes away: the USAT Liberty wreck at Tulamben, 30m of WWII steel completely swallowed by reef life. One of the most fun dives in Southeast Asia.</span></div>
-          </div>
-          <div class="ds-item">
-            <div class="ds-dot"></div>
-            <div><span class="ds-name">Gili Air, with Pacific Freedive Academy</span><br><span class="ds-sub">No motorbikes, no noise, no rush. Turtles on every dive. The kind of island that makes you cancel your flight home.</span></div>
-          </div>
-          <div class="ds-item">
-            <div class="ds-dot"></div>
-            <div><span class="ds-name">4-Day Liveaboard, Dewi Operator</span><br><span class="ds-sub">Manta rays (guaranteed). Whale sharks (guaranteed). Pink Beach. Padar Island at sunrise. Komodo dragons on Rinca. End in Labuan Bajo. This is the kind of trip people talk about for the rest of their lives, because it earns it.</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dest-adventure">
-        <p class="da-label">Marine life, guaranteed on liveaboard</p>
-        <div class="da-items">
-          <span class="da-tag">Oceanic manta rays ✓</span>
-          <span class="da-tag">Whale sharks ✓</span>
-          <span class="da-tag">Pink Beach</span>
-          <span class="da-tag">Komodo dragons</span>
-          <span class="da-tag">Padar Island sunrise</span>
-        </div>
-      </div>
-      <div class="dest-for">
-        <span class="df-label">Perfect for</span>
-        <div class="df-tags">
-          <span class="df-tag">Any water level</span>
-          <span class="df-tag">Adventure seekers</span>
-          <span class="df-tag">Once-in-a-lifetime</span>
-        </div>
-      </div>
-      <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+      <div class="trip-cta">
         <a href="#enquire" class="btn-primary">Enquire, Bali</a>
         <a href="#whats-included" class="btn-ghost">What's included</a>
       </div>
     </div>
-  </div>
 
-  <!-- ── SRI LANKA ── -->
+    <div class="trip-journey">
+      <p class="trip-journey-label">The journey</p>
+      <div class="trip-stops">
+      <div class="trip-stop reveal">
+        <div class="trip-stop-photo"><picture><source srcset="./blj-ubud.avif" type="image/avif"><source srcset="./blj-ubud.webp" type="image/webp"><img src="./blj-ubud.jpg" alt="Rice terraces in the hills above Ubud, Bali" loading="lazy" width="1400" height="933"></picture></div>
+        <div class="trip-stop-body">
+          <p class="trip-stop-num">01</p>
+          <h4 class="trip-stop-name">Ubud</h4>
+          <p class="trip-stop-text">Start here. Temples, rice terraces, morning markets and good food. Bali at its most Balinese, before the islands take over.</p>
+          <div class="trip-stop-tags"><span class="trip-stop-tag">Temples</span><span class="trip-stop-tag">Rice terraces</span><span class="trip-stop-tag">Morning markets</span></div>
+        </div>
+      </div>
+      <div class="trip-stop reveal">
+        <div class="trip-stop-photo"><picture><source srcset="./blj-amed.avif" type="image/avif"><source srcset="./blj-amed.webp" type="image/webp"><img src="./blj-amed.jpg" alt="The northeast coast at Amed with Mount Agung behind, Bali" loading="lazy" width="1400" height="933"></picture></div>
+        <div class="trip-stop-body">
+          <p class="trip-stop-num">02</p>
+          <h4 class="trip-stop-name">Amed</h4>
+          <p class="trip-stop-text">Freediving on the quiet northeast coast with Ocean Prana Bali. Ten minutes away, the USAT Liberty wreck at Tulamben: 30m of WWII steel swallowed whole by reef.</p>
+          <div class="trip-stop-tags"><span class="trip-stop-tag">Ocean Prana Bali</span><span class="trip-stop-tag">USAT Liberty wreck</span><span class="trip-stop-tag">Quiet northeast coast</span></div>
+        </div>
+      </div>
+      <div class="trip-stop reveal">
+        <div class="trip-stop-photo"><picture><source srcset="./blj-gili.avif" type="image/avif"><source srcset="./blj-gili.webp" type="image/webp"><img src="./blj-gili.jpg" alt="Underwater statues on the reef off the Gili islands, Indonesia" loading="lazy" width="1400" height="933"></picture></div>
+        <div class="trip-stop-body">
+          <p class="trip-stop-num">03</p>
+          <h4 class="trip-stop-name">Gili Air</h4>
+          <p class="trip-stop-text">No motorbikes, no noise, no rush, diving with Pacific Freedive Academy. Turtles on every dive. The kind of island that makes you cancel your flight home.</p>
+          <div class="trip-stop-tags"><span class="trip-stop-tag">Pacific Freedive Academy</span><span class="trip-stop-tag">Turtles on every dive</span><span class="trip-stop-tag">Car-free island</span></div>
+        </div>
+      </div>
+      <div class="trip-stop reveal">
+        <div class="trip-stop-photo"><picture><source srcset="./blj-liveaboard.avif" type="image/avif"><source srcset="./blj-liveaboard.webp" type="image/webp"><img src="./blj-liveaboard.jpg" alt="A freediver swimming with oceanic manta rays, Indonesia" loading="lazy" width="1400" height="933"></picture></div>
+        <div class="trip-stop-body">
+          <p class="trip-stop-num">04</p>
+          <h4 class="trip-stop-name">The liveaboard</h4>
+          <p class="trip-stop-text">Four days aboard with Dewi, through the richest water of the whole trip. Oceanic mantas and whale sharks, both guaranteed.</p>
+          <div class="trip-stop-tags"><span class="trip-stop-tag">4 days aboard</span><span class="trip-stop-tag">Mantas guaranteed</span><span class="trip-stop-tag">Whale sharks guaranteed</span></div>
+        </div>
+      </div>
+      <div class="trip-stop reveal">
+        <div class="trip-stop-photo"><picture><source srcset="./blj-komodo.avif" type="image/avif"><source srcset="./blj-komodo.webp" type="image/webp"><img src="./blj-komodo.jpg" alt="The islands of Komodo National Park near Labuan Bajo, Indonesia" loading="lazy" width="1400" height="933"></picture></div>
+        <div class="trip-stop-body">
+          <p class="trip-stop-num">05</p>
+          <h4 class="trip-stop-name">Komodo &amp; Labuan Bajo</h4>
+          <p class="trip-stop-text">Where the boat ends up. Padar Island at sunrise, Pink Beach, and Komodo dragons on Rinca, before you step off at Labuan Bajo.</p>
+          <div class="trip-stop-tags"><span class="trip-stop-tag">Padar at sunrise</span><span class="trip-stop-tag">Pink Beach</span><span class="trip-stop-tag">Komodo dragons</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="trip-foot">
+      <p class="trip-foot-note">Local partners: Ocean Prana Bali (Amed) &middot; Pacific Freedive Academy (Gili Air) &middot; Dewi (liveaboard). Full logistics between every stop.</p>
+    </div>
+  </div>
   <div class="dest trip" id="srilanka">
     <div class="trip-hero" style="background-image:image-set(url('./slj-hero.avif') type('image/avif'), url('./slj-hero.webp') type('image/webp'), url('./slj-hero.jpg') type('image/jpeg'))">
       <button type="button" class="trip-back" onclick="closeTrips()">&#8592; All destinations</button>
