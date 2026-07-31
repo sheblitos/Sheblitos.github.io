@@ -313,7 +313,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
         <li>Dive reflex &amp; safety</li>
         <li>AIDA 1 certificate</li>
       </ul>
-      <a href="#enquire" class="btn-gold">Join waitlist →</a>
+      <a href="#enquire" class="btn-gold" onclick="openBooking('AIDA 1','€120');return false;">Join waitlist →</a>
     </div>
 
     <div class="pkg-card">
@@ -328,7 +328,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
         <li>Rescue &amp; buddy safety</li>
         <li>AIDA 2 certificate</li>
       </ul>
-      <a href="#enquire" class="btn-gold">Join waitlist →</a>
+      <a href="#enquire" class="btn-gold" onclick="openBooking('AIDA 2','€300');return false;">Join waitlist →</a>
     </div>
 
     <div class="pkg-card">
@@ -343,7 +343,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
         <li>Mental performance protocol</li>
         <li>AIDA 3 certificate</li>
       </ul>
-      <a href="#enquire" class="btn-gold">Join waitlist →</a>
+      <a href="#enquire" class="btn-gold" onclick="openBooking('AIDA 3','€360');return false;">Join waitlist →</a>
     </div>
 
     <div class="pkg-card">
@@ -358,7 +358,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
         <li>Self-coaching &amp; planning</li>
         <li>AIDA 4 certificate</li>
       </ul>
-      <a href="#enquire" class="btn-gold">Join waitlist →</a>
+      <a href="#enquire" class="btn-gold" onclick="openBooking('AIDA 4','€480');return false;">Join waitlist →</a>
     </div>
 
     <div class="pkg-card">
@@ -373,7 +373,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
         <li>Standards &amp; safety mastery</li>
         <li>Supervised teaching practice</li>
       </ul>
-      <a href="#enquire" class="btn-gold">Enquire →</a>
+      <a href="#enquire" class="btn-gold" onclick="openBooking('AIDA Instructor','€1,200');return false;">Enquire →</a>
     </div>
 
   </div>
@@ -405,7 +405,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
         <li>Both AIDA certification cards</li>
         <li>Mind-first method from day one</li>
       </ul>
-      <a href="#enquire" class="btn-gold">Join waitlist →</a>
+      <a href="#enquire" class="btn-gold" onclick="openBooking('First Breath','€370');return false;">Join waitlist →</a>
     </div>
 
     <div class="pkg-card featured">
@@ -425,7 +425,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
         <li>All theory &amp; materials</li>
         <li>Both AIDA certification cards</li>
       </ul>
-      <a href="#enquire" class="btn-gold">Join waitlist →</a>
+      <a href="#enquire" class="btn-gold" onclick="openBooking('Depth Path','€590');return false;">Join waitlist →</a>
     </div>
 
     <div class="pkg-card">
@@ -444,7 +444,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
         <li>All theory, materials &amp; cards</li>
         <li>Priority cohort placement</li>
       </ul>
-      <a href="#enquire" class="btn-gold">Join waitlist →</a>
+      <a href="#enquire" class="btn-gold" onclick="openBooking('Full Pathway','€1,090');return false;">Join waitlist →</a>
     </div>
 
   </div>
@@ -556,5 +556,108 @@ function toggleMobileNav(){var ham=document.getElementById('navHam'),menu=docume
 function closeMobileNav(){var ham=document.getElementById('navHam'),menu=document.getElementById('navMobile');if(!ham||!menu)return;ham.classList.remove('open');menu.classList.remove('open');ham.setAttribute('aria-expanded','false');document.body.style.overflow='';}
 (function(){var m=document.getElementById('navMobile');if(m)m.addEventListener('click',function(e){if(e.target===e.currentTarget)closeMobileNav();});window.addEventListener('resize',function(){if(window.innerWidth>900)closeMobileNav();});})();
 </script>
+
+<style>
+/* ── Course booking modal (mirrors the Training modal) ── */
+.cbk{display:none;position:fixed;inset:0;z-index:400;background:rgba(6,14,11,.86);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:1.5rem}
+.cbk.open{display:flex}
+.cbk-box{background:var(--deep2);border:1px solid var(--ln2);border-radius:var(--r-lg,14px);max-width:440px;width:100%;padding:2rem 1.9rem;position:relative;max-height:92vh;overflow-y:auto}
+.cbk-close{position:absolute;top:1rem;right:1.1rem;background:none;border:none;color:var(--txt3);font-family:var(--font-body);font-size:var(--text-xs);cursor:pointer;padding:.4rem}
+.cbk-close:hover{color:var(--txt)}
+.cbk-eyebrow{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.06em;color:var(--teal);margin-bottom:.5rem}
+.cbk-title{font-size:1.5rem;font-weight:600;line-height:1.15;margin-bottom:.5rem}
+.cbk-sub{font-family:var(--font-body);font-size:var(--text-xs);color:var(--txt2);line-height:1.7;margin-bottom:1.25rem}
+.cbk-pick{display:flex;align-items:center;justify-content:space-between;gap:1rem;background:rgba(126,205,176,.08);border:1px solid rgba(126,205,176,.22);border-radius:var(--r,10px);padding:.8rem 1rem;margin-bottom:1.4rem}
+.cbk-pick-name{font-weight:600;font-size:1rem}
+.cbk-pick-price{font-family:var(--font-body);color:var(--teal);font-size:.95rem}
+.cbk-field{margin-bottom:1.1rem}
+.cbk-field label{display:block;font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--txt3);margin-bottom:.4rem}
+.cbk-field input,.cbk-field textarea{width:100%;background:var(--deep);border:1px solid var(--ln2);border-radius:var(--r,10px);padding:.75rem .9rem;color:var(--txt);font-family:var(--font-body);font-size:.95rem}
+.cbk-field input:focus,.cbk-field textarea:focus{outline:none;border-color:var(--teal)}
+.cbk-field textarea{resize:vertical;min-height:70px}
+.cbk-submit{width:100%;font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;font-weight:700;color:var(--deep);background:var(--teal);border:none;border-radius:var(--r-lg,999px);padding:.95rem 1rem;cursor:pointer;transition:background .2s;min-height:44px}
+.cbk-submit:hover:not(:disabled){background:var(--teal2)}
+.cbk-submit:disabled{opacity:.45;cursor:not-allowed}
+.cbk-note{font-family:var(--font-body);font-size:var(--text-xs);color:var(--txt3);text-align:center;margin-top:.85rem;line-height:1.6}
+.cbk-done{display:none;text-align:center;padding:1rem 0}
+.cbk-done-icon{font-size:2rem;margin-bottom:.6rem}
+.cbk-done-title{font-size:1.35rem;font-weight:600;margin-bottom:.5rem}
+.cbk-done-msg{font-family:var(--font-body);font-size:var(--text-xs);color:var(--txt2);line-height:1.75}
+</style>
+
+<div class="cbk" id="cbk" role="dialog" aria-modal="true" aria-label="Reserve your place">
+  <div class="cbk-box">
+    <button class="cbk-close" onclick="closeBooking()" aria-label="Close">Close &times;</button>
+    <div id="cbkForm">
+      <p class="cbk-eyebrow">Reserve your place</p>
+      <p class="cbk-title">Two details and you're on the list.</p>
+      <p class="cbk-sub">No payment now. Shebl replies personally, usually within a day.</p>
+      <div class="cbk-pick">
+        <span class="cbk-pick-name" id="cbkName">&nbsp;</span>
+        <span class="cbk-pick-price" id="cbkPrice"></span>
+      </div>
+      <div class="cbk-field">
+        <label for="cbkFirst">Your name</label>
+        <input type="text" id="cbkFirst" placeholder="Your name" autocomplete="name" oninput="cbkCheck()">
+      </div>
+      <div class="cbk-field">
+        <label for="cbkEmail">Email</label>
+        <input type="email" id="cbkEmail" placeholder="your@email.com" autocomplete="email" oninput="cbkCheck()">
+      </div>
+      <div class="cbk-field">
+        <label for="cbkNotes">Anything to add? (optional)</label>
+        <textarea id="cbkNotes" placeholder="Your experience, preferred dates, questions..."></textarea>
+      </div>
+      <button class="cbk-submit" id="cbkSend" onclick="cbkSubmit()" disabled>Send request</button>
+      <p class="cbk-note">No payment now &middot; No obligation</p>
+    </div>
+    <div class="cbk-done" id="cbkDone">
+      <div class="cbk-done-icon" aria-hidden="true">&#127754;</div>
+      <p class="cbk-done-title">Request received.</p>
+      <p class="cbk-done-msg" id="cbkDoneMsg"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+var cbkPick={name:'',price:''};
+function openBooking(name, price){
+  cbkPick.name=name||''; cbkPick.price=price||'';
+  document.getElementById('cbkName').textContent=cbkPick.name;
+  document.getElementById('cbkPrice').textContent=cbkPick.price;
+  document.getElementById('cbkForm').style.display='block';
+  document.getElementById('cbkDone').style.display='none';
+  ['cbkFirst','cbkEmail','cbkNotes'].forEach(function(id){var e=document.getElementById(id); if(e) e.value='';});
+  document.getElementById('cbkSend').disabled=true;
+  document.getElementById('cbk').classList.add('open');
+  document.body.style.overflow='hidden';
+  var f=document.getElementById('cbkFirst'); if(f) setTimeout(function(){f.focus();},60);
+}
+function closeBooking(){
+  document.getElementById('cbk').classList.remove('open');
+  document.body.style.overflow='';
+}
+function cbkCheck(){
+  var n=(document.getElementById('cbkFirst').value||'').trim();
+  var e=(document.getElementById('cbkEmail').value||'').trim();
+  var ok=n.length>1 && /^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(e);
+  document.getElementById('cbkSend').disabled=!ok;
+}
+function cbkSubmit(){
+  var g=function(id){var e=document.getElementById(id);return e?(e.value||'').trim():'';};
+  var name=g('cbkFirst');
+  var data={course:cbkPick.name, price:cbkPick.price, name:name, email:g('cbkEmail'), notes:g('cbkNotes'),
+    _subject:'New course request \u2014 freedivingbrain.com', _template:'table', _captcha:'false',
+    _autoresponse:'Thanks for reaching out to Freediving Brain! We have your request and will be in touch within 48 hours. \u2014 Shebl'};
+  var body=Object.keys(data).map(function(k){return encodeURIComponent(k)+'='+encodeURIComponent(data[k]);}).join('&');
+  fetch('https://formsubmit.co/ajax/hello@freedivingbrain.com',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded','Accept':'application/json'},body:body}).catch(function(){});
+  document.getElementById('cbkForm').style.display='none';
+  document.getElementById('cbkDoneMsg').textContent='Thanks '+name+'. We have your request for '+cbkPick.name+' and will be in touch within 48 hours to confirm your place.';
+  document.getElementById('cbkDone').style.display='block';
+}
+document.getElementById('cbk').addEventListener('click',function(e){ if(e.target===e.currentTarget) closeBooking(); });
+document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeBooking(); });
+</script>
+
 </body>
 </html>
