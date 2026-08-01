@@ -1132,89 +1132,81 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 
   <p class="exp-hint">Tap a destination for its dive sites, land adventures and what's included.</p>
 
-  <div class="dest" id="dahab">
-    <div class="dest-visual dahab">
-      <div class="dest-slider" data-slider aria-label="Dahab photo slideshow">
-        <div class="ds-slide active" style="--img:image-set(url('./dahab-1.avif') type('image/avif'), url('./dahab-1.webp') type('image/webp'), url('./dahab-1.jpg') type('image/jpeg'))" role="img" aria-label="Freediver descending into the deep blue at Dahab"></div>
-        <div class="ds-slide" style="--img:image-set(url('./dahab-2.avif') type('image/avif'), url('./dahab-2.webp') type('image/webp'), url('./dahab-2.jpg') type('image/jpeg'))" role="img" aria-label="Cave dive at Ras Mohamed, Red Sea"></div>
-        <div class="ds-slide" style="--img:image-set(url('./dahab-3.avif') type('image/avif'), url('./dahab-3.webp') type('image/webp'), url('./dahab-3.jpg') type('image/jpeg'))" role="img" aria-label="Surfacing high-five after a personal-best dive, Dahab"></div>
-        <div class="ds-slide" style="--img:image-set(url('./dahab-4.avif') type('image/avif'), url('./dahab-4.webp') type('image/webp'), url('./dahab-4.jpg') type('image/jpeg'))" role="img" aria-label="Student and instructor after a session at the Lighthouse, Dahab"></div>
-        <div class="ds-slide" style="--img:image-set(url('./wadi-genai.avif') type('image/avif'), url('./wadi-genai.webp') type('image/webp'), url('./wadi-genai.jpg') type('image/jpeg'))" role="img" aria-label="Desert hike near Wadi Genai, Sinai"></div>
-        <button class="ds-arrow ds-prev" type="button" aria-label="Previous photo">‹</button>
-        <button class="ds-arrow ds-next" type="button" aria-label="Next photo">›</button>
-        <div class="ds-dots"></div>
+  <div class="dest trip" id="dahab">
+    <div class="trip-hero" style="background-image:image-set(url('./dhj-hero.avif') type('image/avif'), url('./dhj-hero.webp') type('image/webp'), url('./dhj-hero.jpg') type('image/jpeg'))">
+      <button type="button" class="trip-back" onclick="closeTrips()">&#8592; All destinations</button>
+      <p class="trip-eyebrow">Expedition 01 &middot; Dahab, Egypt</p>
+      <h3 class="trip-name">Dahab</h3>
+      <p class="trip-tagline">"The Blue Hole. The Desert. The Beginning."</p>
+      <p class="trip-lead">A laid-back Sinai town: desert at dusk, the Red Sea at 24&deg;C year-round, and the Blue Hole dropping past 100m just offshore, one of diving's wildest feelings.</p>
+      <div class="trip-facts">
+        <span class="trip-fact">Red Sea &middot; 24&deg;C year-round</span>
+        <span class="trip-fact">Blue Hole 100m+</span>
+        <span class="trip-fact">Four dive sites</span>
+        <span class="trip-fact">Desert &amp; monastery</span>
+        <span class="trip-fact">Any water level</span>
       </div>
-      <svg class="dest-geo" viewBox="0 0 500 500" fill="none">
-        <circle cx="250" cy="250" r="200" stroke="#7ecdb0" stroke-width="1"/>
-        <circle cx="250" cy="150" r="100" stroke="#7ecdb0" stroke-width="1"/>
-        <circle cx="250" cy="350" r="100" stroke="#7ecdb0" stroke-width="1"/>
-        <circle cx="163" cy="200" r="100" stroke="#7ecdb0" stroke-width="1"/>
-        <circle cx="337" cy="200" r="100" stroke="#7ecdb0" stroke-width="1"/>
-        <circle cx="163" cy="300" r="100" stroke="#7ecdb0" stroke-width="1"/>
-        <circle cx="337" cy="300" r="100" stroke="#7ecdb0" stroke-width="1"/>
-      </svg>
-      <div class="dest-flag-wrap">
-        <span class="dest-flag">🇪🇬</span>
-        <span class="dest-country">Egypt · Red Sea · Sinai</span>
-      </div>
-      <div class="dest-depth-mark">Blue Hole · 100m+</div>
-    </div>
-    <div class="dest-content reveal">
-      <button type="button" class="dest-close" onclick="closeTrips()">&#8592; All destinations</button>
-      <p class="dest-number">Expedition 01 · Dahab, Egypt</p>
-      <h3 class="dest-name">Dahab</h3>
-      <p class="dest-tagline">"The Blue Hole. The Desert. The Beginning."</p>
-      <p class="dest-desc">A laid-back Sinai town: desert at dusk, the Red Sea at 24°C year-round, and the Blue Hole dropping past 100m just offshore, one of diving's wildest feelings.</p>
-
-      <div class="dest-sites">
-        <p class="ds-label">Where we dive</p>
-        <div class="ds-list">
-          <div class="ds-item">
-            <div class="ds-dot"></div>
-            <div><span class="ds-name">The Lighthouse</span><br><span class="ds-sub">Shebl's home site. A gorgeous reef shelf from 10–50m with a buoyancy park and an underwater art installation. Great for every level, beautiful whatever depth you reach.</span></div>
-          </div>
-          <div class="ds-item">
-            <div class="ds-dot"></div>
-            <div><span class="ds-name">The Blue Hole + The Bells</span><br><span class="ds-sub">The famous one. Through The Bells arch at 25–28m and back along the wall, one of the most iconic routes in freediving. Stunning at any depth.</span></div>
-          </div>
-          <div class="ds-item">
-            <div class="ds-dot"></div>
-            <div><span class="ds-name">Ras Mohamed</span><br><span class="ds-sub">Full-day boat trip to the tip of the Sinai Peninsula. Shark Observatory, the legendary Yolanda wreck, and coral walls that genuinely look like screensavers.</span></div>
-          </div>
-          <div class="ds-item">
-            <div class="ds-dot"></div>
-            <div><span class="ds-name">Eel Garden</span><br><span class="ds-sub">Right in the centre of Dahab. Easy, colourful, and exactly what an afternoon dive should feel like.</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dest-adventure">
-        <p class="da-label">On land</p>
-        <div class="da-items">
-          <span class="da-tag">Wadi Genai desert dinner</span>
-          <span class="da-tag">Mount Sinai sunrise hike</span>
-          <span class="da-tag">St Catherine's Monastery</span>
-          <span class="da-tag">Sinai desert trails</span>
-          <span class="da-tag">Red Sea snorkel safari</span>
-        </div>
-      </div>
-      <div class="dest-for">
-        <span class="df-label">Perfect for</span>
-        <div class="df-tags">
-          <span class="df-tag">Any water level</span>
-          <span class="df-tag">First big dive trip</span>
-          <span class="df-tag">Culture + ocean lovers</span>
-        </div>
-      </div>
-      <p class="dest-note">Accommodation: Tranquilo Hostel, Dahab · Site briefings before every session · Reef life is rich, expect surprises</p>
-      <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+      <div class="trip-cta">
         <a href="#enquire" class="btn-primary">Enquire, Dahab</a>
         <a href="#whats-included" class="btn-ghost">What's included</a>
       </div>
     </div>
-  </div>
 
-  <!-- ── BALI ── -->
+    <div class="trip-journey">
+      <p class="trip-journey-label">The journey</p>
+      <div class="trip-stops">
+      <div class="trip-stop reveal">
+        <div class="trip-stop-photo"><picture><source srcset="./dhj-lighthouse.avif" type="image/avif"><source srcset="./dhj-lighthouse.webp" type="image/webp"><img src="./dhj-lighthouse.jpg" alt="A freediver over the reef shelf at the Lighthouse, Dahab" loading="lazy" width="1400" height="933"></picture></div>
+        <div class="trip-stop-body">
+          <p class="trip-stop-num">01</p>
+          <h4 class="trip-stop-name">The Lighthouse</h4>
+          <p class="trip-stop-text">Shebl's home site, and where most sessions start. A reef shelf from 10 to 50m with a buoyancy park and an underwater art installation. Beautiful whatever depth you reach.</p>
+          <div class="trip-stop-tags"><span class="trip-stop-tag">Shebl's home site</span><span class="trip-stop-tag">10&ndash;50m reef shelf</span><span class="trip-stop-tag">Buoyancy park</span></div>
+        </div>
+      </div>
+      <div class="trip-stop reveal">
+        <div class="trip-stop-photo"><picture><source srcset="./dhj-bluehole.avif" type="image/avif"><source srcset="./dhj-bluehole.webp" type="image/webp"><img src="./dhj-bluehole.jpg" alt="The Blue Hole from above, with the Red Sea and the Sinai mountains, Dahab" loading="lazy" width="1400" height="933"></picture></div>
+        <div class="trip-stop-body">
+          <p class="trip-stop-num">02</p>
+          <h4 class="trip-stop-name">The Blue Hole &amp; The Bells</h4>
+          <p class="trip-stop-text">The famous one. In through The Bells arch at 25&ndash;28m, then back along the wall, one of the most iconic routes in freediving. Stunning at any depth.</p>
+          <div class="trip-stop-tags"><span class="trip-stop-tag">The Bells arch</span><span class="trip-stop-tag">25&ndash;28m</span><span class="trip-stop-tag">Drops past 100m</span></div>
+        </div>
+      </div>
+      <div class="trip-stop reveal">
+        <div class="trip-stop-photo"><picture><source srcset="./dhj-rasmohamed.avif" type="image/avif"><source srcset="./dhj-rasmohamed.webp" type="image/webp"><img src="./dhj-rasmohamed.jpg" alt="A manta ray over the coral wall at Ras Mohamed, Red Sea" loading="lazy" width="1400" height="933"></picture></div>
+        <div class="trip-stop-body">
+          <p class="trip-stop-num">03</p>
+          <h4 class="trip-stop-name">Ras Mohamed</h4>
+          <p class="trip-stop-text">A full day by boat to the tip of the Sinai peninsula. Shark Observatory, the Yolanda wreck, and coral walls that genuinely look like screensavers.</p>
+          <div class="trip-stop-tags"><span class="trip-stop-tag">Full-day boat</span><span class="trip-stop-tag">Shark Observatory</span><span class="trip-stop-tag">Yolanda wreck</span></div>
+        </div>
+      </div>
+      <div class="trip-stop reveal">
+        <div class="trip-stop-photo"><picture><source srcset="./dhj-eelgarden.avif" type="image/avif"><source srcset="./dhj-eelgarden.webp" type="image/webp"><img src="./dhj-eelgarden.jpg" alt="A freediver descending the line in clear blue water, Dahab" loading="lazy" width="1400" height="933"></picture></div>
+        <div class="trip-stop-body">
+          <p class="trip-stop-num">04</p>
+          <h4 class="trip-stop-name">Eel Garden</h4>
+          <p class="trip-stop-text">Right in the centre of town. Easy, colourful, and exactly what an afternoon dive should feel like.</p>
+          <div class="trip-stop-tags"><span class="trip-stop-tag">In the centre of town</span><span class="trip-stop-tag">Easy and colourful</span><span class="trip-stop-tag">Afternoon dive</span></div>
+        </div>
+      </div>
+      <div class="trip-stop reveal">
+        <div class="trip-stop-photo"><picture><source srcset="./dhj-desert.avif" type="image/avif"><source srcset="./dhj-desert.webp" type="image/webp"><img src="./dhj-desert.jpg" alt="Dinner under the palms with the Sinai mountains behind, Wadi Genai" loading="lazy" width="1400" height="933"></picture></div>
+        <div class="trip-stop-body">
+          <p class="trip-stop-num">05</p>
+          <h4 class="trip-stop-name">The desert</h4>
+          <p class="trip-stop-text">Half the trip happens on land. Dinner at Wadi Genai under the palms, the sunrise hike up Mount Sinai, and St Catherine's Monastery below it.</p>
+          <div class="trip-stop-tags"><span class="trip-stop-tag">Wadi Genai dinner</span><span class="trip-stop-tag">Mount Sinai sunrise</span><span class="trip-stop-tag">St Catherine's Monastery</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="trip-foot">
+      <p class="trip-foot-note">Accommodation: Tranquilo Hostel, Dahab &middot; Site briefings before every session &middot; Reef life is rich, expect surprises.</p>
+    </div>
+  </div>
   <div class="dest trip" id="bali">
     <div class="trip-hero" style="background-image:image-set(url('./blj-hero.avif') type('image/avif'), url('./blj-hero.webp') type('image/webp'), url('./blj-hero.jpg') type('image/jpeg'))">
       <button type="button" class="trip-back" onclick="closeTrips()">&#8592; All destinations</button>
