@@ -1358,83 +1358,72 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
     </div>
   </div>
   <!-- ── TENERIFE ── -->
-  <div class="dest" id="tenerife">
-    <div class="dest-visual tenerife">
-      <div class="dest-slider" data-slider aria-label="Tenerife and Gran Canaria photo slideshow">
-        <div class="ds-slide active" style="--img:image-set(url('./ten-beach.avif') type('image/avif'), url('./ten-beach.webp') type('image/webp'), url('./ten-beach.jpg') type('image/jpeg'))" role="img" aria-label="Beach on Tenerife, Canary Islands"></div>
-        <div class="ds-slide" style="--img:image-set(url('./ten-diving.avif') type('image/avif'), url('./ten-diving.webp') type('image/webp'), url('./ten-diving.jpg') type('image/jpeg'))" role="img" aria-label="Diving the volcanic reefs of the Canaries"></div>
-        <div class="ds-slide" style="--img:image-set(url('./gc-sunset.avif') type('image/avif'), url('./gc-sunset.webp') type('image/webp'), url('./gc-sunset.jpg') type('image/jpeg'))" role="img" aria-label="Sunset over Gran Canaria"></div>
-        <button class="ds-arrow ds-prev" type="button" aria-label="Previous photo">&#8249;</button>
-        <button class="ds-arrow ds-next" type="button" aria-label="Next photo">&#8250;</button>
-        <div class="ds-dots"></div>
+  <div class="dest trip" id="tenerife">
+    <div class="trip-hero" style="background-image:image-set(url('./thj-hero.avif') type('image/avif'), url('./thj-hero.webp') type('image/webp'), url('./thj-hero.jpg') type('image/jpeg'))">
+      <button type="button" class="trip-back" onclick="closeTrips()">&#8592; All destinations</button>
+      <p class="trip-eyebrow">Expedition 04 &middot; Tenerife, Canary Islands</p>
+      <h3 class="trip-name">Tenerife</h3>
+      <p class="trip-tagline">"Europe's wild Atlantic edge."</p>
+      <p class="trip-lead">Four hours from Europe: 21&deg;C water, 40m visibility, resident pilot whales year-round, and Teide towering at 3,718m. The easiest trip to say yes to.</p>
+      <div class="trip-facts">
+        <span class="trip-fact">4 hours from Europe</span>
+        <span class="trip-fact">21&deg;C water</span>
+        <span class="trip-fact">40m visibility</span>
+        <span class="trip-fact">Pilot whales guaranteed</span>
+        <span class="trip-fact">All levels welcome</span>
       </div>
-      <svg class="dest-geo" viewBox="0 0 500 500" fill="none">
-        <circle cx="250" cy="250" r="200" stroke="#7ecdb0" stroke-width="1"/>
-        <circle cx="250" cy="150" r="100" stroke="#7ecdb0" stroke-width="1"/>
-        <circle cx="250" cy="350" r="100" stroke="#7ecdb0" stroke-width="1"/>
-        <circle cx="163" cy="200" r="100" stroke="#7ecdb0" stroke-width="1"/>
-        <circle cx="337" cy="200" r="100" stroke="#7ecdb0" stroke-width="1"/>
-        <circle cx="163" cy="300" r="100" stroke="#7ecdb0" stroke-width="1"/>
-        <circle cx="337" cy="300" r="100" stroke="#7ecdb0" stroke-width="1"/>
-      </svg>
-      <div class="dest-flag-wrap">
-        <span class="dest-flag">🇪🇸</span>
-        <span class="dest-country">Canary Islands · Atlantic</span>
-      </div>
-      <div class="dest-depth-mark">40m visibility · Year-round</div>
-    </div>
-    <div class="dest-content reveal">
-      <button type="button" class="dest-close" onclick="closeTrips()">&#8592; All destinations</button>
-      <p class="dest-number">Expedition 04 · Tenerife, Canary Islands</p>
-      <h3 class="dest-name">Tenerife</h3>
-      <p class="dest-tagline">"Europe's Wild Atlantic Edge."</p>
-      <p class="dest-desc">Four hours from Europe: 21°C water, 40m visibility, resident pilot whales year-round, and Teide towering at 3,718m. The easiest trip to say yes to.</p>
-
-      <div class="dest-sites">
-        <p class="ds-label">Where we dive, with Atlantis Freediving Tabaiba</p>
-        <div class="ds-list">
-          <div class="ds-item">
-            <div class="ds-dot"></div>
-            <div><span class="ds-name">Pilot Whale Freediving</span><br><span class="ds-sub">Guaranteed. A resident pod lives year-round in the southwest channel. Swimming alongside pilot whales in open Atlantic water is as wild as it sounds.</span></div>
-          </div>
-          <div class="ds-item">
-            <div class="ds-dot"></div>
-            <div><span class="ds-name">Angel Shark Encounters</span><br><span class="ds-sub">December through March. One of the last significant populations left in the Atlantic. Flat, camouflaged, and genuinely prehistoric-looking, unforgettable to encounter.</span></div>
-          </div>
-          <div class="ds-item">
-            <div class="ds-dot"></div>
-            <div><span class="ds-name">Atlantic Open Water</span><br><span class="ds-sub">Volcanic reef structures, clean Atlantic visibility, and a richness of marine life that surprises almost everyone who comes expecting Europe to be underwhelming.</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dest-adventure">
-        <p class="da-label">On land</p>
-        <div class="da-items">
-          <span class="da-tag">Teide crater at 3718m (UNESCO)</span>
-          <span class="da-tag">Stargazing above the clouds</span>
-          <span class="da-tag">Masca gorge hike</span>
-          <span class="da-tag">Anaga ancient laurel forest</span>
-          <span class="da-tag">Black sand beach days</span>
-        </div>
-      </div>
-      <div class="dest-for">
-        <span class="df-label">Perfect for</span>
-        <div class="df-tags">
-          <span class="df-tag">European-based divers</span>
-          <span class="df-tag">All levels welcome</span>
-          <span class="df-tag">Wildlife lovers</span>
-          <span class="df-tag">Angel sharks: Dec–Mar</span>
-        </div>
-      </div>
-      <p class="dest-note">Local partner: Atlantis Freediving Tabaiba · Pilot whales: guaranteed year-round · Angel sharks: December–March</p>
-      <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+      <div class="trip-cta">
         <a href="#enquire" class="btn-primary">Enquire, Tenerife</a>
         <a href="#whats-included" class="btn-ghost">What's included</a>
       </div>
     </div>
-  </div>
 
+    <div class="trip-journey">
+      <p class="trip-journey-label">The journey</p>
+      <div class="trip-stops">
+      <div class="trip-stop reveal">
+        <div class="trip-stop-photo"><picture><source srcset="./thj-whales.avif" type="image/avif"><source srcset="./thj-whales.webp" type="image/webp"><img src="./thj-whales.jpg" alt="A pilot whale at the surface in deep blue Atlantic water" loading="lazy" width="1400" height="933"></picture></div>
+        <div class="trip-stop-body">
+          <p class="trip-stop-num">01</p>
+          <h4 class="trip-stop-name">Pilot whales</h4>
+          <p class="trip-stop-text">Guaranteed. A resident pod lives year-round in the southwest channel. Swimming alongside pilot whales in open Atlantic water is as wild as it sounds.</p>
+          <div class="trip-stop-tags"><span class="trip-stop-tag">Guaranteed year-round</span><span class="trip-stop-tag">Resident pod</span><span class="trip-stop-tag">Open Atlantic</span></div>
+        </div>
+      </div>
+      <div class="trip-stop reveal">
+        <div class="trip-stop-photo"><picture><source srcset="./thj-atlantic.avif" type="image/avif"><source srcset="./thj-atlantic.webp" type="image/webp"><img src="./thj-atlantic.jpg" alt="A freediver descending through volcanic rock formations in clear Atlantic water" loading="lazy" width="1400" height="933"></picture></div>
+        <div class="trip-stop-body">
+          <p class="trip-stop-num">02</p>
+          <h4 class="trip-stop-name">The Atlantic</h4>
+          <p class="trip-stop-text">Volcanic reef structures, 40m visibility and more marine life than anyone expects from Europe. December to March, the angel sharks arrive, one of the last significant populations left in the Atlantic.</p>
+          <div class="trip-stop-tags"><span class="trip-stop-tag">40m visibility</span><span class="trip-stop-tag">Volcanic reef</span><span class="trip-stop-tag">Angel sharks Dec&ndash;Mar</span></div>
+        </div>
+      </div>
+      <div class="trip-stop reveal">
+        <div class="trip-stop-photo"><picture><source srcset="./thj-teide.avif" type="image/avif"><source srcset="./thj-teide.webp" type="image/webp"><img src="./thj-teide.jpg" alt="The peak of Mount Teide above the clouds at sunrise, Tenerife" loading="lazy" width="1400" height="933"></picture></div>
+        <div class="trip-stop-body">
+          <p class="trip-stop-num">03</p>
+          <h4 class="trip-stop-name">Teide</h4>
+          <p class="trip-stop-text">Spain's highest point at 3,718m, and a UNESCO site. Up through the crater by day, then stargazing above the cloud line, some of the clearest night sky in Europe.</p>
+          <div class="trip-stop-tags"><span class="trip-stop-tag">3,718m</span><span class="trip-stop-tag">UNESCO crater</span><span class="trip-stop-tag">Stargazing above the clouds</span></div>
+        </div>
+      </div>
+      <div class="trip-stop reveal">
+        <div class="trip-stop-photo"><picture><source srcset="./thj-anaga.avif" type="image/avif"><source srcset="./thj-anaga.webp" type="image/webp"><img src="./thj-anaga.jpg" alt="Green mountains meeting the Atlantic in the Anaga range, Tenerife" loading="lazy" width="1400" height="933"></picture></div>
+        <div class="trip-stop-body">
+          <p class="trip-stop-num">04</p>
+          <h4 class="trip-stop-name">Anaga &amp; Masca</h4>
+          <p class="trip-stop-text">The other half of the island. Ancient laurel forest in the Anaga range, the walk down Masca gorge, and black sand beaches to finish on.</p>
+          <div class="trip-stop-tags"><span class="trip-stop-tag">Ancient laurel forest</span><span class="trip-stop-tag">Masca gorge</span><span class="trip-stop-tag">Black sand beaches</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="trip-foot">
+      <p class="trip-foot-note">Local partner: Atlantis Freediving, Tabaiba &middot; Pilot whales: guaranteed year-round &middot; Angel sharks: December&ndash;March.</p>
+    </div>
+  </div>
 </section>
 
 <!-- ═══ METHODOLOGY ═══ -->
