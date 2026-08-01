@@ -206,8 +206,9 @@ nav.scrolled {
 .tr-req-inner {
   background:var(--deep2); border:1px solid var(--ln2);
   border-radius:var(--r-xl); padding:1.75rem 2.25rem;
-  display:grid; grid-template-columns:repeat(4,1fr);
-  gap:1.75rem;
+  display:grid; grid-template-columns:repeat(2,1fr);
+  gap:1.75rem 3rem;
+  max-width:820px; margin:0 auto;   /* two items now, so stop the box sprawling */
 }
 .tr-req-item {
   display:flex; align-items:flex-start; gap:.75rem;
@@ -644,7 +645,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
     <div class="tr-hero-text">
       <p class="section-tag reveal">Training sessions</p>
       <h1 class="section-h reveal">Train deeper.<br>Think <em>clearer.</em></h1>
-      <p class="tr-hero-kicker reveal">For certified freedivers of any level. On-demand sessions, open water and pool. Build the practice, deepen the calm. No fixed schedule. Book when you're ready.</p>
+      <p class="tr-hero-kicker reveal">Not a course, just water time. Build the practice, deepen the calm.</p>
     </div>
     <div class="tr-hero-stats reveal">
       <div>
@@ -678,20 +679,6 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
       <div class="tr-req-text">
         <strong>On-demand booking</strong>
         No fixed schedule. Book when it fits you. Sessions confirmed within 24 hours.
-      </div>
-    </div>
-    <div class="tr-req-item">
-      <div class="tr-req-icon">✓</div>
-      <div class="tr-req-text">
-        <strong>Lanyard, open water</strong>
-        Safety lanyard required for all open water sessions. Available to rent on-site.
-      </div>
-    </div>
-    <div class="tr-req-item">
-      <div class="tr-req-icon">✓</div>
-      <div class="tr-req-text">
-        <strong>Minimum 2 participants</strong>
-        Sessions run with a minimum of 2 freedivers. Solo bookings joined to a shared session.
       </div>
     </div>
   </div>
