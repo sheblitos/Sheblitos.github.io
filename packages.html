@@ -91,6 +91,7 @@ nav.scrolled{background:rgba(12,26,21,.96);backdrop-filter:blur(20px);padding:1r
 .pkg-head h2 em{color:var(--gold);font-style:italic}
 .pkg-head p{font-size:.95rem;color:var(--txt2);line-height:1.85;font-weight:400}
 .pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.pkg-dots{display:none}   /* carousel dots are mobile-only; shown in the max-width:680px block */
 .pkg-card{position:relative;background:var(--deep3);border:1px solid var(--ln);border-radius:var(--r);padding:2.25rem 2rem;display:flex;flex-direction:column;transition:border-color .25s,transform .25s}
 .pkg-card:hover{border-color:var(--ln2);transform:translateY(-3px)}
 .pkg-card.featured{border-color:var(--gold2);box-shadow:0 0 0 1px var(--gold3)}
@@ -158,10 +159,33 @@ footer{padding:4rem 3.5rem;border-top:1px solid var(--ln);display:flex;align-ite
   nav{padding:1.25rem 1.75rem}
   nav.scrolled{padding:.875rem 1.75rem}
   .nav-links{display:none}
-  .hero{padding:0 1.75rem 5rem}
+  .hero{padding:0 1.75rem 3rem;min-height:66vh}   /* shorter now the stats and sub-copy are gone */
   .hero-stats{flex-direction:column;gap:1.5rem}
   .pkg-section{padding:4rem 1.75rem}
-  .pkg-grid,.combo-grid{grid-template-columns:1fr}
+  /* Mobile: card grids become swipe carousels so the page stops being a 10-screen scroll */
+  .pkg-grid,.combo-grid{
+    grid-template-columns:none;
+    grid-auto-flow:column;
+    grid-auto-columns:86%;
+    gap:.9rem;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    padding:.25rem 1.75rem .25rem 0;
+    margin-right:-1.75rem;
+  }
+  .pkg-grid::-webkit-scrollbar,.combo-grid::-webkit-scrollbar{display:none}
+  .pkg-grid>*,.combo-grid>*{scroll-snap-align:center}
+  .pkg-dots{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:1.25rem}
+  .pkg-dots button{
+    width:8px;height:8px;min-width:0;min-height:0;align-self:center;
+    padding:6px;box-sizing:content-box;background-clip:content-box;
+    border:none;border-radius:50%;background-color:var(--ln2);cursor:pointer;
+    transition:background-color .25s,transform .25s;
+  }
+  .pkg-dots button.on{background-color:var(--teal);transform:scale(1.35)}
   .enquiry{padding:5rem 1.75rem}
   .eq-form{grid-template-columns:1fr}
   footer{flex-direction:column;gap:1rem;text-align:center;padding:3rem 1.75rem}
@@ -267,29 +291,14 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 <section class="hero">
   <div>
     <p class="lab-eyebrow">Barcelona</p>
-    <h1>Courses &amp;<br><span style="color:var(--gold);font-style:italic">pricing</span></h1>
+    <h1>AIDA courses &amp;<br><span style="color:var(--gold);font-style:italic">packages</span></h1>
     <div class="hero-rule"></div>
-    <p class="hero-sub"><strong>One clear path, from first breath to instructor.</strong> Take a single AIDA course, or combine levels and save. Every course is taught with the mind-first method from day one.</p>
     <div class="hero-pills">
       <a href="#courses" class="pill">AIDA courses</a>
       <a href="#bundles" class="pill">Combine &amp; save</a>
     </div>
   </div>
 
-  <div class="hero-stats reveal">
-    <div>
-      <p class="hs-num">AIDA 1–4</p>
-      <p class="hs-label">Beginner to advanced<br>+ Instructor course</p>
-    </div>
-    <div>
-      <p class="hs-num">Save €170</p>
-      <p class="hs-label">When you bundle<br>the full AIDA pathway</p>
-    </div>
-    <div>
-      <p class="hs-num">2026</p>
-      <p class="hs-label">First Barcelona cohort<br>waitlist now open</p>
-    </div>
-  </div>
 </section>
 
 <!-- AIDA COURSES -->
@@ -659,5 +668,65 @@ document.getElementById('cbk').addEventListener('click',function(e){ if(e.target
 document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeBooking(); });
 </script>
 
+
+<script>
+/* Mobile card carousels: dot indicators for .pkg-grid / .combo-grid */
+(function(){
+  var MQ = window.matchMedia('(max-width:680px)');
+  var built = [];
+
+  function build(){
+    teardown();
+    if(!MQ.matches) return;
+    document.querySelectorAll('.pkg-grid,.combo-grid').forEach(function(grid){
+      var cards = Array.prototype.filter.call(grid.children, function(c){ return c.nodeType===1; });
+      if(cards.length < 2) return;
+
+      var dots = document.createElement('div');
+      dots.className = 'pkg-dots';
+      cards.forEach(function(_, i){
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', 'Go to card ' + (i+1));
+        b.addEventListener('click', function(){
+          grid.scrollTo({ left: Math.max(0, cards[i].offsetLeft - (grid.clientWidth - cards[i].offsetWidth)/2), behavior: 'smooth' });
+        });
+        dots.appendChild(b);
+      });
+      grid.parentNode.insertBefore(dots, grid.nextSibling);
+
+      function sync(){
+        var mid = grid.scrollLeft + grid.clientWidth/2, best = 0, bd = Infinity;
+        cards.forEach(function(c, i){
+          var cc = c.offsetLeft + c.offsetWidth/2;
+          var d = Math.abs(cc - mid);
+          if(d < bd){ bd = d; best = i; }
+        });
+        Array.prototype.forEach.call(dots.children, function(b, i){
+          b.classList.toggle('on', i === best);
+        });
+      }
+      var last = 0, t;
+      grid.addEventListener('scroll', function(){
+        var now = Date.now();
+        if(now - last > 80){ last = now; sync(); }
+        clearTimeout(t); t = setTimeout(sync, 90);   // settle after momentum stops
+      }, {passive:true});
+      sync();
+      built.push({grid:grid, dots:dots});
+    });
+  }
+  function teardown(){
+    built.forEach(function(b){ if(b.dots.parentNode) b.dots.parentNode.removeChild(b.dots); });
+    built = [];
+  }
+  if(document.readyState !== 'loading') build();
+  else document.addEventListener('DOMContentLoaded', build);
+  (MQ.addEventListener ? MQ.addEventListener('change', build) : MQ.addListener(build));
+  // fallback: some browsers are unreliable with matchMedia change; also covers rotation
+  var rt;
+  window.addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(build, 150); });
+})();
+</script>
 </body>
 </html>
