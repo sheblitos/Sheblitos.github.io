@@ -2023,9 +2023,9 @@ font-weight:600}
 .mob-exp-card.bali {
   background:
     linear-gradient(rgba(12,26,21,.68) 0%, rgba(12,26,21,.88) 100%),
-    url('./bali-manta-rays.jpg') center bottom / cover no-repeat;background:
+    url('./bali-manta-rays.jpg?v=2') center bottom / cover no-repeat;background:
     linear-gradient(rgba(12,26,21,.68) 0%, rgba(12,26,21,.88) 100%),
-    image-set(url('./bali-manta-rays.avif') type('image/avif'), url('./bali-manta-rays.webp') type('image/webp'), url('./bali-manta-rays.jpg') type('image/jpeg')) center bottom / cover no-repeat;
+    image-set(url('./bali-manta-rays.avif?v=2') type('image/avif'), url('./bali-manta-rays.webp?v=2') type('image/webp'), url('./bali-manta-rays.jpg?v=2') type('image/jpeg')) center bottom / cover no-repeat;
 }
 /* Photo-backed expedition cards */
 .exp-card.dahab {
@@ -2045,16 +2045,16 @@ font-weight:600}
 .exp-card.bali {
   background:
     linear-gradient(rgba(12,26,21,.74) 0%, rgba(12,26,21,.88) 100%),
-    url('./bali-manta-rays.jpg') center bottom / cover no-repeat;background:
+    url('./bali-manta-rays.jpg?v=2') center bottom / cover no-repeat;background:
     linear-gradient(rgba(12,26,21,.74) 0%, rgba(12,26,21,.88) 100%),
-    image-set(url('./bali-manta-rays.avif') type('image/avif'), url('./bali-manta-rays.webp') type('image/webp'), url('./bali-manta-rays.jpg') type('image/jpeg')) center bottom / cover no-repeat;
+    image-set(url('./bali-manta-rays.avif?v=2') type('image/avif'), url('./bali-manta-rays.webp?v=2') type('image/webp'), url('./bali-manta-rays.jpg?v=2') type('image/jpeg')) center bottom / cover no-repeat;
 }
 .exp-card.bali:hover {
   background:
     linear-gradient(rgba(12,26,21,.56) 0%, rgba(12,26,21,.78) 100%),
-    url('./bali-manta-rays.jpg') center bottom / cover no-repeat;background:
+    url('./bali-manta-rays.jpg?v=2') center bottom / cover no-repeat;background:
     linear-gradient(rgba(12,26,21,.56) 0%, rgba(12,26,21,.78) 100%),
-    image-set(url('./bali-manta-rays.avif') type('image/avif'), url('./bali-manta-rays.webp') type('image/webp'), url('./bali-manta-rays.jpg') type('image/jpeg')) center bottom / cover no-repeat;
+    image-set(url('./bali-manta-rays.avif?v=2') type('image/avif'), url('./bali-manta-rays.webp?v=2') type('image/webp'), url('./bali-manta-rays.jpg?v=2') type('image/jpeg')) center bottom / cover no-repeat;
 }
 .exp-card-flag  { font-size: 1.75rem; line-height: 1; }
 .exp-card-num {
@@ -2431,7 +2431,7 @@ body.fx-off .dive-fx{ display:none; }
 .mw-card h3{ font-family:var(--font-display); font-weight:600; font-size:1.55rem; color:var(--txt); margin:0 0 .5rem; }
 .mw-card p{ font-size:.92rem; color:var(--txt2); line-height:1.55; margin:0 0 1.1rem; }
 .mw-link{ font-family:var(--font-body); font-weight:600; font-size:var(--text-xs); letter-spacing:.02em;  color:var(--teal); }
-.mw-thumb{ width:100%; height:150px; object-fit:cover; display:block; filter:brightness(.82) saturate(1.12); transition:transform .6s cubic-bezier(.16,1,.3,1); } .mw-card:hover .mw-thumb{ transform:scale(1.06); } .mw-body{ padding:1.5rem 1.6rem 1.7rem; } @media(max-width:860px){ .mw-grid{ display:flex; gap:1rem; max-width:none; margin:0; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; padding-bottom:.5rem; } .mw-grid::-webkit-scrollbar{ display:none; } .mw-card{ flex:0 0 80%; scroll-snap-align:start; } .mw-thumb{ height:160px; } }/* ── Course photo-card carousel (desktop) ── */
+.mw-thumb{ width:100%; aspect-ratio:8/5; height:auto; object-fit:cover; display:block; filter:brightness(.88) saturate(1.12); transition:transform .6s cubic-bezier(.16,1,.3,1); } .mw-card:hover .mw-thumb{ transform:scale(1.06); } .mw-body{ padding:1.5rem 1.6rem 1.7rem; } @media(max-width:860px){ .mw-grid{ display:flex; gap:1rem; max-width:none; margin:0; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; padding-bottom:.5rem; } .mw-grid::-webkit-scrollbar{ display:none; } .mw-card{ flex:0 0 80%; scroll-snap-align:start; } .mw-thumb{ height:160px; } }/* ── Course photo-card carousel (desktop) ── */
 .course-carousel-wrap{position:relative;max-width:1120px;margin:2.5rem auto 0}
 .course-carousel{display:flex;gap:1.1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.6rem .25rem 1rem;scrollbar-width:none}
 .course-carousel::-webkit-scrollbar{display:none}
@@ -2536,7 +2536,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 @media (hover:none){.dr-grab::before{border-color:rgba(126,205,176,.3)}}
 @media(prefers-reduced-motion:reduce){.dive-rope-panel,.dr-rail,.dr-grab{display:none}}
 /* ── Photos in sections 2 & 3 ── */
-.why{background-image:linear-gradient(180deg,rgba(12,26,21,.9) 0%,rgba(12,26,21,.82) 45%,rgba(12,26,21,.93) 100%),url('./training-line.jpg');background-image:linear-gradient(180deg,rgba(12,26,21,.9) 0%,rgba(12,26,21,.82) 45%,rgba(12,26,21,.93) 100%),image-set(url('./training-line.avif') type('image/avif'), url('./training-line.webp') type('image/webp'), url('./training-line.jpg') type('image/jpeg'));background-size:cover;background-position:center 26%}
+.why{background-image:linear-gradient(180deg,rgba(12,26,21,.9) 0%,rgba(12,26,21,.82) 45%,rgba(12,26,21,.93) 100%),url('./training-line.jpg?v=2');background-image:linear-gradient(180deg,rgba(12,26,21,.9) 0%,rgba(12,26,21,.82) 45%,rgba(12,26,21,.93) 100%),image-set(url('./training-line.avif?v=2') type('image/avif'), url('./training-line.webp?v=2') type('image/webp'), url('./training-line.jpg?v=2') type('image/jpeg'));background-size:cover;background-position:center 26%}
 .funnel::before{display:none}
 .f-step{padding:0 1rem}
 .f-photo{width:100%;aspect-ratio:4/3;border-radius:12px;background-size:cover;background-position:center;margin-bottom:1.4rem;box-shadow:var(--shadow-md);filter:brightness(.93) saturate(1.08)}
@@ -2882,7 +2882,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
           <span class="cc-cta">See details &rarr;</span>
         </div>
       </article>
-      <article class="course-card" data-ci="ci2" style="background-image:image-set(url('./training-line.avif') type('image/avif'), url('./training-line.webp') type('image/webp'), url('./training-line.jpg') type('image/jpeg'))" onclick="openCourse('ci2')">
+      <article class="course-card" data-ci="ci2" style="background-image:image-set(url('./training-line.avif?v=2') type('image/avif'), url('./training-line.webp?v=2') type('image/webp'), url('./training-line.jpg?v=2') type('image/jpeg'))" onclick="openCourse('ci2')">
         <div class="cc-grad"></div>
         <div class="cc-body">
           <span class="cc-badge">Foundational &middot; Open water</span>
@@ -2892,7 +2892,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
           <span class="cc-cta">See details &rarr;</span>
         </div>
       </article>
-      <article class="course-card" data-ci="ci3" style="background-image:image-set(url('./course-3.avif') type('image/avif'), url('./course-3.webp') type('image/webp'), url('./course-3.jpg') type('image/jpeg'))" onclick="openCourse('ci3')">
+      <article class="course-card" data-ci="ci3" style="background-image:image-set(url('./course-3.avif?v=2') type('image/avif'), url('./course-3.webp?v=2') type('image/webp'), url('./course-3.jpg?v=2') type('image/jpeg'))" onclick="openCourse('ci3')">
         <div class="cc-grad"></div>
         <div class="cc-body">
           <span class="cc-badge">Advanced</span>
@@ -3242,12 +3242,12 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 <section class="more-ways" id="more-ways" aria-labelledby="mw-heading">
   <h2 class="section-h reveal" style="text-align:center;margin:0 auto 2.25rem;">More ways to <em>dive with us.</em></h2>
   <div class="mw-grid">
-    <a class="mw-card reveal" href="/training"><picture><source srcset="./training-line.avif" type="image/avif"><source srcset="./training-line.webp" type="image/webp"><img class="mw-thumb" src="./training-line.jpg" alt="Two freedivers training on the line" loading="lazy" width="1080" height="1206"></picture><div class="mw-body">
+    <a class="mw-card reveal" href="/training"><picture><source srcset="./training-line.avif?v=2" type="image/avif"><source srcset="./training-line.webp?v=2" type="image/webp"><img class="mw-thumb" src="./training-line.jpg?v=2" alt="A freediver pulling up the line on a no-fins dive" loading="lazy" width="1400" height="875"></picture><div class="mw-body">
       <h3>Training Sessions</h3>
       <p>Drop-in pool &amp; open-water sessions for certified freedivers of any level.</p>
       <span class="mw-link">View packages &rarr;</span></div>
     </a>
-    <a class="mw-card reveal" href="/expeditions" style="transition-delay:.08s"><picture><source srcset="./bali-manta-rays.avif" type="image/avif"><source srcset="./bali-manta-rays.webp" type="image/webp"><img class="mw-thumb" src="./bali-manta-rays.jpg" alt="A manta ray gliding past a freediver in Bali" loading="lazy" width="1400" height="1371"></picture><div class="mw-body">
+    <a class="mw-card reveal" href="/expeditions" style="transition-delay:.08s"><picture><source srcset="./bali-manta-rays.avif?v=2" type="image/avif"><source srcset="./bali-manta-rays.webp?v=2" type="image/webp"><img class="mw-thumb" src="./bali-manta-rays.jpg?v=2" alt="A manta ray over the reef at Nusa Penida, Bali" loading="lazy" width="1400" height="875"></picture><div class="mw-body">
       <h3>Travel</h3>
       <p>Dahab, Bali, Sri Lanka, Tenerife, dive trips led personally by Shebl &amp; Rimi.</p>
       <span class="mw-link">See destinations &rarr;</span></div>
