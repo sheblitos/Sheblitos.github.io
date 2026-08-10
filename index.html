@@ -1334,12 +1334,8 @@ font-weight:600}
 .bk-field input::placeholder,.bk-field textarea::placeholder { color:var(--txt3); }
 .bk-field-row { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; }
 .bk-phone-wrap { display:flex; }
-.bk-phone-prefix {
-  background:var(--deep2); border:1px solid rgba(126,205,176,.1); border-right:none;
-  border-radius:var(--r-xs) 0 0 3px; padding:.85rem 1rem;
-  font-family:var(--font-body); font-size:var(--text-xs); color:var(--txt2);
-  letter-spacing:.04em; white-space:nowrap;
-}
+.bk-phone-code { background:var(--deep3); border:1px solid var(--ln2); color:var(--teal); font-family:var(--font-body); font-size:.9rem; padding:.75rem .4rem; }
+.bk-phone-code:focus { outline:none; border-color:var(--teal); }
 .bk-phone-wrap input { border-radius:0 3px 3px 0; }
 
 /* Actions */
@@ -3580,6 +3576,13 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
   </div>
 </footer>
 
+<!-- ── STICKY MOBILE CTA ── -->
+<div class="sticky-cta" id="stickyCta">
+  <span class="sticky-cta-label" id="stickyCtaLabel">Ready to dive?</span>
+  <a class="sticky-cta-btn" id="stickyCtaBtn" href="#" onclick="stickyCtaAction();return false;">Reserve</a>
+  <button class="sticky-cta-close" onclick="dismissStickyCta()" aria-label="Dismiss">&times;</button>
+</div>
+
 <!-- ═══════════════════════════ BOOKING WIZARD ══════════════ -->
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Course booking wizard">
 
@@ -3721,7 +3724,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
       <h2 class="bk-step-heading">When are you<br>thinking of <em>diving?</em></h2>
       <p class="bk-step-sub">We open mid-2026. Pick the month that works best, or tell us you're flexible.</p>
       <div class="bk-month-grid">
-        <div class="bk-month-btn" data-month="June 2026" onclick="bkSelectMonth(this)" role="button" tabindex="0" aria-label="Choose June 2026"><p class="bk-mb-month">June</p><p class="bk-mb-year">2026</p><p class="bk-mb-note">Launch month</p></div>
+        <div class="bk-month-btn" data-month="June 2026" onclick="bkSelectMonth(this)" role="button" tabindex="0" aria-label="Choose June 2026"><p class="bk-mb-month">June</p><p class="bk-mb-year">2026</p></div>
         <div class="bk-month-btn" data-month="July 2026" onclick="bkSelectMonth(this)" role="button" tabindex="0" aria-label="Choose July 2026"><p class="bk-mb-month">July</p><p class="bk-mb-year">2026</p></div>
         <div class="bk-month-btn" data-month="August 2026" onclick="bkSelectMonth(this)" role="button" tabindex="0" aria-label="Choose August 2026"><p class="bk-mb-month">August</p><p class="bk-mb-year">2026</p></div>
         <div class="bk-month-btn" data-month="September 2026" onclick="bkSelectMonth(this)" role="button" tabindex="0" aria-label="Choose September 2026"><p class="bk-mb-month">September</p><p class="bk-mb-year">2026</p></div>
@@ -3730,6 +3733,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
         <div class="bk-month-btn" data-month="December 2026" onclick="bkSelectMonth(this)" role="button" tabindex="0" aria-label="Choose December 2026"><p class="bk-mb-month">December</p><p class="bk-mb-year">2026</p></div>
         <div class="bk-month-btn" data-month="Flexible" onclick="bkSelectMonth(this)" role="button" tabindex="0" aria-label="Choose Flexible"><p class="bk-mb-month">I'm flexible</p><p class="bk-mb-year">Anytime 2026</p></div>
         <div class="bk-month-btn" data-month="Just exploring" onclick="bkSelectMonth(this)" role="button" tabindex="0" aria-label="Choose Just exploring"><p class="bk-mb-month">Just exploring</p><p class="bk-mb-year">For now</p></div>
+      </div>
+      <div class="bk-field" id="bkDateField" style="display:none;margin-bottom:1.5rem">
+        <label class="bk-field-label" for="bkDate">Preferred dates <span>optional</span></label>
+        <input type="text" id="bkDate" placeholder="e.g. first week, 15th onwards, any time">
       </div>
       <div class="bk-actions">
         <button class="bk-btn-primary" id="bkStep3Next" onclick="bkGoTo(4)" disabled>Continue →</button>
@@ -3760,8 +3767,8 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
         <div class="bk-field">
           <label class="bk-field-label" for="bkPhone">WhatsApp number <span>optional, preferred for quick replies</span></label>
           <div class="bk-phone-wrap">
-            <span class="bk-phone-prefix">🇪🇸 +34</span>
-            <input type="tel" id="bkPhone" placeholder="600 000 000">
+            <input type="text" class="bk-phone-code" id="bkPhoneCode" value="+34" placeholder="+1" style="width:60px;text-align:center;border-radius:3px 0 0 3px;border-right:none;">
+            <input type="tel" id="bkPhone" placeholder="Your number" style="border-radius:0 3px 3px 0;">
           </div>
         </div>
         <div class="bk-field">
@@ -3822,28 +3829,58 @@ window.addEventListener('scroll',()=>{
 });
 
 /* ─── STICKY MOBILE CTA ─── */
+var _stickyCtaCourse = '';
+function stickyCtaAction(){
+  if(_stickyCtaCourse){ openModal(_stickyCtaCourse); }
+  else { openModal(); }
+}
 (function(){
   const bar = document.getElementById('stickyCta');
   if(!bar) return;
   let dismissed = false;
   let heroBottom = 0;
+  const label = document.getElementById('stickyCtaLabel');
+  const btn = document.getElementById('stickyCtaBtn');
+  const courseItems = [
+    {id:'ci1', name:'AIDA 1'},
+    {id:'ci2', name:'AIDA 2'},
+    {id:'ci3', name:'AIDA 3'},
+    {id:'ci4', name:'AIDA 4'}
+  ];
   function calcHero(){
     const hero = document.querySelector('.hero');
     if(hero) heroBottom = hero.getBoundingClientRect().bottom + scrollY;
   }
   calcHero();
-  window.addEventListener('scroll', ()=>{
+  function updateCta(){
     if(dismissed) return;
-    bar.classList.toggle('visible', scrollY > heroBottom * 0.6);
-  }, {passive:true});
+    const show = scrollY > heroBottom * 0.6;
+    bar.classList.toggle('visible', show);
+    if(!show) return;
+    var found = '';
+    for(var i=0;i<courseItems.length;i++){
+      var el = document.getElementById(courseItems[i].id);
+      if(!el) continue;
+      var rect = el.getBoundingClientRect();
+      if(rect.top < window.innerHeight * 0.6 && rect.bottom > window.innerHeight * 0.3){
+        found = courseItems[i].name; break;
+      }
+    }
+    _stickyCtaCourse = found;
+    if(found){
+      label.textContent = found;
+      btn.textContent = 'Reserve ' + found;
+    } else {
+      label.textContent = 'Ready to dive?';
+      btn.textContent = 'Reserve';
+    }
+  }
+  window.addEventListener('scroll', updateCta, {passive:true});
   window.addEventListener('resize', calcHero);
 })();
 function dismissStickyCta(){
   const bar = document.getElementById('stickyCta');
-  if(bar){ bar.classList.remove('visible'); }
-  const dismissed = true;
-  // hide for this session
-  bar.style.display = 'none';
+  if(bar){ bar.classList.remove('visible'); bar.style.display = 'none'; }
 }
 
 /* ─── MOBILE NAV ─── */
@@ -4090,6 +4127,7 @@ function bkSelectMonth(el){
   el.classList.add('selected');
   bkState.month=el.dataset.month;
   document.getElementById('bkStep3Next').disabled=false;
+  document.getElementById('bkDateField').style.display='block';
 }
 
 function bkCheckStep4(){
@@ -4147,10 +4185,12 @@ function bkReset(){
   document.querySelectorAll('.bk-course-card,.bk-help-card').forEach(c=>c.classList.remove('selected'));
   document.getElementById('bkMiniQuiz').style.display='none';
   document.getElementById('bkStep1Next').disabled=true;
-  ['bkFname','bkLname','bkEmail','bkPhone','bkNotes'].forEach(id=>{
+  ['bkFname','bkLname','bkEmail','bkPhone','bkNotes','bkDate'].forEach(id=>{
     const el=document.getElementById(id);
     if(el) el.value='';
   });
+  var pcEl=document.getElementById('bkPhoneCode'); if(pcEl) pcEl.value='+34';
+  var dfEl=document.getElementById('bkDateField'); if(dfEl) dfEl.style.display='none';
   const pw=document.getElementById('bkProgressWrap');
   if(pw) pw.style.opacity='1';
   bkGoTo(1);
@@ -4159,7 +4199,7 @@ function bkReset(){
 function bkSubmitReservation(){
   try{
     var g=function(id){var el=document.getElementById(id);return el?(el.value||'').trim():'';};
-    var data={course:bkState.course,price:bkState.price,experience:bkState.experience,month:bkState.month,name:bkState.name,email:bkState.email,phone:g('bkPhone'),notes:g('bkNotes'),_subject:'New reservation — freedivingbrain.com',_template:'table',_captcha:'false',_autoresponse:'Thanks for reserving with Freediving Brain! We have your request and will be in touch within 48 hours to confirm your place. — Shebl'};
+    var data={course:bkState.course,price:bkState.price,experience:bkState.experience,month:bkState.month,dates:g('bkDate'),name:bkState.name,email:bkState.email,phone:g('bkPhoneCode')+' '+g('bkPhone'),notes:g('bkNotes'),_subject:'New reservation — freedivingbrain.com',_template:'table',_captcha:'false',_autoresponse:'Thanks for reserving with Freediving Brain! We have your request and will be in touch within 48 hours to confirm your place. — Shebl'};
     var body=Object.keys(data).map(function(k){return encodeURIComponent(k)+'='+encodeURIComponent(data[k]);}).join('&');
     fetch('https://formsubmit.co/ajax/hello@freedivingbrain.com',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded','Accept':'application/json'},body:body}).catch(function(){});
   }catch(e){}
@@ -4179,6 +4219,7 @@ function openModal(course){
       }
     });
   }
+  if(bkState.course){ bkGoTo(2); }
   var m=document.getElementById('modal');
   bkLastFocus=document.activeElement;
   m.classList.add('open');
