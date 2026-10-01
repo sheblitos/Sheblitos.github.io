@@ -28,7 +28,7 @@ html{scroll-behavior:smooth;font-size:100%}
   --ln:rgba(226,221,212,.07);--ln2:rgba(226,221,212,.14);
   --r:4px;--ease:cubic-bezier(.16,1,.3,1)
 }
-body{font-family:var(--font-display);background:var(--deep);color:var(--txt);overflow-x:hidden;font-weight:600}
+body{font-family:var(--font-display);background:var(--deep);color:var(--txt);overflow-x:hidden;cursor:none;font-weight:600}
 .cur-dot{position:fixed;width:6px;height:6px;background:var(--teal);border-radius:var(--r-round);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s}
 .cur-ring{position:fixed;width:32px;height:32px;border:1px solid rgba(126,205,176,.3);border-radius:var(--r-round);pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s,opacity .3s}
 .cur-dot.hov{width:10px;height:10px;background:var(--teal2)}
@@ -172,8 +172,6 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
   <a href="/#booking" class="nav-mobile-cta">Reserve a spot</a>
 </div>
 
-<main>
-
 <section class="blog-hero">
   <p class="blog-hero-label">The Freediving Brain Blog</p>
   <h1>Science, method,<br><em>and the quiet mind</em></h1>
@@ -299,8 +297,6 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
   <p>Explore AIDA freediving courses and training in Barcelona, from your first pool session to advanced depth work.</p>
   <a href="/packages" class="btn-primary">Explore Barcelona courses</a>
 </section>
-
-</main>
 
 <footer><div class="footer-watermark" aria-hidden="true"></div>
   <span class="foot-logo">Freediving <strong>Brain</strong></span>
