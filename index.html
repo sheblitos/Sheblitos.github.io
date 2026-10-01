@@ -4205,13 +4205,6 @@ function openModal(course){
   if(first){ setTimeout(function(){ first.focus(); },40); }
 }
 
-// Deep link: /?book=AIDA%202 opens the booking form with that course picked (/?book opens it blank).
-(function(){
-  var p=new URLSearchParams(location.search);
-  if(!p.has('book'))return;
-  addEventListener('load',function(){ openModal(p.get('book')||undefined); });
-})();
-
 function closeModal(){
   document.getElementById('modal').classList.remove('open');
   document.body.style.overflow='';
