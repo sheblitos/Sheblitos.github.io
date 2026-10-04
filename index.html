@@ -42,7 +42,7 @@
   "address": { "@type": "PostalAddress", "addressLocality": "Barcelona", "addressCountry": "ES" },
   "areaServed": "Barcelona, Catalonia, Spain",
   "image": "https://freedivingbrain.com/og-image.jpg",
-  "email": "hello@freedivingbrain.com",
+  "email": "shebl@freedivingbrain.com",
   "priceRange": "€€",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -1114,6 +1114,9 @@ section { padding: 4.5rem 3.5rem; position:relative; }
   color:var(--txt2); max-width:460px;
   margin:0 auto 2.75rem; line-height:1.85;
 }
+.booking-contact { font-size:var(--text-xs); color:var(--txt2); margin-top:.75rem; }
+.booking-contact a { color:var(--teal); text-decoration:none; border-bottom:1px solid rgba(126,205,176,.35); transition:border-color .2s; }
+.booking-contact a:hover { border-bottom-color:var(--teal); }
 .booking-actions { display:flex; gap:1.1rem; justify-content:center; flex-wrap:wrap; }
 .booking-note {
   font-family:var(--font-body);
@@ -3547,6 +3550,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
       <a href="#" class="btn-ghost" onclick="openModal('General Inquiry');return false;">Ask a question</a>
     </div>
     <p class="booking-note reveal">No payment now. No obligation. We reply personally, usually within a day.</p>
+    <p class="booking-contact reveal">Prefer to talk first? <a href="https://wa.me/34603083325" target="_blank" rel="noopener">WhatsApp +34 603 083 325</a> · <a href="mailto:shebl@freedivingbrain.com">shebl@freedivingbrain.com</a></p>
   </div>
 </section>
 
@@ -3575,6 +3579,8 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
         <a href="#" aria-label="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.51 3.55 12 3.55 12 3.55s-7.51 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.87.5 9.38.5 9.38.5s7.51 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a>
       </div>
       <div class="footer-links">
+        <a href="https://wa.me/34603083325" target="_blank" rel="noopener">WhatsApp +34 603 083 325</a>
+        <a href="mailto:shebl@freedivingbrain.com">shebl@freedivingbrain.com</a>
         <a href="/about">Our Story</a>
         <a href="#" onclick="openModal('General Inquiry')">Contact</a>
         <a href="/faq">FAQ</a>
@@ -3807,6 +3813,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
         </div>
         <h2 class="bk-confirm-heading">You're on the<br><em>list.</em></h2>
         <p class="bk-confirm-sub" id="bkConfirmMsg">We've received your request. Shebl will reach out personally within 48 hours.</p>
+        <p class="bk-confirm-sub" style="margin-top:-1.75rem">Want a faster answer? Message Shebl on <a href="https://wa.me/34603083325" target="_blank" rel="noopener" style="color:var(--teal)">WhatsApp +34 603 083 325</a>.</p>
 
         <div class="bk-summary-card" style="text-align:left;max-width:480px;margin:0 auto 2rem">
           <div class="bk-summary-row"><span class="bk-summary-key">Course</span><span class="bk-summary-val" id="bk-conf-course"></span></div>
