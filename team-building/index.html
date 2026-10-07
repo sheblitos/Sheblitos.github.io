@@ -329,6 +329,15 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
   line-height: 1.1;
   letter-spacing: normal;
 }
+/* How the day looks: small, uncropped photo strip */
+.tb-moments{margin-top:3.5rem}
+.tb-moments-tag{font-size:var(--text-xs);color:var(--txt2);margin:0 0 1rem}
+.tb-moments-row+.tb-moments-tag{margin-top:2rem}
+.tb-moments-row{display:flex;flex-wrap:wrap;gap:.75rem}
+.tb-moments figure{margin:0;flex:0 0 auto;display:flex;flex-direction:column}
+.tb-moments img{display:block;height:150px;width:auto;border-radius:6px}
+.tb-moments figcaption{width:0;min-width:100%;font-size:var(--text-xs);line-height:1.35;color:var(--txt2);margin-top:.45rem}
+@media (max-width:680px){.tb-moments-row{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.5rem;-webkit-overflow-scrolling:touch}.tb-moments figure{scroll-snap-align:start}.tb-moments img{height:130px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Team Building Workshops, Experiences & Retreats","serviceType":"Team building workshops, experiences and retreats","description":"Freediving and breathwork team building for corporate teams and startups, from short Barcelona workshops to full-day experiences and multi-day retreats.","provider":{"@type":"Organization","name":"Freediving Brain","url":"https://freedivingbrain.com"},"areaServed":[{"@type":"City","name":"Barcelona"},{"@type":"Country","name":"Spain"}],"url":"https://freedivingbrain.com/team-building"}</script>
 </head>
@@ -539,6 +548,26 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
       <p class="ib-body" style="color:var(--txt3);font-size:var(--text-xs)">Half-day or full-day &middot; in Barcelona or on-location &middot; led personally by Shebl &amp; Rimi.</p>
       <br>
       <a href="#enquire" class="btn-gold" style="font-size:var(--text-xs)">Design your experience &rarr;</a>
+    </div>
+  </div>
+  <div class="tb-moments">
+    <p class="tb-moments-tag">How the day looks</p>
+    <div class="tb-moments-row">
+      <figure><picture><source srcset="/c2s-dry.avif" type="image/avif"><source srcset="/c2s-dry.webp" type="image/webp"><img src="/c2s-dry.jpg" alt="Breathwork on land" width="1100" height="825" loading="lazy" decoding="async"></picture><figcaption>Breathwork on land</figcaption></figure>
+      <figure><picture><source srcset="/pl-band-3.avif" type="image/avif"><source srcset="/pl-band-3.webp" type="image/webp"><img src="/pl-band-3.jpg" alt="Static, with a buddy" width="900" height="1200" loading="lazy" decoding="async"></picture><figcaption>Static, with a buddy</figcaption></figure>
+      <figure><picture><source srcset="/tr-pool.avif" type="image/avif"><source srcset="/tr-pool.webp" type="image/webp"><img src="/tr-pool.jpg" alt="Dynamic in the pool" width="1500" height="1125" loading="lazy" decoding="async"></picture><figcaption>Dynamic in the pool</figcaption></figure>
+      <figure><picture><source srcset="/commx-21.avif" type="image/avif"><source srcset="/commx-21.webp" type="image/webp"><img src="/commx-21.jpg" alt="Depth, together on the line" width="985" height="1100" loading="lazy" decoding="async"></picture><figcaption>Depth, together on the line</figcaption></figure>
+      <figure><picture><source srcset="/comm-sunset.avif" type="image/avif"><source srcset="/comm-sunset.webp" type="image/webp"><img src="/comm-sunset.jpg" alt="Trust at the buoy" width="1100" height="619" loading="lazy" decoding="async"></picture><figcaption>Trust at the buoy</figcaption></figure>
+      <figure><picture><source srcset="/comm-boat-smiles.avif" type="image/avif"><source srcset="/comm-boat-smiles.webp" type="image/webp"><img src="/comm-boat-smiles.jpg" alt="The whole team" width="1100" height="825" loading="lazy" decoding="async"></picture><figcaption>The whole team</figcaption></figure>
+    </div>
+    <p class="tb-moments-tag">Between dives</p>
+    <div class="tb-moments-row">
+      <figure><picture><source srcset="/comm-dahab-buoy.avif" type="image/avif"><source srcset="/comm-dahab-buoy.webp" type="image/webp"><img src="/comm-dahab-buoy.jpg" alt="Buoy break" width="1100" height="825" loading="lazy" decoding="async"></picture><figcaption>Buoy break</figcaption></figure>
+      <figure><picture><source srcset="/commx-52.avif" type="image/avif"><source srcset="/commx-52.webp" type="image/webp"><img src="/commx-52.jpg" alt="Laughs between dives" width="1100" height="962" loading="lazy" decoding="async"></picture><figcaption>Laughs between dives</figcaption></figure>
+      <figure><picture><source srcset="/students-buoy-openwater.avif" type="image/avif"><source srcset="/students-buoy-openwater.webp" type="image/webp"><img src="/students-buoy-openwater.jpg" alt="Waiting for the next dive" width="1400" height="1050" loading="lazy" decoding="async"></picture><figcaption>Waiting for the next dive</figcaption></figure>
+      <figure><picture><source srcset="/commx-05.avif" type="image/avif"><source srcset="/commx-05.webp" type="image/webp"><img src="/commx-05.jpg" alt="Suited up and ready" width="1100" height="825" loading="lazy" decoding="async"></picture><figcaption>Suited up and ready</figcaption></figure>
+      <figure><picture><source srcset="/commx-53.avif" type="image/avif"><source srcset="/commx-53.webp" type="image/webp"><img src="/commx-53.jpg" alt="End of a good day" width="975" height="1100" loading="lazy" decoding="async"></picture><figcaption>End of a good day</figcaption></figure>
+      <figure><picture><source srcset="/commx-54.avif" type="image/avif"><source srcset="/commx-54.webp" type="image/webp"><img src="/commx-54.jpg" alt="Out of the water" width="836" height="1100" loading="lazy" decoding="async"></picture><figcaption>Out of the water</figcaption></figure>
     </div>
   </div>
 </section>
