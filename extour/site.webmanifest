@@ -1,0 +1,14 @@
+{
+  "name": "EXTour",
+  "short_name": "EXTour",
+  "description": "Find where to go, who to learn with, and who's going.",
+  "start_url": "/extour/",
+  "scope": "/extour/",
+  "display": "standalone",
+  "background_color": "#15251F",
+  "theme_color": "#15251F",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
