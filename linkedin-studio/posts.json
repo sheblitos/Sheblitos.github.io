@@ -12,7 +12,9 @@
       "subline": "We’re many. And we keep becoming more.",
       "images": [
         {
-          "type": "graphic"
+          "type": "photo",
+          "src": "post-01",
+          "mode": "overlay"
         }
       ]
     },
