@@ -48,11 +48,15 @@
         {
           "type": "photo",
           "src": "post-03",
-          "mode": "overlay",
+          "mode": "clean",
           "focus": [
-            0.5,
-            0.0
-          ]
+            0.48,
+            0.5
+          ],
+          "gauge": false
+        },
+        {
+          "type": "graphic"
         }
       ]
     },
@@ -90,15 +94,6 @@
       ],
       "subline": "From idea to real thing, faster.",
       "images": [
-        {
-          "type": "photo",
-          "src": "post-05",
-          "mode": "clean",
-          "focus": [
-            0.5,
-            0.5
-          ]
-        },
         {
           "type": "graphic"
         }
@@ -142,14 +137,11 @@
         {
           "type": "photo",
           "src": "post-07",
-          "mode": "clean",
+          "mode": "overlay",
           "focus": [
             0.5,
-            0.5
+            0.0
           ]
-        },
-        {
-          "type": "graphic"
         }
       ]
     },
@@ -182,6 +174,122 @@
       "images": [
         {
           "type": "graphic"
+        }
+      ]
+    },
+    {
+      "num": 10,
+      "depth": 25,
+      "pillar": "GO DEEP",
+      "headline": [
+        "The deepest part",
+        "is where you",
+        "stop swimming."
+      ],
+      "subline": "On freefall, and knowing when to let go.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-10",
+          "mode": "clean",
+          "focus": [
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "type": "graphic"
+        }
+      ]
+    },
+    {
+      "num": 11,
+      "depth": 35,
+      "pillar": "FIND THE SIGNAL",
+      "headline": [
+        "Every good dive",
+        "starts on",
+        "the beach."
+      ],
+      "subline": "Why the brief matters more than the launch.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-11",
+          "mode": "overlay",
+          "focus": [
+            0.58,
+            0.5
+          ]
+        }
+      ]
+    },
+    {
+      "num": 12,
+      "depth": 45,
+      "pillar": "BUILD THE TEST",
+      "headline": [
+        "Not every dive",
+        "needs a target."
+      ],
+      "subline": "Know if it’s a depth day or an exploring day.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-12",
+          "mode": "clean",
+          "focus": [
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "type": "graphic"
+        }
+      ]
+    },
+    {
+      "num": 13,
+      "depth": 55,
+      "pillar": "BRING IT TO THE SURFACE",
+      "headline": [
+        "It doesn’t count",
+        "until you bring it",
+        "to the surface."
+      ],
+      "subline": "Notes from the judge’s side of the line.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-13",
+          "mode": "overlay",
+          "focus": [
+            0.43,
+            0.5
+          ],
+          "gauge": false
+        }
+      ]
+    },
+    {
+      "num": 14,
+      "depth": 65,
+      "pillar": "GO DEEP",
+      "headline": [
+        "The surface looks",
+        "brightest when",
+        "you leave it."
+      ],
+      "subline": "On starting over in Barcelona.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-14",
+          "mode": "overlay",
+          "focus": [
+            0.5,
+            0.0
+          ]
         }
       ]
     }

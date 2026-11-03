@@ -231,11 +231,11 @@ def grade(img, strength=0.18):
     return Image.fromarray((np.clip(a * (1 - strength) + tint * strength, 0, 1) * 255).astype(np.uint8))
 
 
-def darken(img, overlay):
+def darken(img, overlay, bright=False):
     """Bottom gradient (transparent to navy 85% over the bottom 55%) plus a light top scrim for the label."""
     alpha = np.zeros((H, 1), np.float32)
     ys = np.arange(H)
-    start, full = H * 0.45, H * 0.78
+    start, full = (H * 0.32, H * 0.66) if bright else (H * 0.45, H * 0.78)
     alpha[:, 0] = np.clip((ys - start) / (full - start), 0, 1) * 0.85
     if not overlay:  # clean mode: only enough for the footer
         start = H * 0.68
@@ -269,7 +269,12 @@ def render_photo(p, spec):
     raw = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
     img, note, faces = crop_45(raw, spec.get("focus"))
     overlay = spec.get("mode", "overlay") == "overlay"
-    img = darken(grade(img), overlay)
+    img = grade(img)
+    zone = np.asarray(img.convert("L"))[int(H * 0.5):int(H * 0.75), X:W - RIGHT_MARGIN]
+    bright = overlay and float(zone.mean()) > 120   # light water or sky behind the headline
+    img = darken(img, overlay, bright)
+    if bright:
+        note += ", bright background: stronger shading"
     c = Canvas(img)
     # The gauge runs down the left edge. If it would cross a face (detected, or flagged with
     # "gauge": false for faces the detector misses), drop it and show the depth in the top label.
