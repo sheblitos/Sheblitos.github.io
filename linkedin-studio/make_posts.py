@@ -104,8 +104,9 @@ def gauge(c, depth, opacity=1.0):
     c.boxes.append(("depth label", d.textbbox((GX - 28, my), label, font=mono(20), anchor="rm", **{k: v for k, v in halo.items() if k == "stroke_width"}), True))
 
 
-def top_label(c, num, pillar, fill=DIM):
-    c.text("top label", (X, 150), f"{num:02d} / {pillar}", mono(22), fill, anchor="lt")
+def top_label(c, num, pillar, fill=DIM, depth=None):
+    s = f"{num:02d} / {pillar}" + (f" / −{depth} m" if depth is not None else "")
+    c.text("top label", (X, 150), s, mono(22), fill, anchor="lt")
 
 
 def footer(c):
@@ -190,7 +191,7 @@ def detect_faces(img):
 def crop_45(img, focus=None, face_y=0.32):
     """Crop to 4:5 keeping faces in frame. Returns (image, note)."""
     w, h = img.size
-    faces = [] if focus else (detect_faces(img) or [])
+    faces = detect_faces(img) or []   # always detected, so QA can protect them even with a manual focus
     if focus:
         cx, cy, note = focus[0] * w, focus[1] * h, "manual focus"
     elif faces:
@@ -237,8 +238,8 @@ def darken(img, overlay):
     start, full = H * 0.45, H * 0.78
     alpha[:, 0] = np.clip((ys - start) / (full - start), 0, 1) * 0.85
     if not overlay:  # clean mode: only enough for the footer
-        start = H * 0.78
-        alpha[:, 0] = np.clip((ys - start) / (H * 0.95 - start), 0, 1) * 0.75
+        start = H * 0.68
+        alpha[:, 0] = np.clip((ys - start) / (H * 0.86 - start), 0, 1) * 0.85
     alpha[:, 0] = np.maximum(alpha[:, 0], np.clip(1 - ys / (H * 0.20), 0, 1) * 0.60)
     a = np.repeat(alpha, W, axis=1)[..., None]
     base = np.asarray(img).astype(np.float32)
@@ -270,8 +271,15 @@ def render_photo(p, spec):
     overlay = spec.get("mode", "overlay") == "overlay"
     img = darken(grade(img), overlay)
     c = Canvas(img)
-    gauge(c, p["depth"], opacity=0.45)
-    top_label(c, p["num"], p["pillar"], fill=CREAM)
+    # The gauge runs down the left edge. If it would cross a face (detected, or flagged with
+    # "gauge": false for faces the detector misses), drop it and show the depth in the top label.
+    gauge_zone = (GX - 110, GY0, GX + 24, GY1)
+    show_gauge = spec.get("gauge", True) and not any(overlap(gauge_zone, f) for f in faces)
+    if show_gauge:
+        gauge(c, p["depth"], opacity=0.45)
+    else:
+        note += ", gauge hidden (face on the left), depth in top label"
+    top_label(c, p["num"], p["pillar"], fill=CREAM, depth=None if show_gauge else p["depth"])
     for i, f in enumerate(faces):   # faces join QA: no text may touch them
         c.boxes.append((f"face {i+1}", (f[0] - 12, f[1] - 12, f[2] + 12, f[3] + 12), False))
     if overlay:

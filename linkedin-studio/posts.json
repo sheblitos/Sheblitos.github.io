@@ -48,14 +48,12 @@
         {
           "type": "photo",
           "src": "post-03",
-          "mode": "clean",
+          "mode": "overlay",
           "focus": [
-            0.47,
+            0.43,
             0.5
-          ]
-        },
-        {
-          "type": "graphic"
+          ],
+          "gauge": false
         }
       ]
     },
@@ -73,10 +71,11 @@
         {
           "type": "photo",
           "src": "post-04",
-          "mode": "clean"
-        },
-        {
-          "type": "graphic"
+          "mode": "overlay",
+          "focus": [
+            0.58,
+            0.5
+          ]
         }
       ]
     },
@@ -91,6 +90,15 @@
       ],
       "subline": "From idea to real thing, faster.",
       "images": [
+        {
+          "type": "photo",
+          "src": "post-05",
+          "mode": "clean",
+          "focus": [
+            0.5,
+            0.5
+          ]
+        },
         {
           "type": "graphic"
         }
@@ -134,11 +142,14 @@
         {
           "type": "photo",
           "src": "post-07",
-          "mode": "overlay",
+          "mode": "clean",
           "focus": [
             0.5,
-            0.0
+            0.5
           ]
+        },
+        {
+          "type": "graphic"
         }
       ]
     },
