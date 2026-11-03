@@ -98,9 +98,10 @@ def gauge(c, depth, opacity=1.0):
     my = GY0 + (GY1 - GY0) * depth / GMAX
     d.ellipse([GX - 6, my - 6, GX + 6, my + 6], fill=ACCENT + (max(a, 200),))
     label = f"−{depth} m"
-    d.text((GX - 28, my), label, font=mono(20), fill=ACCENT + (max(a, 220),), anchor="rm")
+    halo = {} if opacity >= 1 else {"stroke_width": 2, "stroke_fill": DEEP + (170,)}  # readable on bright photos
+    d.text((GX - 28, my), label, font=mono(20), fill=ACCENT + (255 if halo else max(a, 220),), anchor="rm", **halo)
     c.img.paste(Image.alpha_composite(c.img.convert("RGBA"), layer).convert("RGB"))
-    c.boxes.append(("depth label", d.textbbox((GX - 28, my), label, font=mono(20), anchor="rm"), True))
+    c.boxes.append(("depth label", d.textbbox((GX - 28, my), label, font=mono(20), anchor="rm", **{k: v for k, v in halo.items() if k == "stroke_width"}), True))
 
 
 def top_label(c, num, pillar, fill=DIM):
