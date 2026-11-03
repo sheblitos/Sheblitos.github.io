@@ -28,7 +28,7 @@ PHOTO_EXT = (".jpg", ".jpeg", ".png", ".webp")
 SURFACE, DEEP, ABYSS = (26, 92, 110), (6, 16, 28), (2, 6, 12)
 CREAM, DIM, ACCENT = (238, 232, 218), (150, 170, 175), (120, 200, 205)
 FOOTER_NAME = "Abd-El-Rahman Shebl"
-FOOTER_OS = "Go deep. Find the signal. Build the test. Grow what works."
+FOOTER_OS = "Go deep. Find the signal. Build the test. Bring it to the surface."
 
 
 def serif(s): return ImageFont.truetype(str(FONTS / "InstrumentSerif-Regular.ttf"), s)

@@ -19,3 +19,7 @@ python make_posts.py         # render everything whose photos exist
 
 Fonts: Instrument Serif and DM Mono (SIL Open Font License, see `fonts/OFL-*.txt`).
 Face model: YuNet from opencv_zoo (MIT).
+
+Operating system (footer slogan and content pillars):
+Go deep. Find the signal. Build the test. Bring it to the surface.
+Pillars: GO DEEP, FIND THE SIGNAL, BUILD THE TEST, BRING IT TO THE SURFACE (results, case studies, clear ask; once or twice a month).
