@@ -1,0 +1,41 @@
+{
+  "_help": "One entry per post. images: list of {type: graphic | photo | screenshot}. photo/screenshot need src (file in photos/). photo mode: overlay (headline on photo) or clean (footer only). Optional focus [x, y] (0-1) overrides face detection for the crop.",
+  "posts": [
+    {
+      "num": 1, "depth": 5, "pillar": "GO DEEP",
+      "headline": ["We’re not", "one thing."],
+      "subline": "We’re many. And we keep becoming more.",
+      "images": [{"type": "graphic"}]
+    },
+    {
+      "num": 2, "depth": 15, "pillar": "GO DEEP",
+      "headline": ["I was busy.", "I wasn’t living."],
+      "subline": "Burnout taught me what drive can’t.",
+      "images": [{"type": "photo", "src": "post-02", "mode": "overlay"}]
+    },
+    {
+      "num": 3, "depth": 25, "pillar": "GO DEEP",
+      "headline": ["Never dive alone.", "Never build alone."],
+      "subline": "The lesson I almost learned too late.",
+      "images": [{"type": "photo", "src": "post-03", "mode": "clean"}, {"type": "graphic"}]
+    },
+    {
+      "num": 4, "depth": 35, "pillar": "FIND THE SIGNAL",
+      "headline": ["People don’t buy", "features. They buy", "feeling understood."],
+      "subline": "What 160+ students taught me about marketing.",
+      "images": [{"type": "photo", "src": "post-04", "mode": "overlay"}]
+    },
+    {
+      "num": 5, "depth": 45, "pillar": "BUILD THE TEST",
+      "headline": ["AI didn’t replace", "my skills. It gave", "them speed."],
+      "subline": "From idea to real thing, faster.",
+      "images": [{"type": "graphic"}]
+    },
+    {
+      "num": 6, "depth": 55, "pillar": "BUILD THE TEST",
+      "headline": ["AI can write the code.", "It can’t tell you what’s", "worth building."],
+      "subline": "Notes from a marketer who builds.",
+      "images": [{"type": "screenshot", "src": "post-06"}, {"type": "graphic"}]
+    }
+  ]
+}

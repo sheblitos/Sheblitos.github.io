@@ -1,0 +1,21 @@
+# LinkedIn Content Studio
+
+Captions and images for Shebl's LinkedIn posts.
+
+```
+pip install -r requirements.txt
+python make_posts.py 1 5     # render posts 01 and 05
+python make_posts.py         # render everything whose photos exist
+```
+
+- `posts.json`: one entry per post (depth, pillar, headline lines, subline, images).
+  Image types: `graphic`, `photo` (`mode`: `overlay` or `clean`, optional `focus: [x, y]`), `screenshot`.
+- `captions/post-XX.txt`: caption source. Copied to `output/post-XX/caption.txt` and checked
+  (length, no dashes, no bullets, 3 hashtags at the end).
+- `photos/post-XX.jpg`: raw photos. Faces are found with YuNet (`models/`) and the crop keeps them in frame.
+  QA fails if any text touches a face or an edge.
+- `review/contact-sheet.png`: every image of the last batch.
+- `posts-log.md`: schedule and results.
+
+Fonts: Instrument Serif and DM Mono (SIL Open Font License, see `fonts/OFL-*.txt`).
+Face model: YuNet from opencv_zoo (MIT).
