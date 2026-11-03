@@ -50,10 +50,9 @@
           "src": "post-03",
           "mode": "overlay",
           "focus": [
-            0.43,
-            0.5
-          ],
-          "gauge": false
+            0.5,
+            0.0
+          ]
         }
       ]
     },
