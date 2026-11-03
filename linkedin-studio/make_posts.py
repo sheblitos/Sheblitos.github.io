@@ -285,26 +285,73 @@ def render_photo(p, spec):
     return c, f"photo {src.name} ({'overlay' if overlay else 'clean, footer only'}; {note})"
 
 
+def rounded_paste(c, im, x, y, r, outline=None, shadow=True):
+    mask = Image.new("L", im.size, 0)
+    ImageDraw.Draw(mask).rounded_rectangle([0, 0, im.width - 1, im.height - 1], r, fill=255)
+    if shadow:
+        sh = Image.new("L", (W, H), 0)
+        ImageDraw.Draw(sh).rounded_rectangle([x + 6, y + 16, x + im.width + 6, y + im.height + 16], r, fill=160)
+        c.img = Image.composite(Image.new("RGB", (W, H), ABYSS), c.img, sh.filter(ImageFilter.GaussianBlur(20)))
+    c.img.paste(im, (x, y), mask)
+    c.d = ImageDraw.Draw(c.img)
+    if outline:
+        c.d.rounded_rectangle([x, y, x + im.width - 1, y + im.height - 1], r, outline=outline, width=1)
+
+
+def browser_frame(shot, width, url):
+    """Desktop screenshot inside a minimal browser window."""
+    bar = 46
+    shot = shot.resize((width, int(shot.height * width / shot.width)), Image.LANCZOS)
+    win = Image.new("RGB", (width, shot.height + bar), (16, 26, 34))
+    d = ImageDraw.Draw(win)
+    for i, col in enumerate(((237, 106, 94), (245, 191, 79), (98, 197, 84))):
+        d.ellipse([18 + i * 22, bar / 2 - 6, 30 + i * 22, bar / 2 + 6], fill=col)
+    d.rounded_rectangle([100, 10, width - 24, bar - 10], 13, fill=(28, 40, 50))
+    d.text((118, bar / 2), url, font=mono(16), fill=DIM, anchor="lm")
+    win.paste(shot, (0, bar))
+    return win
+
+
+def phone_frame(shot, width):
+    """Mobile screenshot inside a simple phone body."""
+    bezel = 12
+    inner_w = width - 2 * bezel
+    shot = shot.resize((inner_w, int(shot.height * inner_w / shot.width)), Image.LANCZOS)
+    status = 46   # status bar so the notch never covers the page
+    screen = Image.new("RGB", (inner_w, shot.height + status), (14, 22, 26))
+    screen.paste(shot, (0, status))
+    body = Image.new("RGB", (width, screen.height + 2 * bezel), (10, 14, 18))
+    m = Image.new("L", screen.size, 0)
+    ImageDraw.Draw(m).rounded_rectangle([0, 0, screen.width - 1, screen.height - 1], 30, fill=255)
+    body.paste(screen, (bezel, bezel), m)
+    d = ImageDraw.Draw(body)
+    d.rounded_rectangle([width / 2 - 38, bezel + 10, width / 2 + 38, bezel + 32], 11, fill=(0, 0, 0))
+    return body
+
+
 def render_screenshot(p, spec):
+    """Desktop screenshot in a browser frame, plus an optional phone mockup overlapping it."""
     src = find_photo(spec["src"])
     shot = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
     c = Canvas(ocean_background(p["num"], p["depth"]))
     gauge(c, p["depth"], opacity=0.6)
     top_label(c, p["num"], p["pillar"])
-    box_w, box_h = W - X - RIGHT_MARGIN, 1110 - 220   # area between label and footer
-    shot.thumbnail((box_w, box_h), Image.LANCZOS)
-    sx = X + (box_w - shot.width) // 2; sy = 220 + (box_h - shot.height) // 2
-    mask = Image.new("L", shot.size, 0)
-    ImageDraw.Draw(mask).rounded_rectangle([0, 0, shot.width - 1, shot.height - 1], 18, fill=255)
-    shadow = Image.new("L", (W, H), 0)
-    ImageDraw.Draw(shadow).rounded_rectangle([sx + 6, sy + 14, sx + shot.width + 6, sy + shot.height + 14], 18, fill=150)
-    c.img = Image.composite(Image.new("RGB", (W, H), ABYSS), c.img, shadow.filter(ImageFilter.GaussianBlur(18)))
-    c.img.paste(shot, (sx, sy), mask)
-    c.d = ImageDraw.Draw(c.img)
-    c.d.rounded_rectangle([sx, sy, sx + shot.width - 1, sy + shot.height - 1], 18, outline=lerp(DIM, DEEP, 0.4), width=1)
-    c.boxes.append(("screenshot", (sx, sy, sx + shot.width, sy + shot.height), False))
+    edge = lerp(DIM, DEEP, 0.35)
+    win = browser_frame(shot, W - X - RIGHT_MARGIN + 40, spec.get("url", ""))
+    wx, wy = X, 260
+    rounded_paste(c, win, wx, wy, 14, outline=edge)
+    c.boxes.append(("browser", (wx, wy, wx + win.width, wy + win.height), False))
+    desc = f"{src.name} in a browser frame"
+    if spec.get("mobile") and find_photo(spec["mobile"]):
+        msrc = find_photo(spec["mobile"])
+        phone = phone_frame(ImageOps.exif_transpose(Image.open(msrc)).convert("RGB"), 300)
+        px, py = W - RIGHT_MARGIN + 40 - phone.width - 30, 1150 - phone.height
+        rounded_paste(c, phone, px, py, 42, outline=edge)
+        desc += f" + {msrc.name} on a phone"
+        c.text("caption", (X, py + phone.height - 120), spec.get("note", ""), serif_i(36), DIM)
+        c.text("caption 2", (X, py + phone.height - 72), spec.get("note2", ""), serif_i(36), DIM)
     footer(c)
-    return c, f"screenshot {src.name} on branded background"
+    return c, desc + " on branded background"
 
 
 # ---------------------------------------------------------------- QA
@@ -375,7 +422,7 @@ def main(argv):
     for p in cfg:
         if wanted and p["num"] not in wanted:
             continue
-        missing = [s["src"] for s in p["images"] if s["type"] != "graphic" and not find_photo(s["src"])]
+        missing = [s[k] for s in p["images"] for k in ("src", "mobile") if k in s and not find_photo(s[k])]
         if missing:
             print(f"post {p['num']:02d}: skipped, waiting for photos/{', photos/'.join(missing)}.(jpg|png|webp)")
             continue
