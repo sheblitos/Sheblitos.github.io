@@ -106,7 +106,9 @@ def gauge(c, depth, opacity=1.0):
 
 def top_label(c, num, pillar, fill=DIM, depth=None):
     s = f"{num:02d} / {pillar}" + (f" / −{depth} m" if depth is not None else "")
-    c.text("top label", (X, 150), s, mono(22), fill, anchor="lt")
+    halo = {"stroke_width": 3, "stroke_fill": DEEP} if fill == CREAM else {}   # on photos
+    c.d.text((X, 150), s, font=mono(22), fill=fill, anchor="lt", **halo)
+    c.boxes.append(("top label", c.d.textbbox((X, 150), s, font=mono(22), anchor="lt", **{k: v for k, v in halo.items() if k == "stroke_width"}), True))
 
 
 def footer(c):
@@ -368,6 +370,38 @@ def render_screenshot(p, spec):
     return c, desc + " on branded background"
 
 
+def render_photo_top(p, spec):
+    """Wide photo shown whole across the top, fading into the ocean background, headline below.
+    For landscape group shots where a 4:5 crop would cut people out."""
+    src = find_photo(spec["src"])
+    raw = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
+    ph = grade(raw.resize((W, int(raw.height * W / raw.width)), Image.LANCZOS))
+    ph_h = min(ph.height, int(H * 0.62))
+    ph = ph.crop((0, 0, W, ph_h))
+    c = Canvas(ocean_background(p["num"], p["depth"]))
+    fade = Image.new("L", (W, ph_h), 255)
+    fd = ImageDraw.Draw(fade)
+    for y in range(ph_h - 180, ph_h):
+        fd.line([(0, y), (W, y)], fill=int(255 * (ph_h - y) / 180))
+    c.img.paste(ph, (0, 0), fade)
+    scrim = np.asarray(c.img).astype(np.float32)
+    ys = np.arange(H)[:, None, None]
+    a = np.clip(1 - ys / (H * 0.20), 0, 1) * 0.55
+    c.img = Image.fromarray((scrim * (1 - a) + np.array(DEEP) * a).astype(np.uint8))
+    c.d = ImageDraw.Draw(c.img)
+    faces = []
+    for f in detect_faces(raw) or []:
+        k = W / raw.width
+        faces.append(tuple(int(v * k) for v in f))
+    top_label(c, p["num"], p["pillar"], fill=CREAM, depth=p["depth"])
+    for i, f in enumerate(faces):
+        if f[1] < ph_h:
+            c.boxes.append((f"face {i+1}", (f[0] - 8, f[1] - 8, f[2] + 8, f[3] + 8), False))
+    headline_block(c, p["headline"], p["subline"], bottom_y=1140)
+    footer(c)
+    return c, f"photo {src.name} shown whole at the top ({len(faces)} faces), headline below"
+
+
 # ---------------------------------------------------------------- QA
 def overlap(a, b):
     return a[0] < b[2] and b[0] < a[2] and a[1] < b[3] and b[1] < a[3]
@@ -453,7 +487,8 @@ def main(argv):
         else:
             print(f"  caption: missing captions/{cap_src.name}"); problems += 1
         for i, spec in enumerate(p["images"], 1):
-            fn = {"graphic": lambda s: render_graphic(p), "photo": lambda s: render_photo(p, s),
+            fn = {"graphic": lambda s: render_graphic(p),
+                  "photo": lambda s: render_photo_top(p, s) if s.get("mode") == "top" else render_photo(p, s),
                   "screenshot": lambda s: render_screenshot(p, s)}[spec["type"]]
             c, desc = fn(spec)
             path = folder / f"image-{i}.png"

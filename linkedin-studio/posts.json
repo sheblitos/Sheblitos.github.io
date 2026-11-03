@@ -126,6 +126,149 @@
     {
       "num": 7,
       "depth": 65,
+      "pillar": "GO DEEP · TEAMS",
+      "headline": [
+        "Your team has never",
+        "seen each other",
+        "hold their breath."
+      ],
+      "subline": "A series on freediving and how teams work.",
+      "images": [
+        {
+          "type": "graphic"
+        }
+      ]
+    },
+    {
+      "num": 8,
+      "depth": 5,
+      "pillar": "GO DEEP · TEAMS",
+      "headline": [
+        "One dives.",
+        "One watches.",
+        "Then you switch."
+      ],
+      "subline": "Trust you can’t build in a meeting room.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-08",
+          "mode": "overlay"
+        }
+      ]
+    },
+    {
+      "num": 9,
+      "depth": 15,
+      "pillar": "GO DEEP · TEAMS",
+      "headline": [
+        "Doing nothing",
+        "is the hardest",
+        "thing we train."
+      ],
+      "subline": "What one breath shows a busy team.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-09",
+          "mode": "clean"
+        },
+        {
+          "type": "graphic"
+        }
+      ]
+    },
+    {
+      "num": 10,
+      "depth": 25,
+      "pillar": "FIND THE SIGNAL · TEAMS",
+      "headline": [
+        "The race flips",
+        "in the pool."
+      ],
+      "subline": "From beating each other to lifting each other.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-10",
+          "mode": "overlay"
+        }
+      ]
+    },
+    {
+      "num": 11,
+      "depth": 35,
+      "pillar": "BUILD THE TEST · TEAMS",
+      "headline": [
+        "Most of us",
+        "breathe like",
+        "we’re late."
+      ],
+      "subline": "One minute to try before your next meeting.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-11",
+          "mode": "top"
+        }
+      ]
+    },
+    {
+      "num": 12,
+      "depth": 45,
+      "pillar": "BRING IT TO THE SURFACE · TEAMS",
+      "headline": [
+        "Bring your team",
+        "one breath",
+        "deeper."
+      ],
+      "subline": "Freediving and breathwork for teams.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-12",
+          "mode": "top"
+        }
+      ]
+    },
+    {
+      "num": 13,
+      "depth": 55,
+      "pillar": "FIND THE SIGNAL · TEAMS",
+      "headline": [
+        "In the water,",
+        "the CEO is",
+        "just a buddy."
+      ],
+      "subline": "What happens to hierarchy one breath down.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-13",
+          "mode": "top"
+        }
+      ]
+    },
+    {
+      "num": 14,
+      "depth": 65,
+      "pillar": "FIND THE SIGNAL · TEAMS",
+      "headline": [
+        "Nobody",
+        "sits it out."
+      ],
+      "subline": "Every part has a dry version.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-14",
+          "mode": "overlay"
+        }
+      ]
+    },
+    {
+      "num": 15,
+      "depth": 5,
       "pillar": "GO DEEP",
       "headline": [
         "Decide before",
@@ -136,7 +279,7 @@
       "images": [
         {
           "type": "photo",
-          "src": "post-07",
+          "src": "post-15",
           "mode": "overlay",
           "focus": [
             0.5,
@@ -146,8 +289,8 @@
       ]
     },
     {
-      "num": 8,
-      "depth": 5,
+      "num": 16,
+      "depth": 15,
       "pillar": "FIND THE SIGNAL",
       "headline": [
         "Talk to everyone",
@@ -162,8 +305,8 @@
       ]
     },
     {
-      "num": 9,
-      "depth": 15,
+      "num": 17,
+      "depth": 25,
       "pillar": "BUILD THE TEST",
       "headline": [
         "The best ideas are",
@@ -178,8 +321,8 @@
       ]
     },
     {
-      "num": 10,
-      "depth": 25,
+      "num": 18,
+      "depth": 35,
       "pillar": "GO DEEP",
       "headline": [
         "The deepest part",
@@ -190,7 +333,7 @@
       "images": [
         {
           "type": "photo",
-          "src": "post-10",
+          "src": "post-18",
           "mode": "clean",
           "focus": [
             0.5,
@@ -203,8 +346,8 @@
       ]
     },
     {
-      "num": 11,
-      "depth": 35,
+      "num": 19,
+      "depth": 45,
       "pillar": "FIND THE SIGNAL",
       "headline": [
         "Every good dive",
@@ -215,7 +358,7 @@
       "images": [
         {
           "type": "photo",
-          "src": "post-11",
+          "src": "post-19",
           "mode": "overlay",
           "focus": [
             0.58,
@@ -225,8 +368,8 @@
       ]
     },
     {
-      "num": 12,
-      "depth": 45,
+      "num": 20,
+      "depth": 55,
       "pillar": "BUILD THE TEST",
       "headline": [
         "Not every dive",
@@ -236,7 +379,7 @@
       "images": [
         {
           "type": "photo",
-          "src": "post-12",
+          "src": "post-20",
           "mode": "clean",
           "focus": [
             0.5,
@@ -249,8 +392,8 @@
       ]
     },
     {
-      "num": 13,
-      "depth": 55,
+      "num": 21,
+      "depth": 65,
       "pillar": "BRING IT TO THE SURFACE",
       "headline": [
         "It doesn’t count",
@@ -261,7 +404,7 @@
       "images": [
         {
           "type": "photo",
-          "src": "post-13",
+          "src": "post-21",
           "mode": "overlay",
           "focus": [
             0.43,
@@ -272,8 +415,8 @@
       ]
     },
     {
-      "num": 14,
-      "depth": 65,
+      "num": 22,
+      "depth": 5,
       "pillar": "GO DEEP",
       "headline": [
         "The surface looks",
@@ -284,7 +427,7 @@
       "images": [
         {
           "type": "photo",
-          "src": "post-14",
+          "src": "post-22",
           "mode": "overlay",
           "focus": [
             0.5,

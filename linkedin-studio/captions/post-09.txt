@@ -1,15 +1,15 @@
-EXTour started with a problem I had myself.
+The hardest exercise I give busy people is doing nothing.
 
-Every time I wanted to dive, the hardest part wasn't the water. It was finding a buddy.
+Static is the simplest discipline in freediving. You float face down in shallow water, relaxed, on one breath, while your buddy stays right beside you, watching and keeping time.
 
-If you read my post about the dive that almost ended it all, you know why I don't dive alone anymore.
+For people who live in Slack, the first seconds are loud. The mind wants to check something, fix something, move. Then the urge to breathe arrives, and with it the real question: do you fight it, or do you relax into it?
 
-So I'm building the thing I wished existed: an app that helps people find partners for adventure sports.
+The ones who relax go longer. Almost every time.
 
-I'm not a developer. I'm building it with AI, one feature at a time, breaking things and fixing them as I go.
+That's the lesson a team carries back to the office. Under pressure, the instinct is to do more. Often the better move is to slow down.
 
-The best product ideas aren't clever. They're problems you got tired of living with.
+Always in shallow water, always with a trained instructor. Safety is the first thing everyone learns.
 
-What problem have you been tired of long enough to fix?
+What would change in your team if everyone could stay calm for one more breath?
 
-#BuildInPublic #VibeCoding #AdventureSports
+#TeamBuilding #Mindset #Freediving
