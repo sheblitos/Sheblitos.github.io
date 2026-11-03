@@ -11,3 +11,6 @@ Fill in results 48 h after posting. Review what works after 4 weeks (around 3 De
 | 04 | FIND THE SIGNAL | 35 m | photo clean (students-buoy-2.jpg) + graphic | Tue 17 Nov 2026 | | | | | | ready; faces sit in text zone, so headline moved to image 2 |
 | 05 | BUILD THE TEST | 45 m | graphic | Thu 19 Nov 2026 | | | | | | ready; first clear ask |
 | 06 | BUILD THE TEST | 55 m | site mockup (desktop + phone) + graphic | Tue 24 Nov 2026 | | | | | | ready |
+| 07 | GO DEEP | 65 m | photo overlay (course-3.jpg, diver on the line) | Thu 26 Nov 2026 | | | | | | draft, awaiting approval |
+| 08 | FIND THE SIGNAL | 5 m | graphic | Tue 1 Dec 2026 | | | | | | draft, awaiting approval |
+| 09 | BUILD THE TEST | 15 m | graphic (add EXTour screenshot when ready) | Thu 3 Dec 2026 | | | | | | draft, awaiting approval |

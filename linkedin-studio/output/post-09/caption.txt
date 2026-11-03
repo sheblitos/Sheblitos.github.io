@@ -1,0 +1,15 @@
+EXTour started with a problem I had myself.
+
+Every time I wanted to dive, the hardest part wasn't the water. It was finding a buddy.
+
+If you read my post about the dive that almost ended it all, you know why I don't dive alone anymore.
+
+So I'm building the thing I wished existed: an app that helps people find partners for adventure sports.
+
+I'm not a developer. I'm building it with AI, one feature at a time, breaking things and fixing them as I go.
+
+The best product ideas aren't clever. They're problems you got tired of living with.
+
+What problem have you been tired of long enough to fix?
+
+#BuildInPublic #VibeCoding #AdventureSports

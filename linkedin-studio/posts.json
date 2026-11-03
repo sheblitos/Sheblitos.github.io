@@ -119,6 +119,60 @@
           "type": "graphic"
         }
       ]
+    },
+    {
+      "num": 7,
+      "depth": 65,
+      "pillar": "GO DEEP",
+      "headline": [
+        "Decide before",
+        "the pressure.",
+        "Not during it."
+      ],
+      "subline": "What holding your breath taught me about decisions.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-07",
+          "mode": "overlay",
+          "focus": [
+            0.5,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "num": 8,
+      "depth": 5,
+      "pillar": "FIND THE SIGNAL",
+      "headline": [
+        "Talk to everyone",
+        "and nobody",
+        "listens."
+      ],
+      "subline": "The mistake I see most in small wellness brands.",
+      "images": [
+        {
+          "type": "graphic"
+        }
+      ]
+    },
+    {
+      "num": 9,
+      "depth": 15,
+      "pillar": "BUILD THE TEST",
+      "headline": [
+        "The best ideas are",
+        "problems you got",
+        "tired of."
+      ],
+      "subline": "Why I’m building EXTour.",
+      "images": [
+        {
+          "type": "graphic"
+        }
+      ]
     }
   ]
 }
