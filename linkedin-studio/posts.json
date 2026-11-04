@@ -30,6 +30,11 @@
       "subline": "A series on freediving and how teams work.",
       "images": [
         {
+          "type": "photo",
+          "src": "post-02",
+          "mode": "top"
+        },
+        {
           "type": "graphic"
         }
       ]
