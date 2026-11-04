@@ -21,111 +21,6 @@
     {
       "num": 2,
       "depth": 15,
-      "pillar": "GO DEEP",
-      "headline": [
-        "I was busy.",
-        "I wasn’t living."
-      ],
-      "subline": "Burnout taught me what drive can’t.",
-      "images": [
-        {
-          "type": "photo",
-          "src": "post-02",
-          "mode": "overlay"
-        }
-      ]
-    },
-    {
-      "num": 3,
-      "depth": 25,
-      "pillar": "GO DEEP",
-      "headline": [
-        "Never dive alone.",
-        "Never build alone."
-      ],
-      "subline": "The lesson I almost learned too late.",
-      "images": [
-        {
-          "type": "photo",
-          "src": "post-03",
-          "mode": "clean",
-          "focus": [
-            0.48,
-            0.5
-          ],
-          "gauge": false
-        },
-        {
-          "type": "graphic"
-        }
-      ]
-    },
-    {
-      "num": 4,
-      "depth": 35,
-      "pillar": "FIND THE SIGNAL",
-      "headline": [
-        "People don’t buy",
-        "features. They buy",
-        "feeling understood."
-      ],
-      "subline": "What 160+ students taught me about marketing.",
-      "images": [
-        {
-          "type": "photo",
-          "src": "post-04",
-          "mode": "overlay",
-          "focus": [
-            0.47,
-            0.5
-          ],
-          "gauge": false
-        }
-      ]
-    },
-    {
-      "num": 5,
-      "depth": 45,
-      "pillar": "BUILD THE TEST",
-      "headline": [
-        "AI didn’t replace",
-        "my skills. It gave",
-        "them speed."
-      ],
-      "subline": "From idea to real thing, faster.",
-      "images": [
-        {
-          "type": "graphic"
-        }
-      ]
-    },
-    {
-      "num": 6,
-      "depth": 55,
-      "pillar": "BUILD THE TEST",
-      "headline": [
-        "AI can write the code.",
-        "It can’t tell you what’s",
-        "worth building."
-      ],
-      "subline": "Notes from a marketer who builds.",
-      "images": [
-        {
-          "type": "screenshot",
-          "src": "post-06-desktop",
-          "mobile": "post-06-mobile",
-          "url": "freedivingbrain.com",
-          "note": "My school’s site.",
-          "note2": "Built with AI, no developer."
-        },
-        {
-          "type": "graphic"
-        }
-      ]
-    },
-    {
-      "num": 7,
-      "depth": 65,
       "pillar": "GO DEEP · TEAMS",
       "headline": [
         "Your team has never",
@@ -140,8 +35,25 @@
       ]
     },
     {
-      "num": 8,
-      "depth": 5,
+      "num": 3,
+      "depth": 25,
+      "pillar": "GO DEEP",
+      "headline": [
+        "I was busy.",
+        "I wasn’t living."
+      ],
+      "subline": "Burnout taught me what drive can’t.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-03",
+          "mode": "overlay"
+        }
+      ]
+    },
+    {
+      "num": 4,
+      "depth": 35,
       "pillar": "GO DEEP · TEAMS",
       "headline": [
         "One dives.",
@@ -152,14 +64,84 @@
       "images": [
         {
           "type": "photo",
-          "src": "post-08",
+          "src": "post-04",
           "mode": "overlay"
         }
       ]
     },
     {
-      "num": 9,
-      "depth": 15,
+      "num": 5,
+      "depth": 45,
+      "pillar": "GO DEEP",
+      "headline": [
+        "Never dive alone.",
+        "Never build alone."
+      ],
+      "subline": "The lesson I almost learned too late.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-05",
+          "mode": "clean",
+          "focus": [
+            0.48,
+            0.5
+          ],
+          "gauge": false
+        },
+        {
+          "type": "graphic"
+        }
+      ]
+    },
+    {
+      "num": 6,
+      "depth": 55,
+      "pillar": "FIND THE SIGNAL",
+      "headline": [
+        "People don’t buy",
+        "features. They buy",
+        "feeling understood."
+      ],
+      "subline": "What 160+ students taught me about marketing.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-06",
+          "mode": "overlay",
+          "focus": [
+            0.47,
+            0.5
+          ],
+          "gauge": false
+        }
+      ]
+    },
+    {
+      "num": 7,
+      "depth": 65,
+      "pillar": "GO DEEP",
+      "headline": [
+        "Decide before",
+        "the pressure.",
+        "Not during it."
+      ],
+      "subline": "What holding your breath taught me about decisions.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-07",
+          "mode": "overlay",
+          "focus": [
+            0.5,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "num": 8,
+      "depth": 5,
       "pillar": "GO DEEP · TEAMS",
       "headline": [
         "Doing nothing",
@@ -170,8 +152,33 @@
       "images": [
         {
           "type": "photo",
-          "src": "post-09",
+          "src": "post-08",
           "mode": "clean"
+        },
+        {
+          "type": "graphic"
+        }
+      ]
+    },
+    {
+      "num": 9,
+      "depth": 15,
+      "pillar": "GO DEEP",
+      "headline": [
+        "The deepest part",
+        "is where you",
+        "stop swimming."
+      ],
+      "subline": "On freefall, and knowing when to let go.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-09",
+          "mode": "clean",
+          "focus": [
+            0.5,
+            0.5
+          ]
         },
         {
           "type": "graphic"
@@ -198,18 +205,23 @@
     {
       "num": 11,
       "depth": 35,
-      "pillar": "BUILD THE TEST · TEAMS",
+      "pillar": "BRING IT TO THE SURFACE",
       "headline": [
-        "Most of us",
-        "breathe like",
-        "we’re late."
+        "It doesn’t count",
+        "until you bring it",
+        "to the surface."
       ],
-      "subline": "One minute to try before your next meeting.",
+      "subline": "Notes from the judge’s side of the line.",
       "images": [
         {
           "type": "photo",
           "src": "post-11",
-          "mode": "top"
+          "mode": "overlay",
+          "focus": [
+            0.43,
+            0.5
+          ],
+          "gauge": false
         }
       ]
     },
@@ -234,6 +246,110 @@
     {
       "num": 13,
       "depth": 55,
+      "pillar": "GO DEEP",
+      "headline": [
+        "The surface looks",
+        "brightest when",
+        "you leave it."
+      ],
+      "subline": "On starting over in Barcelona.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-13",
+          "mode": "overlay",
+          "focus": [
+            0.5,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "num": 14,
+      "depth": 65,
+      "pillar": "BUILD THE TEST · TEAMS",
+      "headline": [
+        "Most of us",
+        "breathe like",
+        "we’re late."
+      ],
+      "subline": "One minute to try before your next meeting.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-14",
+          "mode": "top"
+        }
+      ]
+    },
+    {
+      "num": 15,
+      "depth": 5,
+      "pillar": "BUILD THE TEST",
+      "headline": [
+        "Not every dive",
+        "needs a target."
+      ],
+      "subline": "Know if it’s a depth day or an exploring day.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-15",
+          "mode": "clean",
+          "focus": [
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "type": "graphic"
+        }
+      ]
+    },
+    {
+      "num": 16,
+      "depth": 15,
+      "pillar": "BUILD THE TEST",
+      "headline": [
+        "AI didn’t replace",
+        "my skills. It gave",
+        "them speed."
+      ],
+      "subline": "From idea to real thing, faster.",
+      "images": [
+        {
+          "type": "graphic"
+        }
+      ]
+    },
+    {
+      "num": 17,
+      "depth": 25,
+      "pillar": "BUILD THE TEST",
+      "headline": [
+        "AI can write the code.",
+        "It can’t tell you what’s",
+        "worth building."
+      ],
+      "subline": "Notes from a marketer who builds.",
+      "images": [
+        {
+          "type": "screenshot",
+          "src": "post-17-desktop",
+          "mobile": "post-17-mobile",
+          "url": "freedivingbrain.com",
+          "note": "My school’s site.",
+          "note2": "Built with AI, no developer."
+        },
+        {
+          "type": "graphic"
+        }
+      ]
+    },
+    {
+      "num": 18,
+      "depth": 35,
       "pillar": "FIND THE SIGNAL · TEAMS",
       "headline": [
         "In the water,",
@@ -244,69 +360,14 @@
       "images": [
         {
           "type": "photo",
-          "src": "post-13",
+          "src": "post-18",
           "mode": "top"
         }
       ]
     },
     {
-      "num": 14,
-      "depth": 65,
-      "pillar": "FIND THE SIGNAL · TEAMS",
-      "headline": [
-        "Nobody",
-        "sits it out."
-      ],
-      "subline": "Every part has a dry version.",
-      "images": [
-        {
-          "type": "photo",
-          "src": "post-14",
-          "mode": "overlay"
-        }
-      ]
-    },
-    {
-      "num": 15,
-      "depth": 5,
-      "pillar": "GO DEEP",
-      "headline": [
-        "Decide before",
-        "the pressure.",
-        "Not during it."
-      ],
-      "subline": "What holding your breath taught me about decisions.",
-      "images": [
-        {
-          "type": "photo",
-          "src": "post-15",
-          "mode": "overlay",
-          "focus": [
-            0.5,
-            0.0
-          ]
-        }
-      ]
-    },
-    {
-      "num": 16,
-      "depth": 15,
-      "pillar": "FIND THE SIGNAL",
-      "headline": [
-        "Talk to everyone",
-        "and nobody",
-        "listens."
-      ],
-      "subline": "The mistake I see most in small wellness brands.",
-      "images": [
-        {
-          "type": "graphic"
-        }
-      ]
-    },
-    {
-      "num": 17,
-      "depth": 25,
+      "num": 19,
+      "depth": 45,
       "pillar": "BUILD THE TEST",
       "headline": [
         "The best ideas are",
@@ -321,33 +382,41 @@
       ]
     },
     {
-      "num": 18,
-      "depth": 35,
-      "pillar": "GO DEEP",
+      "num": 20,
+      "depth": 55,
+      "pillar": "FIND THE SIGNAL",
       "headline": [
-        "The deepest part",
-        "is where you",
-        "stop swimming."
+        "Talk to everyone",
+        "and nobody",
+        "listens."
       ],
-      "subline": "On freefall, and knowing when to let go.",
+      "subline": "The mistake I see most in small wellness brands.",
       "images": [
-        {
-          "type": "photo",
-          "src": "post-18",
-          "mode": "clean",
-          "focus": [
-            0.5,
-            0.5
-          ]
-        },
         {
           "type": "graphic"
         }
       ]
     },
     {
-      "num": 19,
-      "depth": 45,
+      "num": 21,
+      "depth": 65,
+      "pillar": "FIND THE SIGNAL · TEAMS",
+      "headline": [
+        "Nobody",
+        "sits it out."
+      ],
+      "subline": "Every part has a dry version.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-21",
+          "mode": "overlay"
+        }
+      ]
+    },
+    {
+      "num": 22,
+      "depth": 5,
       "pillar": "FIND THE SIGNAL",
       "headline": [
         "Every good dive",
@@ -358,80 +427,11 @@
       "images": [
         {
           "type": "photo",
-          "src": "post-19",
+          "src": "post-22",
           "mode": "overlay",
           "focus": [
             0.58,
             0.5
-          ]
-        }
-      ]
-    },
-    {
-      "num": 20,
-      "depth": 55,
-      "pillar": "BUILD THE TEST",
-      "headline": [
-        "Not every dive",
-        "needs a target."
-      ],
-      "subline": "Know if it’s a depth day or an exploring day.",
-      "images": [
-        {
-          "type": "photo",
-          "src": "post-20",
-          "mode": "clean",
-          "focus": [
-            0.5,
-            0.5
-          ]
-        },
-        {
-          "type": "graphic"
-        }
-      ]
-    },
-    {
-      "num": 21,
-      "depth": 65,
-      "pillar": "BRING IT TO THE SURFACE",
-      "headline": [
-        "It doesn’t count",
-        "until you bring it",
-        "to the surface."
-      ],
-      "subline": "Notes from the judge’s side of the line.",
-      "images": [
-        {
-          "type": "photo",
-          "src": "post-21",
-          "mode": "overlay",
-          "focus": [
-            0.43,
-            0.5
-          ],
-          "gauge": false
-        }
-      ]
-    },
-    {
-      "num": 22,
-      "depth": 5,
-      "pillar": "GO DEEP",
-      "headline": [
-        "The surface looks",
-        "brightest when",
-        "you leave it."
-      ],
-      "subline": "On starting over in Barcelona.",
-      "images": [
-        {
-          "type": "photo",
-          "src": "post-22",
-          "mode": "overlay",
-          "focus": [
-            0.5,
-            0.0
           ]
         }
       ]

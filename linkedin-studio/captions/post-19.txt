@@ -1,13 +1,15 @@
-Every good dive starts on the beach.
+EXTour started with a problem I had myself.
 
-Before my students touched the water, we stood on the sand and talked. What we're doing, how deep, which signals we use, what happens if something feels wrong.
+Every time I wanted to dive, the hardest part wasn't the water. It was finding a buddy.
 
-A few minutes on land saved a lot of confusion in the water.
+If you read my post about the dive that almost ended it all, you know why I don't dive alone anymore.
 
-Most marketing skips this part. Someone says "let's run ads" and the campaign is live before anyone agreed on who it's for or what success looks like.
+So I'm building the thing I wished existed: an app that helps people find partners for adventure sports.
 
-The brief isn't paperwork. It's the dive plan.
+I'm not a developer. I'm building it with AI, one feature at a time, breaking things and fixing them as I go.
 
-What's one thing you'd want agreed on before your next launch?
+The best product ideas aren't clever. They're problems you got tired of living with.
 
-#Marketing #Strategy #Freediving
+What problem have you been tired of long enough to fix?
+
+#BuildInPublic #VibeCoding #AdventureSports

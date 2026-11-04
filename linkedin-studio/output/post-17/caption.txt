@@ -1,15 +1,13 @@
-EXTour started with a problem I had myself.
+I'm not a developer. I'm building an app anyway.
 
-Every time I wanted to dive, the hardest part wasn't the water. It was finding a buddy.
+For years, my ideas died in the same place: "I need someone technical for this."
 
-If you read my post about the dive that almost ended it all, you know why I don't dive alone anymore.
+Then I started vibe coding. Describing what I want, building with AI, testing, breaking things, fixing them.
 
-So I'm building the thing I wished existed: an app that helps people find partners for adventure sports.
+It's not magic. Some days nothing works and I spend hours on one bug. But the ideas are finally leaving my head and becoming real.
 
-I'm not a developer. I'm building it with AI, one feature at a time, breaking things and fixing them as I go.
+My biggest lesson so far: AI can write the code. It can't tell you what's worth building. That part is still on you.
 
-The best product ideas aren't clever. They're problems you got tired of living with.
+What's one idea you'd build if code wasn't the problem?
 
-What problem have you been tired of long enough to fix?
-
-#BuildInPublic #VibeCoding #AdventureSports
+#VibeCoding #AI #BuildInPublic
