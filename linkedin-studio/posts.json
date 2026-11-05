@@ -20,28 +20,19 @@
     },
     {
       "num": 2,
-      "depth": 15,
-      "pillar": "GO DEEP · TEAMS",
+      "pillar": "BRING IT TO THE SURFACE",
       "headline": [
-        "Why your team",
-        "should learn to",
-        "hold its breath."
+        "I build things",
+        "from zero."
       ],
-      "subline": "Freediving for teams that live at full speed.",
+      "subline": "Here’s what that actually means.",
       "images": [
         {
-          "type": "photo",
-          "src": "post-02-sta",
-          "mode": "top",
-          "pure": true
-        },
-        {
-          "type": "photo",
-          "src": "post-02",
-          "mode": "clean",
-          "gauge": false
+          "type": "graphic"
         }
-      ]
+      ],
+      "carousel": "carousel-02",
+      "depth": 15
     },
     {
       "num": 3,
@@ -65,20 +56,22 @@
       "depth": 35,
       "pillar": "GO DEEP · TEAMS",
       "headline": [
-        "One dives.",
-        "One watches.",
-        "Then you switch."
+        "Why your team",
+        "should learn to",
+        "hold its breath."
       ],
-      "subline": "Trust you can’t build in a meeting room.",
+      "subline": "Freediving for teams that live at full speed.",
       "images": [
         {
           "type": "photo",
+          "src": "post-04-sta",
+          "mode": "top",
+          "pure": true
+        },
+        {
+          "type": "photo",
           "src": "post-04",
-          "mode": "overlay",
-          "focus": [
-            0.5,
-            0.41
-          ],
+          "mode": "clean",
           "gauge": false
         }
       ]
@@ -111,21 +104,21 @@
     {
       "num": 6,
       "depth": 55,
-      "pillar": "FIND THE SIGNAL",
+      "pillar": "GO DEEP · TEAMS",
       "headline": [
-        "People don’t buy",
-        "features. They buy",
-        "feeling understood."
+        "One dives.",
+        "One watches.",
+        "Then you switch."
       ],
-      "subline": "What 160+ students taught me about marketing.",
+      "subline": "Trust you can’t build in a meeting room.",
       "images": [
         {
           "type": "photo",
           "src": "post-06",
           "mode": "overlay",
           "focus": [
-            0.47,
-            0.5
+            0.5,
+            0.41
           ],
           "gauge": false
         }
@@ -151,18 +144,23 @@
     {
       "num": 8,
       "depth": 5,
-      "pillar": "GO DEEP · TEAMS",
+      "pillar": "FIND THE SIGNAL",
       "headline": [
-        "Doing nothing",
-        "is the hardest",
-        "thing we train."
+        "People don’t buy",
+        "features. They buy",
+        "feeling understood."
       ],
-      "subline": "What one breath shows a busy team.",
+      "subline": "What 160+ students taught me about marketing.",
       "images": [
         {
           "type": "photo",
           "src": "post-08",
-          "mode": "top"
+          "mode": "overlay",
+          "focus": [
+            0.47,
+            0.5
+          ],
+          "gauge": false
         }
       ]
     },
@@ -191,12 +189,13 @@
     {
       "num": 10,
       "depth": 25,
-      "pillar": "FIND THE SIGNAL · TEAMS",
+      "pillar": "GO DEEP · TEAMS",
       "headline": [
-        "The race flips",
-        "in the pool."
+        "Doing nothing",
+        "is the hardest",
+        "thing we train."
       ],
-      "subline": "From beating each other to lifting each other.",
+      "subline": "What one breath shows a busy team.",
       "images": [
         {
           "type": "photo",
@@ -231,13 +230,12 @@
     {
       "num": 12,
       "depth": 45,
-      "pillar": "BRING IT TO THE SURFACE · TEAMS",
+      "pillar": "FIND THE SIGNAL · TEAMS",
       "headline": [
-        "Bring your team",
-        "one breath",
-        "deeper."
+        "The race flips",
+        "in the pool."
       ],
-      "subline": "Freediving and breathwork for teams.",
+      "subline": "From beating each other to lifting each other.",
       "images": [
         {
           "type": "photo",
@@ -271,19 +269,18 @@
     {
       "num": 14,
       "depth": 65,
-      "pillar": "BUILD THE TEST · TEAMS",
+      "pillar": "BRING IT TO THE SURFACE · TEAMS",
       "headline": [
-        "Most of us",
-        "breathe like",
-        "we’re late."
+        "Bring your team",
+        "one breath",
+        "deeper."
       ],
-      "subline": "One minute to try before your next meeting.",
+      "subline": "Freediving and breathwork for teams.",
       "images": [
         {
           "type": "photo",
           "src": "post-14",
-          "mode": "top",
-          "pure": true
+          "mode": "top"
         }
       ]
     },
@@ -314,16 +311,19 @@
     {
       "num": 16,
       "depth": 15,
-      "pillar": "BUILD THE TEST",
+      "pillar": "BUILD THE TEST · TEAMS",
       "headline": [
-        "AI didn’t replace",
-        "my skills. It gave",
-        "them speed."
+        "Most of us",
+        "breathe like",
+        "we’re late."
       ],
-      "subline": "From idea to real thing, faster.",
+      "subline": "One minute to try before your next meeting.",
       "images": [
         {
-          "type": "graphic"
+          "type": "photo",
+          "src": "post-16",
+          "mode": "top",
+          "pure": true
         }
       ]
     },
@@ -354,18 +354,16 @@
     {
       "num": 18,
       "depth": 35,
-      "pillar": "FIND THE SIGNAL · TEAMS",
+      "pillar": "BUILD THE TEST",
       "headline": [
-        "In the water,",
-        "the CEO is",
-        "just a buddy."
+        "AI didn’t replace",
+        "my skills. It gave",
+        "them speed."
       ],
-      "subline": "What happens to hierarchy one breath down.",
+      "subline": "From idea to real thing, faster.",
       "images": [
         {
-          "type": "photo",
-          "src": "post-18",
-          "mode": "top"
+          "type": "graphic"
         }
       ]
     },
@@ -388,16 +386,18 @@
     {
       "num": 20,
       "depth": 55,
-      "pillar": "FIND THE SIGNAL",
+      "pillar": "FIND THE SIGNAL · TEAMS",
       "headline": [
-        "Talk to everyone",
-        "and nobody",
-        "listens."
+        "In the water,",
+        "the CEO is",
+        "just a buddy."
       ],
-      "subline": "The mistake I see most in small wellness brands.",
+      "subline": "What happens to hierarchy one breath down.",
       "images": [
         {
-          "type": "graphic"
+          "type": "photo",
+          "src": "post-20",
+          "mode": "top"
         }
       ]
     },
@@ -421,18 +421,16 @@
     {
       "num": 22,
       "depth": 5,
-      "pillar": "FIND THE SIGNAL · TEAMS",
+      "pillar": "FIND THE SIGNAL",
       "headline": [
-        "Nobody",
-        "sits it out."
+        "Talk to everyone",
+        "and nobody",
+        "listens."
       ],
-      "subline": "Every part has a dry version.",
+      "subline": "The mistake I see most in small wellness brands.",
       "images": [
         {
-          "type": "photo",
-          "src": "post-22",
-          "mode": "top",
-          "pure": true
+          "type": "graphic"
         }
       ]
     },
@@ -457,22 +455,18 @@
     {
       "num": 24,
       "depth": 25,
-      "pillar": "FIND THE SIGNAL",
+      "pillar": "FIND THE SIGNAL · TEAMS",
       "headline": [
-        "Every good dive",
-        "starts on",
-        "the beach."
+        "Nobody",
+        "sits it out."
       ],
-      "subline": "Why the brief matters more than the launch.",
+      "subline": "Every part has a dry version.",
       "images": [
         {
           "type": "photo",
           "src": "post-24",
-          "mode": "overlay",
-          "focus": [
-            0.58,
-            0.5
-          ]
+          "mode": "top",
+          "pure": true
         }
       ]
     },
@@ -498,16 +492,20 @@
       "depth": 45,
       "pillar": "FIND THE SIGNAL",
       "headline": [
-        "Leading instructors",
-        "taught me",
-        "management."
+        "Every good dive",
+        "starts on",
+        "the beach."
       ],
-      "subline": "Lessons from the buoy, Dahab 2024 to 2025.",
+      "subline": "Why the brief matters more than the launch.",
       "images": [
         {
           "type": "photo",
           "src": "post-26",
-          "mode": "overlay"
+          "mode": "overlay",
+          "focus": [
+            0.58,
+            0.5
+          ]
         }
       ]
     },
@@ -535,18 +533,18 @@
     {
       "num": 28,
       "depth": 65,
-      "pillar": "GO DEEP · TEAMS",
+      "pillar": "FIND THE SIGNAL",
       "headline": [
-        "Many came",
-        "after burnout."
+        "Leading instructors",
+        "taught me",
+        "management."
       ],
-      "subline": "What freediving gives people who can’t switch off.",
+      "subline": "Lessons from the buoy, Dahab 2024 to 2025.",
       "images": [
         {
           "type": "photo",
           "src": "post-28",
-          "mode": "top",
-          "pure": true
+          "mode": "overlay"
         }
       ]
     },
@@ -576,16 +574,18 @@
     {
       "num": 30,
       "depth": 15,
-      "pillar": "BUILD THE TEST · TEAMS",
+      "pillar": "GO DEEP · TEAMS",
       "headline": [
-        "Your calm-down",
-        "button is a bowl",
-        "of cold water."
+        "Many came",
+        "after burnout."
       ],
-      "subline": "The dive reflex, and how to use it at your desk.",
+      "subline": "What freediving gives people who can’t switch off.",
       "images": [
         {
-          "type": "graphic"
+          "type": "photo",
+          "src": "post-30",
+          "mode": "top",
+          "pure": true
         }
       ]
     },
@@ -614,18 +614,16 @@
     {
       "num": 32,
       "depth": 35,
-      "pillar": "FIND THE SIGNAL · TEAMS",
+      "pillar": "BUILD THE TEST · TEAMS",
       "headline": [
-        "We don’t push",
-        "through. We",
-        "equalize."
+        "Your calm-down",
+        "button is a bowl",
+        "of cold water."
       ],
-      "subline": "What every freediver knows about forcing it.",
+      "subline": "The dive reflex, and how to use it at your desk.",
       "images": [
         {
-          "type": "photo",
-          "src": "post-32",
-          "mode": "top"
+          "type": "graphic"
         }
       ]
     },
@@ -654,20 +652,18 @@
     {
       "num": 34,
       "depth": 55,
-      "pillar": "GO DEEP · TEAMS",
+      "pillar": "FIND THE SIGNAL · TEAMS",
       "headline": [
-        "One holds.",
-        "One guides.",
-        "Both relax."
+        "We don’t push",
+        "through. We",
+        "equalize."
       ],
-      "subline": "Why buddy work only works with honest care.",
+      "subline": "What every freediver knows about forcing it.",
       "images": [
         {
           "type": "photo",
           "src": "post-34",
-          "mode": "top",
-          "pure": true,
-          "crop_top": 0.24
+          "mode": "top"
         }
       ]
     },
@@ -690,21 +686,20 @@
     {
       "num": 36,
       "depth": 5,
-      "pillar": "FIND THE SIGNAL",
+      "pillar": "GO DEEP · TEAMS",
       "headline": [
-        "Half mind.",
-        "Half muscle."
+        "One holds.",
+        "One guides.",
+        "Both relax."
       ],
-      "subline": "Freediving as a full athletic sport.",
+      "subline": "Why buddy work only works with honest care.",
       "images": [
         {
           "type": "photo",
           "src": "post-36",
-          "mode": "overlay",
-          "focus": [
-            0.5,
-            0.3
-          ]
+          "mode": "top",
+          "pure": true,
+          "crop_top": 0.24
         }
       ]
     },
@@ -729,6 +724,27 @@
     {
       "num": 38,
       "depth": 25,
+      "pillar": "FIND THE SIGNAL",
+      "headline": [
+        "Half mind.",
+        "Half muscle."
+      ],
+      "subline": "Freediving as a full athletic sport.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-38",
+          "mode": "overlay",
+          "focus": [
+            0.5,
+            0.3
+          ]
+        }
+      ]
+    },
+    {
+      "num": 39,
+      "depth": 35,
       "pillar": "BRING IT TO THE SURFACE · TEAMS",
       "headline": [
         "Nobody here",
@@ -739,7 +755,7 @@
       "images": [
         {
           "type": "photo",
-          "src": "post-38",
+          "src": "post-39",
           "mode": "top"
         }
       ]
