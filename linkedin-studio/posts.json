@@ -139,11 +139,7 @@
         {
           "type": "photo",
           "src": "post-07",
-          "mode": "overlay",
-          "focus": [
-            0.5,
-            0.0
-          ]
+          "mode": "overlay"
         }
       ]
     },
@@ -161,10 +157,7 @@
         {
           "type": "photo",
           "src": "post-08",
-          "mode": "clean"
-        },
-        {
-          "type": "graphic"
+          "mode": "top"
         }
       ]
     },
@@ -182,14 +175,11 @@
         {
           "type": "photo",
           "src": "post-09",
-          "mode": "clean",
+          "mode": "overlay",
           "focus": [
             0.5,
-            0.5
+            0.55
           ]
-        },
-        {
-          "type": "graphic"
         }
       ]
     },
@@ -206,7 +196,7 @@
         {
           "type": "photo",
           "src": "post-10",
-          "mode": "overlay"
+          "mode": "top"
         }
       ]
     },
@@ -407,7 +397,24 @@
     },
     {
       "num": 21,
-      "depth": 65,
+      "pillar": "GO DEEP",
+      "headline": [
+        "Going down",
+        "is the easy part."
+      ],
+      "subline": "On the way back up, after burnout.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-21",
+          "mode": "overlay"
+        }
+      ],
+      "depth": 65
+    },
+    {
+      "num": 22,
+      "depth": 5,
       "pillar": "FIND THE SIGNAL · TEAMS",
       "headline": [
         "Nobody",
@@ -417,14 +424,32 @@
       "images": [
         {
           "type": "photo",
-          "src": "post-21",
-          "mode": "overlay"
+          "src": "post-22",
+          "mode": "top"
         }
       ]
     },
     {
-      "num": 22,
-      "depth": 5,
+      "num": 23,
+      "pillar": "GO DEEP",
+      "headline": [
+        "The quietest place",
+        "I know is",
+        "upside down."
+      ],
+      "subline": "Why I protect the silence now.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-23",
+          "mode": "overlay"
+        }
+      ],
+      "depth": 15
+    },
+    {
+      "num": 24,
+      "depth": 25,
       "pillar": "FIND THE SIGNAL",
       "headline": [
         "Every good dive",
@@ -435,7 +460,7 @@
       "images": [
         {
           "type": "photo",
-          "src": "post-22",
+          "src": "post-24",
           "mode": "overlay",
           "focus": [
             0.58,
