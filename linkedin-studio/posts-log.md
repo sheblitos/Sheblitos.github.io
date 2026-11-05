@@ -13,7 +13,7 @@ Fill in results 48 h after posting. First review: Thu 3 Dec.
 | 04 | Professional | Tue 17 Nov 2026 | GO DEEP · TEAMS | 35 m | One dives. One watches. Then you switch. | overlay | | | | | |
 | 05 | Personal | Thu 19 Nov 2026 | GO DEEP | 45 m | Never dive alone. Never build alone. | clean + graphic | | | | | |
 | 06 | Professional | Tue 24 Nov 2026 | FIND THE SIGNAL | 55 m | People don’t buy features. They buy feeling understood. | overlay | | | | | |
-| 07 | Personal | Thu 26 Nov 2026 | GO DEEP | 65 m | Decide before the pressure. Not during it. | overlay | | | | | |
+| 07 | Personal | Thu 26 Nov 2026 | GO DEEP | 65 m | Decide on land. Not on the line. | overlay | | | | | |
 | 08 | Professional | Tue 1 Dec 2026 | GO DEEP · TEAMS | 5 m | Doing nothing is the hardest thing we train. | top | | | | | |
 | 09 | Personal | Thu 3 Dec 2026 | GO DEEP | 15 m | The deepest part is where you stop swimming. | overlay | | | | | |
 | 10 | Professional | Tue 8 Dec 2026 | FIND THE SIGNAL · TEAMS | 25 m | The race flips in the pool. | top | | | | | |
@@ -33,3 +33,15 @@ Fill in results 48 h after posting. First review: Thu 3 Dec.
 | 24 | Professional | Tue 9 Feb 2027 | FIND THE SIGNAL | 25 m | Every good dive starts on the beach. | overlay | | | | | |
 | 25 | Personal | Thu 11 Feb 2027 | GO DEEP | 35 m | People come for the water. | top (boat trip group) | | | | | |
 | 26 | Professional | Tue 16 Feb 2027 | FIND THE SIGNAL | 45 m | Leading instructors taught me management. | overlay (three instructors at the buoy) | | | | | |
+| 27 | Personal | Thu 18 Feb 2027 | GO DEEP | 55 m | Everything aligned. | overlay | | | | | |
+| 28 | Professional | Tue 23 Feb 2027 | GO DEEP · TEAMS | 65 m | Many came after burnout. | top | | | | | |
+| 29 | Personal | Thu 25 Feb 2027 | GO DEEP | 5 m | 70% of the planet. One breath. | overlay + clean | | | | | |
+| 30 | Professional | Tue 2 Mar 2027 | BUILD THE TEST · TEAMS | 15 m | Your calm-down button is a bowl of cold water. | graphic | | | | | |
+| 31 | Personal | Thu 4 Mar 2027 | BRING IT TO THE SURFACE | 25 m | 160+ freedivers. 5 years. One reward. | top + raw | | | | | |
+| 32 | Professional | Tue 9 Mar 2027 | FIND THE SIGNAL · TEAMS | 35 m | We don’t push through. We equalize. | top | | | | | |
+| 33 | Personal | Thu 11 Mar 2027 | GO DEEP | 45 m | The urge to breathe isn’t an emergency. | overlay | | | | | |
+| 34 | Professional | Tue 16 Mar 2027 | GO DEEP · TEAMS | 55 m | One holds. One guides. Both relax. | top | | | | | |
+| 35 | Personal | Thu 18 Mar 2027 | GO DEEP | 65 m | What freediving is really like. | graphic + carousel PDF | | | | | |
+| 36 | Professional | Tue 23 Mar 2027 | FIND THE SIGNAL | 5 m | Half mind. Half muscle. | overlay | | | | | |
+| 37 | Personal | Thu 25 Mar 2027 | GO DEEP | 15 m | The fear before. The feeling after. | top | | | | | |
+| 38 | Professional | Tue 30 Mar 2027 | BRING IT TO THE SURFACE · TEAMS | 25 m | Nobody here is thinking about their job title. | top | | | | | |

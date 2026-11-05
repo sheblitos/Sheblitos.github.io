@@ -32,7 +32,8 @@
         {
           "type": "photo",
           "src": "post-02-sta",
-          "mode": "top"
+          "mode": "top",
+          "pure": true
         },
         {
           "type": "photo",
@@ -135,9 +136,8 @@
       "depth": 65,
       "pillar": "GO DEEP",
       "headline": [
-        "Decide before",
-        "the pressure.",
-        "Not during it."
+        "Decide on land.",
+        "Not on the line."
       ],
       "subline": "What holding your breath taught me about decisions.",
       "images": [
@@ -282,7 +282,8 @@
         {
           "type": "photo",
           "src": "post-14",
-          "mode": "top"
+          "mode": "top",
+          "pure": true
         }
       ]
     },
@@ -430,7 +431,8 @@
         {
           "type": "photo",
           "src": "post-22",
-          "mode": "top"
+          "mode": "top",
+          "pure": true
         }
       ]
     },
@@ -506,6 +508,239 @@
           "type": "photo",
           "src": "post-26",
           "mode": "overlay"
+        }
+      ]
+    },
+    {
+      "num": 27,
+      "depth": 55,
+      "pillar": "GO DEEP",
+      "headline": [
+        "Everything",
+        "aligned."
+      ],
+      "subline": "Body, heart, mind and soul, on one breath.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-27",
+          "mode": "overlay",
+          "focus": [
+            0.5,
+            0.4
+          ]
+        }
+      ]
+    },
+    {
+      "num": 28,
+      "depth": 65,
+      "pillar": "GO DEEP · TEAMS",
+      "headline": [
+        "Many came",
+        "after burnout."
+      ],
+      "subline": "What freediving gives people who can’t switch off.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-28",
+          "mode": "top",
+          "pure": true
+        }
+      ]
+    },
+    {
+      "num": 29,
+      "depth": 5,
+      "pillar": "GO DEEP",
+      "headline": [
+        "70% of the planet.",
+        "One breath."
+      ],
+      "subline": "What you unlock when you learn to freedive.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-29",
+          "mode": "overlay"
+        },
+        {
+          "type": "photo",
+          "src": "post-29-whale",
+          "mode": "clean",
+          "gauge": false
+        }
+      ]
+    },
+    {
+      "num": 30,
+      "depth": 15,
+      "pillar": "BUILD THE TEST · TEAMS",
+      "headline": [
+        "Your calm-down",
+        "button is a bowl",
+        "of cold water."
+      ],
+      "subline": "The dive reflex, and how to use it at your desk.",
+      "images": [
+        {
+          "type": "graphic"
+        }
+      ]
+    },
+    {
+      "num": 31,
+      "depth": 25,
+      "pillar": "BRING IT TO THE SURFACE",
+      "headline": [
+        "160+ freedivers.",
+        "5 years.",
+        "One reward."
+      ],
+      "subline": "Thank you for the trust.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-31",
+          "mode": "top"
+        },
+        {
+          "type": "raw",
+          "src": "post-31-slide"
+        }
+      ]
+    },
+    {
+      "num": 32,
+      "depth": 35,
+      "pillar": "FIND THE SIGNAL · TEAMS",
+      "headline": [
+        "We don’t push",
+        "through. We",
+        "equalize."
+      ],
+      "subline": "What every freediver knows about forcing it.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-32",
+          "mode": "top"
+        }
+      ]
+    },
+    {
+      "num": 33,
+      "depth": 45,
+      "pillar": "GO DEEP",
+      "headline": [
+        "The urge to",
+        "breathe isn’t",
+        "an emergency."
+      ],
+      "subline": "On the mind games of a breath-hold.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-33",
+          "mode": "overlay",
+          "focus": [
+            0.5,
+            0.35
+          ]
+        }
+      ]
+    },
+    {
+      "num": 34,
+      "depth": 55,
+      "pillar": "GO DEEP · TEAMS",
+      "headline": [
+        "One holds.",
+        "One guides.",
+        "Both relax."
+      ],
+      "subline": "Why buddy work only works with honest care.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-34",
+          "mode": "top",
+          "pure": true,
+          "crop_top": 0.24
+        }
+      ]
+    },
+    {
+      "num": 35,
+      "depth": 65,
+      "pillar": "GO DEEP",
+      "headline": [
+        "What freediving",
+        "is really like."
+      ],
+      "subline": "Not the depth. The days.",
+      "images": [
+        {
+          "type": "graphic"
+        }
+      ],
+      "carousel": "carousel-35"
+    },
+    {
+      "num": 36,
+      "depth": 5,
+      "pillar": "FIND THE SIGNAL",
+      "headline": [
+        "Half mind.",
+        "Half muscle."
+      ],
+      "subline": "Freediving as a full athletic sport.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-36",
+          "mode": "overlay",
+          "focus": [
+            0.5,
+            0.3
+          ]
+        }
+      ]
+    },
+    {
+      "num": 37,
+      "depth": 15,
+      "pillar": "GO DEEP",
+      "headline": [
+        "The fear before.",
+        "The feeling after."
+      ],
+      "subline": "What every dive asks of you.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-37",
+          "mode": "top",
+          "crop_top": 0.27
+        }
+      ]
+    },
+    {
+      "num": 38,
+      "depth": 25,
+      "pillar": "BRING IT TO THE SURFACE · TEAMS",
+      "headline": [
+        "Nobody here",
+        "is thinking about",
+        "their job title."
+      ],
+      "subline": "What a shared challenge does to a group.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-38",
+          "mode": "top"
         }
       ]
     }

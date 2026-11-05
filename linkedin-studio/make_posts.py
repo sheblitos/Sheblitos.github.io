@@ -375,9 +375,13 @@ def render_photo_top(p, spec):
     For landscape group shots where a 4:5 crop would cut people out."""
     src = find_photo(spec["src"])
     raw = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
-    ph = grade(raw.resize((W, int(raw.height * W / raw.width)), Image.LANCZOS))
+    pure = spec.get("pure")   # breathing photos: true colors, no grade, no dark scrim
+    ph = raw.resize((W, int(raw.height * W / raw.width)), Image.LANCZOS)
+    if not pure:
+        ph = grade(ph)
     ph_h = min(ph.height, int(H * (0.85 if spec.get("no_headline") else 0.62)))
-    ph = ph.crop((0, 0, W, ph_h))
+    y0 = min(int(ph.height * spec.get("crop_top", 0)), max(0, ph.height - ph_h))   # start lower in tall photos
+    ph = ph.crop((0, y0, W, y0 + ph_h))
     c = Canvas(ocean_background(p["num"], p["depth"]))
     fade = Image.new("L", (W, ph_h), 255)
     fd = ImageDraw.Draw(fade)
@@ -386,13 +390,14 @@ def render_photo_top(p, spec):
     c.img.paste(ph, (0, 0), fade)
     scrim = np.asarray(c.img).astype(np.float32)
     ys = np.arange(H)[:, None, None]
-    a = np.clip(1 - ys / (H * 0.20), 0, 1) * 0.55
+    a = np.clip(1 - ys / (H * 0.20), 0, 1) * (0 if pure else 0.55)
     c.img = Image.fromarray((scrim * (1 - a) + np.array(DEEP) * a).astype(np.uint8))
     c.d = ImageDraw.Draw(c.img)
     faces = []
     for f in detect_faces(raw) or []:
         k = W / raw.width
-        faces.append(tuple(int(v * k) for v in f))
+        x0_, y0_, x1_, y1_ = (int(v * k) for v in f)
+        faces.append((x0_, y0_ - y0, x1_, y1_ - y0))
     top_label(c, p["num"], p["pillar"], fill=CREAM, depth=p["depth"])
     for i, f in enumerate(faces):
         if f[1] < ph_h:
@@ -401,6 +406,24 @@ def render_photo_top(p, spec):
         headline_block(c, p["headline"], p["subline"], bottom_y=1140)
     footer(c)
     return c, f"photo {src.name} shown whole at the top ({len(faces)} faces), headline below"
+
+
+def render_raw(spec):
+    """A finished slide or photo used as is (fitted to 4:5), e.g. an already designed graphic."""
+    src = find_photo(spec["src"])
+    im = ImageOps.fit(ImageOps.exif_transpose(Image.open(src)).convert("RGB"), (W, H), Image.LANCZOS)
+    return Canvas(im), f"{src.name} used as is"
+
+
+def build_carousel(p, folder):
+    """LinkedIn document post: cover (image-1) plus every image in photos/<carousel>/, as one PDF."""
+    slides = [Image.open(folder / "image-1.png").convert("RGB")]
+    for f in sorted((PHOTOS / p["carousel"]).iterdir()):
+        if f.suffix.lower() in PHOTO_EXT:
+            slides.append(ImageOps.fit(ImageOps.exif_transpose(Image.open(f)).convert("RGB"), (W, H), Image.LANCZOS))
+    out = folder / "carousel.pdf"
+    slides[0].save(out, save_all=True, append_images=slides[1:], resolution=150)
+    return out, len(slides)
 
 
 # ---------------------------------------------------------------- QA
@@ -490,7 +513,8 @@ def main(argv):
         for i, spec in enumerate(p["images"], 1):
             fn = {"graphic": lambda s: render_graphic(p),
                   "photo": lambda s: render_photo_top(p, s) if s.get("mode") == "top" else render_photo(p, s),
-                  "screenshot": lambda s: render_screenshot(p, s)}[spec["type"]]
+                  "screenshot": lambda s: render_screenshot(p, s),
+                  "raw": lambda s: render_raw(s)}[spec["type"]]
             c, desc = fn(spec)
             path = folder / f"image-{i}.png"
             c.img.save(path, optimize=True)
@@ -498,6 +522,9 @@ def main(argv):
             problems += len(issues)
             print(f"  {path.name}  {desc}" + ("\n    QA: " + "\n    QA: ".join(issues) if issues else "  QA ok"))
             rendered.append((f"post-{p['num']:02d} / image-{i}", path))
+        if p.get("carousel"):
+            out, n = build_carousel(p, folder)
+            print(f"  {out.name}  {n} slides (upload as a LinkedIn document post)")
     if rendered:
         print(f"contact sheet: {contact_sheet(rendered).relative_to(ROOT)}")
     return 1 if problems else 0
