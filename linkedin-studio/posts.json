@@ -473,6 +473,41 @@
           ]
         }
       ]
+    },
+    {
+      "num": 25,
+      "depth": 35,
+      "pillar": "GO DEEP",
+      "headline": [
+        "People come",
+        "for the water."
+      ],
+      "subline": "They come back for the people.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-25",
+          "mode": "top"
+        }
+      ]
+    },
+    {
+      "num": 26,
+      "depth": 45,
+      "pillar": "FIND THE SIGNAL",
+      "headline": [
+        "Leading instructors",
+        "taught me",
+        "management."
+      ],
+      "subline": "Lessons from the buoy, Dahab 2024 to 2025.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-26",
+          "mode": "overlay"
+        }
+      ]
     }
   ]
 }

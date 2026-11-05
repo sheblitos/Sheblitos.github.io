@@ -31,3 +31,5 @@ Fill in results 48 h after posting. First review: Thu 3 Dec.
 | 22 | Professional | Tue 2 Feb 2027 | FIND THE SIGNAL · TEAMS | 5 m | Nobody sits it out. | top | | | | | |
 | 23 | Personal | Thu 4 Feb 2027 | GO DEEP | 15 m | The quietest place I know is upside down. | overlay | | | | | |
 | 24 | Professional | Tue 9 Feb 2027 | FIND THE SIGNAL | 25 m | Every good dive starts on the beach. | overlay | | | | | |
+| 25 | Personal | Thu 11 Feb 2027 | GO DEEP | 35 m | People come for the water. | top (boat trip group) | | | | | |
+| 26 | Professional | Tue 16 Feb 2027 | FIND THE SIGNAL | 45 m | Leading instructors taught me management. | overlay (three instructors at the buoy) | | | | | |
