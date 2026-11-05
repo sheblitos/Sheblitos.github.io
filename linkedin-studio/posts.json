@@ -73,7 +73,12 @@
         {
           "type": "photo",
           "src": "post-04",
-          "mode": "overlay"
+          "mode": "overlay",
+          "focus": [
+            0.5,
+            0.41
+          ],
+          "gauge": false
         }
       ]
     },
