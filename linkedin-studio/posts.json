@@ -129,15 +129,20 @@
       "depth": 65,
       "pillar": "GO DEEP",
       "headline": [
-        "Decide on land.",
-        "Not on the line."
+        "The hardest part",
+        "is leaving",
+        "the surface."
       ],
-      "subline": "What holding your breath taught me about decisions.",
+      "subline": "From a small town by the sea to Barcelona.",
       "images": [
         {
           "type": "photo",
           "src": "post-07",
-          "mode": "overlay"
+          "mode": "overlay",
+          "focus": [
+            0.5,
+            0.0
+          ]
         }
       ]
     },
@@ -169,20 +174,15 @@
       "depth": 15,
       "pillar": "GO DEEP",
       "headline": [
-        "The deepest part",
-        "is where you",
-        "stop swimming."
+        "Decide on land.",
+        "Not on the line."
       ],
-      "subline": "On freefall, and knowing when to let go.",
+      "subline": "What holding your breath taught me about decisions.",
       "images": [
         {
           "type": "photo",
           "src": "post-09",
-          "mode": "overlay",
-          "focus": [
-            0.5,
-            0.55
-          ]
+          "mode": "overlay"
         }
       ]
     },
@@ -207,23 +207,22 @@
     {
       "num": 11,
       "depth": 35,
-      "pillar": "BRING IT TO THE SURFACE",
+      "pillar": "GO DEEP",
       "headline": [
-        "It doesn’t count",
-        "until you bring it",
-        "to the surface."
+        "The deepest part",
+        "is where you",
+        "stop swimming."
       ],
-      "subline": "Notes from the judge’s side of the line.",
+      "subline": "On freefall, and knowing when to let go.",
       "images": [
         {
           "type": "photo",
           "src": "post-11",
           "mode": "overlay",
           "focus": [
-            0.43,
-            0.5
-          ],
-          "gauge": false
+            0.5,
+            0.55
+          ]
         }
       ]
     },
@@ -247,22 +246,23 @@
     {
       "num": 13,
       "depth": 55,
-      "pillar": "GO DEEP",
+      "pillar": "BRING IT TO THE SURFACE",
       "headline": [
-        "The surface looks",
-        "brightest when",
-        "you leave it."
+        "It doesn’t count",
+        "until you bring it",
+        "to the surface."
       ],
-      "subline": "On starting over in Barcelona.",
+      "subline": "Notes from the judge’s side of the line.",
       "images": [
         {
           "type": "photo",
           "src": "post-13",
           "mode": "overlay",
           "focus": [
-            0.5,
-            0.0
-          ]
+            0.43,
+            0.5
+          ],
+          "gauge": false
         }
       ]
     },

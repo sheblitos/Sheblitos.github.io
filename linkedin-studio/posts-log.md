@@ -13,13 +13,13 @@ Fill in results 48 h after posting. First review: Thu 3 Dec.
 | 04 | Professional | Tue 17 Nov 2026 | GO DEEP · TEAMS | 35 m | Why your team should learn to hold its breath. | top + clean | | | | | |
 | 05 | Personal | Thu 19 Nov 2026 | GO DEEP | 45 m | Never dive alone. Never build alone. | clean + graphic | | | | | |
 | 06 | Professional | Tue 24 Nov 2026 | GO DEEP · TEAMS | 55 m | One dives. One watches. Then you switch. | overlay | | | | | |
-| 07 | Personal | Thu 26 Nov 2026 | GO DEEP | 65 m | Decide on land. Not on the line. | overlay | | | | | |
+| 07 | Personal | Thu 26 Nov 2026 | GO DEEP | 65 m | The hardest part is leaving the surface. | overlay | | | | | |
 | 08 | Professional | Tue 1 Dec 2026 | FIND THE SIGNAL | 5 m | People don’t buy features. They buy feeling understood. | overlay | | | | | |
-| 09 | Personal | Thu 3 Dec 2026 | GO DEEP | 15 m | The deepest part is where you stop swimming. | overlay | | | | | |
+| 09 | Personal | Thu 3 Dec 2026 | GO DEEP | 15 m | Decide on land. Not on the line. | overlay | | | | | |
 | 10 | Professional | Tue 8 Dec 2026 | GO DEEP · TEAMS | 25 m | Doing nothing is the hardest thing we train. | top | | | | | |
-| 11 | Personal | Thu 10 Dec 2026 | BRING IT TO THE SURFACE | 35 m | It doesn’t count until you bring it to the surface. | overlay | | | | | |
+| 11 | Personal | Thu 10 Dec 2026 | GO DEEP | 35 m | The deepest part is where you stop swimming. | overlay | | | | | |
 | 12 | Professional | Tue 15 Dec 2026 | FIND THE SIGNAL · TEAMS | 45 m | The race flips in the pool. | top | | | | | |
-| 13 | Personal | Thu 17 Dec 2026 | GO DEEP | 55 m | The surface looks brightest when you leave it. | overlay | | | | | |
+| 13 | Personal | Thu 17 Dec 2026 | BRING IT TO THE SURFACE | 55 m | It doesn’t count until you bring it to the surface. | overlay | | | | | |
 | 14 | Professional | Tue 5 Jan 2027 | BRING IT TO THE SURFACE · TEAMS | 65 m | Bring your team one breath deeper. | top | | | | | |
 | 15 | Personal | Thu 7 Jan 2027 | BUILD THE TEST | 5 m | Not every dive needs a target. | clean + graphic | | | | | |
 | 16 | Professional | Tue 12 Jan 2027 | BUILD THE TEST · TEAMS | 15 m | Most of us breathe like we’re late. | top | | | | | |
