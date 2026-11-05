@@ -31,11 +31,14 @@
       "images": [
         {
           "type": "photo",
-          "src": "post-02",
+          "src": "post-02-sta",
           "mode": "top"
         },
         {
-          "type": "graphic"
+          "type": "photo",
+          "src": "post-02",
+          "mode": "clean",
+          "gauge": false
         }
       ]
     },

@@ -376,7 +376,7 @@ def render_photo_top(p, spec):
     src = find_photo(spec["src"])
     raw = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
     ph = grade(raw.resize((W, int(raw.height * W / raw.width)), Image.LANCZOS))
-    ph_h = min(ph.height, int(H * 0.62))
+    ph_h = min(ph.height, int(H * (0.85 if spec.get("no_headline") else 0.62)))
     ph = ph.crop((0, 0, W, ph_h))
     c = Canvas(ocean_background(p["num"], p["depth"]))
     fade = Image.new("L", (W, ph_h), 255)
@@ -397,7 +397,8 @@ def render_photo_top(p, spec):
     for i, f in enumerate(faces):
         if f[1] < ph_h:
             c.boxes.append((f"face {i+1}", (f[0] - 8, f[1] - 8, f[2] + 8, f[3] + 8), False))
-    headline_block(c, p["headline"], p["subline"], bottom_y=1140)
+    if not spec.get("no_headline"):   # second image of a post: photo + footer only
+        headline_block(c, p["headline"], p["subline"], bottom_y=1140)
     footer(c)
     return c, f"photo {src.name} shown whole at the top ({len(faces)} faces), headline below"
 

@@ -7,7 +7,7 @@ Clear asks: post 12 (Tue 15 Dec, team workshops) and post 16 (Tue 12 Jan, growth
 | # | Type | Date (8:30 Barcelona) | Pillar | Depth | Headline | Images | Impressions | Reactions | Comments | DMs | Notes |
 |---|------|------|--------|-------|----------|--------|---|---|---|---|-------|
 | 01 | Personal | Thu 5 Nov 2026 | GO DEEP | 5 m | We’re not one thing. | overlay | | | | | |
-| 02 | Professional | Tue 10 Nov 2026 | GO DEEP · TEAMS | 15 m | Why your team should learn to hold its breath. | top + graphic | | | | | |
+| 02 | Professional | Tue 10 Nov 2026 | GO DEEP · TEAMS | 15 m | Why your team should learn to hold its breath. | STA photo top + group photo clean | | | | | |
 | 03 | Personal | Thu 12 Nov 2026 | GO DEEP | 25 m | I was busy. I wasn’t living. | overlay | | | | | |
 | 04 | Professional | Tue 17 Nov 2026 | GO DEEP · TEAMS | 35 m | One dives. One watches. Then you switch. | overlay | | | | | |
 | 05 | Personal | Thu 19 Nov 2026 | GO DEEP | 45 m | Never dive alone. Never build alone. | clean + graphic | | | | | |
