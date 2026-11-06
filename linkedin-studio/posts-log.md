@@ -13,7 +13,7 @@ Fill in results 48 h after posting. First review: Thu 3 Dec.
 | 04 | Professional | Tue 17 Nov 2026 | GO DEEP · TEAMS | 35 m | Why your team should learn to hold its breath. | top + clean | | | | | |
 | 05 | Personal | Thu 19 Nov 2026 | GO DEEP | 45 m | Never dive alone. Never build alone. | clean + graphic | | | | | |
 | 06 | Professional | Tue 24 Nov 2026 | GO DEEP · TEAMS | 55 m | One dives. One watches. Then you switch. | overlay | | | | | |
-| 07 | Personal | Thu 26 Nov 2026 | GO DEEP | 65 m | The hardest part is leaving the surface. | overlay | | | | | |
+| 07 | Personal | Thu 26 Nov 2026 | GO DEEP | 65 m | From Dahab to Barcelona on one breath. | overlay | | | | | |
 | 08 | Professional | Tue 1 Dec 2026 | FIND THE SIGNAL | 5 m | People don’t buy features. They buy feeling understood. | overlay | | | | | |
 | 09 | Personal | Thu 3 Dec 2026 | GO DEEP | 15 m | Decide on land. Not on the line. | overlay | | | | | |
 | 10 | Professional | Tue 8 Dec 2026 | GO DEEP · TEAMS | 25 m | Doing nothing is the hardest thing we train. | top | | | | | |
