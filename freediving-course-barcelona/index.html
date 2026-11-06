@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VR5PT4F97R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VR5PT4F97R');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beginner Freediving Course Barcelona | AIDA 2 · Try It Free</title>
+<meta name="description" content="Learn to freedive in Barcelona. Start with a free live online session, then join the AIDA 2 beginner course (pool + Mediterranean). Intro price €294, pay only if you continue.">
+<link rel="canonical" href="https://freedivingbrain.com/freediving-course-barcelona">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freedivingbrain.com/freediving-course-barcelona">
+<meta property="og:title" content="Beginner Freediving Course Barcelona | AIDA 2 · Try It Free">
+<meta property="og:description" content="Start with a free live online session. Then learn to freedive in Barcelona with the AIDA 2 beginner course. Pay only if you continue.">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:100%}
+
+:root{
+  --deep:#060d09;--deep2:#0a1410;--deep3:#0f1c14;
+  --teal:#7ecdb0;--teal2:#a8e8cc;--teal3:#4aaa86;
+  --gold:#c9a84c;--gold2:rgba(201,168,76,.55);--gold3:rgba(201,168,76,.1);
+  --txt:#e2ddd4;--txt2:rgba(226,221,212,.58);--txt3:rgba(226,221,212,.32);
+  --ln:rgba(226,221,212,.07);--ln2:rgba(226,221,212,.14);
+  --r:4px;--ease:cubic-bezier(.16,1,.3,1);
+}
+
+body{font-family:var(--font-display);background:var(--deep);color:var(--txt);overflow-x:hidden;cursor:none;font-weight:600}
+
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:.028;pointer-events:none;z-index:9999}
+
+.cur-dot{position:fixed;width:6px;height:6px;background:var(--gold);border-radius:var(--r-round);pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s}
+.cur-ring{position:fixed;width:32px;height:32px;border:1px solid rgba(201,168,76,.3);border-radius:var(--r-round);pointer-events:none;z-index:9997;transform:translate(-50%,-50%);transition:width .3s,height .3s,opacity .3s}
+.cur-dot.hov{width:10px;height:10px;background:var(--teal)}
+.cur-ring.hov{width:48px;height:48px;opacity:.45}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3.5rem;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(12,26,21,.96);backdrop-filter:blur(20px);padding:1rem 3.5rem;border-color:var(--ln)}
+.nav-logo{display:flex;align-items:center;gap:.875rem;font-family:var(--font-display);font-size:1.15rem;font-weight:600;letter-spacing:.02em;color:var(--txt);text-decoration:none}
+.nav-logo svg{width:36px;height:36px}
+.nav-logo strong{font-weight:400;color:var(--teal)}
+.nav-links{display:flex;align-items:center;gap:2.5rem}
+.nav-links a{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--txt2);text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--teal)}
+.nav-cta{font-family:var(--font-body);font-size:var(--text-xs);font-weight:400;letter-spacing:.02em;color:var(--deep)!important;background:var(--teal);padding:.55rem 1.25rem;border-radius:var(--r);transition:background .2s,transform .15s!important}
+.nav-cta:hover{background:var(--teal2)!important;transform:translateY(-1px)}
+
+/* BUTTONS */
+.btn-gold{display:inline-block;font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--deep);background:var(--gold);padding:.75rem 1.75rem;border-radius:var(--r);text-decoration:none;border:none;cursor:pointer;transition:background .2s,transform .15s}
+.btn-gold:hover{background:#d4b86a;transform:translateY(-1px)}
+.btn-ghost{display:inline-block;font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--txt2);background:transparent;border:1px solid var(--ln2);padding:.75rem 1.75rem;border-radius:var(--r);text-decoration:none;cursor:pointer;transition:border-color .2s,color .2s}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+/* SECTION TAGS */
+.section-tag{display:flex;align-items:center;gap:.75rem;font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--gold);margin-bottom:1.25rem}
+.section-tag::before{content:'';width:28px;height:1px;background:var(--gold);opacity:.6}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.vis{opacity:1;transform:none}
+.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity .75s var(--ease),transform .75s var(--ease)}
+.reveal-left.vis{opacity:1;transform:none}
+
+/* ═══ HERO ═══ */
+.hero{min-height:86vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 3.5rem 4.5rem;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(12,26,21,.7) 0%,rgba(12,26,21,.3) 35%,rgba(12,26,21,.8) 75%,rgba(12,26,21,.98) 100%),radial-gradient(ellipse at 55% 45%,rgba(201,168,76,.05) 0%,transparent 60%),var(--deep)}
+.hero-geo{position:absolute;top:50%;left:58%;transform:translate(-50%,-50%);width:min(80vw,680px);opacity:.03;animation:geoSpin 80s linear infinite;pointer-events:none}
+@keyframes geoSpin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.lab-eyebrow{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--gold);opacity:.7;margin-bottom:1rem}
+.hero h1{font-size:clamp(3.2rem,8vw,7rem);font-weight:600;line-height:.95;letter-spacing:-.03em;margin-bottom:.4rem}
+.hero h1 sup{font-size:.3em;color:var(--gold);vertical-align:super;letter-spacing:0;font-family:var(--font-body)}
+.hero-rule{width:60px;height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:1.5rem 0}
+.hero-sub{font-size:1.05rem;font-weight:400;color:var(--txt2);max-width:520px;line-height:1.85;margin-bottom:2.5rem}
+.hero-sub strong{color:var(--txt);font-weight:400}
+.hero-pills{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:2.25rem}
+.lab-cta{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-body);font-weight:700;font-size:var(--text-xs);letter-spacing:.02em;color:var(--deep);background:var(--gold);padding:.95rem 2rem;border-radius:var(--r-xs);text-decoration:none;transition:background .2s,transform .15s}
+.lab-cta:hover{background:#d4b86a;transform:translateY(-1px)}
+.pill{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;border:1px solid var(--ln2);padding:.55rem 1.25rem;border-radius:var(--r-2xl);color:var(--txt2);background:transparent;cursor:pointer;transition:border-color .2s,color .2s,background .2s}
+.pill:hover,.pill.on{border-color:var(--gold);color:var(--deep);background:var(--gold)}
+.hero-stats{display:flex;gap:3rem;border-top:1px solid var(--ln);padding-top:2rem}
+.hs-num{font-family:var(--font-body);font-size:1.35rem;color:var(--gold);letter-spacing:-.02em;margin-bottom:.2rem}
+.hs-label{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--txt3);line-height:1.7}
+
+/* ═══ CORE TRUTH ═══ */
+.core-truth{padding:4.25rem 3.5rem;border-bottom:1px solid var(--ln);display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.ct-h2{font-size:clamp(2rem,3.5vw,3rem);font-weight:600;line-height:1.15;letter-spacing:-.02em;margin-bottom:1.1rem}
+.ct-h2 em{color:var(--gold);font-style:italic}
+.ct-body{font-size:var(--text-base);color:var(--txt2);line-height:1.9;font-weight:400}
+.ct-body p+p{margin-top:.85rem}
+.ct-stats{display:flex;gap:2.5rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--ln)}
+.cs-num{font-family:var(--font-body);font-size:2rem;color:var(--gold);letter-spacing:-.02em;line-height:1;margin-bottom:.3rem}
+.cs-label{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--txt3);line-height:1.6}
+.ct-cards{display:flex;flex-direction:column;gap:1px}
+.ct-card{background:var(--deep2);padding:1.5rem 1.75rem;border-top:1px solid var(--ln)}
+.ct-card:last-child{border-bottom:1px solid var(--ln)}
+.ctc-tag{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--gold);opacity:.65;margin-bottom:.6rem}
+.ctc-title{font-size:1.05rem;font-weight:600;margin-bottom:.4rem}
+.ctc-body{font-size:var(--text-base);color:var(--txt2);line-height:1.72}
+
+/* ═══ TRACKS ═══ */
+.tracks{border-bottom:1px solid var(--ln)}
+.tracks-nav{display:flex;border-bottom:1px solid var(--ln);background:var(--deep2)}
+.track-tab{flex:1;font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--txt3);padding:1.5rem 3.5rem;cursor:pointer;border:none;background:transparent;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;text-align:left}
+.track-tab:hover{color:var(--txt2)}
+.track-tab.on{color:var(--gold);border-bottom-color:var(--gold)}
+.track-panel{display:none;padding:5rem 3.5rem}
+.track-panel.on{display:block}
+
+.track-intro{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-bottom:4rem;padding-bottom:4rem;border-bottom:1px solid var(--ln)}
+.ti-eyebrow{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--gold);opacity:.7;margin-bottom:.85rem}
+.ti-h2{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:600;line-height:1.15;letter-spacing:-.02em;margin-bottom:1.25rem}
+.ti-h2 em{color:var(--gold);font-style:italic}
+.ti-body{font-size:var(--text-base);color:var(--txt2);line-height:1.9;font-weight:400}
+.ti-body p+p{margin-top:.85rem}
+.zero-list{margin-top:1.5rem;display:flex;flex-direction:column;gap:.5rem}
+.zero-item{display:flex;align-items:center;gap:.75rem;font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--txt3)}
+.zero-item::before{content:'—';color:rgba(201,168,76,.35)}
+.ti-callout{background:var(--deep3);border:1px solid var(--ln);border-radius:var(--r);padding:2rem;height:fit-content}
+.ti-callout-tag{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--gold);opacity:.65;margin-bottom:1rem}
+.ti-callout p{font-size:1rem;font-weight:400;line-height:1.65;color:var(--txt);margin-bottom:.85rem}
+.ti-callout-note{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--txt3)}
+
+.benefits-heading{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;gap:.75rem}
+.benefits-heading::before{content:'';width:24px;height:1px;background:var(--gold);opacity:.5}
+.benefits-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--ln);border-radius:var(--r);overflow:hidden}
+.benefit{background:var(--deep2);padding:1.5rem 1.6rem;transition:background .2s}
+.benefit:hover{background:var(--deep3)}
+.b-full{grid-column:1/-1}
+.b-num{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--gold);opacity:.6;margin-bottom:.65rem}
+.b-title{font-size:1.1rem;font-weight:600;color:var(--txt);margin-bottom:.5rem;line-height:1.2}
+.b-body{font-size:var(--text-base);color:var(--txt2);line-height:1.75}
+.b-body em{color:var(--teal);font-style:italic}
+
+/* ═══ FORMAT ═══ */
+.format{padding:4.25rem 3.5rem;border-bottom:1px solid var(--ln);background:var(--deep2)}
+.format-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:2rem}
+.f-step{display:flex;gap:1.5rem;padding:1.5rem 0;border-bottom:1px solid var(--ln)}
+.f-step:first-child{border-top:1px solid var(--ln)}
+.f-num{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--gold);flex-shrink:0;margin-top:.3rem}
+.f-title{font-size:1.05rem;font-weight:600;margin-bottom:.35rem}
+.f-body{font-size:var(--text-base);color:var(--txt2);line-height:1.72}
+.f-opt{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--teal);border:1px solid rgba(126,205,176,.2);padding:.2rem .5rem;border-radius:var(--r-2xl);display:inline-block;margin-top:.5rem}
+.inclusion-box{background:var(--deep3);border:1px solid rgba(201,168,76,.15);border-radius:var(--r);padding:2.5rem}
+.ib-tag{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.ib-tag::before{content:'◈';font-size:var(--text-xs)}
+.ib-title{font-size:1.25rem;font-weight:600;line-height:1.3;margin-bottom:1rem}
+.ib-body{font-size:var(--text-base);color:var(--txt2);line-height:1.8}
+
+/* ═══ ENQUIRY ═══ */
+.enquiry{padding:5rem 3.5rem;text-align:center;position:relative;overflow:hidden}
+.eq-geo{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.03;pointer-events:none}
+.eq-geo svg{width:70%}
+.eq-inner{position:relative;z-index:1}
+.eq-h2{font-size:clamp(2.5rem,5vw,4.5rem);font-weight:600;line-height:1.05;letter-spacing:-.02em;margin-bottom:1rem}
+.eq-h2 em{color:var(--gold);font-style:italic}
+.eq-sub{font-size:1rem;color:var(--txt2);max-width:480px;margin:0 auto 2.5rem;line-height:1.85;font-weight:400}
+.eq-form{max-width:560px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--ln);border-radius:var(--r);overflow:hidden;box-shadow:0 0 0 1px var(--ln)}
+.eq-field{background:var(--deep2);padding:1rem 1.25rem;display:flex;flex-direction:column;gap:.35rem}
+.eq-field.full{grid-column:1/-1}
+.eq-label{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--txt3)}
+.eq-field input,.eq-field select,.eq-field textarea{background:transparent;border:none;outline:none;font-family:var(--font-display);font-size:.95rem;color:var(--txt);padding:0;resize:none;-webkit-appearance:none;appearance:none;font-weight:600}
+.eq-field input::placeholder,.eq-field textarea::placeholder{color:var(--txt3)}
+.eq-field select option{background:var(--deep2)}
+.eq-submit{grid-column:1/-1;background:var(--deep2);padding:1.25rem;display:flex;align-items:center;justify-content:center}
+.eq-submit button{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--deep);background:var(--gold);border:none;padding:.85rem 2.5rem;border-radius:var(--r-xs);cursor:pointer;transition:background .2s,transform .15s}
+.eq-submit button:hover{background:#d4b86a;transform:translateY(-1px)}
+.eq-note{margin-top:1.5rem;font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--txt3)}
+
+/* FOOTER */
+footer{padding:4rem 3.5rem;border-top:1px solid var(--ln);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
+.footer-logo{font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:var(--txt2)}
+.footer-logo span{color:var(--teal);font-weight:400}
+.footer-links{display:flex;gap:2rem;flex-wrap:wrap}
+.footer-links a{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--txt3);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--teal)}
+.footer-copy{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--txt3)}
+
+@media(max-width:900px){
+  nav{padding:1.25rem 1.75rem}
+  nav.scrolled{padding:.875rem 1.75rem}
+  .nav-links{display:none}
+  .hero{padding:0 1.75rem 5rem}
+  .hero-stats{flex-direction:column;gap:1.5rem}
+  .core-truth,.format{grid-template-columns:1fr;padding-left:1.75rem;padding-right:1.75rem}
+  .core-truth{display:block}
+  .ct-cards{margin-top:3rem}
+  .format-grid{grid-template-columns:1fr}
+  .track-tab{padding:1.25rem 1.75rem}
+  .track-panel{padding:3rem 1.75rem}
+  .track-intro{grid-template-columns:1fr;gap:2rem}
+  .benefits-grid{grid-template-columns:1fr}
+  .b-full{grid-column:1}
+  .enquiry{padding:5rem 1.75rem}
+  .eq-form{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:1rem;text-align:center;padding:3rem 1.75rem}
+  .footer-links{justify-content:center}
+}
+/* === site-wide warm + readable system (Mulish body, Cormorant headings) === */
+:root{--deep:#0c1a15;--deep2:#112620;--deep3:#16291f;--surface:#1c3026;--txt:#ece8e0;--txt2:rgba(236,232,224,.80);--txt3:rgba(236,232,224,.60);--ln:rgba(236,232,224,.10);--ln2:rgba(236,232,224,.18)}
+body{font-family:var(--font-body);line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
+.nav-links a,.nav-cta,.nav-mobile a,.nav-mobile-cta,.btn-primary,.btn-ghost,button{font-family:var(--font-body) !important;font-weight:600}
+
+/* nav: collapse text links below desktop, keep logo + CTA */
+@media(max-width:900px){.nav-links{display:none}.nav-ham{display:flex}}
+
+/* ── hamburger + mobile drawer (added for nav consistency) ── */
+.nav-ham{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;background:none;border:none;cursor:pointer;padding:0;z-index:101}
+.nav-ham span{display:block;width:22px;height:1.5px;background:var(--txt);transition:transform .3s var(--ease,cubic-bezier(.16,1,.3,1)),opacity .2s}
+.nav-ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nav-ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav-mobile{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(12,26,21,.97);backdrop-filter:blur(20px);padding:5.5rem 2rem 2.5rem;display:flex;flex-direction:column;gap:0;transform:translateY(-110%);transition:transform .42s var(--ease,cubic-bezier(.16,1,.3,1));border-bottom:1px solid var(--ln2);pointer-events:none}
+.nav-mobile.open{transform:translateY(0);pointer-events:all}
+.nav-mobile a{font-family:var(--font-body);font-weight:600;font-size:.9rem;letter-spacing:.02em;color:var(--txt2);text-decoration:none;padding:1.1rem 0;border-bottom:1px solid var(--ln);transition:color .2s}
+.nav-mobile a:last-child{border-bottom:none}
+.nav-mobile a:hover{color:var(--teal)}
+.nav-mobile-cta{margin-top:1.75rem;background:var(--teal) !important;color:var(--deep) !important;padding:.9rem 1.5rem !important;border-radius:var(--r-xs);text-align:center;border-bottom:none !important}
+.nav-mobile-cta:hover{background:var(--teal2) !important}
+@media(max-width:900px){.nav-links{display:none !important}.nav-ham{display:flex !important}}
+/* ── Tracks chooser header ── */
+.tracks-header{padding:5rem 3.5rem 0}
+.tracks-title{font-size:clamp(2rem,3.5vw,3rem);font-weight:600;letter-spacing:-.02em;line-height:1.1;margin-bottom:.85rem}
+.tracks-title em{color:var(--gold);font-style:italic}
+.tracks-hint{font-family:var(--font-body);font-size:var(--text-xs);color:var(--txt3);max-width:520px;margin-bottom:2.25rem}
+@media(max-width:900px){.tracks-header{padding:3.5rem 1.75rem 0}}
+/* ── Deeper Together photos ── */
+.hero{background-image:linear-gradient(180deg,rgba(12,26,21,.62) 0%,rgba(12,26,21,.35) 40%,rgba(12,26,21,.55) 72%,rgba(12,26,21,.9) 100%),url('/dt-buoy.jpg');background-image:linear-gradient(180deg,rgba(12,26,21,.62) 0%,rgba(12,26,21,.35) 40%,rgba(12,26,21,.55) 72%,rgba(12,26,21,.9) 100%),image-set(url('/dt-buoy.avif') type('image/avif'), url('/dt-buoy.webp') type('image/webp'), url('/dt-buoy.jpg') type('image/jpeg'));background-size:cover;background-position:center 40%}
+.pl-strip-head{padding:4.5rem 3.5rem 1.75rem}
+.pl-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;background:var(--deep)}
+.pl-gsi{position:relative;height:clamp(240px,40vh,420px);background-size:cover;background-position:center;overflow:hidden}
+.pl-gsi::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,26,21,.1),rgba(12,26,21,.7))}
+.pl-gsi span{position:absolute;bottom:1.1rem;left:1.4rem;z-index:1;font-family:var(--font-body);font-size:var(--text-xs);font-weight:600;letter-spacing:.02em;color:rgba(236,232,224,.85)}
+@media(max-width:760px){.pl-strip{grid-template-columns:1fr}.pl-strip-head{padding:3rem 1.75rem 1.5rem}}
+.nav-logo{gap:0 !important}.nav-logo svg{display:none !important}.nav-logo::before{content:"";width:38px;height:38px;flex:0 0 auto;margin-right:.6rem;background:url(/logo-mark.png) center/contain no-repeat}.nav-logo strong{margin-left:.3em}/*HEROFIX*/.hero{padding-top:96px}@media(max-width:900px){.hero{justify-content:flex-start}}.footer-logo{display:flex;align-items:center;gap:.6rem}.footer-logo img{width:44px;height:44px;display:block;flex:0 0 auto}.footer-watermark{position:absolute;right:-70px;bottom:-90px;width:360px;height:360px;background:url(/logo-mark.png) center/contain no-repeat;opacity:.05;pointer-events:none;z-index:-1}footer{position:relative;overflow:hidden;isolation:isolate}.hero-geo{display:none}@media(max-width:680px){.hero{background-image:linear-gradient(180deg,rgba(12,26,21,.62) 0%,rgba(12,26,21,.35) 40%,rgba(12,26,21,.55) 72%,rgba(12,26,21,.9) 100%),url('/dt-buoy-mobile.jpg');background-image:linear-gradient(180deg,rgba(12,26,21,.62) 0%,rgba(12,26,21,.35) 40%,rgba(12,26,21,.55) 72%,rgba(12,26,21,.9) 100%),image-set(url('/dt-buoy-mobile.avif') type('image/avif'), url('/dt-buoy-mobile.webp') type('image/webp'), url('/dt-buoy-mobile.jpg') type('image/jpeg'));background-position:center 45%}}
+
+/* ═══ REDESIGN: performance-first framing ═══ */
+.hero-cta-row{display:flex;gap:.85rem;flex-wrap:wrap;align-items:center}
+.lab-cta.ghost{background:transparent;color:var(--txt);border:1px solid var(--ln2)}
+.lab-cta.ghost:hover{background:transparent;border-color:var(--teal);color:var(--teal)}
+.hero-pills a.pill{text-decoration:none}
+.lead-sub{font-size:1.05rem;color:var(--txt2);line-height:1.9;font-weight:400;max-width:640px;margin-top:1.5rem}
+.lead-sub strong{color:var(--txt);font-weight:600}
+/* flow diagram */
+.flow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.5rem;margin-top:2.25rem;max-width:900px}
+.flow-step{font-family:var(--font-body);font-size:var(--text-xs);font-weight:600;letter-spacing:.01em;color:var(--txt);background:var(--deep2);border:1px solid var(--ln2);border-radius:var(--r-2xl);padding:.45rem 1rem;text-align:center}
+.flow-step.start{color:var(--txt2);background:transparent;border-color:var(--ln);font-weight:400}
+.flow-step.end{color:var(--deep);background:var(--gold);border-color:var(--gold);font-weight:700}
+.flow-arrow{color:var(--gold);opacity:.55;font-size:.8rem;font-weight:700}
+.flow-cap{font-family:var(--font-body);font-size:var(--text-xs);color:var(--txt3);text-align:center;margin-top:1.75rem;max-width:520px;line-height:1.7}
+/* choose experience fork */
+.xp-fork{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
+.xp-card{background:var(--deep2);border:1px solid var(--ln);border-radius:var(--r);padding:2.5rem;transition:border-color .25s,transform .25s;text-decoration:none;display:flex;flex-direction:column}
+.xp-card:hover{border-color:var(--gold2);transform:translateY(-3px)}
+.xp-card.teal:hover{border-color:rgba(126,205,176,.45)}
+.xp-tag{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--gold);margin-bottom:1rem}
+.xp-card.teal .xp-tag{color:var(--teal)}
+.xp-h3{font-size:1.5rem;font-weight:600;margin-bottom:.75rem;color:var(--txt);line-height:1.2}
+.xp-desc{font-size:var(--text-base);color:var(--txt2);line-height:1.75;margin-bottom:1.5rem;flex:1}
+.xp-link{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--gold)}
+.xp-card.teal .xp-link{color:var(--teal)}
+/* teal-accented section (athletic) */
+.accent-teal .section-tag{color:var(--teal)}
+.accent-teal .section-tag::before{background:var(--teal)}
+.accent-teal .ct-h2 em{color:var(--teal)}
+.accent-teal .b-num{color:var(--teal)}
+.accent-teal .cs-num{color:var(--teal)}
+.accent-teal .btn-gold{background:var(--teal);color:var(--deep)}
+.accent-teal .btn-gold:hover{background:var(--teal2)}
+/* USP banner (buddy system) */
+.usp{background:var(--deep3);border:1px solid rgba(201,168,76,.18);border-radius:var(--r);padding:2rem 2.25rem;margin-top:2rem}
+.usp p{font-size:1.15rem;font-weight:400;line-height:1.65;color:var(--txt)}
+.usp p em{color:var(--gold);font-style:italic;font-weight:600}
+.usp-note{font-size:var(--text-base);color:var(--txt2);line-height:1.8;margin-top:1rem;font-weight:400}
+/* activities chips */
+.activities{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.5rem;max-width:720px}
+.activity{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--txt2);background:var(--deep2);border:1px solid var(--ln);border-radius:var(--r-2xl);padding:.5rem 1.05rem}
+/* FAQ */
+.faq-sec{padding:4.25rem 3.5rem;border-bottom:1px solid var(--ln)}
+.faq-list{max-width:760px;margin:2.5rem auto 0;border-top:1px solid var(--ln)}
+.faq-item{border-bottom:1px solid var(--ln)}
+.faq-item summary{list-style:none;cursor:pointer;padding:1.4rem 0;display:flex;justify-content:space-between;gap:1.5rem;font-size:1.05rem;font-weight:600;color:var(--txt)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';color:var(--gold);font-weight:400;font-size:1.35rem;line-height:1}
+.faq-item[open] summary::after{content:'2'}
+.faq-item p{font-size:var(--text-base);color:var(--txt2);line-height:1.8;padding:0 0 1.5rem;max-width:660px}
+@media(max-width:900px){.xp-fork{grid-template-columns:1fr}.faq-sec{padding:5rem 1.75rem}.usp{padding:1.75rem}.flow-step{min-width:150px}}
+</style>
+<style>
+.nav-dd{position:relative;display:flex;align-items:center}
+.nav-dd>.nav-dd-toggle{display:inline-flex;align-items:center;gap:.4rem;cursor:pointer}
+.nav-dd>.nav-dd-toggle::after{content:'';width:5px;height:5px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px;opacity:.6;transition:transform .2s}
+.nav-dd:hover>.nav-dd-toggle::after,.nav-dd:focus-within>.nav-dd-toggle::after{transform:rotate(225deg);margin-top:1px}
+.nav-dd::after{content:'';position:absolute;top:100%;left:-1rem;right:-1rem;height:14px}
+.nav-dd-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(10px);margin-top:8px;background:rgba(12,26,21,.97);backdrop-filter:blur(18px);border:1px solid var(--ln2);border-radius:var(--r-lg);padding:.45rem;min-width:215px;display:flex;flex-direction:column;gap:.1rem;opacity:0;visibility:hidden;transition:opacity .2s,transform .2s;box-shadow:var(--shadow-md);z-index:300}
+.nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.nav-dd-menu a{padding:.65rem .85rem !important;border-radius:var(--r-sm);white-space:nowrap;text-transform:none !important;letter-spacing:.02em !important;font-size:var(--text-xs) !important;color:var(--txt) !important}
+.nav-dd-menu a span{display:block;font-size:var(--text-xs);letter-spacing:.04em;color:var(--txt3);margin-top:.15rem;text-transform:none}
+.nav-dd-menu a:hover{background:rgba(126,205,176,.1);color:var(--teal) !important}
+</style>
+<link rel="icon" type="image/png" href="/logo-mark.png"><link rel="apple-touch-icon" href="/logo-mark.png"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="/type-system.css?v=5">
+<meta property="og:image" content="https://freedivingbrain.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Beginner Freediving Course Barcelona | AIDA 2 · Try It Free">
+<meta name="twitter:description" content="Start with a free live online session. Then learn to freedive in Barcelona with the AIDA 2 beginner course. Pay only if you continue.">
+<meta name="twitter:image" content="https://freedivingbrain.com/og-image.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freedivingbrain.com/"},{"@type":"ListItem","position":2,"name":"Beginner Freediving Course","item":"https://freedivingbrain.com/freediving-course-barcelona"}]}</script>
+<style>
+/* Unified hero typography — matches the Training page treatment */
+.hero h1,
+.tr-hero h1,
+.story-hero h1,
+.faq-header h1,
+.blog-hero h1,
+.article-hero h1,
+.article-h1 {
+  font-size: clamp(2.2rem, 5vw, 3.75rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: normal;
+}
+/* Photos woven into the content (no captions) */
+.tb-split{display:grid;grid-template-columns:1.05fr .95fr;gap:3.5rem;align-items:center;max-width:1100px}
+.tb-split .ct-cards{margin-top:0}
+.tb-duo{position:relative;padding:0 0 18% 14%;max-width:480px;justify-self:end;width:100%}
+.tb-duo picture,.tb-duo img{display:block}
+.tb-duo .d-main img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
+.tb-duo .d-sub{position:absolute;left:0;bottom:0;width:46%}
+.tb-duo .d-sub img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:var(--r);border:6px solid var(--deep2);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.tb-duo.on-deep .d-sub img{border-color:var(--deep)}
+.tb-duo.flip{padding:0 14% 18% 0;justify-self:start}
+.tb-duo.flip .d-sub{left:auto;right:0}
+.tb-duo.wide .d-main img{aspect-ratio:4/3}
+.tb-duo::before{content:"";position:absolute;top:-14px;right:-14px;width:38%;height:38%;border-top:1px solid var(--gold2);border-right:1px solid var(--gold2);border-radius:0 var(--r) 0 0;pointer-events:none}
+.tb-duo.flip::before{right:auto;left:-14px;border-right:0;border-left:1px solid var(--gold2);border-radius:var(--r) 0 0 0}
+.tb-mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:.75rem;margin:2.75rem 0 0}
+.tb-mosaic picture{display:block;overflow:hidden;border-radius:var(--r)}
+.tb-mosaic img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.tb-mosaic picture:hover img{transform:scale(1.04)}
+.tb-mosaic .m-tall{grid-row:span 2}
+.tb-mosaic .m-wide{grid-column:span 2}
+.xp-card{overflow:hidden}
+.xp-img{display:block;margin:-2.5rem -2.5rem 1.75rem;height:300px;overflow:hidden}
+.xp-img img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.xp-card:hover .xp-img img{transform:scale(1.04)}
+.f-step{align-items:flex-start}
+.f-step>div{flex:1}
+.f-thumb{flex:0 0 auto;display:block}
+.f-thumb img{display:block;width:96px;height:96px;object-fit:cover;border-radius:var(--r)}
+.tb-band{position:relative;min-height:440px;display:flex;align-items:flex-end;overflow:hidden;border-bottom:1px solid var(--ln)}
+.tb-band>picture,.tb-band>picture img{position:absolute;inset:0;width:100%;height:100%}
+.tb-band>picture img{object-fit:cover;object-position:center 40%}
+.tb-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,26,21,.05) 0%,rgba(12,26,21,.35) 45%,rgba(12,26,21,.92) 100%)}
+.tb-band-txt{position:relative;z-index:1;padding:3rem 3.5rem;max-width:760px}
+.tb-band-txt p{font-size:clamp(1.4rem,3vw,2.1rem);font-weight:600;line-height:1.25;color:#fff}
+.tb-band-txt p em{color:var(--gold);font-style:italic}
+.tb-band-txt span{display:block;margin-top:.9rem;font-size:var(--text-xs);letter-spacing:.04em;color:rgba(255,255,255,.75)}
+.why-list{list-style:none;margin:1.75rem 0 0;padding:0;border-top:1px solid var(--ln)}
+.why-list li{display:flex;gap:1rem;align-items:baseline;padding:.9rem 0;border-bottom:1px solid var(--ln)}
+.why-list span{font-size:var(--text-xs);color:var(--gold);font-weight:700;letter-spacing:.04em}
+.why-list p{font-size:var(--text-base);color:var(--txt2);line-height:1.6;margin:0}
+.why-list strong{color:var(--txt);font-weight:600}
+.why-goal{margin-top:1.5rem;font-size:1.05rem;font-weight:600;color:var(--txt);line-height:1.5}
+@media (max-width:900px){
+.tb-split{grid-template-columns:1fr;gap:2.5rem}
+.tb-duo,.tb-duo.flip{justify-self:center;max-width:420px}
+.tb-mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}
+.tb-mosaic{grid-auto-flow:dense}
+.xp-img{margin:-1.75rem -1.75rem 1.5rem;height:200px}
+.tb-band{min-height:360px}
+.tb-band-txt{padding:2rem 1.75rem}
+}
+/* Mobile: less scrolling */
+@media (max-width:680px){
+.core-truth,.format,.faq-sec{padding-top:3rem !important;padding-bottom:3rem !important}
+.ct-h2{margin-bottom:.75rem !important}
+.section-tag{margin-bottom:.75rem}
+.tb-split{gap:1.75rem}
+.tb-duo,.tb-duo.flip{max-width:330px;padding:0 0 12% 12%}
+.tb-duo .d-main img{aspect-ratio:3/2}
+.tb-duo .d-sub{width:38%}
+.tb-duo::before{display:none}
+.ct-card{padding:1.1rem 1.25rem}
+.ct-body p{margin-bottom:.75rem}
+.xp-fork,.benefits-grid,.tb-mosaic{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:.75rem;background:none;border-radius:0;margin-right:-1.75rem;padding-right:1.75rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.xp-fork::-webkit-scrollbar,.benefits-grid::-webkit-scrollbar,.tb-mosaic::-webkit-scrollbar{display:none}
+.xp-fork{margin-top:1.5rem}
+.xp-fork>.xp-card{flex:0 0 84%;scroll-snap-align:start;padding:1.5rem}
+.xp-img{margin:-1.5rem -1.5rem 1.25rem;height:170px}
+.xp-h3{font-size:1.25rem}
+.xp-desc{margin-bottom:1rem}
+.benefits-grid>.benefit{flex:0 0 72%;scroll-snap-align:start;border-radius:var(--r);padding:1.25rem}
+.tb-mosaic{margin-top:1.75rem}
+.tb-mosaic>picture{flex:0 0 72%;height:240px;scroll-snap-align:start}
+.usp{padding:1.25rem;margin-top:1.25rem}
+.usp p{font-size:1rem}
+.usp:not(.open) .usp-note{display:none}
+#athletic .ct-body:not(.open) p~p{display:none}
+.format-grid>*,.tb-split>*{min-width:0}
+#athletic .section-tag[style],#team .section-tag[style]{margin-top:2rem !important}
+#athletic .btn-gold,#team .btn-gold{margin-top:0}
+.activities{display:none}
+.format-grid{margin-top:1.5rem !important;gap:2rem}
+.f-step{padding:1rem 0}
+.inclusion-box{padding:1.5rem}
+.inclusion-box>br{display:none}
+.inclusion-box .ib-body+.ib-body{margin-top:.75rem}
+.inclusion-box .btn-gold{margin-top:1rem;display:inline-block}
+.tb-band{min-height:280px}
+.faq-list{margin-top:1.5rem}
+}
+@media (min-width:681px){.m-dots,.m-more{display:none}}
+/* Mobile: text as swipeable cards */
+@media (max-width:680px){
+.m-swipe{display:flex !important;flex-direction:row !important;overflow-x:auto;scroll-snap-type:x mandatory;gap:.75rem;margin-right:-1.75rem;padding-right:1.75rem;scrollbar-width:none;-webkit-overflow-scrolling:touch;border:0 !important}
+.m-swipe::-webkit-scrollbar{display:none}
+.m-swipe>*{scroll-snap-align:start;border-radius:var(--r)}
+.ct-cards.m-swipe>.ct-card{flex:0 0 82%;background:var(--deep3);border:1px solid var(--ln)}
+.why-list.m-swipe{margin-top:1.25rem}
+.why-list.m-swipe>li{flex:0 0 62%;flex-direction:column;gap:.5rem;padding:1.1rem 1.2rem;background:var(--deep2);border:1px solid var(--ln)}
+.why-list.m-swipe span{font-size:1rem}
+.m-swipe>.f-step{flex:0 0 82%;flex-direction:column;align-items:stretch;gap:.6rem;padding:0 0 1.25rem;background:var(--deep3);border:1px solid var(--ln) !important;overflow:hidden}
+.m-swipe>.f-step>.f-num,.m-swipe>.f-step>div{padding:0 1.25rem}
+.m-swipe>.f-step>.f-num{margin-top:0}
+.m-swipe>.f-step>.f-thumb{order:-1;display:block}
+.m-swipe>.f-step>.f-thumb img{width:100%;height:150px;border-radius:0}
+.m-swipe>.f-step .f-body{font-size:.95rem;line-height:1.65}
+.m-dots{display:flex;justify-content:center;gap:.4rem;margin-top:.9rem}
+.m-dots i{width:6px;height:6px;border-radius:50%;background:var(--ln2);transition:background .25s,width .25s}
+.m-dots i.on{background:var(--gold);width:18px;border-radius:3px}
+.m-clamp.clamped{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.m-more{background:none;border:0;padding:0;margin:.1rem 0 .75rem;color:var(--gold);font:inherit;font-size:var(--text-xs);font-weight:600;letter-spacing:.02em;cursor:pointer}
+}
+@media (max-width:520px){.f-thumb img{width:72px;height:72px}.f-step{gap:1rem}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Beginner Freediving Course (AIDA 2) in Barcelona","description":"Learn to freedive in Barcelona. Start with a free live online session, then join the AIDA 2 beginner course (pool + Mediterranean). Intro price €294, pay only if you continue.","provider":{"@type":"Organization","name":"Freediving Brain","url":"https://freedivingbrain.com"},"offers":{"@type":"Offer","price":"294","priceCurrency":"EUR","url":"https://freedivingbrain.com/freediving-course-barcelona","category":"Intro offer"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":["Online","Onsite"],"location":{"@type":"Place","name":"Barcelona, Spain"}}}</script>
+<style>
+/* ═══ Beginner course landing ═══ */
+.hero.course-hero{min-height:92vh;background-image:linear-gradient(180deg,rgba(12,26,21,.55) 0%,rgba(12,26,21,.25) 40%,rgba(12,26,21,.7) 75%,rgba(12,26,21,.97) 100%),image-set(url('/commx-21.avif') type('image/avif'),url('/commx-21.webp') type('image/webp'),url('/commx-21.jpg') type('image/jpeg'));background-size:cover;background-position:center 30%}
+.offer-pill{display:inline-flex;align-items:center;gap:.6rem;flex-wrap:wrap;margin:1.25rem 0 1.75rem;padding:.55rem 1rem;border:1px solid var(--gold2);border-radius:var(--r-2xl);background:rgba(12,26,21,.55);backdrop-filter:blur(6px);font-size:var(--text-xs);color:var(--txt)}
+.offer-pill s{color:var(--txt3)}
+.offer-pill b{color:var(--gold);font-size:1rem}
+.offer-pill .free{color:var(--teal);font-weight:700}
+.sec{padding:4.25rem 3.5rem;border-bottom:1px solid var(--ln)}
+.sec.alt{background:var(--deep2)}
+.sec-h2{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:600;line-height:1.15;margin-bottom:1rem;max-width:720px}
+.sec-h2 em{color:var(--gold);font-style:italic}
+.sec-lead{font-size:1.05rem;color:var(--txt2);line-height:1.8;max-width:640px}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem}
+.step{background:var(--deep3);border:1px solid var(--ln);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.step picture,.step img{display:block}
+.step img{width:100%;height:190px;object-fit:cover}
+.step-body{padding:1.4rem 1.5rem 1.6rem}
+.step-n{font-size:var(--text-xs);color:var(--gold);font-weight:700;letter-spacing:.04em}
+.step-t{font-size:1.15rem;font-weight:600;margin:.4rem 0 .5rem;color:var(--txt)}
+.step-d{font-size:var(--text-base);color:var(--txt2);line-height:1.7}
+.step-tag{display:inline-block;margin-top:.9rem;font-size:var(--text-xs);color:var(--teal);border:1px solid rgba(126,205,176,.35);border-radius:var(--r-2xl);padding:.3rem .8rem}
+.step.free{border-color:rgba(126,205,176,.4)}
+/* video */
+.vid-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:3rem;align-items:center;margin-top:2.25rem}
+.vid{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:16/9;background:#000;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.vid picture,.vid img{display:block;width:100%;height:100%}
+.vid img{object-fit:cover;opacity:.75}
+.vid iframe,.vid video{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid-play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem;background:none;border:0;cursor:pointer;color:#fff;font:inherit}
+.vid-play i{width:78px;height:78px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 10px rgba(201,168,76,.22);transition:transform .2s}
+.vid-play i::after{content:"";border-left:22px solid var(--deep);border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:6px}
+.vid-play:hover i{transform:scale(1.07)}
+.vid-play span{font-size:var(--text-xs);letter-spacing:.04em;background:rgba(12,26,21,.7);padding:.35rem .8rem;border-radius:var(--r-2xl)}
+.vid-play[disabled]{cursor:default}
+.reasons{list-style:none;padding:0;margin:0;border-top:1px solid var(--ln)}
+.reasons li{padding:1.1rem 0;border-bottom:1px solid var(--ln)}
+.reasons b{display:block;color:var(--txt);font-weight:600;margin-bottom:.25rem}
+.reasons span{color:var(--txt2);font-size:var(--text-base);line-height:1.6}
+/* learn (reuse duo) */
+.tb-split{display:grid;grid-template-columns:1.05fr .95fr;gap:3.5rem;align-items:center;max-width:1100px;margin-top:2rem}
+.tb-duo{position:relative;padding:0 0 18% 14%;max-width:480px;justify-self:end;width:100%}
+.tb-duo picture,.tb-duo img{display:block}
+.tb-duo .d-main img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
+.tb-duo .d-sub{position:absolute;left:0;bottom:0;width:46%}
+.tb-duo .d-sub img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:var(--r);border:6px solid var(--deep2);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.tb-duo::before{content:"";position:absolute;top:-14px;right:-14px;width:38%;height:38%;border-top:1px solid var(--gold2);border-right:1px solid var(--gold2);border-radius:0 var(--r) 0 0;pointer-events:none}
+.learn-list{list-style:none;padding:0;margin:0;border-top:1px solid var(--ln)}
+.learn-list li{display:flex;gap:1rem;align-items:baseline;padding:.9rem 0;border-bottom:1px solid var(--ln);color:var(--txt2);line-height:1.6}
+.learn-list span{font-size:var(--text-xs);color:var(--gold);font-weight:700;letter-spacing:.04em}
+.learn-list strong{color:var(--txt);font-weight:600}
+/* price */
+.price-wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.price-card{background:var(--deep3);border:1px solid var(--gold2);border-radius:var(--r);padding:2.25rem;position:relative}
+.price-badge{position:absolute;top:-13px;left:2.25rem;background:var(--gold);color:var(--deep);font-size:var(--text-xs);font-weight:700;padding:.3rem .8rem;border-radius:var(--r-2xl)}
+.price-name{font-size:1.25rem;font-weight:600;color:var(--txt)}
+.price-sub{font-size:var(--text-xs);color:var(--txt2);margin-top:.25rem}
+.price-row{display:flex;align-items:baseline;gap:.8rem;margin:1.25rem 0 .25rem}
+.price-old{font-size:1.2rem;color:var(--txt3);text-decoration:line-through}
+.price-new{font-size:3rem;font-weight:700;color:var(--gold);line-height:1}
+.price-save{font-size:var(--text-xs);color:var(--teal);font-weight:600}
+.price-list{list-style:none;padding:0;margin:1.5rem 0;display:grid;gap:.55rem}
+.price-list li{font-size:var(--text-base);color:var(--txt2);padding-left:1.5rem;position:relative;line-height:1.5}
+.price-list li::before{content:"";position:absolute;left:0;top:.5em;width:.7rem;height:.35rem;border-left:2px solid var(--teal);border-bottom:2px solid var(--teal);transform:rotate(-45deg)}
+.price-list li.hl{color:var(--txt)}
+.price-card .lab-cta{width:100%;justify-content:center}
+.price-fine{font-size:var(--text-xs);color:var(--txt3);margin-top:.9rem;text-align:center}
+.promise{border-left:2px solid var(--teal);padding-left:1.5rem}
+.promise p{font-size:clamp(1.3rem,2.6vw,1.8rem);font-weight:600;line-height:1.3;color:var(--txt)}
+.promise p em{color:var(--teal);font-style:italic}
+.promise span{display:block;margin-top:1rem;color:var(--txt2);line-height:1.7}
+/* coaches */
+.coaches{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem;max-width:760px}
+.coach{display:flex;gap:1rem;align-items:center;background:var(--deep3);border:1px solid var(--ln);border-radius:var(--r);padding:1rem}
+.coach img{width:72px;height:72px;border-radius:50%;object-fit:cover;display:block}
+.coach b{display:block;color:var(--txt);font-weight:600}
+.coach span{font-size:var(--text-xs);color:var(--txt2);line-height:1.5}
+/* photo band */
+.tb-band{position:relative;min-height:400px;display:flex;align-items:flex-end;overflow:hidden;border-bottom:1px solid var(--ln)}
+.tb-band>picture,.tb-band>picture img{position:absolute;inset:0;width:100%;height:100%}
+.tb-band>picture img{object-fit:cover;object-position:center 40%}
+.tb-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,26,21,.05) 0%,rgba(12,26,21,.35) 45%,rgba(12,26,21,.92) 100%)}
+.tb-band-txt{position:relative;z-index:1;padding:3rem 3.5rem;max-width:760px}
+.tb-band-txt p{font-size:clamp(1.4rem,3vw,2.1rem);font-weight:600;line-height:1.25;color:#fff}
+.tb-band-txt p em{color:var(--gold);font-style:italic}
+/* sticky mobile CTA */
+.m-cta{display:none}
+.m-dots{display:none}
+@media (max-width:900px){
+.sec{padding:3.25rem 1.75rem}
+.steps{grid-template-columns:1fr}
+.vid-grid,.price-wrap,.tb-split{grid-template-columns:1fr;gap:2rem}
+.tb-duo{justify-self:center;max-width:420px}
+.tb-band-txt{padding:2rem 1.75rem}
+}
+@media (max-width:680px){
+.hero.course-hero{min-height:88vh}
+.steps,.m-swipe{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:.75rem;margin-right:-1.75rem;padding-right:1.75rem;scrollbar-width:none}
+.steps::-webkit-scrollbar,.m-swipe::-webkit-scrollbar{display:none}
+.steps>.step{flex:0 0 82%;scroll-snap-align:start}
+.step img{height:150px}
+.m-dots{display:flex;justify-content:center;gap:.4rem;margin-top:.9rem}
+.m-dots i{width:6px;height:6px;border-radius:50%;background:var(--ln2);transition:background .25s,width .25s}
+.m-dots i.on{background:var(--gold);width:18px;border-radius:3px}
+.tb-duo{max-width:330px;padding:0 0 12% 12%}
+.tb-duo .d-main img{aspect-ratio:3/2}
+.tb-duo .d-sub{width:38%}
+.tb-duo::before{display:none}
+.coaches{grid-template-columns:1fr}
+.price-card{padding:1.75rem 1.4rem}
+.price-new{font-size:2.6rem}
+.tb-band{min-height:280px}
+.faq-list{margin-top:1.5rem}
+.m-cta{display:flex;position:fixed;left:.75rem;right:.75rem;bottom:.75rem;z-index:150;align-items:center;justify-content:space-between;gap:.75rem;background:rgba(12,26,21,.94);backdrop-filter:blur(12px);border:1px solid var(--gold2);border-radius:var(--r-lg);padding:.6rem .6rem .6rem 1rem;transform:translateY(140%);transition:transform .35s var(--ease)}
+.m-cta.show{transform:none}
+.m-cta p{font-size:var(--text-xs);color:var(--txt2);line-height:1.3}
+.m-cta p b{color:var(--gold);font-size:.95rem}
+.m-cta a{background:var(--gold);color:var(--deep);font-weight:700;font-size:var(--text-xs);padding:.7rem 1rem;border-radius:var(--r-xs);text-decoration:none;white-space:nowrap}
+footer{padding-bottom:6rem}
+}
+</style>
+</head>
+<body>
+
+<div class="cur-dot" id="curDot"></div>
+<div class="cur-ring" id="curRing"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="/" class="nav-logo">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="ng" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#7ecdb0" stop-opacity=".88"/>
+          <stop offset="55%" stop-color="#7ecdb0" stop-opacity=".48"/>
+          <stop offset="100%" stop-color="#3d9e7a" stop-opacity=".05"/>
+        </linearGradient>
+      </defs>
+      <circle cx="50" cy="50"     r="23" stroke="url(#ng)" stroke-width=".82" fill="none"/>
+      <circle cx="50" cy="27"     r="23" stroke="url(#ng)" stroke-width=".68" fill="none"/>
+      <circle cx="69.9" cy="38.5" r="23" stroke="url(#ng)" stroke-width=".68" fill="none"/>
+      <circle cx="69.9" cy="61.5" r="23" stroke="url(#ng)" stroke-width=".68" fill="none"/>
+      <circle cx="50" cy="73"     r="23" stroke="url(#ng)" stroke-width=".68" fill="none"/>
+      <circle cx="30.1" cy="61.5" r="23" stroke="url(#ng)" stroke-width=".68" fill="none"/>
+      <circle cx="30.1" cy="38.5" r="23" stroke="url(#ng)" stroke-width=".68" fill="none"/>
+    </svg>
+    Freediving <strong>Brain</strong>
+  </a>
+  <div class="nav-links">
+    <a href="/packages">Courses</a>
+    <a href="/training">Training</a>
+    <a href="/expeditions">Travel</a>
+    <a href="/team-building">Teams</a>
+    <a href="/about">Our Story</a><a href="/learn">Learn</a>
+    <a href="/blog">Blog</a><a href="/faq">FAQ</a>
+    <a href="#apply" class="nav-cta">Talk with us</a>
+  </div>
+  <button class="nav-ham" id="navHam" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMobileNav()"><span></span><span></span><span></span></button></nav>
+<div class="nav-mobile" id="navMobile" role="dialog" aria-label="Mobile navigation">
+  <a href="/packages" onclick="closeMobileNav()">Courses</a>
+  <a href="/training" onclick="closeMobileNav()">Training</a>
+  <a href="/expeditions" onclick="closeMobileNav()">Travel</a>
+  <a href="/team-building" onclick="closeMobileNav()">Teams</a>
+  <a href="/about" onclick="closeMobileNav()">Our Story</a>
+  <a href="/blog" onclick="closeMobileNav()">Blog</a>
+  <a href="/faq" onclick="closeMobileNav()">FAQ</a>
+  <a href="#apply" class="nav-mobile-cta" onclick="closeMobileNav()">Talk with us</a>
+</div>
+
+<!-- HERO -->
+<section class="hero course-hero">
+  <div>
+    <p class="lab-eyebrow">Beginner freediving · AIDA 2 · Barcelona</p>
+    <h1>Learn to freedive<br><span style="color:var(--gold);font-style:italic">Try it free first.</span></h1>
+    <p class="hero-brandline">Start with a free live online session. Love it? Join us in Barcelona for the full beginner course. Not for you? You don't pay anything.</p>
+    <div class="offer-pill"><span class="free">Online intro: free</span><span>·</span><span>Full course <s>€360</s> <b>€294</b></span></div>
+    <div class="hero-cta-row">
+      <a href="#apply" class="lab-cta">Book my free online session &rarr;</a>
+      <a href="#how" class="lab-cta ghost">How it works &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec alt" id="how">
+  <p class="section-tag reveal">How it works</p>
+  <h2 class="sec-h2 reveal">Try it online. Then <em>meet us in the water.</em></h2>
+  <p class="sec-lead reveal">No risk, no pressure. You only pay once you've met us and decided you want to carry on.</p>
+  <div class="steps reveal">
+    <div class="step free"><picture><source srcset="/c2s-dry.avif" type="image/avif"><source srcset="/c2s-dry.webp" type="image/webp"><img src="/c2s-dry.jpg" alt="A relaxed breathing session on land" width="1100" height="825" loading="lazy" decoding="async" style="object-position:center 35%"></picture><div class="step-body"><p class="step-n">01</p><p class="step-t">Free live online session</p><p class="step-d">Meet your instructor live. Learn how a breath-hold works, how to relax, the basics of equalisation and how freedivers stay safe.</p><span class="step-tag">Free</span></div></div>
+    <div class="step"><picture><source srcset="/pl-band-3.avif" type="image/avif"><source srcset="/pl-band-3.webp" type="image/webp"><img src="/pl-band-3.jpg" alt="Coaching a calm breath-hold in the pool" width="900" height="1200" loading="lazy" decoding="async" style="object-position:center 60%"></picture><div class="step-body"><p class="step-n">02</p><p class="step-t">You decide</p><p class="step-d">Enjoyed it? Book your place in Barcelona. Not for you? That's fine. You don't pay anything.</p><span class="step-tag">No payment until you continue</span></div></div>
+    <div class="step"><picture><source srcset="/students-buoy-openwater.avif" type="image/avif"><source srcset="/students-buoy-openwater.webp" type="image/webp"><img src="/students-buoy-openwater.jpg" alt="Students at the buoy in open water" width="1400" height="1050" loading="lazy" decoding="async" style="object-position:center 40%"></picture><div class="step-body"><p class="step-n">03</p><p class="step-t">Barcelona: pool + sea</p><p class="step-d">2.5 days of pool training and Mediterranean open water, building calmly towards around 20 m and your AIDA 2 certificate.</p><span class="step-tag">€294 intro price</span></div></div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="sec" id="why">
+  <p class="section-tag reveal">Why apply</p>
+  <h2 class="sec-h2 reveal">Freediving starts with <em>calm, not depth.</em></h2>
+  <div class="vid-grid">
+    <div class="vid reveal" id="vid" data-src="">
+      <picture><source srcset="/commx-53.avif" type="image/avif"><source srcset="/commx-53.webp" type="image/webp"><img src="/commx-53.jpg" alt="A smiling group in the water after a dive" width="975" height="1100" loading="lazy" decoding="async"></picture>
+      <button type="button" class="vid-play" id="vidPlay" aria-label="Play video"><i></i><span id="vidLabel">Video coming soon</span></button>
+    </div>
+    <ul class="reasons reveal">
+      <li><b>Mind-first coaching</b><span>Relaxation and breathing come first. Depth follows naturally.</span></li>
+      <li><b>Small groups</b><span>Personal feedback from an AIDA Instructor Trainer, not a crowd.</span></li>
+      <li><b>Pool and the Mediterranean</b><span>Learn safely in the pool, then dive in the open sea.</span></li>
+      <li><b>All equipment included</b><span>Just bring a swimsuit and a towel.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- WHAT YOU LEARN -->
+<section class="sec alt">
+  <p class="section-tag reveal">What you'll learn</p>
+  <h2 class="sec-h2 reveal">From your first calm breath-hold<br>to <em>your first dive to depth.</em></h2>
+  <div class="tb-split">
+    <ul class="learn-list reveal">
+      <li><span>01</span><p><strong>Breathing &amp; relaxation.</strong> Slow down your body and mind before every dive.</p></li>
+      <li><span>02</span><p><strong>Breath-hold.</strong> Longer, calmer holds in the pool.</p></li>
+      <li><span>03</span><p><strong>Equalisation.</strong> Clear your ears comfortably as you go down.</p></li>
+      <li><span>04</span><p><strong>Finning &amp; technique.</strong> Move efficiently and save oxygen.</p></li>
+      <li><span>05</span><p><strong>Safety &amp; buddy system.</strong> How freedivers look after each other.</p></li>
+      <li><span>06</span><p><strong>Open water.</strong> Calm, guided dives around 20 m.</p></li>
+    </ul>
+    <div class="tb-duo reveal"><picture class="d-main"><source srcset="/training-line.avif" type="image/avif"><source srcset="/training-line.webp" type="image/webp"><img src="/training-line.jpg" alt="A freediver calmly pulling up the line" width="1400" height="875" loading="lazy" decoding="async" style="object-position:center 40%"></picture><picture class="d-sub"><source srcset="/tr-pool.avif" type="image/avif"><source srcset="/tr-pool.webp" type="image/webp"><img src="/tr-pool.jpg" alt="Gliding through the pool" width="1500" height="1125" loading="lazy" decoding="async"></picture></div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="sec" id="price">
+  <div class="price-wrap">
+    <div class="reveal">
+      <p class="section-tag">The offer</p>
+      <h2 class="sec-h2">Pay only if you <em>want to continue.</em></h2>
+      <div class="promise"><p>Try the online session for free.<br><em>No card, no commitment.</em></p><span>If you decide freediving isn't for you after the online session, you don't pay anything. If you love it, you join the full course in Barcelona at the intro price.</span></div>
+    </div>
+    <div class="price-card reveal">
+      <span class="price-badge">Intro offer</span>
+      <p class="price-name">Beginner Freediving Course (AIDA 2)</p>
+      <p class="price-sub">Online intro + 2.5 days in Barcelona</p>
+      <div class="price-row"><span class="price-old">€360</span><span class="price-new">€294</span></div>
+      <p class="price-save">Save €66 · online session free</p>
+      <ul class="price-list">
+        <li class="hl">Free live online session first</li>
+        <li>Pool training in Barcelona</li>
+        <li>Mediterranean open-water dives, around 20 m</li>
+        <li>Equalisation, finning and relaxation</li>
+        <li>Safety and buddy skills</li>
+        <li>AIDA 2 certificate</li>
+        <li>All equipment included</li>
+      </ul>
+      <a href="#apply" class="lab-cta">Book my free online session &rarr;</a>
+      <p class="price-fine">You only pay if you continue to Barcelona.</p>
+    </div>
+  </div>
+  <div class="coaches reveal">
+    <div class="coach"><picture><source srcset="/shebl.avif" type="image/avif"><source srcset="/shebl.webp" type="image/webp"><img src="/shebl.jpg" alt="Shebl" width="1000" height="1250" loading="lazy" decoding="async"></picture><div><b>Shebl</b><span>AIDA Instructor Trainer &amp; Judge · Founder</span></div></div>
+    <div class="coach"><picture><source srcset="/rimi.avif" type="image/avif"><source srcset="/rimi.webp" type="image/webp"><img src="/rimi.jpg" alt="Rimi" width="1200" height="1600" loading="lazy" decoding="async"></picture><div><b>Rimi</b><span>Freediving Brain coach · Barcelona</span></div></div>
+  </div>
+</section>
+
+<!-- PHOTO BAND -->
+<div class="tb-band">
+  <picture><source srcset="/comm-boat-smiles.avif" type="image/avif"><source srcset="/comm-boat-smiles.webp" type="image/webp"><img src="/comm-boat-smiles.jpg" alt="A happy group of freedivers on the boat" width="1100" height="825" loading="lazy" decoding="async"></picture>
+  <div class="tb-band-txt reveal"><p>One breath at a time.<br><em>You'll surprise yourself.</em></p></div>
+</div>
+
+<!-- FAQ -->
+<section class="faq-sec">
+  <p class="section-tag reveal">Good to know</p>
+  <h2 class="ct-h2 reveal" style="max-width:560px">Questions people <em>ask first.</em></h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>Do I need any experience?</summary><p>No. The course is made for beginners. You just need to be comfortable in the water.</p></details>
+    <details class="faq-item"><summary>What happens in the free online session?</summary><p>It's a live session with your instructor. You learn the basics of breath-hold, relaxation, equalisation and safety, and you can ask anything before deciding.</p></details>
+    <details class="faq-item"><summary>What if I don't want to continue?</summary><p>Then you don't pay anything. The online session is free, with no commitment.</p></details>
+    <details class="faq-item"><summary>Where does the course take place?</summary><p>In Barcelona: pool sessions first, then open-water dives in the Mediterranean.</p></details>
+    <details class="faq-item"><summary>How deep will I go?</summary><p>The AIDA 2 course works towards dives of around 20 m, always at your own pace and comfort.</p></details>
+    <details class="faq-item"><summary>Is equipment included?</summary><p>Yes, all equipment is included in the course price.</p></details>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section class="enquiry" id="apply">
+  <div class="eq-inner">
+    <p class="section-tag reveal" style="justify-content:center">Start for free</p>
+    <h2 class="eq-h2 reveal">Book your free<br><em>online session.</em></h2>
+    <p class="eq-sub reveal">Tell us a little about yourself and we'll send you the next online session date. Free, with no commitment.</p>
+    <form class="eq-form reveal" name="course-apply" method="POST" onsubmit="handleApply(event)">
+      <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
+      <div class="eq-field"><label class="eq-label">Name</label><input type="text" name="name" placeholder="Your name" required aria-label="Your name"></div>
+      <div class="eq-field"><label class="eq-label">Email</label><input type="email" name="email" placeholder="your@email.com" required aria-label="Your email address"></div>
+      <div class="eq-field"><label class="eq-label">WhatsApp (optional)</label><input type="tel" name="phone" placeholder="+34 ..." aria-label="WhatsApp number"></div>
+      <div class="eq-field"><label class="eq-label">Your experience</label>
+        <select name="experience" required aria-label="Your experience">
+          <option value="">Select one</option>
+          <option>Never tried freediving</option>
+          <option>Tried snorkelling or a try-dive</option>
+          <option>Scuba diver</option>
+          <option>Already freedive a little</option>
+        </select>
+      </div>
+      <div class="eq-field full"><label class="eq-label">When would you like to come to Barcelona?</label><input type="text" name="dates" placeholder="e.g. next month, weekends, flexible" aria-label="Preferred dates"></div>
+      <div class="eq-field full"><label class="eq-label">Anything we should know?</label><textarea name="message" rows="2" placeholder="Questions, goals, how you feel about the water..." aria-label="Your message"></textarea></div>
+      <div class="eq-submit"><button type="submit">Book my free session &rarr;</button></div>
+    </form>
+    <p class="eq-note reveal">Free online session &middot; Pay only if you continue &middot; Reply within 48 hours</p>
+  </div>
+</section>
+
+<div class="m-cta" id="mCta" aria-hidden="true"><p>Online intro <b>free</b><br>Full course <b>€294</b></p><a href="#apply" tabindex="-1">Book free session</a></div>
+
+<!-- FOOTER -->
+<footer><div class="footer-watermark" aria-hidden="true"></div>
+  <p class="footer-logo"><picture><source srcset="/logo-mark.webp" type="image/webp"><img src="/logo-mark.png" alt="" width="44" height="44"></picture>Freediving <span>Brain</span></p>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/packages">Courses</a>
+    <a href="/training">Training</a>
+    <a href="/expeditions">Travel</a>
+    <a href="/team-building">Teams</a>
+    <a href="/#about">About</a>
+  </div>
+  <p class="footer-copy">© 2026 Freediving Brain · Barcelona</p>
+</footer>
+
+<script>
+/* CURSOR */
+const dot=document.getElementById('curDot'),ring=document.getElementById('curRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px'});
+(function loop(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop)})();
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{dot.classList.add('hov');ring.classList.add('hov')});
+  el.addEventListener('mouseleave',()=>{dot.classList.remove('hov');ring.classList.remove('hov')});
+});
+/* NAV */
+window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',scrollY>60));
+/* REVEAL */
+const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')}),{threshold:.1});
+document.querySelectorAll('.reveal,.reveal-left').forEach(r=>ro.observe(r));
+
+/* VIDEO: set data-src on #vid to a YouTube/Vimeo embed URL or an .mp4 path */
+(function(){
+  var box=document.getElementById('vid'),btn=document.getElementById('vidPlay'),src=(box.getAttribute('data-src')||'').trim();
+  if(!src){btn.disabled=true;btn.setAttribute('aria-label','Video coming soon');return;}
+  document.getElementById('vidLabel').textContent='Watch: why freediving';
+  btn.addEventListener('click',function(){
+    var el;
+    if(/\.mp4($|\?)/i.test(src)){el=document.createElement('video');el.src=src;el.controls=true;el.autoplay=true;el.playsInline=true;}
+    else{el=document.createElement('iframe');el.src=src+(src.indexOf('?')<0?'?':'&')+'autoplay=1';el.allow='autoplay; fullscreen; picture-in-picture';el.allowFullscreen=true;el.title='Why freediving with Freediving Brain';}
+    box.appendChild(el);btn.remove();
+  });
+})();
+
+/* APPLY → FormSubmit (emails hello@freedivingbrain.com) */
+function handleApply(e){
+  e.preventDefault();
+  var form=e.target;
+  if((form.querySelector('[name="bot-field"]')||{}).value) return;
+  var btn=form.querySelector('button');
+  var fd=new FormData(form);
+  fd.delete('bot-field');
+  fd.append('course','Beginner course (AIDA 2) — free online intro, then €294 in Barcelona');
+  fd.append('_subject','New free online session request — beginner course');
+  fd.append('_template','table');
+  fd.append('_captcha','false');
+  fd.append('_autoresponse','Thanks for your interest in learning to freedive with Freediving Brain! We will send you the next free online session date within 48 hours. — Shebl');
+  fetch('https://formsubmit.co/ajax/hello@freedivingbrain.com',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded','Accept':'application/json'},body:new URLSearchParams(fd).toString()}).catch(function(){});
+  btn.textContent='Sent! We\'ll be in touch within 48 hours.';
+  btn.style.background='#4aaa86';
+  btn.disabled=true;
+}
+
+/* MOBILE: swipe dots + sticky CTA */
+(function(){
+  if(!window.matchMedia('(max-width:680px)').matches) return;
+  document.querySelectorAll('.steps').forEach(function(row){
+    var items=[].slice.call(row.children); if(items.length<2) return;
+    var dots=document.createElement('div'); dots.className='m-dots'; dots.setAttribute('aria-hidden','true');
+    items.forEach(function(_,i){var d=document.createElement('i'); if(!i) d.className='on'; dots.appendChild(d);});
+    row.parentNode.insertBefore(dots,row.nextSibling);
+    var t; row.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(function(){
+      var x=row.scrollLeft,best=0,bd=1e9;
+      items.forEach(function(el,i){var d=Math.abs(el.offsetLeft-row.offsetLeft-x); if(d<bd){bd=d;best=i;}});
+      if(row.scrollLeft+row.clientWidth>=row.scrollWidth-4) best=items.length-1;
+      [].forEach.call(dots.children,function(d,i){d.className=i===best?'on':'';});
+    },60);},{passive:true});
+  });
+  var cta=document.getElementById('mCta'),apply=document.getElementById('apply'),hero=document.querySelector('.course-hero');
+  function upd(){var a=apply.getBoundingClientRect(),h=hero.getBoundingClientRect();var on=h.bottom<0&&a.top>window.innerHeight;cta.classList.toggle('show',on);cta.setAttribute('aria-hidden',String(!on));cta.querySelector('a').tabIndex=on?0:-1;}
+  window.addEventListener('scroll',upd,{passive:true});upd();
+})();
+</script>
+<script>
+function toggleMobileNav(){var ham=document.getElementById('navHam'),menu=document.getElementById('navMobile');var isOpen=menu.classList.contains('open');ham.classList.toggle('open');menu.classList.toggle('open');ham.setAttribute('aria-expanded',String(!isOpen));document.body.style.overflow=isOpen?'':'hidden';}
+function closeMobileNav(){var ham=document.getElementById('navHam'),menu=document.getElementById('navMobile');if(!ham||!menu)return;ham.classList.remove('open');menu.classList.remove('open');ham.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+(function(){var m=document.getElementById('navMobile');if(m)m.addEventListener('click',function(e){if(e.target===e.currentTarget)closeMobileNav();});window.addEventListener('resize',function(){if(window.innerWidth>900)closeMobileNav();});})();
+</script>
+</body>
+</html>
