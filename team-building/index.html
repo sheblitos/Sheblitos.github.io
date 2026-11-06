@@ -329,12 +329,52 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
   line-height: 1.1;
   letter-spacing: normal;
 }
-/* Small, uncropped photo rows spread through the page */
-.tb-pics{display:flex;flex-wrap:wrap;gap:.75rem;margin:2.25rem 0}
-.tb-pics figure{margin:0;flex:0 0 auto;display:flex;flex-direction:column}
-.tb-pics img{display:block;height:150px;width:auto;border-radius:6px}
-.tb-pics figcaption{width:0;min-width:100%;font-size:var(--text-xs);line-height:1.35;color:var(--txt2);margin-top:.45rem}
-@media (max-width:680px){.tb-pics{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.5rem;-webkit-overflow-scrolling:touch}.tb-pics figure{scroll-snap-align:start}.tb-pics img{height:130px}}
+/* Photos woven into the content (no captions) */
+.tb-split{display:grid;grid-template-columns:1.05fr .95fr;gap:3.5rem;align-items:center;max-width:1100px}
+.tb-split .ct-cards{margin-top:0}
+.tb-duo{position:relative;padding:0 0 18% 14%;max-width:480px;justify-self:end;width:100%}
+.tb-duo picture,.tb-duo img{display:block}
+.tb-duo .d-main img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
+.tb-duo .d-sub{position:absolute;left:0;bottom:0;width:46%}
+.tb-duo .d-sub img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:var(--r);border:6px solid var(--deep2);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.tb-duo.on-deep .d-sub img{border-color:var(--deep)}
+.tb-duo.flip{padding:0 14% 18% 0;justify-self:start}
+.tb-duo.flip .d-sub{left:auto;right:0}
+.tb-duo.wide .d-main img{aspect-ratio:4/3}
+.tb-duo::before{content:"";position:absolute;top:-14px;right:-14px;width:38%;height:38%;border-top:1px solid var(--gold2);border-right:1px solid var(--gold2);border-radius:0 var(--r) 0 0;pointer-events:none}
+.tb-duo.flip::before{right:auto;left:-14px;border-right:0;border-left:1px solid var(--gold2);border-radius:var(--r) 0 0 0}
+.tb-mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:.75rem;margin:2.75rem 0 0}
+.tb-mosaic picture{display:block;overflow:hidden;border-radius:var(--r)}
+.tb-mosaic img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.tb-mosaic picture:hover img{transform:scale(1.04)}
+.tb-mosaic .m-tall{grid-row:span 2}
+.tb-mosaic .m-wide{grid-column:span 2}
+.xp-card{overflow:hidden}
+.xp-img{display:block;margin:-2.5rem -2.5rem 1.75rem;height:230px;overflow:hidden}
+.xp-img img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.xp-card:hover .xp-img img{transform:scale(1.04)}
+.f-step{align-items:flex-start}
+.f-step>div{flex:1}
+.f-thumb{flex:0 0 auto;display:block}
+.f-thumb img{display:block;width:96px;height:96px;object-fit:cover;border-radius:var(--r)}
+.tb-band{position:relative;min-height:440px;display:flex;align-items:flex-end;overflow:hidden;border-bottom:1px solid var(--ln)}
+.tb-band>picture,.tb-band>picture img{position:absolute;inset:0;width:100%;height:100%}
+.tb-band>picture img{object-fit:cover;object-position:center 40%}
+.tb-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,26,21,.05) 0%,rgba(12,26,21,.35) 45%,rgba(12,26,21,.92) 100%)}
+.tb-band-txt{position:relative;z-index:1;padding:3rem 3.5rem;max-width:760px}
+.tb-band-txt p{font-size:clamp(1.4rem,3vw,2.1rem);font-weight:600;line-height:1.25;color:#fff}
+.tb-band-txt p em{color:var(--gold);font-style:italic}
+.tb-band-txt span{display:block;margin-top:.9rem;font-size:var(--text-xs);letter-spacing:.04em;color:rgba(255,255,255,.75)}
+@media (max-width:900px){
+.tb-split{grid-template-columns:1fr;gap:2.5rem}
+.tb-duo,.tb-duo.flip{justify-self:center;max-width:420px}
+.tb-mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}
+.tb-mosaic{grid-auto-flow:dense}
+.xp-img{margin:-1.75rem -1.75rem 1.5rem;height:200px}
+.tb-band{min-height:360px}
+.tb-band-txt{padding:2rem 1.75rem}
+}
+@media (max-width:520px){.f-thumb img{width:72px;height:72px}.f-step{gap:1rem}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Team Building Workshops, Experiences & Retreats","serviceType":"Team building workshops, experiences and retreats","description":"Freediving and breathwork team building for corporate teams and startups, from short Barcelona workshops to full-day experiences and multi-day retreats.","provider":{"@type":"Organization","name":"Freediving Brain","url":"https://freedivingbrain.com"},"areaServed":[{"@type":"City","name":"Barcelona"},{"@type":"Country","name":"Spain"}],"url":"https://freedivingbrain.com/team-building"}</script>
 </head>
@@ -407,11 +447,8 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
   <div class="ct-body reveal" style="max-width:760px;margin-bottom:2rem">
     <p>Not every company needs the same commitment. We can build the experience around your agenda, from a short Barcelona workshop to a full team day or a destination retreat.</p>
   </div>
-  <div class="tb-pics reveal">
-    <figure><picture><source srcset="/comm-boat-smiles.avif" type="image/avif"><source srcset="/comm-boat-smiles.webp" type="image/webp"><img src="/comm-boat-smiles.jpg" alt="The whole team" width="1100" height="825" loading="lazy" decoding="async"></picture><figcaption>The whole team</figcaption></figure>
-    <figure><picture><source srcset="/commx-54.avif" type="image/avif"><source srcset="/commx-54.webp" type="image/webp"><img src="/commx-54.jpg" alt="Out of the water" width="836" height="1100" loading="lazy" decoding="async"></picture><figcaption>Out of the water</figcaption></figure>
-  </div>
-  <div class="ct-cards reveal" style="max-width:900px">
+    <div class="tb-split">
+  <div class="ct-cards reveal">
     <div class="ct-card">
       <p class="ctc-tag">2–4 hours · Barcelona</p>
       <p class="ctc-title">Team Building Workshops</p>
@@ -428,6 +465,8 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
       <p class="ctc-body">A full offsite experience that can combine freediving, breathwork, team development and destination activities in places such as Barcelona or Dahab.</p>
     </div>
   </div>
+  <div class="tb-duo reveal"><picture class="d-main"><source srcset="/commx-54.avif" type="image/avif"><source srcset="/commx-54.webp" type="image/webp"><img src="/commx-54.jpg" alt="A team celebrating together in the desert after a freediving day" width="836" height="1100" loading="lazy" decoding="async"></picture><picture class="d-sub"><source srcset="/commx-12.avif" type="image/avif"><source srcset="/commx-12.webp" type="image/webp"><img src="/commx-12.jpg" alt="Two freedivers celebrating underwater" width="680" height="1100" loading="lazy" decoding="async" style="object-position:center 30%"></picture></div>
+  </div>
   <div style="margin-top:2rem;display:flex;gap:.8rem;flex-wrap:wrap">
     <a href="/corporate-team-building-barcelona" class="btn-gold" style="font-size:var(--text-xs)">Corporate team building Barcelona &rarr;</a>
     <a href="#enquire" class="btn-ghost" style="font-size:var(--text-xs)">Build a custom format &rarr;</a>
@@ -443,10 +482,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
       <p>Teams carry stress, thin communication and eroding trust. Athletes feel it on the day, nerves and focus that slips at the worst moment. The root is the same: a nervous system stuck in fight-or-flight, and you can't connect or perform from there.</p>
       <p>Most training targets skills and strategy. Almost none trains the state underneath them, how a person responds the moment pressure arrives.</p>
     </div>
-    <div class="tb-pics">
-      <figure><picture><source srcset="/c2s-dry.avif" type="image/avif"><source srcset="/c2s-dry.webp" type="image/webp"><img src="/c2s-dry.jpg" alt="Breathwork on land" width="1100" height="825" loading="lazy" decoding="async"></picture><figcaption>Breathwork on land</figcaption></figure>
-      <figure><picture><source srcset="/pl-band-3.avif" type="image/avif"><source srcset="/pl-band-3.webp" type="image/webp"><img src="/pl-band-3.jpg" alt="Static, with a buddy" width="900" height="1200" loading="lazy" decoding="async"></picture><figcaption>Static, with a buddy</figcaption></figure>
-    </div>
+    <div class="tb-duo flip on-deep" style="margin-top:2.5rem"><picture class="d-main"><source srcset="/pool-coaching-session.avif" type="image/avif"><source srcset="/pool-coaching-session.webp" type="image/webp"><img src="/pool-coaching-session.jpg" alt="Breath-hold practice in the pool with a buddy watching" width="585" height="1400" loading="lazy" decoding="async" style="object-position:center 70%"></picture><picture class="d-sub"><source srcset="/pl-band-3.avif" type="image/avif"><source srcset="/pl-band-3.webp" type="image/webp"><img src="/pl-band-3.jpg" alt="Coaches guiding a static breath-hold" width="900" height="1200" loading="lazy" decoding="async"></picture></div>
   </div>
   <div class="ct-cards reveal">
     <div class="ct-card"><p class="ctc-tag">For teams</p><p class="ctc-title">Stress, silos &amp; shallow trust</p><p class="ctc-body">High workload and constant pressure quietly pull a team apart, less real communication, weaker psychological safety, slower decisions.</p></div>
@@ -459,14 +495,13 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 <section class="core-truth" style="display:block;background:var(--deep2)">
   <p class="section-tag reveal">Why freediving</p>
   <h2 class="ct-h2 reveal" style="max-width:640px;margin-bottom:1.25rem">Freediving isn't the point.<br>It's the <em>mirror.</em></h2>
-  <div class="ct-body reveal" style="max-width:640px">
+  <div class="tb-split">
+  <div class="ct-body reveal">
     <p>Freediving is not about holding your breath. A single breath underwater strips away every distraction and shows you, in real time, exactly how you respond to stress. Panic, and you lose your air. Regulate, and you find a calm you didn't know you had.</p>
     <p>In that environment, people learn breathing, nervous-system awareness, emotional regulation, trust, communication and calm decision-making, not as theory, but as lived experience. None of it stays in the water. It transfers to the meeting, the match and the hard conversation.</p>
     <p style="color:var(--txt);font-weight:600">The water is simply the classroom.</p>
   </div>
-  <div class="tb-pics reveal">
-    <figure><picture><source srcset="/tr-pool.avif" type="image/avif"><source srcset="/tr-pool.webp" type="image/webp"><img src="/tr-pool.jpg" alt="Dynamic in the pool" width="1500" height="1125" loading="lazy" decoding="async"></picture><figcaption>Dynamic in the pool</figcaption></figure>
-    <figure><picture><source srcset="/commx-21.avif" type="image/avif"><source srcset="/commx-21.webp" type="image/webp"><img src="/commx-21.jpg" alt="Depth, together on the line" width="985" height="1100" loading="lazy" decoding="async"></picture><figcaption>Depth, together on the line</figcaption></figure>
+  <div class="tb-duo reveal"><picture class="d-main"><source srcset="/commx-21.avif" type="image/avif"><source srcset="/commx-21.webp" type="image/webp"><img src="/commx-21.jpg" alt="Two freedivers descending together along the line" width="985" height="1100" loading="lazy" decoding="async"></picture><picture class="d-sub"><source srcset="/tr-pool.avif" type="image/avif"><source srcset="/tr-pool.webp" type="image/webp"><img src="/tr-pool.jpg" alt="A diver gliding through the pool" width="1500" height="1125" loading="lazy" decoding="async"></picture></div>
   </div>
   <div class="flow reveal" style="margin-top:2.25rem" aria-label="How the training transfers: stress to breathing to nervous system to mindset to communication to trust to performance">
     <span class="flow-step start">Stress</span><span class="flow-arrow">&rarr;</span>
@@ -484,18 +519,16 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 <section class="core-truth" style="display:block">
   <p class="section-tag reveal">Who we work with</p>
   <h2 class="ct-h2 reveal" style="max-width:640px;margin-bottom:.5rem">Built for teams.<br><em>Adapted to your people.</em></h2>
-  <div class="tb-pics reveal">
-    <figure><picture><source srcset="/commx-05.avif" type="image/avif"><source srcset="/commx-05.webp" type="image/webp"><img src="/commx-05.jpg" alt="Suited up and ready" width="1100" height="825" loading="lazy" decoding="async"></picture><figcaption>Suited up and ready</figcaption></figure>
-    <figure><picture><source srcset="/students-buoy-openwater.avif" type="image/avif"><source srcset="/students-buoy-openwater.webp" type="image/webp"><img src="/students-buoy-openwater.jpg" alt="Waiting for the next dive" width="1400" height="1050" loading="lazy" decoding="async"></picture><figcaption>Waiting for the next dive</figcaption></figure>
-  </div>
   <div class="xp-fork reveal">
     <a href="#team" class="xp-card">
+      <picture class="xp-img"><source srcset="/commx-05.avif" type="image/avif"><source srcset="/commx-05.webp" type="image/webp"><img src="/commx-05.jpg" alt="A suited-up team ready to get in the water" width="1100" height="825" loading="lazy" decoding="async" style="object-position:center 35%"></picture>
       <p class="xp-tag">Corporate &amp; startup teams</p>
       <p class="xp-h3">Corporate team building</p>
       <p class="xp-desc">Turn a stretched, siloed team into one that trusts, communicates and stays calm together, through a day where everyone literally keeps each other safe.</p>
       <span class="xp-link">Explore team building &rarr;</span>
     </a>
     <a href="#athletic" class="xp-card teal">
+      <picture class="xp-img"><source srcset="/commx-15.avif" type="image/avif"><source srcset="/commx-15.webp" type="image/webp"><img src="/commx-15.jpg" alt="A freediver in freefall along the line" width="962" height="1100" loading="lazy" decoding="async" style="object-position:center 30%"></picture>
       <p class="xp-tag">Athletes &amp; coaches</p>
       <p class="xp-h3">Athletic performance</p>
       <p class="xp-desc">Train the mental game, composure, breath control, focus and recovery, that decides how you perform when the pressure is highest.</p>
@@ -512,11 +545,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
     <p>In the water, one person dives and one keeps them safe. Everyone learns rescue. <em>Everyone depends on everyone.</em> Titles, departments and job titles disappear, the CEO and the newest hire are equal, both just learning to breathe and trust the person beside them.</p>
     <p class="usp-note">This isn't a metaphor for trust or a trust-fall exercise. It's trust, actually happening, with real stakes, in real time. That's what no meeting room, ropes course or offsite can manufacture, and it's what people carry back to work.</p>
   </div>
-  <div class="tb-pics reveal">
-    <figure><picture><source srcset="/comm-sunset.avif" type="image/avif"><source srcset="/comm-sunset.webp" type="image/webp"><img src="/comm-sunset.jpg" alt="Trust at the buoy" width="1100" height="619" loading="lazy" decoding="async"></picture><figcaption>Trust at the buoy</figcaption></figure>
-    <figure><picture><source srcset="/comm-dahab-buoy.avif" type="image/avif"><source srcset="/comm-dahab-buoy.webp" type="image/webp"><img src="/comm-dahab-buoy.jpg" alt="Buoy break" width="1100" height="825" loading="lazy" decoding="async"></picture><figcaption>Buoy break</figcaption></figure>
-    <figure><picture><source srcset="/commx-52.avif" type="image/avif"><source srcset="/commx-52.webp" type="image/webp"><img src="/commx-52.jpg" alt="Laughs between dives" width="1100" height="962" loading="lazy" decoding="async"></picture><figcaption>Laughs between dives</figcaption></figure>
-  </div>
+  <div class="tb-mosaic reveal" aria-label="Moments from our team days"><picture class="m-tall"><source srcset="/commx-53.avif" type="image/avif"><source srcset="/commx-53.webp" type="image/webp"><img src="/commx-53.jpg" alt="A group selfie in the water after a dive" width="975" height="1100" loading="lazy" decoding="async"></picture><picture class="m-wide"><source srcset="/comm-sunset.avif" type="image/avif"><source srcset="/comm-sunset.webp" type="image/webp"><img src="/comm-sunset.jpg" alt="Two buddies high-fiving at the buoy" width="1100" height="619" loading="lazy" decoding="async"></picture><picture class="m-tall"><source srcset="/commx-03.avif" type="image/avif"><source srcset="/commx-03.webp" type="image/webp"><img src="/commx-03.jpg" alt="The group around a campfire in the evening" width="825" height="1100" loading="lazy" decoding="async"></picture><picture><source srcset="/commx-22.avif" type="image/avif"><source srcset="/commx-22.webp" type="image/webp"><img src="/commx-22.jpg" alt="Waving from the buoy" width="1100" height="825" loading="lazy" decoding="async"></picture><picture><source srcset="/commx-52.avif" type="image/avif"><source srcset="/commx-52.webp" type="image/webp"><img src="/commx-52.jpg" alt="Laughing together on the buoy between dives" width="1100" height="962" loading="lazy" decoding="async"></picture></div>
   <p class="section-tag reveal" style="margin-top:3.5rem">What your team takes away</p>
   <div class="benefits-grid reveal">
     <div class="benefit"><p class="b-num">01</p><p class="b-title">Better communication</p><p class="b-body">Reading each other without words, and speaking clearly when it counts, becomes second nature when a teammate's calm depends on it.</p></div>
@@ -531,13 +560,12 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 <section class="core-truth accent-teal" id="athletic" style="display:block">
   <p class="section-tag reveal">Athletic performance &middot; Athletes &amp; coaches</p>
   <h2 class="ct-h2 reveal" style="max-width:640px;margin-bottom:1.25rem">The dive isn't the goal.<br><em>Performance is.</em></h2>
-  <div class="ct-body reveal" style="max-width:640px">
+  <div class="tb-split">
+  <div class="ct-body reveal">
     <p>Freediving is a controlled, high-stakes environment where the only variable is you. There's no opponent and no clock, just the athlete, a breath, and the pressure. It's a rare place to train the mental side of performance with real consequences and complete safety.</p>
     <p>Athletes learn to down-regulate before a start, breathe through tension, recover between efforts, and hold focus when everything says to rush. The objective is never a deeper dive, it's a calmer, sharper athlete under pressure. We don't promise podiums, we give athletes practical, repeatable skills for performing under pressure.</p>
   </div>
-  <div class="tb-pics reveal">
-    <figure><picture><source srcset="/training-line.avif" type="image/avif"><source srcset="/training-line.webp" type="image/webp"><img src="/training-line.jpg" alt="Calm on the line" width="1400" height="875" loading="lazy" decoding="async"></picture><figcaption>Calm on the line</figcaption></figure>
-    <figure><picture><source srcset="/c2s-sea.avif" type="image/avif"><source srcset="/c2s-sea.webp" type="image/webp"><img src="/c2s-sea.jpg" alt="Freefall, fully relaxed" width="1100" height="825" loading="lazy" decoding="async"></picture><figcaption>Freefall, fully relaxed</figcaption></figure>
+  <div class="tb-duo wide reveal on-deep"><picture class="d-main"><source srcset="/training-line.avif" type="image/avif"><source srcset="/training-line.webp" type="image/webp"><img src="/training-line.jpg" alt="Calm, controlled descent on the line" width="1400" height="875" loading="lazy" decoding="async"></picture><picture class="d-sub"><source srcset="/c2s-sea.avif" type="image/avif"><source srcset="/c2s-sea.webp" type="image/webp"><img src="/c2s-sea.jpg" alt="A freediver relaxed in freefall" width="1100" height="825" loading="lazy" decoding="async"></picture></div>
   </div>
   <p class="section-tag reveal" style="margin-top:3.5rem">What athletes train</p>
   <div class="benefits-grid reveal">
@@ -558,9 +586,9 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
   </div>
   <div class="format-grid" style="margin-top:3.5rem">
     <div class="reveal-left">
-      <div class="f-step"><p class="f-num">01</p><div><p class="f-title">Dry, breathe &amp; regulate</p><p class="f-body">We start on the mat, fully dry. Breathwork, relaxation, and your first real taste of down-regulating on command, the same tool everyone will use all day.</p></div></div>
-      <div class="f-step"><p class="f-num">02</p><div><p class="f-title">Pool, in pairs</p><p class="f-body">Into the shallow pool as buddies. You hold a relaxed breath, stay calm, and keep each other safe, partner drills and communication under a little pressure. Most people surprise themselves.</p></div></div>
-      <div class="f-step"><p class="f-num">03</p><div><p class="f-title">Open water &amp; debrief</p><p class="f-body">For groups who want the full experience, a calm, fully guided dive together, then we sit down: what happened in your body, and how to use it on Monday, at the start line, or in the next hard moment.</p><span class="f-opt">Optional &middot; fully guided &middot; all gear provided</span></div></div>
+      <div class="f-step"><p class="f-num">01</p><div><p class="f-title">Dry, breathe &amp; regulate</p><p class="f-body">We start on the mat, fully dry. Breathwork, relaxation, and your first real taste of down-regulating on command, the same tool everyone will use all day.</p></div><picture class="f-thumb"><source srcset="/c2s-dry.avif" type="image/avif"><source srcset="/c2s-dry.webp" type="image/webp"><img src="/c2s-dry.jpg" alt="Dry session on land before the water" width="1100" height="825" loading="lazy" decoding="async"></picture></div>
+      <div class="f-step"><p class="f-num">02</p><div><p class="f-title">Pool, in pairs</p><p class="f-body">Into the shallow pool as buddies. You hold a relaxed breath, stay calm, and keep each other safe, partner drills and communication under a little pressure. Most people surprise themselves.</p></div><picture class="f-thumb"><source srcset="/c2s-pool.avif" type="image/avif"><source srcset="/c2s-pool.webp" type="image/webp"><img src="/c2s-pool.jpg" alt="Buddy pairs in the pool" width="1200" height="900" loading="lazy" decoding="async"></picture></div>
+      <div class="f-step"><p class="f-num">03</p><div><p class="f-title">Open water &amp; debrief</p><p class="f-body">For groups who want the full experience, a calm, fully guided dive together, then we sit down: what happened in your body, and how to use it on Monday, at the start line, or in the next hard moment.</p><span class="f-opt">Optional &middot; fully guided &middot; all gear provided</span></div><picture class="f-thumb"><source srcset="/students-buoy-2.avif" type="image/avif"><source srcset="/students-buoy-2.webp" type="image/webp"><img src="/students-buoy-2.jpg" alt="The group at the buoy in open water" width="1600" height="1200" loading="lazy" decoding="async"></picture></div>
     </div>
     <div class="inclusion-box reveal">
       <p class="ib-tag">Everyone included</p>
@@ -572,10 +600,13 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
       <a href="#enquire" class="btn-gold" style="font-size:var(--text-xs)">Design your experience &rarr;</a>
     </div>
   </div>
-  <div class="tb-pics reveal">
-    <figure><picture><source srcset="/commx-53.avif" type="image/avif"><source srcset="/commx-53.webp" type="image/webp"><img src="/commx-53.jpg" alt="End of a good day" width="975" height="1100" loading="lazy" decoding="async"></picture><figcaption>End of a good day</figcaption></figure>
-  </div>
 </section>
+
+<!-- PHOTO BAND -->
+<div class="tb-band">
+  <picture><source srcset="/comm-boat-smiles.avif" type="image/avif"><source srcset="/comm-boat-smiles.webp" type="image/webp"><img src="/comm-boat-smiles.jpg" alt="The whole group together on the boat at the end of the day" width="1100" height="825" loading="lazy" decoding="async"></picture>
+  <div class="tb-band-txt reveal"><p>Strangers in the morning.<br><em>A team by sunset.</em></p><span>One day, one breath at a time, together.</span></div>
+</div>
 
 <!-- FAQ -->
 <section class="faq-sec">
