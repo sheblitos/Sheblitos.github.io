@@ -23,6 +23,7 @@ W, H = 1080, 1350
 X = 230                 # text column
 RIGHT_MARGIN = 80
 GX, GY0, GY1, GMAX = 150, 150, 1200, 70   # depth gauge
+CONFIG = ROOT / "posts.json"
 PHOTO_EXT = (".jpg", ".jpeg", ".png", ".webp")
 
 SURFACE, DEEP, ABYSS = (26, 92, 110), (6, 16, 28), (2, 6, 12)
@@ -488,7 +489,7 @@ def contact_sheet(rendered):
 
 
 def main(argv):
-    cfg = json.loads((ROOT / "posts.json").read_text())["posts"]
+    cfg = json.loads(CONFIG.read_text())["posts"]
     wanted = {int(a) for a in argv}
     rendered, problems = [], 0
     for p in cfg:

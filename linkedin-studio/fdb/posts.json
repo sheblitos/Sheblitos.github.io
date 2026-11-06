@@ -1,0 +1,165 @@
+{
+  "posts": [
+    {
+      "num": 1,
+      "depth": 5,
+      "pillar": "WELCOME",
+      "headline": [
+        "Freediving Brain",
+        "is now in",
+        "Barcelona."
+      ],
+      "subline": "A freediving school where the mind goes first.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "fdb-01",
+          "mode": "overlay",
+          "focus": [
+            0.5,
+            0.35
+          ]
+        }
+      ]
+    },
+    {
+      "num": 2,
+      "depth": 15,
+      "pillar": "FREEDIVING 101",
+      "headline": [
+        "One breath.",
+        "No tanks.",
+        "No noise."
+      ],
+      "subline": "The disciplines of freediving, explained.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "fdb-02",
+          "mode": "overlay",
+          "focus": [
+            0.5,
+            0.3
+          ]
+        }
+      ]
+    },
+    {
+      "num": 3,
+      "depth": 25,
+      "pillar": "FOR TEAMS",
+      "headline": [
+        "What happens",
+        "in a team",
+        "workshop."
+      ],
+      "subline": "From the mat, to the pool, to the sea.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "fdb-03",
+          "mode": "top"
+        }
+      ]
+    },
+    {
+      "num": 4,
+      "depth": 35,
+      "pillar": "SAFETY",
+      "headline": [
+        "Never dive",
+        "alone."
+      ],
+      "subline": "Rule number one, and why it works.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "fdb-04",
+          "mode": "overlay",
+          "focus": [
+            0.5,
+            0.45
+          ]
+        }
+      ]
+    },
+    {
+      "num": 5,
+      "depth": 45,
+      "pillar": "BREATHWORK",
+      "headline": [
+        "A 60-second",
+        "reset for your",
+        "next meeting."
+      ],
+      "subline": "Long exhales, from the freediving playbook.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "fdb-05",
+          "mode": "top",
+          "pure": true
+        }
+      ]
+    },
+    {
+      "num": 6,
+      "depth": 55,
+      "pillar": "FREEDIVING SCIENCE",
+      "headline": [
+        "Your body has",
+        "a freediving",
+        "mode."
+      ],
+      "subline": "The mammalian dive reflex.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "fdb-06",
+          "mode": "overlay",
+          "focus": [
+            0.5,
+            0.35
+          ]
+        }
+      ]
+    },
+    {
+      "num": 7,
+      "depth": 65,
+      "pillar": "FOR TEAMS",
+      "headline": [
+        "In the water,",
+        "everyone is",
+        "equal."
+      ],
+      "subline": "What happens to hierarchy one breath down.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "fdb-07",
+          "mode": "top",
+          "crop_top": 0.33
+        }
+      ]
+    },
+    {
+      "num": 8,
+      "depth": 5,
+      "pillar": "COURSES",
+      "headline": [
+        "Your first",
+        "freediving",
+        "course."
+      ],
+      "subline": "What to expect from AIDA 1 in Barcelona.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "fdb-08",
+          "mode": "top"
+        }
+      ]
+    }
+  ]
+}

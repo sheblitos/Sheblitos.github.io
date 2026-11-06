@@ -28,3 +28,7 @@ Image options in posts.json: `"pure": true` (top layout, true colors, for breath
 (start lower in a tall photo), `"type": "raw"` (a finished slide used as is), and a post-level
 `"carousel": "<folder in photos/>"` that builds `carousel.pdf` for a LinkedIn document post.
 See content-bank.md for every photo and the story it can carry.
+
+## Freediving Brain company page
+`python make_fdb.py` renders the company page posts in the school's brand (deep green, mint, Mulish, logo mark).
+Config `fdb/posts.json`, captions `fdb/captions/`, output `fdb/output/`, schedule `fdb/posts-log.md` (Wednesday and Friday).
