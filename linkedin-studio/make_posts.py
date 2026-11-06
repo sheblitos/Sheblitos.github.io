@@ -258,7 +258,7 @@ def busy_score(img, box):
 def render_graphic(p):
     c = Canvas(ocean_background(p["num"], p["depth"]))
     gauge(c, p["depth"])
-    top_label(c, p["num"], p["pillar"])
+    top_label(c, p.get("label_num", p["num"]), p["pillar"])
     size, lh = fit_headline(c, p["headline"])
     headline_block(c, p["headline"], p["subline"], top_y=int(H * 0.47 - lh * len(p["headline"]) / 2))
     footer(c)
@@ -286,7 +286,7 @@ def render_photo(p, spec):
         gauge(c, p["depth"], opacity=0.45)
     else:
         note += ", gauge hidden (face on the left), depth in top label"
-    top_label(c, p["num"], p["pillar"], fill=CREAM, depth=None if show_gauge else p["depth"])
+    top_label(c, p.get("label_num", p["num"]), p["pillar"], fill=CREAM, depth=None if show_gauge else p["depth"])
     for i, f in enumerate(faces):   # faces join QA: no text may touch them
         c.boxes.append((f"face {i+1}", (f[0] - 12, f[1] - 12, f[2] + 12, f[3] + 12), False))
     if overlay:
@@ -351,7 +351,7 @@ def render_screenshot(p, spec):
     shot = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
     c = Canvas(ocean_background(p["num"], p["depth"]))
     gauge(c, p["depth"], opacity=0.6)
-    top_label(c, p["num"], p["pillar"])
+    top_label(c, p.get("label_num", p["num"]), p["pillar"])
     edge = lerp(DIM, DEEP, 0.35)
     win = browser_frame(shot, W - X - RIGHT_MARGIN + 40, spec.get("url", ""))
     wx, wy = X, 260
@@ -398,7 +398,7 @@ def render_photo_top(p, spec):
         k = W / raw.width
         x0_, y0_, x1_, y1_ = (int(v * k) for v in f)
         faces.append((x0_, y0_ - y0, x1_, y1_ - y0))
-    top_label(c, p["num"], p["pillar"], fill=CREAM, depth=p["depth"])
+    top_label(c, p.get("label_num", p["num"]), p["pillar"], fill=CREAM, depth=p["depth"])
     for i, f in enumerate(faces):
         if f[1] < ph_h:
             c.boxes.append((f"face {i+1}", (f[0] - 8, f[1] - 8, f[2] + 8, f[3] + 8), False))
