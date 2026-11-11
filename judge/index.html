@@ -21,17 +21,18 @@
 <link rel="icon" href="/aida-judge-og.png">
 <style>
 :root {
-  --bg: #f0f2f6;
-  --bg2: #e4e7ed;
+  --bg: #e8f0ed;
+  --bg2: #dce7e2;
   --surface: #ffffff;
-  --surface2: #f7f8fa;
-  --text: #14202e;
-  --text2: #4a5568;
-  --text3: #8a95a6;
-  --accent: #0c7a6e;
-  --accent-bg: #e6f5f2;
-  --border: #d2d8e0;
-  --border2: #e8ecf0;
+  --surface2: #f4f8f6;
+  --text: #10211c;
+  --text2: #3d5249;
+  --text3: #7a8c84;
+  --accent: #17625b;
+  --on-accent: #ffffff;
+  --accent-bg: #e1efe9;
+  --border: #c9d8d1;
+  --border2: #e2ece7;
   --white-card: #1a8a4a;
   --white-card-bg: #eafaf0;
   --yellow-card: #b86e14;
@@ -42,23 +43,23 @@
   --shadow2: 0 2px 8px rgba(0,0,0,.1);
   --radius: 6px;
   --input-bg: #ffffff;
-  --nav-bg: rgba(240,242,246,.92);
-  --hover: #edf0f5;
-  --focus: #0c7a6e44;
+  --nav-bg: rgba(232,240,237,.92);
+  --hover: #e6efea;
+  --focus: #17625b44;
 }
 @media(prefers-color-scheme:dark){:root{
-  --bg:#0d1117;--bg2:#161b22;--surface:#1c2230;--surface2:#232b3a;
-  --text:#d8dee8;--text2:#8b95a8;--text3:#586070;
-  --accent:#2cc4b4;--accent-bg:#152e2b;
-  --border:#2a3346;--border2:#232b3a;
+  --bg:#0c1a15;--bg2:#112620;--surface:#16291f;--surface2:#1c3026;
+  --text:#ece8e0;--text2:#a9b5ae;--text3:#71817a;
+  --accent:#7ecdb0;--on-accent:#0c1a15;--accent-bg:#16302a;
+  --border:#2a4236;--border2:#1c3026;
   --white-card:#4ade80;--white-card-bg:#0f2a1a;
   --yellow-card:#f0a840;--yellow-card-bg:#2a2210;
   --red-card:#f06060;--red-card-bg:#2a1414;
   --shadow:0 1px 3px rgba(0,0,0,.2);--shadow2:0 2px 8px rgba(0,0,0,.3);
-  --input-bg:#232b3a;--nav-bg:rgba(13,17,23,.92);--hover:#232b3a;--focus:#2cc4b444;
+  --input-bg:#1c3026;--nav-bg:rgba(12,26,21,.92);--hover:#1c3026;--focus:#7ecdb044;
 }}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:-apple-system,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+body{font-family:Mulish,-apple-system,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 button{font:inherit;cursor:pointer;border:none;background:none;color:inherit;}
 input,select,textarea{font:inherit;color:var(--text);background:var(--input-bg);border:1px solid var(--border);border-radius:var(--radius);padding:.5rem .65rem;outline:none;transition:border-color .15s;}
 input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--focus);}
@@ -72,7 +73,7 @@ input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;}
 .tab-btn{padding:.5rem .85rem;font-size:.75rem;font-weight:600;color:var(--text2);border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap;}
 .tab-btn:hover{color:var(--text);}
 .tab-btn.active{color:var(--accent);border-bottom-color:var(--accent);}
-.tab-btn .badge{display:inline-block;background:var(--accent);color:#fff;font-size:.6rem;padding:.1rem .35rem;border-radius:8px;margin-left:.3rem;font-weight:700;min-width:16px;text-align:center;}
+.tab-btn .badge{display:inline-block;background:var(--accent);color:var(--on-accent);font-size:.6rem;padding:.1rem .35rem;border-radius:8px;margin-left:.3rem;font-weight:700;min-width:16px;text-align:center;}
 
 main{max-width:900px;margin:0 auto;padding:1rem;}
 .page{display:none;}
@@ -89,7 +90,7 @@ main{max-width:900px;margin:0 auto;padding:1rem;}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.35rem;padding:.5rem 1rem;border-radius:var(--radius);font-size:.8rem;font-weight:600;transition:all .15s;cursor:pointer;}
 .btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
-.btn-primary{background:var(--accent);color:#fff;}
+.btn-primary{background:var(--accent);color:var(--on-accent);}
 .btn-primary:hover{opacity:.9;}
 .btn-outline{border:1px solid var(--border);background:var(--surface);color:var(--text);}
 .btn-outline:hover{background:var(--hover);border-color:var(--text3);}
@@ -194,6 +195,7 @@ td .btn-sm{vertical-align:middle;}
 }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"AIDA Judge System","applicationCategory":"SportsApplication","operatingSystem":"Web","url":"https://freedivingbrain.com/judge/","description":"Web-based competition judging tool for AIDA freediving judges, with discipline scoring, penalties, disqualifications and result export.","publisher":{"@type":"Organization","name":"Freediving Brain","url":"https://freedivingbrain.com"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 

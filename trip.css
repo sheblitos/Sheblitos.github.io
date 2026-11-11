@@ -11,7 +11,7 @@
   --deep:#0c1a15; --deep2:#112620; --deep3:#16302a;
   --txt:#ece8e0; --txt2:rgba(236,232,224,.76); --txt3:rgba(236,232,224,.54);
   --ln:rgba(236,232,224,.12); --ln2:rgba(236,232,224,.2);
-  --brand:#218078; --brand-hi:#279185;
+  --brand:#7ecdb0; --brand-hi:#a8e8cc;
   --accent:#7ecdb0;                 /* text accent on dark */
   --accent-soft:rgba(126,205,176,.35);
   --paper:#e8f0ed; --paper-ink:#10211c; --paper-ink2:rgba(16,33,28,.74); --paper-brand:#17625b; --paper-ln:rgba(16,33,28,.14); --paper-card:#fff;
@@ -43,7 +43,7 @@ h1,h2,h3{font-family:var(--font-display);margin:0;text-wrap:balance}
 /* Buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.8rem 1.4rem;border-radius:var(--r-pill);font:700 1rem/1.1 var(--font-body);text-decoration:none;cursor:pointer;border:1px solid transparent;transition:background-color .2s,border-color .2s,transform .25s var(--ease)}
 .btn:hover{transform:translateY(-2px)}
-.btn-primary{background:var(--brand);color:#fff}
+.btn-primary{background:var(--brand);color:var(--deep)}
 .btn-primary:hover{background:var(--brand-hi)}
 .btn-ghost{border-color:var(--ln2);color:var(--txt)}
 .btn-ghost:hover{border-color:var(--txt)}
