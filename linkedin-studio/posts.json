@@ -28,7 +28,8 @@
       "subline": "Here’s what that actually means.",
       "images": [
         {
-          "type": "graphic"
+          "type": "raw",
+          "src": "zero-cover-render"
         }
       ],
       "carousel": "carousel-02",
