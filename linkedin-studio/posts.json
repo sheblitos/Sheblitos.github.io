@@ -51,7 +51,8 @@
           "src": "post-03",
           "mode": "overlay"
         }
-      ]
+      ],
+      "label_num": 8
     },
     {
       "num": 4,
@@ -76,7 +77,8 @@
           "mode": "clean",
           "gauge": false
         }
-      ]
+      ],
+      "label_num": 3
     },
     {
       "num": 5,
@@ -101,7 +103,8 @@
         {
           "type": "graphic"
         }
-      ]
+      ],
+      "label_num": 10
     },
     {
       "num": 6,
@@ -124,7 +127,8 @@
           ],
           "gauge": false
         }
-      ]
+      ],
+      "label_num": 5
     },
     {
       "num": 7,
@@ -170,7 +174,8 @@
           ],
           "gauge": false
         }
-      ]
+      ],
+      "label_num": 7
     },
     {
       "num": 9,
@@ -205,7 +210,8 @@
           "src": "post-10",
           "mode": "top"
         }
-      ]
+      ],
+      "label_num": 9
     },
     {
       "num": 11,
@@ -244,7 +250,8 @@
           "src": "post-12",
           "mode": "top"
         }
-      ]
+      ],
+      "label_num": 11
     },
     {
       "num": 13,

@@ -5,6 +5,27 @@ Post at 8:30 Barcelona time. No posts 21 Dec to 4 Jan (holiday low reach).
 Clear asks: see the Notes column.
 Fill in results 48 h after posting. First review: Thu 3 Dec.
 
+## Live schedule (from 16 Nov 2026)
+
+The order actually being posted. Image labels match the # here. After 17 Dec the main table continues in order, skipping posts already used above. Main post 02 (one From Zero carousel) is replaced by the 3-part series in zero/.
+
+| # | Date | Type | Post | Files | Status |
+|---|---|---|---|---|---|
+| 01 | Thu 5 Nov | Personal | We're not one thing |  | posted |
+| 02 | — | Personal | From Dahab to Barcelona on one breath |  | posted |
+| 03 | Tue 17 Nov | Professional | Why your team should learn to hold its breath | output/post-04 | ready |
+| 04 | Thu 19 Nov | Personal | From Zero, part 1: Before the ocean, there was a bag | zero/output/post-01 | ready |
+| 05 | Tue 24 Nov | Professional | One dives. One watches. Then you switch. | output/post-06 | ready |
+| 06 | Thu 26 Nov | Personal | From Zero, part 2: The startup years | zero/output/post-02 | ready |
+| 07 | Tue 1 Dec | Professional | People don't buy features | output/post-08 | ready |
+| 08 | Thu 3 Dec | Personal | I was busy. I wasn't living. | output/post-03 | ready |
+| 09 | Tue 8 Dec | Professional | Doing nothing is the hardest thing we train | output/post-10 | ready |
+| 10 | Thu 10 Dec | Personal | Never dive alone. Never build alone. | output/post-05 | ready |
+| 11 | Tue 15 Dec | Professional | The race flips in the pool | output/post-12 | ready |
+| 12 | Thu 17 Dec | Personal | From Zero, part 3: the ocean years and the pattern | zero/output/post-03 | ready |
+
+## Full post bank
+
 | # | Type | Date (8:30 Barcelona) | Pillar | Depth | Headline | Images | Impressions | Reactions | Comments | DMs | Notes |
 |---|------|------|--------|-------|----------|--------|---|---|---|---|-------|
 | 01 | Personal | Thu 5 Nov 2026 | GO DEEP | 5 m | We’re not one thing. | overlay | | | | | |
