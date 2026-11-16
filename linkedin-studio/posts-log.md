@@ -23,6 +23,8 @@ The order actually being posted. Image labels match the # here. After 17 Dec the
 | 10 | Thu 10 Dec | Personal | Never dive alone. Never build alone. | output/post-05 | ready |
 | 11 | Tue 15 Dec | Professional | The race flips in the pool | output/post-12 | ready |
 | 12 | Thu 17 Dec | Personal | From Zero, part 3: the ocean years and the pattern | zero/output/post-03 | ready |
+| 13 | Tue 5 Jan | Professional | (next team post, after the holiday break) |  | to pick |
+| 14 | Thu 7 Jan | Personal | 70 meters. On one breath. | output/post-40 | ready |
 
 ## Full post bank
 

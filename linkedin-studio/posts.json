@@ -769,6 +769,28 @@
           "mode": "top"
         }
       ]
+    },
+    {
+      "num": 40,
+      "label_num": 14,
+      "depth": 70,
+      "pillar": "GO DEEP",
+      "headline": [
+        "70 meters.",
+        "On one breath."
+      ],
+      "subline": "Body, mind and soul. All of it.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-40",
+          "mode": "overlay",
+          "focus": [
+            0.5,
+            0.35
+          ]
+        }
+      ]
     }
   ]
 }
