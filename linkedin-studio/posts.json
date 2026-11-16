@@ -32,7 +32,8 @@
         }
       ],
       "carousel": "carousel-02",
-      "depth": 15
+      "depth": 15,
+      "label_num": 3
     },
     {
       "num": 3,
