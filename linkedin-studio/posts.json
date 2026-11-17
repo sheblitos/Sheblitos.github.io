@@ -791,6 +791,25 @@
           ]
         }
       ]
+    },
+    {
+      "num": 41,
+      "label_num": 13,
+      "depth": 65,
+      "pillar": "FIND THE SIGNAL",
+      "headline": [
+        "160+ students.",
+        "Six skills I",
+        "use every day."
+      ],
+      "subline": "What teaching freediving taught me about people.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "post-41",
+          "mode": "top"
+        }
+      ]
     }
   ]
 }
