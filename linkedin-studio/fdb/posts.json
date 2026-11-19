@@ -45,9 +45,31 @@
       ]
     },
     {
+      "pillar": "FOR TEAMS · 1 OF 4",
+      "headline": [
+        "Why fast-moving",
+        "teams should",
+        "freedive."
+      ],
+      "subline": "One breath shows you how you really react.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "fdb-03",
+          "mode": "overlay",
+          "focus": [
+            0.5,
+            0.3
+          ]
+        }
+      ],
       "num": 3,
-      "depth": 25,
-      "pillar": "FOR TEAMS",
+      "depth": 25
+    },
+    {
+      "num": 4,
+      "depth": 35,
+      "pillar": "FOR TEAMS · 2 OF 4",
       "headline": [
         "What happens",
         "in a team",
@@ -57,14 +79,52 @@
       "images": [
         {
           "type": "photo",
-          "src": "fdb-03",
+          "src": "fdb-04",
           "mode": "top"
         }
       ]
     },
     {
-      "num": 4,
-      "depth": 35,
+      "num": 5,
+      "depth": 45,
+      "pillar": "FOR TEAMS · 3 OF 4",
+      "headline": [
+        "In the water,",
+        "everyone is",
+        "equal."
+      ],
+      "subline": "What happens to hierarchy one breath down.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "fdb-05",
+          "mode": "top",
+          "crop_top": 0.33
+        }
+      ]
+    },
+    {
+      "pillar": "FOR TEAMS · 4 OF 4",
+      "headline": [
+        "We’ll bring",
+        "your team",
+        "one breath deeper."
+      ],
+      "subline": "Workshops, team days and retreats, designed with you.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "fdb-06",
+          "mode": "top",
+          "crop_top": 0.3
+        }
+      ],
+      "num": 6,
+      "depth": 55
+    },
+    {
+      "num": 7,
+      "depth": 65,
       "pillar": "SAFETY",
       "headline": [
         "Never dive",
@@ -74,7 +134,7 @@
       "images": [
         {
           "type": "photo",
-          "src": "fdb-04",
+          "src": "fdb-07",
           "mode": "overlay",
           "focus": [
             0.5,
@@ -84,8 +144,8 @@
       ]
     },
     {
-      "num": 5,
-      "depth": 45,
+      "num": 8,
+      "depth": 5,
       "pillar": "BREATHWORK",
       "headline": [
         "A 60-second",
@@ -96,15 +156,15 @@
       "images": [
         {
           "type": "photo",
-          "src": "fdb-05",
+          "src": "fdb-08",
           "mode": "top",
           "pure": true
         }
       ]
     },
     {
-      "num": 6,
-      "depth": 55,
+      "num": 9,
+      "depth": 15,
       "pillar": "FREEDIVING SCIENCE",
       "headline": [
         "Your body has",
@@ -115,7 +175,7 @@
       "images": [
         {
           "type": "photo",
-          "src": "fdb-06",
+          "src": "fdb-09",
           "mode": "overlay",
           "focus": [
             0.5,
@@ -125,27 +185,8 @@
       ]
     },
     {
-      "num": 7,
-      "depth": 65,
-      "pillar": "FOR TEAMS",
-      "headline": [
-        "In the water,",
-        "everyone is",
-        "equal."
-      ],
-      "subline": "What happens to hierarchy one breath down.",
-      "images": [
-        {
-          "type": "photo",
-          "src": "fdb-07",
-          "mode": "top",
-          "crop_top": 0.33
-        }
-      ]
-    },
-    {
-      "num": 8,
-      "depth": 5,
+      "num": 10,
+      "depth": 25,
       "pillar": "COURSES",
       "headline": [
         "Your first",
@@ -156,7 +197,7 @@
       "images": [
         {
           "type": "photo",
-          "src": "fdb-08",
+          "src": "fdb-10",
           "mode": "top"
         }
       ]
