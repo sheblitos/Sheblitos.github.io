@@ -1,0 +1,13 @@
+I'm not a developer. I'm building an app anyway.
+
+For years, my ideas died in the same place: "I need someone technical for this."
+
+Then I started vibe coding. Describing what I want, building with AI, testing, breaking things, fixing them.
+
+It's not magic. Some days nothing works and I spend hours on one bug. But the ideas are finally leaving my head and becoming real.
+
+My biggest lesson so far: AI can write the code. It can't tell you what's worth building. That part is still on you.
+
+What's one idea you'd build if code wasn't the problem?
+
+#VibeCoding #AI #BuildInPublic

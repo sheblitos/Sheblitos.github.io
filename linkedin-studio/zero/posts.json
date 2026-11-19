@@ -1,0 +1,58 @@
+{
+  "posts": [
+    {
+      "num": 1,
+      "label_num": 4,
+      "depth": 5,
+      "pillar": "FROM ZERO · PART 1",
+      "headline": [
+        "Before the ocean,",
+        "there was a bag."
+      ],
+      "subline": "Everything I’ve built from zero. Part 1.",
+      "images": [
+        {
+          "type": "graphic"
+        }
+      ],
+      "carousel": "zero-p1"
+    },
+    {
+      "num": 2,
+      "label_num": 6,
+      "depth": 25,
+      "pillar": "FROM ZERO · PART 2",
+      "headline": [
+        "The startup",
+        "years."
+      ],
+      "subline": "Fast, messy, and the best school I ever had.",
+      "images": [
+        {
+          "type": "graphic"
+        }
+      ],
+      "carousel": "zero-p2"
+    },
+    {
+      "num": 3,
+      "label_num": 12,
+      "depth": 15,
+      "pillar": "FROM ZERO · PART 3",
+      "headline": [
+        "I build things",
+        "from zero."
+      ],
+      "subline": "The ocean years, and the pattern.",
+      "images": [
+        {
+          "type": "photo",
+          "src": "zero-cover",
+          "mode": "top",
+          "crop_top": 0.25
+        }
+      ],
+      "carousel": "zero-p3"
+    }
+  ]
+}
