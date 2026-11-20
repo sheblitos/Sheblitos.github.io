@@ -1,0 +1,4 @@
+# Separate Netlify site for Barcelona Freedivers. Set the site's base directory to barcelona-freedivers.
+[build]
+  command = "node build.mjs"
+  publish = "dist"

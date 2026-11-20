@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{title}}</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="{{description}}">
+{{canonical}}
+<link rel="icon" href="{{a:assets/logo.svg}}" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800&amp;display=swap">
+<link rel="stylesheet" href="{{a:assets/site.css}}">
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'});
+try { if (localStorage.getItem('bf-consent') === 'granted') gtag('consent', 'update', {analytics_storage: 'granted'}); } catch (e) {}
+gtag('js', new Date());
+gtag('config', '{{site.ga4_id}}');
+</script>
+{{ga_script}}
+<script type="application/ld+json">{{jsonld}}</script>
+</head>
+<body data-page="{{page}}" data-preview="{{preview}}">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="{{u:}}">
+      <img src="{{a:assets/logo.svg}}" alt="" width="40" height="40">
+      <span class="brand-text"><span class="brand-name">Barcelona Freedivers</span><span class="brand-by">by Freediving Brain</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="{{u:courses/}}" {{cur:courses}}>Courses</a></li>
+        <li><a href="{{u:community/}}" {{cur:community}}>Community</a></li>
+        <li><a href="{{u:about/}}" {{cur:about}}>About</a></li>
+        <li><a href="{{u:trips-and-teams/}}" {{cur:trips}}>Trips and Teams</a></li>
+        <li><a href="{{u:contact/}}" {{cur:contact}}>Contact</a></li>
+      </ul>
+      <a class="btn btn-sm" href="{{u:contact/}}">Request a place</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+{{content}}
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <img src="{{a:assets/logo.svg}}" alt="" width="56" height="56" class="footer-logo">
+      <p><strong>Barcelona Freedivers</strong><br>AIDA freediving courses and community training in Barcelona. Operated by Freediving Brain.</p>
+    </div>
+    <div>
+      <h2 class="footer-h">Explore</h2>
+      <ul>
+        <li><a href="{{u:courses/}}">Courses</a></li>
+        <li><a href="{{u:community/}}">Community</a></li>
+        <li><a href="{{u:about/}}">About</a></li>
+        <li><a href="{{u:trips-and-teams/}}">Trips and Teams</a></li>
+        <li><a href="{{u:contact/}}">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer-h">Resources</h2>
+      <ul>
+        <li><a href="{{u:faq/}}">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer-h">Contact</h2>
+      <ul>
+        <li><a href="{{site.whatsapp_url}}" rel="noopener">WhatsApp {{site.whatsapp_display}}</a></li>
+        <li>We reply {{site.response_time}}.</li>
+        <li>Barcelona, Spain</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-base">© {{year}} Freediving Brain. All rights reserved.</div>
+</footer>
+<div class="consent" id="consent" hidden>
+  <p>We use analytics cookies to see which pages help visitors.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-sm" data-consent="granted">Accept</button>
+    <button type="button" class="btn btn-sm btn-line" data-consent="denied">Decline</button>
+  </div>
+</div>
+<script src="{{a:assets/site.js}}" defer></script>
+</body>
+</html>

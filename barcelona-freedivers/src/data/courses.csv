@@ -1,0 +1,6 @@
+id,level,name,where,duration,depth,depth_max_m,prerequisite,max_students,price_eur,summary
+aida-1,AIDA 1,Introduction to Freediving,Pool only,1 day,None,0,"None, basic comfort in water",4,145,"Your first day as a freediver, in the pool. Breathing, relaxation and safe breath-holds with a buddy."
+aida-2,AIDA 2,Freediver,Pool and Mediterranean,2.5 days,20 m,20,Basic swimming,6,360,"Your first certification with depth. Pool sessions first, then the Mediterranean on a buoy and line."
+aida-3,AIDA 3,Advanced Freediver,Pool and Mediterranean,3 days,20 to 30 m,30,AIDA 2,4,430,"Deeper open water and more advanced technique, building on what you learned in AIDA 2."
+aida-4,AIDA 4,Master Freediver,Pool and Mediterranean,4 days,38 m,38,AIDA 3 and valid EFR,3,575,"The Master Freediver level, with the deepest training of the four AIDA freediver courses."
+aida-instructor,AIDA Instructor,AIDA Instructor Course,Assessment first,10 to 21 days,,,Shared on request,3,1440,"Learn to teach freediving with an AIDA Instructor Trainer. Entry starts with an assessment."

@@ -1,0 +1,51 @@
+<!--meta {"id":"contact","nav":"contact","path":"contact/","title":"Book a Freediving Course in Barcelona | Barcelona Freedivers","description":"Request a place on an AIDA freediving course in Barcelona. Choose your course and month and we reply within 24 hours. WhatsApp +34 603 083 325."} -->
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h1>Request a place. We reply {{site.response_time}}.</h1>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap contact-grid">
+    <form class="form" id="booking" name="booking" method="POST" data-netlify="true" netlify-honeypot="company" data-next="{{u:contact/thanks/}}" novalidate>
+      <input type="hidden" name="form-name" value="booking">
+      <p class="hp"><label>Leave this empty <input name="company" tabindex="-1" autocomplete="off"></label></p>
+      <div class="two">
+        <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required aria-describedby="name-error"><p class="error" id="name-error" hidden>Please add your name.</p></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error"><p class="error" id="email-error" hidden>Please add an email address we can reply to.</p></div>
+      </div>
+      <div class="field"><label for="whatsapp">WhatsApp number <span class="hint">(optional)</span></label><input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel"></div>
+      <div class="field"><label for="course">Course of interest</label>
+        <select id="course" name="course" required aria-describedby="course-error">
+          <option value="">Choose a course</option>
+          {{block:course_options}}
+          <option value="not-sure">Not sure yet, help me choose</option>
+          <option value="other">Community training, a trip or a team day</option>
+        </select><p class="error" id="course-error" hidden>Please choose a course, or "Not sure yet".</p></div>
+      <div class="two">
+        <div class="field"><label for="experience">Your experience</label>
+          <select id="experience" name="experience" required aria-describedby="experience-error">
+            <option value="">Choose one</option>
+            <option value="none">None</option>
+            <option value="pool-only">Pool only</option>
+            <option value="aida-1">AIDA 1</option>
+            <option value="aida-2-plus">AIDA 2 or higher</option>
+          </select><p class="error" id="experience-error" hidden>Please choose your experience.</p></div>
+        <div class="field"><label for="month">Preferred month</label>
+          <select id="month" name="month" required disabled aria-describedby="month-error"><option value="">Choose a month</option></select>
+          <p class="error" id="month-error" hidden>Please choose a month.</p>
+          <noscript><input id="month-nojs" name="month_text" type="month" aria-label="Preferred month"></noscript></div>
+      </div>
+      <div class="field"><label for="message">Message <span class="hint">(optional)</span></label><textarea id="message" name="message"></textarea></div>
+      <p class="error" id="form-error" hidden>Your request did not send. Please try again, or message us on WhatsApp.</p>
+      <div><button class="btn" type="submit">Send request</button></div>
+    </form>
+    <aside class="aside" aria-label="Other ways to reach us">
+      <h2 style="font-size:var(--step-1)">Prefer to message?</h2>
+      <p><a href="{{site.whatsapp_url}}" rel="noopener">WhatsApp {{site.whatsapp_display}}</a></p>
+      <p class="muted">We reply {{site.response_time}}. Courses run in Barcelona, in the pool and the Mediterranean.</p>
+      <p class="muted">Not sure which course fits? <a href="{{u:courses/}}">Answer two questions on the Courses page.</a></p>
+    </aside>
+  </div>
+</section>

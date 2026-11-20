@@ -1,0 +1,65 @@
+<!--meta {"id":"courses","nav":"courses","path":"courses/","title":"AIDA Course Barcelona | AIDA 1 to Instructor | Barcelona Freedivers","description":"Every AIDA freediving course in Barcelona in one table: AIDA 1, 2, 3, 4 and the Instructor Course. Format, depth, prerequisites and price, plus a two-question level finder.","jsonld":{"@context":"https://schema.org","@type":"ItemList","name":"AIDA freediving courses in Barcelona","itemListElement":[]}} -->
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">AIDA courses in Barcelona</p>
+    <h1>Five AIDA freediving courses in Barcelona, in the pool and the Mediterranean.</h1>
+    <p class="lead measure">Every course is taught by an AIDA Instructor Trainer in a small group. Answer two questions to find your level, or compare all five below.</p>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="helper-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="helper-h">Which course is right for me?</h2>
+    </div>
+    <form class="helper" id="helper" onsubmit="return false">
+      <fieldset>
+        <legend>1. What freediving have you done?</legend>
+        <label class="choice"><input type="radio" name="exp" value="none" id="exp-none"> None yet, or only on holiday</label>
+        <label class="choice"><input type="radio" name="exp" value="aida-1" id="exp-1"> AIDA 1 or a pool introduction</label>
+        <label class="choice"><input type="radio" name="exp" value="aida-2" id="exp-2"> AIDA 2 or equivalent</label>
+        <label class="choice"><input type="radio" name="exp" value="aida-3" id="exp-3"> AIDA 3 or equivalent</label>
+        <label class="choice"><input type="radio" name="exp" value="aida-4" id="exp-4"> AIDA 4 or equivalent</label>
+      </fieldset>
+      <fieldset id="q2">
+        <legend>2. If you are new, where do you want to start?</legend>
+        <label class="choice"><input type="radio" name="goal" value="pool" id="goal-pool"> One day in the pool to try it</label>
+        <label class="choice"><input type="radio" name="goal" value="sea" id="goal-sea"> A full certification that takes me into the sea</label>
+      </fieldset>
+      <div class="helper-result" id="helper-result" hidden aria-live="polite"></div>
+    </form>
+    <script type="application/json" id="course-data">{{block:course_json}}</script>
+  </div>
+</section>
+
+<section class="band band-mist" aria-labelledby="table-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="table-h">Format, depth, prerequisite and price for each course.</h2>
+    </div>
+    {{block:course_table}}
+  </div>
+</section>
+
+<section class="band" aria-labelledby="detail-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="detail-h">What each course gives you.</h2>
+    </div>
+    {{block:course_details}}
+  </div>
+</section>
+
+<section class="band band-mist" aria-labelledby="book-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="book-h">Booking takes three steps.</h2>
+    </div>
+    <ol class="numbered">
+      <li><h3>Send a request</h3><p class="muted">Choose the course and the month that suits you.</p></li>
+      <li><h3>Agree the dates</h3><p class="muted">We reply {{site.response_time}} with available dates.</p></li>
+      <li><h3>Confirm and pay</h3><p class="muted">Your place is held once dates and payment are agreed.</p></li>
+    </ol>
+    <p class="section-foot"><a class="btn" href="{{u:contact/}}">Request a place</a></p>
+  </div>
+</section>
