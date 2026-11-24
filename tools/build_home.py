@@ -117,7 +117,7 @@ page = f'''<!DOCTYPE html>
     <p class="bf-eyebrow">Courses</p>
     <h2>From beginner to instructor</h2>
     <p class="bf-lead">Four AIDA levels, taught with the same calm, mind-first method.</p>
-    <div class="bf-levels">{ladder}</div>
+    <div class="bf-levels bf-swipe">{ladder}</div>
   </div>
 </section>
 
@@ -126,7 +126,7 @@ page = f'''<!DOCTYPE html>
   <div class="bf-wrap">
     <p class="bf-eyebrow">More with us</p>
     <h2>Keep diving after your course</h2>
-    <div class="bf-cards">
+    <div class="bf-cards bf-swipe">
       <a class="bf-card" href="/training">{pic('tr-pool', 'Pool training session', 'bf-card-img')}<span class="bf-card-body"><b>Training</b><span>Pool and open-water sessions for certified freedivers.</span><em>From €48 per session</em></span></a>
       <a class="bf-card" href="/trips">{pic('dhj-hero', 'Dahab coastline from above', 'bf-card-img', 'center 50%')}<span class="bf-card-body"><b>Winter trips</b><span>Dahab, Sri Lanka and Indonesia, led by Shebl &amp; Rimi.</span><em>Dates announced soon</em></span></a>
       <a class="bf-card" href="/team-building">{pic('tb-corporate-team', 'A team smiling together in the water', 'bf-card-img', 'center 45%')}<span class="bf-card-body"><b>Teams</b><span>Team days and retreats for companies.</span><em>Price on request</em></span></a>
@@ -139,7 +139,7 @@ page = f'''<!DOCTYPE html>
   <div class="bf-wrap">
     <p class="bf-eyebrow">Your instructors</p>
     <h2>Taught by Shebl &amp; Rimi</h2>
-    <div class="bf-people">
+    <div class="bf-people bf-swipe">
       <a class="bf-person" href="/about/shebl">{pic('shebl', 'Shebl', 'bf-person-img')}<span><b>Shebl</b><em>AIDA Instructor Trainer &amp; Judge · Founder</em><span>Freediving since 2021 and teaching since 2022. He teaches every level, from beginner to instructor, and has certified more than 160 freedivers.</span></span></a>
       <a class="bf-person" href="/about">{pic('rimi', 'Rimi', 'bf-person-img', 'center 25%')}<span><b>Rimi</b><em>Assistant Instructor &amp; AIDA Judge</em><span>The first and deepest Iraqi female freediver, and the architect behind every Barcelona Freedivers trip.</span></span></a>
     </div>

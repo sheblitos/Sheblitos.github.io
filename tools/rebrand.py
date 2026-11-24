@@ -46,7 +46,7 @@ FONT_HREF = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;60
 HEAD_LINKS = ('<!-- BF:HEAD -->\n<link rel="icon" type="image/png" href="/logo-mark.png">'
               '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
               f'<link rel="stylesheet" href="{FONT_HREF}">'
-              '<link rel="stylesheet" href="/site.css?v=1"><script src="/site.js?v=1" defer></script>\n<!-- /BF:HEAD -->')
+              '<link rel="stylesheet" href="/site.css?v=2"><script src="/site.js?v=2" defer></script>\n<!-- /BF:HEAD -->')
 
 # pages whose first banner sits on a photo (gets light text)
 PHOTO_HERO = {

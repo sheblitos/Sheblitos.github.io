@@ -328,3 +328,52 @@ section.bf-community{background:var(--bf-bg-alt);padding:clamp(3.5rem,7vw,5.5rem
 /* Base reset for pages built only on site.css */
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0}
+
+/* =====================================================================
+   3-SECOND SCROLL RULE: shorter pages, swipe rows on phones
+   ===================================================================== */
+.bf-sec{padding:clamp(2.75rem,5.5vw,4.75rem) clamp(1rem,4vw,3rem)}
+section.bf-book{padding:clamp(2.75rem,5.5vw,4.5rem) clamp(1rem,4vw,3rem)}
+.bf-dots{display:none}
+@media (max-width:640px){
+  .bf-swipe{display:flex !important;overflow-x:auto;scroll-snap-type:x mandatory;gap:.85rem;margin-right:-1rem;padding:0 1rem .25rem 0;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .bf-swipe::-webkit-scrollbar{display:none}
+  .bf-swipe>*{flex:0 0 82%;scroll-snap-align:start}
+  .bf-people.bf-swipe>*{flex-basis:88%}
+  .bf-dots{display:flex;justify-content:center;gap:.4rem;margin-top:.9rem}
+  .bf-dots i{width:7px;height:7px;border-radius:50%;background:var(--bf-line2);transition:width .25s,background .25s}
+  .bf-dots i.on{width:20px;border-radius:4px;background:var(--bf-brand)}
+  .bf-sec h2{font-size:1.65rem}
+  .bf-lead{font-size:1rem;margin-bottom:1.25rem}
+  .bf-hero-inner{padding-top:6.5rem;padding-bottom:2.25rem}
+  .bf-hero h1{font-size:2.4rem}
+  .bf-hero-lead{font-size:1rem;margin-bottom:1.1rem}
+  .bf-hero-offer{font-size:.85rem;margin-bottom:1.25rem}
+  .bf-hero .bf-actions .bf-btn{flex:1 1 0}
+  .bf-trust{display:grid;grid-template-columns:1fr 1fr;gap:.5rem 1rem;padding:1rem;font-size:.85rem}
+  .bf-photo-stack{padding:0;max-width:none}
+  .bf-photo-sub{display:none}
+  .bf-photo-main img{aspect-ratio:16/9;border-radius:14px}
+  .bf-steps{gap:.6rem}
+  .bf-steps span{font-size:.92rem}
+  .bf-card-img img{height:170px}
+  .bf-person{grid-template-columns:84px 1fr;padding:.9rem;align-items:start}
+  .bf-person-img img{width:84px;height:104px}
+  .bf-person>span>span{font-size:.88rem}
+  .bf-faq-item summary{padding:.95rem 0;font-size:1rem}
+  .bf-more{margin-top:1.25rem}
+  /* compact footer */
+  footer#footer.bf-foot{padding:2.5rem 1rem 1.5rem !important}
+  footer#footer.bf-foot .bf-foot-grid{grid-template-columns:1fr 1fr 1fr;gap:1.25rem .75rem}
+  footer#footer.bf-foot .bf-foot-brand{grid-column:1/-1;display:flex;align-items:center;gap:1rem}
+  footer#footer.bf-foot .bf-foot-brand img{width:72px;margin:0}
+  footer#footer.bf-foot .bf-foot-brand p{font-size:.85rem;line-height:1.5}
+  footer#footer.bf-foot h4{font-size:.68rem;letter-spacing:.1em;margin-bottom:.6rem}
+  footer#footer.bf-foot ul{gap:.45rem}
+  footer#footer.bf-foot a{font-size:.82rem}
+  footer#footer.bf-foot .bf-foot-bottom{margin-top:1.5rem;padding-top:1rem;font-size:.75rem}
+}
+@media (max-width:640px){
+  .bf-photo-stack .bf-photo-sub{display:none}
+  .bf-hero .bf-actions .bf-btn{white-space:nowrap;padding:.85rem 1rem}
+}

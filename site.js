@@ -21,3 +21,19 @@
   var key=null; map.forEach(function(m){if(!key&&path.indexOf(m[0])===0) key=m[1];});
   if(key) document.querySelectorAll('.bf-links a,.bf-mob a').forEach(function(a){if(a.getAttribute('href')===key) a.classList.add('active');});
 })();
+
+/* Swipe rows on phones: dot indicators */
+(function(){
+  if(!window.matchMedia('(max-width:640px)').matches) return;
+  document.querySelectorAll('.bf-swipe').forEach(function(row){
+    var items=[].slice.call(row.children); if(items.length<2) return;
+    var dots=document.createElement('div'); dots.className='bf-dots'; dots.setAttribute('aria-hidden','true');
+    items.forEach(function(_,i){var d=document.createElement('i'); if(!i) d.className='on'; dots.appendChild(d);});
+    row.parentNode.insertBefore(dots,row.nextSibling);
+    var t; row.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(function(){
+      var best=0,bd=1e9; items.forEach(function(el,i){var d=Math.abs(el.offsetLeft-row.offsetLeft-row.scrollLeft); if(d<bd){bd=d;best=i;}});
+      if(row.scrollLeft+row.clientWidth>=row.scrollWidth-4) best=items.length-1;
+      [].forEach.call(dots.children,function(d,i){d.className=i===best?'on':'';});
+    },60);},{passive:true});
+  });
+})();
