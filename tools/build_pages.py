@@ -33,6 +33,7 @@ body = (hero('commx-21', 'Freediving courses · Barcelona', 'From beginner<br><e
              'Four AIDA levels, taught in small groups with the same calm, mind-first method. Start as a complete beginner and go as far as you want.',
              ['AIDA certified', 'Pool + Mediterranean', 'All equipment included'],
              [btn('/book?for=beginners'), btn('#levels', 'Compare the levels', ghost=True)])
+        + trust()
         + sec(heading('Courses', 'Choose your level', 'Each level is a full AIDA certification. AIDA 1 and AIDA 2 are always taught together as the Beginner course.') + ladder(), alt=True, sid='levels')
         + sec('<div class="bf-two">' + '<div>' + heading('Every course includes', 'Everything you need', 'Bring a swimsuit and a towel. We take care of the rest.') + '</div>'
               + '<div>' + checklist(INCLUDED) + '</div></div>')
@@ -102,6 +103,7 @@ for path, c in COURSE_PAGES.items():
     body = hero(c['img'], f"{c['level']} · {c['aida']} · Barcelona", f"{c['title']}<br><em>{c['em']}</em>", c['lead'], c['facts'],
                 [btn(f"/book?for={c['item']}"), btn('/courses', 'All courses', ghost=True)], pos=c['pos'],
                 crumbs='<a href="/courses">Courses</a> · ' + c['level'])
+    body += trust()
     body += sec(photo_split(learn_html, c['learn_img'], ''))
     if c.get('steps'):
         body += sec(heading('How it works', 'Pool first. <em>Then the sea.</em>') + steps(c['steps']), alt=True)
@@ -149,7 +151,7 @@ TRIP_FAQ = [
     ("What's included?", 'Guided freediving with Shebl on every dive, all dive equipment, accommodation and trusted local operators at each stop, and curated land adventures.'),
     ('Who leads the trips?', 'Shebl and Rimi personally. Shebl is in the water on every dive; Rimi runs the journey end to end.'),
     ('Are the trips safe?', 'Yes. Every session runs with full safety protocols, buddy diving and emergency oxygen on site, with Shebl in the water with the group.'),
-    ('How do I get a spot?', 'Tap Book now and choose your trip. Dates go to the booking list first, and small groups fill quickly. Nothing is charged until your place is confirmed.'),
+    ('How do I get a spot?', 'Tap Book now and choose your trip. Dates go to the booking list first, and small groups fill quickly.'),
 ]
 body = (hero('exp-hero', 'Winter trips · 2026', 'Blue water.<br><em>Wild places.</em>',
              'Small-group freediving trips led by Shebl &amp; Rimi. Half the magic is underwater, the other half is at a table at sunset.',
@@ -330,7 +332,7 @@ FAQS = [
    ('I have a certificate from another school. Can I continue here?', 'Yes. Your certificate transfers directly and you start from your next level. Certified freedivers can also join our training sessions.')]),
  ('Prices &amp; booking', [
    ('How much do courses cost?', 'Beginner (AIDA 1 + AIDA 2) €420 · AIDA 3 €460 · AIDA 4 €575 · Instructor €1,500. All equipment is included. Training: pool €48, open water €72 per session.'),
-   ('How do I book?', 'Tap Book now, choose what you would like to do and when. We confirm dates within 48 hours, and nothing is charged until your place is confirmed.'),
+   ('How do I book?', 'Tap Book now, choose what you would like to do and when. We confirm dates within 48 hours.'),
    ('When are the course dates?', 'Courses run throughout the year in Barcelona. Book now or message us and we will confirm the next available dates.')]),
  ('Our method', [
    ('What is the Barcelona Freedivers method?', "It uses the mammalian dive response, the body's built-in reaction to immersion, together with structured breathing and nervous-system regulation. Depth and breath-hold time are by-products of calm, not willpower.")]),

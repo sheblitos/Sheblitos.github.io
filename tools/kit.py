@@ -48,7 +48,17 @@ def head_from(path, title=None, desc=None, extra=''):
             f'<link rel="stylesheet" href="/type-system.css?v=5">{extra}\n</head>\n')
 
 def page(path, body, title=None, desc=None, extra_head='', body_class=''):
-    out = head_from(path, title, desc, extra_head) + f'<body{(" class=%s" % chr(34) + body_class + chr(34)) if body_class else ""}>\n{body}\n</body>\n</html>\n'
+    head = head_from(path, title, desc, extra_head)
+    # structured FAQ data always mirrors the questions visible on the page
+    head = re.sub(r'<script type="application/ld\+json">\s*\{\s*"@context":\s*"https://schema.org",\s*"@type":\s*"FAQPage".*?</script>\s*', '', head, flags=re.S)
+    qa = re.findall(r'<details class="bf-faq-item"><summary>(.*?)</summary><p>(.*?)</p></details>', body, re.S)
+    if qa:
+        import json
+        clean = lambda s: html.unescape(re.sub(r'<[^>]+>', '', s)).strip()
+        ld = {"@context": "https://schema.org", "@type": "FAQPage",
+              "mainEntity": [{"@type": "Question", "name": clean(q), "acceptedAnswer": {"@type": "Answer", "text": clean(a)}} for q, a in qa]}
+        head = head.replace('</head>', '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + '</script>\n</head>', 1)
+    out = head + f'<body{(" class=%s" % chr(34) + body_class + chr(34)) if body_class else ""}>\n{body}\n</body>\n</html>\n'
     full = os.path.join(ROOT, path)
     os.makedirs(os.path.dirname(full) or ROOT, exist_ok=True)
     open(full, 'w', encoding='utf-8').write(out)
@@ -112,3 +122,7 @@ def book(eyebrow, title, text, item, sid='book'):
             f'    <a href="/book{("?for=" + item) if item else ""}" class="bf-btn">Book now</a>\n'
             f'    <p class="bf-book-alt">Prefer to talk first? <a href="{WA}" target="_blank" rel="noopener">Message us on WhatsApp</a></p>\n'
             '  </div>\n</section>\n<!-- /BF:BOOK -->')
+
+def trust():
+    return ('<ul class="bf-trust"><li><strong>160+</strong> freedivers certified</li><li><strong>AIDA</strong> Instructor Trainer &amp; Judge</li>'
+            '<li><strong>Small</strong> groups</li><li><strong>All</strong> equipment included</li></ul>')
