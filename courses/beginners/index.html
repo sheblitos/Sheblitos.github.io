@@ -693,7 +693,7 @@ footer{padding-bottom:6rem}
     <details class="faq-item"><summary>Where does the course take place?</summary><p>In Barcelona: pool sessions first, then open-water dives in the Mediterranean.</p></details>
     <details class="faq-item"><summary>How deep will I go?</summary><p>The AIDA 2 course works towards dives of around 20 m, always at your own pace and comfort.</p></details>
     <details class="faq-item"><summary>Is equipment included?</summary><p>Yes, all equipment is included in the course price.</p></details>
-    <details class="faq-item"><summary>Can I book AIDA 1 on its own?</summary><p>No. AIDA 1 is part of the beginners course. If you already have AIDA 1 or an equivalent certificate, you can book <a href="/courses/aida-2">AIDA 2</a> on its own.</p></details>
+    <details class="faq-item"><summary>Can I book AIDA 1 or AIDA 2 on its own?</summary><p>No. AIDA 1 and AIDA 2 are always taught together as one course, so you learn in the right order: pool first, then the sea.</p></details>
   </div>
 </section>
 
@@ -762,7 +762,7 @@ function handleApply(e){
   var btn=form.querySelector('button');
   var fd=new FormData(form);
   fd.delete('bot-field');
-  fd.append('course','Beginner course (AIDA 2) — free online intro, then €360 in Barcelona');
+  fd.append('course','Beginner course (AIDA 1 + AIDA 2) — €420');
   fd.append('_subject','New free online session request — beginner course');
   fd.append('_template','table');
   fd.append('_captcha','false');

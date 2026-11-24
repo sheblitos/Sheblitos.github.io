@@ -212,3 +212,5 @@ section.bf-community{background:var(--bf-bg-alt);padding:clamp(3.5rem,7vw,5.5rem
 .bf-community-grid p{color:var(--bf-ink2);line-height:1.65;margin:0}
 @media (max-width:760px){.bf-community-grid{grid-template-columns:1fr}}
 .bf-field[hidden]{display:none !important}
+/* Home course cards: readable small text on photos */
+.course-card.photo-hero .cc-title span,.course-card.photo-hero .cc-meta{color:rgba(255,255,255,.85) !important}

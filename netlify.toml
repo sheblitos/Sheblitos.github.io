@@ -241,13 +241,13 @@
 
 [[redirects]]
   from = "/es/curso-aida-2-barcelona"
-  to = "/courses/aida-2"
+  to = "/courses/beginners"
   status = 301
   force = true
 
 [[redirects]]
   from = "/es/curso-aida-2-barcelona/"
-  to = "/courses/aida-2"
+  to = "/courses/beginners"
   status = 301
   force = true
 
@@ -278,6 +278,19 @@
 
 [[redirects]]
   from = "/beginners-course/"
+  to = "/courses/beginners"
+  status = 301
+  force = true
+
+# AIDA 2 is only sold inside the Beginner course
+[[redirects]]
+  from = "/courses/aida-2"
+  to = "/courses/beginners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/courses/aida-2/"
   to = "/courses/beginners"
   status = 301
   force = true
