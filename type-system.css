@@ -9,8 +9,8 @@
 
 :root {
   /* ---- 2 TYPEFACES (unified fallback stacks) ---- */
-  --font-display: 'Mulish', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-body:    'Mulish', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-body:    'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
   /* ---- MODULAR TYPE SCALE (base 16px; nothing below 14px) ---- */
   --text-xs:   0.875rem;   /* 14px — eyebrow labels, captions, meta (FLOOR) */
@@ -50,7 +50,7 @@
   --shadow-md:   0 16px 38px rgba(0,0,0,.40);
   --shadow-lg:   0 26px 54px rgba(0,0,0,.48);
   --shadow-ring: 0 0 0 1px var(--ln);         /* hairline border */
-  --glow-teal:   0 8px 24px rgba(126,205,176,.16);
+  --glow-teal:   0 8px 24px rgba(5,86,93,.16);
 
   /* ---- MOTION durations (easing = existing --ease) ---- */
   --dur-fast: .15s;
@@ -102,7 +102,7 @@ button, .btn, [role="button"], input[type="submit"], input[type="button"], a.btn
 /* Site-wide keyboard focus indication (WCAG 2.4.7). Visible for keyboard
    users, suppressed for mouse/touch. Teal ring with fallback colour. */
 :focus-visible {
-  outline: 2px solid var(--teal, #7ecdb0);
+  outline: 2px solid var(--teal, #05565d);
   outline-offset: 3px;
   border-radius: var(--r-xs, 2px);
 }

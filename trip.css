@@ -8,13 +8,13 @@
    ===================================================================== */
 
 :root{
-  --deep:#0c1a15; --deep2:#112620; --deep3:#16302a;
-  --txt:#ece8e0; --txt2:rgba(236,232,224,.76); --txt3:rgba(236,232,224,.54);
-  --ln:rgba(236,232,224,.12); --ln2:rgba(236,232,224,.2);
-  --brand:#7ecdb0; --brand-hi:#a8e8cc;
-  --accent:#7ecdb0;                 /* text accent on dark */
-  --accent-soft:rgba(126,205,176,.35);
-  --paper:#e8f0ed; --paper-ink:#10211c; --paper-ink2:rgba(16,33,28,.74); --paper-brand:#17625b; --paper-ln:rgba(16,33,28,.14); --paper-card:#fff;
+  --deep:#ffffff; --deep2:#f4f8f8; --deep3:#e9f2f2;
+  --txt:#0e2a2d; --txt2:rgba(14,42,45,.76); --txt3:rgba(14,42,45,.54);
+  --ln:rgba(14,42,45,.12); --ln2:rgba(14,42,45,.2);
+  --brand:#05565d; --brand-hi:#04434a;
+  --accent:#05565d;                 /* text accent on dark */
+  --accent-soft:rgba(5,86,93,.35);
+  --paper:#f4f8f8; --paper-ink:#0e2a2d; --paper-ink2:rgba(16,33,28,.74); --paper-brand:#05565d; --paper-ln:rgba(16,33,28,.14); --paper-card:#fff;
   --hero-shade:12,26,21;            /* rgb of the hero overlay */
   --gutter:clamp(1rem,5vw,3.5rem); --wrap:1120px;
   --ease:cubic-bezier(.16,1,.3,1);
@@ -255,7 +255,7 @@ details[open] .chev{transform:rotate(180deg)}
 .field input,.field select,.field textarea{width:100%;font:500 1rem/1.4 var(--font-body);color:var(--txt);background:var(--deep2);border:1px solid var(--ln2);border-radius:var(--r-md);padding:.75rem .85rem;min-height:48px}
 .field textarea{min-height:110px;resize:vertical}
 .field select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ece8e0' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .8rem center;background-size:16px;padding-right:2.4rem}
-.field select option{background:#1b2a2a;color:#ece8e0}
+.field select option{background:#1b2a2a;color:#0e2a2d}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
 .field input[aria-invalid="true"],.field select[aria-invalid="true"]{border-color:#e08b7d}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
@@ -263,7 +263,7 @@ details[open] .chev{transform:rotate(180deg)}
 .form .btn-primary{width:100%}
 .form-msg{margin-top:1rem;padding:1rem 1.1rem;border-radius:var(--r-md);font-size:var(--text-sm)}
 .form-msg[hidden]{display:none}
-.form-msg.ok{background:rgba(126,205,176,.12);border:1px solid rgba(126,205,176,.4)}
+.form-msg.ok{background:rgba(5,86,93,.12);border:1px solid rgba(5,86,93,.4)}
 .form-msg.err{background:rgba(224,139,125,.1);border:1px solid rgba(224,139,125,.45)}
 .form-msg a{font-weight:700}
 @media (max-width:860px){.enq{grid-template-columns:1fr}}

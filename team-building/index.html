@@ -24,11 +24,11 @@
 html{scroll-behavior:smooth;font-size:100%}
 
 :root{
-  --deep:#060d09;--deep2:#0a1410;--deep3:#0f1c14;
-  --teal:#7ecdb0;--teal2:#a8e8cc;--teal3:#4aaa86;
-  --gold:#7ecdb0;--gold2:rgba(126,205,176,.55);--gold3:rgba(126,205,176,.1);
-  --txt:#e2ddd4;--txt2:rgba(226,221,212,.58);--txt3:rgba(226,221,212,.32);
-  --ln:rgba(226,221,212,.07);--ln2:rgba(226,221,212,.14);
+  --deep:#ffffff;--deep2:#f4f8f8;--deep3:#e9f2f2;
+  --teal:#05565d;--teal2:#04434a;--teal3:#0a6c74;
+  --gold:#05565d;--gold2:rgba(5,86,93,.55);--gold3:rgba(5,86,93,.1);
+  --txt:#0e2a2d;--txt2:rgba(14,42,45,.58);--txt3:rgba(14,42,45,.32);
+  --ln:rgba(14,42,45,.07);--ln2:rgba(14,42,45,.14);
   --r:4px;--ease:cubic-bezier(.16,1,.3,1);
 }
 
@@ -37,13 +37,13 @@ body{font-family:var(--font-display);background:var(--deep);color:var(--txt);ove
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:.028;pointer-events:none;z-index:9999}
 
 .cur-dot{position:fixed;width:6px;height:6px;background:var(--gold);border-radius:var(--r-round);pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s}
-.cur-ring{position:fixed;width:32px;height:32px;border:1px solid rgba(126,205,176,.3);border-radius:var(--r-round);pointer-events:none;z-index:9997;transform:translate(-50%,-50%);transition:width .3s,height .3s,opacity .3s}
+.cur-ring{position:fixed;width:32px;height:32px;border:1px solid rgba(5,86,93,.3);border-radius:var(--r-round);pointer-events:none;z-index:9997;transform:translate(-50%,-50%);transition:width .3s,height .3s,opacity .3s}
 .cur-dot.hov{width:10px;height:10px;background:var(--teal)}
 .cur-ring.hov{width:48px;height:48px;opacity:.45}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3.5rem;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent}
-nav.scrolled{background:rgba(12,26,21,.96);backdrop-filter:blur(20px);padding:1rem 3.5rem;border-color:var(--ln)}
+nav.scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(20px);padding:1rem 3.5rem;border-color:var(--ln)}
 .nav-logo{display:flex;align-items:center;gap:.875rem;font-family:var(--font-display);font-size:1.15rem;font-weight:600;letter-spacing:.02em;color:var(--txt);text-decoration:none}
 .nav-logo svg{width:36px;height:36px}
 .nav-logo strong{font-weight:400;color:var(--teal)}
@@ -55,7 +55,7 @@ nav.scrolled{background:rgba(12,26,21,.96);backdrop-filter:blur(20px);padding:1r
 
 /* BUTTONS */
 .btn-gold{display:inline-block;font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--deep);background:var(--gold);padding:.75rem 1.75rem;border-radius:var(--r);text-decoration:none;border:none;cursor:pointer;transition:background .2s,transform .15s}
-.btn-gold:hover{background:#a8e8cc;transform:translateY(-1px)}
+.btn-gold:hover{background:#04434a;transform:translateY(-1px)}
 .btn-ghost{display:inline-block;font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--txt2);background:transparent;border:1px solid var(--ln2);padding:.75rem 1.75rem;border-radius:var(--r);text-decoration:none;cursor:pointer;transition:border-color .2s,color .2s}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
 
@@ -70,7 +70,7 @@ nav.scrolled{background:rgba(12,26,21,.96);backdrop-filter:blur(20px);padding:1r
 .reveal-left.vis{opacity:1;transform:none}
 
 /* ═══ HERO ═══ */
-.hero{min-height:86vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 3.5rem 4.5rem;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(12,26,21,.7) 0%,rgba(12,26,21,.3) 35%,rgba(12,26,21,.8) 75%,rgba(12,26,21,.98) 100%),radial-gradient(ellipse at 55% 45%,rgba(126,205,176,.05) 0%,transparent 60%),var(--deep)}
+.hero{min-height:86vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 3.5rem 4.5rem;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(3,38,42,.7) 0%,rgba(3,38,42,.3) 35%,rgba(3,38,42,.8) 75%,rgba(3,38,42,.98) 100%),radial-gradient(ellipse at 55% 45%,rgba(5,86,93,.05) 0%,transparent 60%),var(--deep)}
 .hero-geo{position:absolute;top:50%;left:58%;transform:translate(-50%,-50%);width:min(80vw,680px);opacity:.03;animation:geoSpin 80s linear infinite;pointer-events:none}
 @keyframes geoSpin{to{transform:translate(-50%,-50%) rotate(360deg)}}
 .lab-eyebrow{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--gold);opacity:.7;margin-bottom:1rem}
@@ -81,7 +81,7 @@ nav.scrolled{background:rgba(12,26,21,.96);backdrop-filter:blur(20px);padding:1r
 .hero-sub strong{color:var(--txt);font-weight:400}
 .hero-pills{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:2.25rem}
 .lab-cta{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-body);font-weight:700;font-size:var(--text-xs);letter-spacing:.02em;color:var(--deep);background:var(--gold);padding:.95rem 2rem;border-radius:var(--r-xs);text-decoration:none;transition:background .2s,transform .15s}
-.lab-cta:hover{background:#a8e8cc;transform:translateY(-1px)}
+.lab-cta:hover{background:#04434a;transform:translateY(-1px)}
 .pill{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;border:1px solid var(--ln2);padding:.55rem 1.25rem;border-radius:var(--r-2xl);color:var(--txt2);background:transparent;cursor:pointer;transition:border-color .2s,color .2s,background .2s}
 .pill:hover,.pill.on{border-color:var(--gold);color:var(--deep);background:var(--gold)}
 .hero-stats{display:flex;gap:3rem;border-top:1px solid var(--ln);padding-top:2rem}
@@ -121,7 +121,7 @@ nav.scrolled{background:rgba(12,26,21,.96);backdrop-filter:blur(20px);padding:1r
 .ti-body p+p{margin-top:.85rem}
 .zero-list{margin-top:1.5rem;display:flex;flex-direction:column;gap:.5rem}
 .zero-item{display:flex;align-items:center;gap:.75rem;font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--txt3)}
-.zero-item::before{content:'—';color:rgba(126,205,176,.35)}
+.zero-item::before{content:'—';color:rgba(5,86,93,.35)}
 .ti-callout{background:var(--deep3);border:1px solid var(--ln);border-radius:var(--r);padding:2rem;height:fit-content}
 .ti-callout-tag{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--gold);opacity:.65;margin-bottom:1rem}
 .ti-callout p{font-size:1rem;font-weight:400;line-height:1.65;color:var(--txt);margin-bottom:.85rem}
@@ -146,8 +146,8 @@ nav.scrolled{background:rgba(12,26,21,.96);backdrop-filter:blur(20px);padding:1r
 .f-num{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--gold);flex-shrink:0;margin-top:.3rem}
 .f-title{font-size:1.05rem;font-weight:600;margin-bottom:.35rem}
 .f-body{font-size:var(--text-base);color:var(--txt2);line-height:1.72}
-.f-opt{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--teal);border:1px solid rgba(126,205,176,.2);padding:.2rem .5rem;border-radius:var(--r-2xl);display:inline-block;margin-top:.5rem}
-.inclusion-box{background:var(--deep3);border:1px solid rgba(126,205,176,.15);border-radius:var(--r);padding:2.5rem}
+.f-opt{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--teal);border:1px solid rgba(5,86,93,.2);padding:.2rem .5rem;border-radius:var(--r-2xl);display:inline-block;margin-top:.5rem}
+.inclusion-box{background:var(--deep3);border:1px solid rgba(5,86,93,.15);border-radius:var(--r);padding:2.5rem}
 .ib-tag{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
 .ib-tag::before{content:'◈';font-size:var(--text-xs)}
 .ib-title{font-size:1.25rem;font-weight:600;line-height:1.3;margin-bottom:1rem}
@@ -170,7 +170,7 @@ nav.scrolled{background:rgba(12,26,21,.96);backdrop-filter:blur(20px);padding:1r
 .eq-field select option{background:var(--deep2)}
 .eq-submit{grid-column:1/-1;background:var(--deep2);padding:1.25rem;display:flex;align-items:center;justify-content:center}
 .eq-submit button{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--deep);background:var(--gold);border:none;padding:.85rem 2.5rem;border-radius:var(--r-xs);cursor:pointer;transition:background .2s,transform .15s}
-.eq-submit button:hover{background:#a8e8cc;transform:translateY(-1px)}
+.eq-submit button:hover{background:#04434a;transform:translateY(-1px)}
 .eq-note{margin-top:1.5rem;font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--txt3)}
 
 /* FOOTER */
@@ -202,8 +202,8 @@ footer{padding:4rem 3.5rem;border-top:1px solid var(--ln);display:flex;align-ite
   footer{flex-direction:column;gap:1rem;text-align:center;padding:3rem 1.75rem}
   .footer-links{justify-content:center}
 }
-/* === site-wide warm + readable system (Mulish body, Cormorant headings) === */
-:root{--deep:#0c1a15;--deep2:#112620;--deep3:#16291f;--surface:#1c3026;--txt:#ece8e0;--txt2:rgba(236,232,224,.80);--txt3:rgba(236,232,224,.60);--ln:rgba(236,232,224,.10);--ln2:rgba(236,232,224,.18)}
+/* === site-wide warm + readable system (Montserrat body, Cormorant headings) === */
+:root{--deep:#ffffff;--deep2:#f4f8f8;--deep3:#e9f2f2;--surface:#e2eded;--txt:#0e2a2d;--txt2:rgba(14,42,45,.80);--txt3:rgba(14,42,45,.60);--ln:rgba(14,42,45,.10);--ln2:rgba(14,42,45,.18)}
 body{font-family:var(--font-body);line-height:1.7;-webkit-font-smoothing:antialiased}
 h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 .nav-links a,.nav-cta,.nav-mobile a,.nav-mobile-cta,.btn-primary,.btn-ghost,button{font-family:var(--font-body) !important;font-weight:600}
@@ -217,7 +217,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 .nav-ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
 .nav-ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
 .nav-ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-.nav-mobile{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(12,26,21,.97);backdrop-filter:blur(20px);padding:5.5rem 2rem 2.5rem;display:flex;flex-direction:column;gap:0;transform:translateY(-110%);transition:transform .42s var(--ease,cubic-bezier(.16,1,.3,1));border-bottom:1px solid var(--ln2);pointer-events:none}
+.nav-mobile{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(255,255,255,.97);backdrop-filter:blur(20px);padding:5.5rem 2rem 2.5rem;display:flex;flex-direction:column;gap:0;transform:translateY(-110%);transition:transform .42s var(--ease,cubic-bezier(.16,1,.3,1));border-bottom:1px solid var(--ln2);pointer-events:none}
 .nav-mobile.open{transform:translateY(0);pointer-events:all}
 .nav-mobile a{font-family:var(--font-body);font-weight:600;font-size:.9rem;letter-spacing:.02em;color:var(--txt2);text-decoration:none;padding:1.1rem 0;border-bottom:1px solid var(--ln);transition:color .2s}
 .nav-mobile a:last-child{border-bottom:none}
@@ -232,14 +232,14 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 .tracks-hint{font-family:var(--font-body);font-size:var(--text-xs);color:var(--txt3);max-width:520px;margin-bottom:2.25rem}
 @media(max-width:900px){.tracks-header{padding:3.5rem 1.75rem 0}}
 /* ── Deeper Together photos ── */
-.hero{background-image:linear-gradient(180deg,rgba(12,26,21,.62) 0%,rgba(12,26,21,.35) 40%,rgba(12,26,21,.55) 72%,rgba(12,26,21,.9) 100%),url('/dt-buoy.jpg');background-image:linear-gradient(180deg,rgba(12,26,21,.62) 0%,rgba(12,26,21,.35) 40%,rgba(12,26,21,.55) 72%,rgba(12,26,21,.9) 100%),image-set(url('/dt-buoy.avif') type('image/avif'), url('/dt-buoy.webp') type('image/webp'), url('/dt-buoy.jpg') type('image/jpeg'));background-size:cover;background-position:center 40%}
+.hero{background-image:linear-gradient(180deg,rgba(3,38,42,.62) 0%,rgba(3,38,42,.35) 40%,rgba(3,38,42,.55) 72%,rgba(3,38,42,.9) 100%),url('/dt-buoy.jpg');background-image:linear-gradient(180deg,rgba(3,38,42,.62) 0%,rgba(3,38,42,.35) 40%,rgba(3,38,42,.55) 72%,rgba(3,38,42,.9) 100%),image-set(url('/dt-buoy.avif') type('image/avif'), url('/dt-buoy.webp') type('image/webp'), url('/dt-buoy.jpg') type('image/jpeg'));background-size:cover;background-position:center 40%}
 .pl-strip-head{padding:4.5rem 3.5rem 1.75rem}
 .pl-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;background:var(--deep)}
 .pl-gsi{position:relative;height:clamp(240px,40vh,420px);background-size:cover;background-position:center;overflow:hidden}
-.pl-gsi::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,26,21,.1),rgba(12,26,21,.7))}
-.pl-gsi span{position:absolute;bottom:1.1rem;left:1.4rem;z-index:1;font-family:var(--font-body);font-size:var(--text-xs);font-weight:600;letter-spacing:.02em;color:rgba(236,232,224,.85)}
+.pl-gsi::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,38,42,.1),rgba(3,38,42,.7))}
+.pl-gsi span{position:absolute;bottom:1.1rem;left:1.4rem;z-index:1;font-family:var(--font-body);font-size:var(--text-xs);font-weight:600;letter-spacing:.02em;color:rgba(14,42,45,.85)}
 @media(max-width:760px){.pl-strip{grid-template-columns:1fr}.pl-strip-head{padding:3rem 1.75rem 1.5rem}}
-.nav-logo{gap:0 !important}.nav-logo svg{display:none !important}.nav-logo::before{content:"";width:38px;height:38px;flex:0 0 auto;margin-right:.6rem;background:url(/logo-mark.png) center/contain no-repeat}.nav-logo strong{margin-left:.3em}/*HEROFIX*/.hero{padding-top:96px}@media(max-width:900px){.hero{justify-content:flex-start}}.footer-logo{display:flex;align-items:center;gap:.6rem}.footer-logo img{width:44px;height:44px;display:block;flex:0 0 auto}.footer-watermark{position:absolute;right:-70px;bottom:-90px;width:360px;height:360px;background:url(/logo-mark.png) center/contain no-repeat;opacity:.05;pointer-events:none;z-index:-1}footer{position:relative;overflow:hidden;isolation:isolate}.hero-geo{display:none}@media(max-width:680px){.hero{background-image:linear-gradient(180deg,rgba(12,26,21,.62) 0%,rgba(12,26,21,.35) 40%,rgba(12,26,21,.55) 72%,rgba(12,26,21,.9) 100%),url('/dt-buoy-mobile.jpg');background-image:linear-gradient(180deg,rgba(12,26,21,.62) 0%,rgba(12,26,21,.35) 40%,rgba(12,26,21,.55) 72%,rgba(12,26,21,.9) 100%),image-set(url('/dt-buoy-mobile.avif') type('image/avif'), url('/dt-buoy-mobile.webp') type('image/webp'), url('/dt-buoy-mobile.jpg') type('image/jpeg'));background-position:center 45%}}
+.nav-logo{gap:0 !important}.nav-logo svg{display:none !important}.nav-logo::before{content:"";width:38px;height:38px;flex:0 0 auto;margin-right:.6rem;background:url(/logo-mark.png) center/contain no-repeat}.nav-logo strong{margin-left:.3em}/*HEROFIX*/.hero{padding-top:96px}@media(max-width:900px){.hero{justify-content:flex-start}}.footer-logo{display:flex;align-items:center;gap:.6rem}.footer-logo img{width:44px;height:44px;display:block;flex:0 0 auto}.footer-watermark{position:absolute;right:-70px;bottom:-90px;width:360px;height:360px;background:url(/logo-mark.png) center/contain no-repeat;opacity:.05;pointer-events:none;z-index:-1}footer{position:relative;overflow:hidden;isolation:isolate}.hero-geo{display:none}@media(max-width:680px){.hero{background-image:linear-gradient(180deg,rgba(3,38,42,.62) 0%,rgba(3,38,42,.35) 40%,rgba(3,38,42,.55) 72%,rgba(3,38,42,.9) 100%),url('/dt-buoy-mobile.jpg');background-image:linear-gradient(180deg,rgba(3,38,42,.62) 0%,rgba(3,38,42,.35) 40%,rgba(3,38,42,.55) 72%,rgba(3,38,42,.9) 100%),image-set(url('/dt-buoy-mobile.avif') type('image/avif'), url('/dt-buoy-mobile.webp') type('image/webp'), url('/dt-buoy-mobile.jpg') type('image/jpeg'));background-position:center 45%}}
 
 /* ═══ REDESIGN: performance-first framing ═══ */
 .hero-cta-row{display:flex;gap:.85rem;flex-wrap:wrap;align-items:center}
@@ -259,7 +259,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 .xp-fork{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
 .xp-card{background:var(--deep2);border:1px solid var(--ln);border-radius:var(--r);padding:2.5rem;transition:border-color .25s,transform .25s;text-decoration:none;display:flex;flex-direction:column}
 .xp-card:hover{border-color:var(--gold2);transform:translateY(-3px)}
-.xp-card.teal:hover{border-color:rgba(126,205,176,.45)}
+.xp-card.teal:hover{border-color:rgba(5,86,93,.45)}
 .xp-tag{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--gold);margin-bottom:1rem}
 .xp-card.teal .xp-tag{color:var(--teal)}
 .xp-h3{font-size:1.5rem;font-weight:600;margin-bottom:.75rem;color:var(--txt);line-height:1.2}
@@ -275,7 +275,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 .accent-teal .btn-gold{background:var(--teal);color:var(--deep)}
 .accent-teal .btn-gold:hover{background:var(--teal2)}
 /* USP banner (buddy system) */
-.usp{background:var(--deep3);border:1px solid rgba(126,205,176,.18);border-radius:var(--r);padding:2rem 2.25rem;margin-top:2rem}
+.usp{background:var(--deep3);border:1px solid rgba(5,86,93,.18);border-radius:var(--r);padding:2rem 2.25rem;margin-top:2rem}
 .usp p{font-size:1.15rem;font-weight:400;line-height:1.65;color:var(--txt)}
 .usp p em{color:var(--gold);font-style:italic;font-weight:600}
 .usp-note{font-size:var(--text-base);color:var(--txt2);line-height:1.8;margin-top:1rem;font-weight:400}
@@ -299,15 +299,15 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 .nav-dd>.nav-dd-toggle::after{content:'';width:5px;height:5px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px;opacity:.6;transition:transform .2s}
 .nav-dd:hover>.nav-dd-toggle::after,.nav-dd:focus-within>.nav-dd-toggle::after{transform:rotate(225deg);margin-top:1px}
 .nav-dd::after{content:'';position:absolute;top:100%;left:-1rem;right:-1rem;height:14px}
-.nav-dd-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(10px);margin-top:8px;background:rgba(12,26,21,.97);backdrop-filter:blur(18px);border:1px solid var(--ln2);border-radius:var(--r-lg);padding:.45rem;min-width:215px;display:flex;flex-direction:column;gap:.1rem;opacity:0;visibility:hidden;transition:opacity .2s,transform .2s;box-shadow:var(--shadow-md);z-index:300}
+.nav-dd-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(10px);margin-top:8px;background:rgba(255,255,255,.97);backdrop-filter:blur(18px);border:1px solid var(--ln2);border-radius:var(--r-lg);padding:.45rem;min-width:215px;display:flex;flex-direction:column;gap:.1rem;opacity:0;visibility:hidden;transition:opacity .2s,transform .2s;box-shadow:var(--shadow-md);z-index:300}
 .nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
 .nav-dd-menu a{padding:.65rem .85rem !important;border-radius:var(--r-sm);white-space:nowrap;text-transform:none !important;letter-spacing:.02em !important;font-size:var(--text-xs) !important;color:var(--txt) !important}
 .nav-dd-menu a span{display:block;font-size:var(--text-xs);letter-spacing:.04em;color:var(--txt3);margin-top:.15rem;text-transform:none}
-.nav-dd-menu a:hover{background:rgba(126,205,176,.1);color:var(--teal) !important}
+.nav-dd-menu a:hover{background:rgba(5,86,93,.1);color:var(--teal) !important}
 </style>
 <link rel="icon" type="image/png" href="/logo-mark.png"><link rel="apple-touch-icon" href="/logo-mark.png"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap"></noscript>
+
 <link rel="stylesheet" href="/type-system.css?v=5">
 <meta property="og:image" content="https://freedivingbrain.com/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -360,7 +360,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 .tb-band{position:relative;min-height:440px;display:flex;align-items:flex-end;overflow:hidden;border-bottom:1px solid var(--ln)}
 .tb-band>picture,.tb-band>picture img{position:absolute;inset:0;width:100%;height:100%}
 .tb-band>picture img{object-fit:cover;object-position:center 40%}
-.tb-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,26,21,.05) 0%,rgba(12,26,21,.35) 45%,rgba(12,26,21,.92) 100%)}
+.tb-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,38,42,.05) 0%,rgba(3,38,42,.35) 45%,rgba(3,38,42,.92) 100%)}
 .tb-band-txt{position:relative;z-index:1;padding:3rem 3.5rem;max-width:760px}
 .tb-band-txt p{font-size:clamp(1.4rem,3vw,2.1rem);font-weight:600;line-height:1.25;color:#fff}
 .tb-band-txt p em{color:var(--gold);font-style:italic}
@@ -443,7 +443,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 }
 @media (max-width:520px){.f-thumb img{width:72px;height:72px}.f-step{gap:1rem}}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Team Building Days & Retreats","serviceType":"Full-day team building experiences and retreats","description":"Freediving and breathwork team building for corporate teams and startups, from full-day experiences in Barcelona to multi-day retreats abroad.","provider":{"@type":"Organization","name":"Freediving Brain","url":"https://freedivingbrain.com"},"areaServed":[{"@type":"City","name":"Barcelona"},{"@type":"Country","name":"Spain"}],"url":"https://freedivingbrain.com/team-building"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Team Building Days & Retreats","serviceType":"Full-day team building experiences and retreats","description":"Freediving and breathwork team building for corporate teams and startups, from full-day experiences in Barcelona to multi-day retreats abroad.","provider":{"@type":"Organization","name":"Barcelona Freedivers","url":"https://freedivingbrain.com"},"areaServed":[{"@type":"City","name":"Barcelona"},{"@type":"Country","name":"Spain"}],"url":"https://freedivingbrain.com/team-building"}</script>
+<!-- BF:HEAD -->
+<link rel="icon" type="image/png" href="/logo-mark.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/site.css?v=1"><script src="/site.js?v=1" defer></script>
+<!-- /BF:HEAD -->
 </head>
 <body>
 
@@ -451,49 +454,18 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 <div class="cur-ring" id="curRing"></div>
 
 <!-- NAV -->
-<nav id="navbar">
-  <a href="/" class="nav-logo">
-    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="ng" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#7ecdb0" stop-opacity=".88"/>
-          <stop offset="55%" stop-color="#7ecdb0" stop-opacity=".48"/>
-          <stop offset="100%" stop-color="#3d9e7a" stop-opacity=".05"/>
-        </linearGradient>
-      </defs>
-      <circle cx="50" cy="50"     r="23" stroke="url(#ng)" stroke-width=".82" fill="none"/>
-      <circle cx="50" cy="27"     r="23" stroke="url(#ng)" stroke-width=".68" fill="none"/>
-      <circle cx="69.9" cy="38.5" r="23" stroke="url(#ng)" stroke-width=".68" fill="none"/>
-      <circle cx="69.9" cy="61.5" r="23" stroke="url(#ng)" stroke-width=".68" fill="none"/>
-      <circle cx="50" cy="73"     r="23" stroke="url(#ng)" stroke-width=".68" fill="none"/>
-      <circle cx="30.1" cy="61.5" r="23" stroke="url(#ng)" stroke-width=".68" fill="none"/>
-      <circle cx="30.1" cy="38.5" r="23" stroke="url(#ng)" stroke-width=".68" fill="none"/>
-    </svg>
-    Freediving <strong>Brain</strong>
-  </a>
-  <div class="nav-links">
-    <a href="/packages">Courses</a>
-    <a href="/training">Training</a>
-    <a href="/expeditions">Travel</a>
-    <a href="/team-building">Teams</a>
-    <a href="/about">Our Story</a><a href="/learn">Learn</a>
-    <a href="/blog">Blog</a><a href="/faq">FAQ</a>
-    <a href="#enquire" class="nav-cta">Talk with us</a>
-  </div>
-  <button class="nav-ham" id="navHam" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMobileNav()"><span></span><span></span><span></span></button></nav>
-<div class="nav-mobile" id="navMobile" role="dialog" aria-label="Mobile navigation">
-  <a href="/packages" onclick="closeMobileNav()">Courses</a>
-  <a href="/training" onclick="closeMobileNav()">Training</a>
-  <a href="/expeditions" onclick="closeMobileNav()">Travel</a>
-  <a href="/team-building" onclick="closeMobileNav()">Teams</a>
-  <a href="/about" onclick="closeMobileNav()">Our Story</a>
-  <a href="/blog" onclick="closeMobileNav()">Blog</a>
-  <a href="/faq" onclick="closeMobileNav()">FAQ</a>
-  <a href="#enquire" class="nav-mobile-cta" onclick="closeMobileNav()">Talk with us</a>
-</div>
+<!-- BF:NAV -->
+<nav id="navbar" class="bf-nav" aria-label="Main">
+  <a href="/" class="bf-logo" aria-label="Barcelona Freedivers home"><img src="/logo-mark.png" alt="" width="42" height="42"><span class="bf-word"><small>BARCELONA</small><b>FREEDIVERS</b></span></a>
+  <div class="bf-links"><a href="/packages">Courses</a><a href="/training">Training</a><a href="/expeditions">Travel</a><a href="/team-building">Teams</a><a href="/about">Our Story</a><a href="/learn">Learn</a><a href="/blog">Blog</a><a href="/faq">FAQ</a><a href="/packages" class="bf-cta">Book now</a></div>
+  <button class="bf-ham" id="navHam" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile"><span></span><span></span><span></span></button>
+</nav>
+<div class="bf-mob" id="navMobile"><a href="/packages">Courses</a><a href="/training">Training</a><a href="/expeditions">Travel</a><a href="/team-building">Teams</a><a href="/about">Our Story</a><a href="/learn">Learn</a><a href="/blog">Blog</a><a href="/faq">FAQ</a><a href="/packages" class="bf-cta">Book now</a></div>
+<!-- /BF:NAV -->
+
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero photo-hero">
   <svg class="hero-geo" viewBox="0 0 500 500" fill="none"><circle cx="250" cy="250" r="200" stroke="white" stroke-width=".6"/><circle cx="250" cy="150" r="100" stroke="white" stroke-width=".6"/><circle cx="250" cy="350" r="100" stroke="white" stroke-width=".6"/><circle cx="163" cy="200" r="100" stroke="white" stroke-width=".6"/><circle cx="337" cy="200" r="100" stroke="white" stroke-width=".6"/><circle cx="163" cy="300" r="100" stroke="white" stroke-width=".6"/><circle cx="337" cy="300" r="100" stroke="white" stroke-width=".6"/><circle cx="250" cy="250" r="100" stroke="white" stroke-width=".8"/></svg>
   <div>
     <p class="lab-eyebrow">Team Days · Retreats</p>
@@ -642,7 +614,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 </section>
 
 <!-- PHOTO BAND -->
-<div class="tb-band">
+<div class="tb-band photo-hero">
   <picture><source srcset="/comm-boat-smiles.avif" type="image/avif"><source srcset="/comm-boat-smiles.webp" type="image/webp"><img src="/comm-boat-smiles.jpg" alt="The whole group together on the boat at the end of the day" width="1100" height="825" loading="lazy" decoding="async"></picture>
   <div class="tb-band-txt reveal"><p>Colleagues in the morning.<br><em>A real team by sunset.</em></p><span>One day, one breath at a time, together.</span></div>
 </div>
@@ -695,18 +667,17 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 </section>
 
 <!-- FOOTER -->
-<footer><div class="footer-watermark" aria-hidden="true"></div>
-  <p class="footer-logo"><picture><source srcset="/logo-mark.webp" type="image/webp"><img src="/logo-mark.png" alt="" width="44" height="44"></picture>Freediving <span>Brain</span></p>
-  <div class="footer-links">
-    <a href="/">Home</a>
-    <a href="/packages">Courses</a>
-    <a href="/training">Training</a>
-    <a href="/expeditions">Travel</a>
-    <a href="/team-building">Teams</a>
-    <a href="/#about">About</a>
+<!-- BF:FOOTER -->
+<footer id="footer" class="bf-foot">
+  <div class="bf-foot-grid">
+    <div class="bf-foot-brand"><img src="/logo-full-white.png" alt="Barcelona Freedivers" width="140" height="155" loading="lazy"><p>AIDA freediving courses, training and trips in Barcelona and beyond. Calm first, depth follows.</p></div>
+    <div><h4>Courses</h4><ul><li><a href="/freediving-course-barcelona">Beginner course</a></li><li><a href="/courses/aida-1">AIDA 1</a></li><li><a href="/courses/aida-2">AIDA 2</a></li><li><a href="/courses/aida-3">AIDA 3</a></li><li><a href="/courses/aida-4">AIDA 4</a></li><li><a href="/courses/aida-instructor">Instructor course</a></li></ul></div>
+    <div><h4>Explore</h4><ul><li><a href="/training">Training</a></li><li><a href="/expeditions">Travel</a></li><li><a href="/team-building">Team building</a></li><li><a href="/learn">Learn</a></li><li><a href="/blog">Blog</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li><a href="/about">Our story</a></li><li><a href="/faq">FAQ</a></li><li><a href="https://wa.me/34603083325" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="https://www.instagram.com/freediving_brain/" target="_blank" rel="noopener">Instagram</a></li><li><a href="mailto:hello@freedivingbrain.com">Email us</a></li></ul></div>
   </div>
-  <p class="footer-copy">© 2026 Freediving Brain · Barcelona</p>
+  <div class="bf-foot-bottom"><span>&copy; 2026 Barcelona Freedivers &middot; Barcelona, Spain</span><span>AIDA freediving school</span></div>
 </footer>
+<!-- /BF:FOOTER -->
 
 <script>
 /* CURSOR */
@@ -754,11 +725,11 @@ function handleEnquiry(e){
   fd.append('_subject','New team enquiry — freedivingbrain.com');
   fd.append('_template','table');
   fd.append('_captcha','false');
-  fd.append('_autoresponse','Thanks for reaching out to Freediving Brain! We have your message and will reply within 48 hours. — Shebl');
+  fd.append('_autoresponse','Thanks for reaching out to Barcelona Freedivers! We have your message and will reply within 48 hours. — Shebl');
   var body=new URLSearchParams(fd).toString();
   fetch('https://formsubmit.co/ajax/hello@freedivingbrain.com',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded','Accept':'application/json'},body:body}).catch(function(){});
   btn.textContent='Sent — we\'ll be in touch within 48 hours.';
-  btn.style.background='#4aaa86';
+  btn.style.background='#0a6c74';
   btn.disabled=true;
 }
 </script>
