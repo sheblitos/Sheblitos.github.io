@@ -25,7 +25,7 @@
 /* Swipe rows on phones: dot indicators */
 (function(){
   if(!window.matchMedia('(max-width:640px)').matches) return;
-  document.querySelectorAll('.bf-swipe').forEach(function(row){
+  document.querySelectorAll('.bf-swipe,.why.cols-3,.pkgs').forEach(function(row){
     var items=[].slice.call(row.children); if(items.length<2) return;
     var dots=document.createElement('div'); dots.className='bf-dots'; dots.setAttribute('aria-hidden','true');
     items.forEach(function(_,i){var d=document.createElement('i'); if(!i) d.className='on'; dots.appendChild(d);});

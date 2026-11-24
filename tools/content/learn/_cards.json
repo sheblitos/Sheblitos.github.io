@@ -1,0 +1,122 @@
+[
+ {
+  "slug": "freediving-equalization",
+  "href": "/learn/freediving-equalization",
+  "img": "c2s-sea",
+  "tag": "Guide · Equalisation",
+  "title": "Freediving equalization: from Frenzel to deeper diving",
+  "ex": "How equalisation changes with depth, and how to build a technique that keeps working as you go deeper."
+ },
+ {
+  "slug": "frenzel-equalization",
+  "href": "/learn/frenzel-equalization",
+  "img": "training-line",
+  "tag": "Guide · Equalisation",
+  "title": "Frenzel equalization for freediving",
+  "ex": "The core technique behind comfortable freediving, and the most common mistakes."
+ },
+ {
+  "slug": "equalization-problems",
+  "href": "/learn/equalization-problems",
+  "img": "commx-15",
+  "tag": "Guide · Equalisation",
+  "title": "Why your equalization stops working",
+  "ex": "The usual reasons ears stop clearing at depth, and what to work on."
+ },
+ {
+  "slug": "mouthfill-equalization",
+  "href": "/learn/mouthfill-equalization",
+  "img": "commx-21",
+  "tag": "Guide · Equalisation",
+  "title": "Mouthfill equalization for deeper freediving",
+  "ex": "What the mouthfill is for, when to take it and how to control it."
+ },
+ {
+  "slug": "freediving-safety",
+  "href": "/learn/freediving-safety",
+  "img": "students-buoy-2",
+  "tag": "Guide · Safety",
+  "title": "Freediving safety: the systems that make the sport possible",
+  "ex": "Buddying, blackout, LMC and recovery: the rules every freediver lives by."
+ },
+ {
+  "slug": "shallow-water-blackout",
+  "href": "/learn/shallow-water-blackout",
+  "img": "comm-dahab-buoy",
+  "tag": "Guide · Safety",
+  "title": "Shallow water blackout in freediving",
+  "ex": "Why it happens, who is at risk and how it is prevented."
+ },
+ {
+  "slug": "breath-hold-training",
+  "href": "/learn/breath-hold-training",
+  "img": "pl-band-3",
+  "tag": "Guide · Training",
+  "title": "Breath-hold training: train the response, not the struggle",
+  "ex": "CO₂ tolerance, relaxation and safer ways to train your breath-hold."
+ },
+ {
+  "slug": "mental-training-freediving",
+  "href": "/learn/mental-training-freediving",
+  "img": "pool-coaching-session",
+  "tag": "Guide · Mental training",
+  "title": "Mental training: calm is a performance skill",
+  "ex": "Focus, attention and staying calm when the urge to breathe arrives."
+ },
+ {
+  "slug": "freediving-weekend-barcelona",
+  "href": "/learn/freediving-weekend-barcelona",
+  "img": "students-buoy-openwater",
+  "tag": "Barcelona · Europe · Travel",
+  "title": "Freediving Weekend in Barcelona: Go Deep Without Going Far",
+  "ex": "You do not need a long-haul trip every time you want meaningful freediving. Turn a few days in Barcelona into AIDA training, coaching, Mediterranean depth and a city break."
+ },
+ {
+  "slug": "why-freedive",
+  "href": "/learn/why-freedive",
+  "img": "hero-surface",
+  "tag": "Why freedive",
+  "title": "Why Freedive: More Than a Breath-Hold",
+  "ex": "People come for the depth. They stay for the calm, focus, confidence and community it gives back to the rest of their life."
+ },
+ {
+  "slug": "how-to-hold-your-breath-longer",
+  "href": "/learn/how-to-hold-your-breath-longer",
+  "img": "blog-breath-hero",
+  "tag": "Physiology",
+  "title": "How to Hold Your Breath Longer: The CO₂ Method",
+  "ex": "The urge to breathe is not oxygen running out. It is a CO₂ signal. Learning to read it, and calm it, is how depth actually happens."
+ },
+ {
+  "slug": "mammalian-dive-response",
+  "href": "/learn/mammalian-dive-response",
+  "img": "blog-mdr-hero",
+  "tag": "Physiology",
+  "title": "The Mammalian Dive Response: Your Built-In Superpower",
+  "ex": "Every human carries a physiological cascade that slows the heart, redirects blood, and extends breath-hold time. You were born with it. We teach you to activate it."
+ },
+ {
+  "slug": "aida1-vs-aida2",
+  "href": "/learn/aida1-vs-aida2",
+  "img": "blog-aida-hero",
+  "tag": "Courses",
+  "title": "AIDA 1 vs AIDA 2: Which Course Is Right for You?",
+  "ex": "One day or three days? Pool only or open water? Here is everything you need to choose the right starting point for your freediving journey."
+ },
+ {
+  "slug": "freediving-barcelona",
+  "href": "/learn/freediving-barcelona",
+  "img": "students-buoy-2",
+  "tag": "Barcelona",
+  "title": "Freediving in Barcelona: The Complete Local Guide",
+  "ex": "Where to train, what conditions to expect, which sites are best for beginners, and what makes the Mediterranean one of Europe's finest freediving environments."
+ },
+ {
+  "slug": "scuba-vs-freediving",
+  "href": "/learn/scuba-vs-freediving",
+  "img": "blog-scuba-hero",
+  "tag": "For Scuba Divers",
+  "title": "Scuba Diver Trying Freediving: What to Expect",
+  "ex": "You know the underwater world. Now lose the tank. What changes, what transfers, and why scuba divers often fall in love with freediving within their first session."
+ }
+]

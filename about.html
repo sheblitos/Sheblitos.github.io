@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VR5PT4F97R"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-VR5PT4F97R');
-</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VR5PT4F97R');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shebl & Rimi | Barcelona Freedivers Barcelona</title>
@@ -19,159 +13,17 @@
 <meta property="og:title" content="Our Story, Shebl & Rimi | Barcelona Freedivers">
 <meta property="og:description" content="Met in the water.<br>Built a school. The duo behind Barcelona Freedivers.">
 <meta property="og:image" content="https://freedivingbrain.com/og-image.jpg">
-<link rel="icon" type="image/png" href="/logo-mark.png"><link rel="apple-touch-icon" href="/logo-mark.png">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:100%;-webkit-text-size-adjust:100%}
-:root{
-  --deep:#ffffff;--deep2:#f4f8f8;--deep3:#e9f2f2;
-  --teal:#05565d;--teal2:#04434a;--teal3:#0a6c74;
-  --gold:#05565d;
-  --txt:#0e2a2d;--txt2:rgba(14,42,45,.80);--txt3:rgba(14,42,45,.55);
-  --ln:rgba(14,42,45,.10);--ln2:rgba(14,42,45,.18);
-  --ease:cubic-bezier(.16,1,.3,1);
-}
-body{font-family:var(--font-display);background:var(--deep);color:var(--txt);overflow-x:hidden;line-height:1.5;font-weight:600}
-a{color:inherit}
-img{max-width:100%;display:block}
-.wrap{max-width:720px;margin:0 auto;padding:0 1.5rem}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 3.5rem;background:rgba(255,255,255,.9);backdrop-filter:blur(18px);border-bottom:1px solid var(--ln)}
-.nav-logo{display:flex;align-items:center;gap:.6rem;font-family:var(--font-display);font-size:1.15rem;font-weight:600;letter-spacing:.02em;color:var(--txt);text-decoration:none}
-.nav-logo img{width:38px;height:38px}
-.nav-logo strong{font-weight:400;color:var(--teal)}
-.nav-links{display:flex;gap:2.3rem;align-items:center}
-.nav-links a{font-family:var(--font-body);font-size:var(--text-xs);font-weight:600;letter-spacing:.02em;color:var(--txt2);text-decoration:none;transition:color .2s}
-.nav-links a:hover,.nav-links a.active{color:var(--teal)}
-.nav-ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
-.nav-ham span{width:24px;height:1.5px;background:var(--txt);display:block;transition:.3s}
-.nav-mobile{position:fixed;top:0;left:0;right:0;z-index:190;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);padding:5.5rem 2rem 2rem;display:flex;flex-direction:column;gap:.2rem;transform:translateY(-100%);transition:transform .4s var(--ease);pointer-events:none}
-.nav-mobile.open{transform:translateY(0);pointer-events:all}
-.nav-mobile a{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--txt2);text-decoration:none;padding:1rem 0;border-bottom:1px solid var(--ln)}
-
-/* HERO */
-.story-hero{min-height:82vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 1.5rem 4rem;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(3,38,42,.35) 0%,rgba(3,38,42,.28) 42%,rgba(3,38,42,.92) 100%),url('./about-hero.jpg');background:linear-gradient(180deg,rgba(3,38,42,.35) 0%,rgba(3,38,42,.28) 42%,rgba(3,38,42,.92) 100%),image-set(url('./about-hero.avif') type('image/avif'), url('./about-hero.webp') type('image/webp'), url('./about-hero.jpg') type('image/jpeg'));background-size:cover;background-position:center 42%}
-.story-hero-inner{max-width:720px;margin:0 auto;width:100%}
-.story-eyebrow{font-family:var(--font-body);font-size:var(--text-xs);font-weight:700;letter-spacing:.02em;color:var(--gold);margin-bottom:1rem}
-.story-hero h1{font-size:clamp(2.4rem,8vw,4.5rem);font-weight:600;line-height:1.02;letter-spacing:-.02em;max-width:14ch}
-.story-hero h1 em{font-style:italic;color:var(--teal)}
-
-/* STORY SECTIONS */
-.story{padding:4.5rem 0}
-.story h2,.founders h2,.playgrounds h2{font-size:clamp(1.7rem,5.5vw,2.6rem);font-weight:400;line-height:1.12;letter-spacing:-.01em;color:var(--txt);margin-bottom:1.6rem}
-.story h2 em,.founders h2 em,.playgrounds h2 em{font-style:italic;color:var(--teal)}
-.story p{font-size:1.12rem;font-weight:400;color:var(--txt2);line-height:1.85;margin-bottom:1.4rem;max-width:62ch}
-.story p:last-child{margin-bottom:0}
-.story .lead{color:var(--teal2);font-style:italic;font-size:1.2rem}
-.sec-rule{width:54px;height:2px;background:var(--gold);margin:0 auto 3.25rem;opacity:.8}
-
-/* FOUNDERS */
-.founders{padding:1rem 0 4.5rem}
-.founder{display:grid;grid-template-columns:300px 1fr;gap:2.5rem;align-items:start;margin-bottom:3.5rem}
-.founder:last-child{margin-bottom:0}
-.founder-photo{position:relative;border-radius:var(--r-xl);overflow:hidden;aspect-ratio:4/5;background:linear-gradient(160deg,var(--deep3),var(--deep2));box-shadow:var(--shadow-md)}
-.founder-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
-.founder-photo::after{content:attr(data-initial);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:4rem;color:rgba(5,86,93,.3);z-index:0;font-weight:600}
-.founder-name{font-family:var(--font-display);font-size:1.9rem;font-weight:600;color:var(--txt);line-height:1.05}
-.founder-role{font-family:var(--font-body);font-size:var(--text-xs);font-weight:700;letter-spacing:.02em;color:var(--gold);margin:.5rem 0 1rem}
-.founder-vibe{display:inline-block;font-family:var(--font-body);font-size:var(--text-xs);font-weight:600;letter-spacing:.05em;color:var(--teal2);background:rgba(5,86,93,.08);border:1px solid var(--ln2);border-radius:var(--r-pill);padding:.45rem .95rem;margin-bottom:1.4rem}
-.founder-body p{font-size:1.06rem;line-height:1.82;margin-bottom:1.2rem}
-
-/* PLAYGROUNDS — distinct section */
-.playgrounds{background:var(--deep2);border-top:1px solid var(--ln);border-bottom:1px solid var(--ln);padding:5rem 0;position:relative}
-.playgrounds::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(5,86,93,.06),transparent 60%);pointer-events:none}
-.pg-intro{max-width:720px;margin:0 auto;padding:0 1.5rem 1rem;position:relative}
-.pg-quote{border-left:2px solid var(--gold);padding:.2rem 0 .2rem 1.5rem;margin-bottom:3rem}
-.pg-quote strong{color:var(--gold);font-weight:600}
-.pg-quote p{font-size:1.12rem;font-style:italic;color:var(--txt2);line-height:1.8;margin:0}
-.pg-grid{max-width:980px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;position:relative}
-.pg-card{position:relative;border-radius:var(--r-xl);overflow:hidden;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;padding:1.6rem;background:var(--deep3);box-shadow:var(--shadow-md)}
-.pg-card-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .6s var(--ease)}
-.pg-card:hover .pg-card-bg{transform:scale(1.06)}
-.pg-card-grad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,38,42,.15) 30%,rgba(3,38,42,.6) 65%,rgba(3,38,42,.95) 100%)}
-.pg-card-body{position:relative;z-index:2}
-.pg-flag{font-size:1.5rem;line-height:1;margin-bottom:.6rem}
-.pg-card h3{font-family:var(--font-display);font-size:1.5rem;font-weight:600;color:#fff;line-height:1.1;margin-bottom:.2rem}
-.pg-card h3 span{display:block;font-family:var(--font-body);font-size:var(--text-xs);font-weight:700;letter-spacing:.02em;color:var(--teal2);margin-top:.45rem}
-.pg-card p{font-size:.98rem;font-weight:400;color:rgba(14,42,45,.86);line-height:1.7;margin-top:.7rem}
-
-/* CLOSING CTA */
-.story-cta{text-align:center;padding:5rem 1.5rem}
-.story-cta h2{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:400;line-height:1.12;margin-bottom:1.4rem}
-.story-cta h2 em{font-style:italic;color:var(--teal)}
-.story-cta p{max-width:50ch;margin:0 auto 2rem;color:var(--txt2);font-size:1.08rem;line-height:1.8}
-.btn-primary{display:inline-block;font-family:var(--font-body);font-weight:700;font-size:var(--text-xs);letter-spacing:.02em;color:var(--deep);background:var(--teal);padding:1rem 2.4rem;border-radius:var(--r-sm);text-decoration:none;transition:background .2s,transform .15s}
-.btn-primary:hover{background:var(--teal2);transform:translateY(-1px)}
-
-/* FOOTER */
-footer{background:var(--deep2);border-top:1px solid var(--ln);padding:4rem 3.5rem 2.5rem;position:relative;overflow:hidden;isolation:isolate}
-.footer-watermark{position:absolute;right:-70px;bottom:-90px;width:340px;height:340px;background:url('/logo-mark.png') center/contain no-repeat;opacity:.05;pointer-events:none;z-index:-1}
-.footer-grid{max-width:1100px;margin:0 auto 3rem;display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:3rem}
-.footer-logo{display:flex;align-items:center;gap:.6rem;font-family:var(--font-display);font-size:1.3rem;font-weight:600;color:var(--txt);margin-bottom:.75rem}
-.footer-logo img{width:44px;height:44px}
-.footer-logo span{color:var(--teal)}
-.footer-tagline{font-size:.92rem;color:var(--txt3);line-height:1.8;max-width:260px}
-.footer-col-title{font-family:var(--font-body);font-size:var(--text-xs);font-weight:700;letter-spacing:.02em;color:var(--txt3);margin-bottom:1.4rem}
-.footer-links{display:flex;flex-direction:column;gap:.55rem}
-.footer-links a{font-size:.95rem;color:var(--txt2);text-decoration:none;transition:color .2s}
-.footer-links a:hover{color:var(--teal)}
-.footer-social{display:flex;gap:1rem;margin-bottom:1rem}
-.footer-social a{color:var(--txt2);line-height:0;transition:color .2s,transform .2s}
-.footer-social a:hover{color:var(--teal);transform:translateY(-2px)}
-.footer-social svg{width:20px;height:20px;display:block;fill:currentColor}
-.footer-bottom{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;border-top:1px solid var(--ln)}
-.footer-copy{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.04em;color:var(--txt3)}
-
-@media(max-width:900px){
-  nav{padding:1rem 1.5rem}
-  .nav-links{display:none}
-  .nav-ham{display:flex}
-}
-@media(max-width:680px){
-  .story{padding:3.25rem 0}
-  .story h2{margin-bottom:1.2rem}
-  .story p{font-size:1.08rem;line-height:1.8}
-  .founder{grid-template-columns:1fr;gap:1.4rem;margin-bottom:3rem}
-  .founder-photo{max-width:220px;aspect-ratio:1/1;border-radius:14px}
-  .pg-grid{grid-template-columns:1fr}
-  .pg-card{min-height:260px}
-  .footer{padding:3rem 1.5rem 2rem}
-  .footer-grid{grid-template-columns:1fr;gap:2.25rem;text-align:left}
-  .footer-bottom{flex-direction:column;gap:1rem;text-align:center}
-}
-</style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link rel="stylesheet" href="/type-system.css?v=5">
-<link rel="preload" as="image" href="./about-hero.avif" type="image/avif" fetchpriority="high">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Our Story, Shebl & Rimi | Barcelona Freedivers">
 <meta name="twitter:description" content="Met in the water.<br>Built a school. The duo behind Barcelona Freedivers.">
 <meta name="twitter:image" content="https://freedivingbrain.com/og-image.jpg">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://freedivingbrain.com/"}, {"@type": "ListItem", "position": 2, "name": "Our Story", "item": "https://freedivingbrain.com/about"}]}</script>
-<style>
-/* Unified hero typography — matches the Training page treatment */
-.hero h1,
-.tr-hero h1,
-.story-hero h1,
-.faq-header h1,
-.blog-hero h1,
-.article-hero h1,
-.article-h1 {
-  font-size: clamp(2.2rem, 5vw, 3.75rem);
-  font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: normal;
-}
-</style>
+<link rel="stylesheet" href="/type-system.css?v=5">
 <!-- BF:HEAD -->
-<link rel="icon" type="image/png" href="/logo-mark.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/site.css?v=2"><script src="/site.js?v=2" defer></script>
+<link rel="icon" type="image/png" href="/logo-mark.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/site.css?v=3"><script src="/site.js?v=3" defer></script>
 <!-- /BF:HEAD -->
 </head>
 <body>
-
 <!-- BF:NAV -->
 <nav id="navbar" class="bf-nav" aria-label="Main">
   <a href="/" class="bf-logo" aria-label="Barcelona Freedivers home"><img src="/logo-mark.png" alt="" width="42" height="42"><span class="bf-word"><small>BARCELONA</small><b>FREEDIVERS</b></span></a>
@@ -180,153 +32,20 @@ footer{background:var(--deep2);border-top:1px solid var(--ln);padding:4rem 3.5re
 </nav>
 <div class="bf-mob" id="navMobile"><a href="/courses">Courses</a><a href="/training">Training</a><a href="/trips">Trips</a><a href="/team-building">Teams</a><a href="/about">About</a><a href="/book" class="bf-cta">Book now</a></div>
 <!-- /BF:NAV -->
-
-
-<!-- HERO -->
-<header class="story-hero photo-hero">
-  <div class="story-hero-inner">
-    <p class="story-eyebrow">Our Story</p>
-    <h1>The people behind <em>Barcelona Freedivers</em></h1>
-  </div>
-</header>
-
-<!-- MET IN THE BLUE -->
-<section class="story">
-  <div class="wrap">
-    <h2>Met in the water. Built a <em>school.</em></h2>
-
-    <p>It started in Dahab, on the Red Sea. We met in the water, fell in love, and built a freediving school.</p>
-
+<section class="bf-hero photo-hero bf-hero-sm">
+  <picture class="bf-hero-img"><source srcset="/about-hero.avif" type="image/avif"><source srcset="/about-hero.webp" type="image/webp"><img src="/about-hero.jpg" alt="" width="1200" height="1600" loading="eager" fetchpriority="high" decoding="async" style="object-position:center 40%"></picture>
+  <div class="bf-hero-inner"><p class="bf-eyebrow">Our story</p><h1>The people behind<br><em>Barcelona Freedivers.</em></h1><p class="bf-hero-lead">It started in Dahab, on the Red Sea. We met in the water, fell in love, and built a freediving school.</p><div class="bf-actions"><a href="/book" class="bf-btn">Book now</a><a href="#team" class="bf-btn bf-btn-ghost">Meet Shebl &amp; Rimi</a></div></div>
+</section><section class="bf-sec" id="team"><div class="bf-wrap"><p class="bf-eyebrow">Your instructors</p><h2>Shebl &amp; Rimi</h2><div class="bf-profile"><picture class="bf-profile-img"><source srcset="/shebl.avif" type="image/avif"><source srcset="/shebl.webp" type="image/webp"><img src="/shebl.jpg" alt="Shebl" width="1000" height="1250" loading="lazy" decoding="async"></picture><div><b>Shebl</b><em>Founder · AIDA Instructor Trainer &amp; Judge</em><p>An AIDA Instructor Trainer, the highest teaching level in AIDA, Shebl teaches every level, from beginner courses to the AIDA Instructor Course, and has certified more than 160 freedivers. He is also an AIDA Freediving Judge at competitions.</p><p>Freediving since 2021 and teaching since 2022, he spent five years in Dahab on the Red Sea before bringing Barcelona Freedivers to Barcelona. On every trip, in Dahab, Sri Lanka and Indonesia, he is in the water leading the dives.</p><p><a href="/about/shebl" class="bf-link">Read Shebl’s instructor profile →</a></p></div></div><div class="bf-profile"><picture class="bf-profile-img"><source srcset="/rimi.avif" type="image/avif"><source srcset="/rimi.webp" type="image/webp"><img src="/rimi.jpg" alt="Rimi" width="1200" height="1600" loading="lazy" decoding="async" style="object-position:center 25%"></picture><div><b>Rimi</b><em>Assistant Instructor · AIDA Judge · Trips</em><p>An Architect and Product Design Lead by profession, Rimi is the first and deepest Iraqi female freediver. An Assistant Instructor and AIDA Freediving Judge, she is also a world traveller who has lived in six countries and explored more than 45. At Barcelona Freedivers, she is the architect behind every trip and adventure.</p></div></div></div></section><section class="bf-sec bf-sec-alt"><div class="bf-wrap"><p class="bf-eyebrow">From Dahab to the world</p><h2>Where we dive</h2><p class="bf-lead">We've dived with whales, mantas and dolphins around the world. Now based in Barcelona, teaching and running freediving trips.</p><div class="bf-cards bf-swipe"><a class="bf-card" href="/freediving-trips/dahab"><picture class="bf-card-img"><source srcset="/dest-dahab.avif" type="image/avif"><source srcset="/dest-dahab.webp" type="image/webp"><img src="/dest-dahab.jpg" alt="" width="1400" height="950" loading="lazy" decoding="async"></picture><span class="bf-card-body"><b>Egypt &amp; Dahab</b><span>Shebl's home water, every reef and canyon.</span></span></a><a class="bf-card" href="/freediving-trips/bali"><picture class="bf-card-img"><source srcset="/dest-bali.avif" type="image/avif"><source srcset="/dest-bali.webp" type="image/webp"><img src="/dest-bali.jpg" alt="" width="1400" height="950" loading="lazy" decoding="async"></picture><span class="bf-card-body"><b>Indonesia &amp; Bali</b><span>Drop-offs, shipwrecks and hidden gems across Bali, Lombok and Komodo.</span></span></a><a class="bf-card" href="/freediving-trips/sri-lanka"><picture class="bf-card-img"><source srcset="/card-srilanka.avif" type="image/avif"><source srcset="/card-srilanka.webp" type="image/webp"><img src="/card-srilanka.jpg" alt="" width="820" height="1242" loading="lazy" decoding="async"></picture><span class="bf-card-body"><b>Sri Lanka</b><span>Depth and surf on the coast; jungle and wild elephants inland.</span></span></a></div></div></section><section class="bf-sec" id="community"><div class="bf-wrap"><p class="bf-eyebrow">Community</p><h2>A freediving community in Barcelona</h2><p class="bf-lead">Freediving is built on trust, so we want people to meet reliable buddies, train together and keep the sport social as well as safe.</p><div class="bf-tcards bf-cols-3 bf-swipe"><div class="bf-tcard"><b>Find buddies</b><span>Meet other freedivers for pool sessions, open-water dives and shared training. Nobody should practise breath-hold diving alone.</span></div><div class="bf-tcard"><b>Train together</b><span>Dry practice, stretching, pool training and Mediterranean sessions, matched to your certification and experience.</span></div><div class="bf-tcard"><b>Start freediving</b><span>Not certified yet? Meet people in the sport and join the Beginner course when you are ready.</span></div></div></div></section><!-- BF:BOOK -->
+<section class="bf-book" id="book">
+  <div class="bf-book-inner">
+    <p class="bf-book-eyebrow">Ready to dive?</p>
+    <h2>First breath or your hundredth</h2>
+    <p>There's a spot for you. Tell us what you'd like to do and we'll reply within 48 hours.</p>
+    <a href="/book" class="bf-btn">Book now</a>
+    <p class="bf-book-alt">Prefer to talk first? <a href="https://wa.me/34603083325" target="_blank" rel="noopener">Message us on WhatsApp</a></p>
   </div>
 </section>
-
-<!-- FOUNDERS -->
-<section class="founders">
-  <div class="wrap" style="margin-bottom:2.5rem">
-    <h2>Shebl &amp; <em>Rimi</em></h2>
-  </div>
-  <div class="wrap">
-
-    <article class="founder">
-      <div class="founder-photo" data-initial="S">
-        <picture><source srcset="./shebl.avif" type="image/avif"><source srcset="./shebl.webp" type="image/webp"><img src="./shebl.jpg" alt="Shebl - Founder & Head Instructor Trainer" loading="lazy" decoding="async" width="1000" height="1250"></picture>
-      </div>
-      <div>
-        <p class="founder-name">Shebl</p>
-        <p class="founder-role">Founder &amp; Head Instructor Trainer</p>
-        <span class="founder-vibe">The vibe: Inner calm &amp; psychological mastery</span>
-        <div class="founder-body">
-          <p>An AIDA Instructor Trainer, the highest teaching level in AIDA, Shebl teaches every level, from beginner courses to the AIDA Instructor Course, and has certified more than 160 freedivers. He is also an AIDA Freediving Judge at competitions.</p>
-          <p>Freediving since 2021 and teaching since 2022, he spent five years in Dahab on the Red Sea before bringing Barcelona Freedivers to Barcelona. On every Barcelona Freedivers trip, in Dahab, Sri Lanka and Indonesia, he is in the water leading the dives.</p>
-          <p><a href="/about/shebl" style="color:var(--teal);text-decoration:none">Read Shebl’s instructor profile and guides →</a></p>
-
-        </div>
-      </div>
-    </article>
-
-    <article class="founder">
-      <div class="founder-photo" data-initial="R">
-        <picture><source srcset="./rimi.avif" type="image/avif"><source srcset="./rimi.webp" type="image/webp"><img src="./rimi.jpg" alt="Rimi - Co-Organizer" loading="lazy" decoding="async" onerror="this.style.display='none'" width="1200" height="1600"></picture>
-      </div>
-      <div>
-        <p class="founder-name">Rimi</p>
-        <p class="founder-role">Assistant Instructor, AIDA Judge &amp; Trip Organiser</p>
-        <span class="founder-vibe">The vibe: High-energy spark &amp; architect of the journey</span>
-        <div class="founder-body">
-          <p>An Architect and Product Design Lead by profession, Rimi is the first and deepest Iraqi female freediver. An Assistant Instructor and AIDA Freediving Judge, she is also a world traveller who has lived in six countries and explored more than 45. At Barcelona Freedivers, she is the architect behind every trip and adventure.</p>
-
-        </div>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<!-- FROM DAHAB TO THE WORLD -->
-<section class="story" style="background:var(--deep);border-top:1px solid var(--ln)">
-  <div class="wrap">
-    <h2>From Dahab to the <em>world</em></h2>
-
-    <p>We've dived with whales, mantas and dolphins around the world. Now based in Barcelona, teaching, and running freediving trips.</p>
-
-  </div>
-</section>
-
-<!-- PLAYGROUNDS (distinct background) -->
-<section class="playgrounds">
-  <div class="pg-intro">
-    <div class="pg-quote">
-      
-    </div>
-    <h2 style="text-align:center;margin-bottom:0">Our global <em>playgrounds</em></h2>
-  </div>
-
-  <div class="pg-grid">
-    <article class="pg-card">
-      <div class="pg-card-bg" style="background-image:image-set(url('./dahab-1.avif') type('image/avif'), url('./dahab-1.webp') type('image/webp'), url('./dahab-1.jpg') type('image/jpeg'))"></div>
-      <div class="pg-card-grad"></div>
-      <div class="pg-card-body">
-        <div class="pg-flag">🇪🇬</div>
-        <h3>Egypt &amp; Dahab</h3>
-        <p>Shebl's home water, every reef and canyon.</p>
-      </div>
-    </article>
-
-    <article class="pg-card">
-      <div class="pg-card-bg" style="background-image:image-set(url('./bali-1.avif') type('image/avif'), url('./bali-1.webp') type('image/webp'), url('./bali-1.jpg') type('image/jpeg'))"></div>
-      <div class="pg-card-grad"></div>
-      <div class="pg-card-body">
-        <div class="pg-flag">🇮🇩</div>
-        <h3>Indonesia &amp; Bali</h3>
-        <p>Island drop-offs, shipwrecks and hidden gems across Bali, Lombok and Komodo.</p>
-      </div>
-    </article>
-
-    <article class="pg-card">
-      <div class="pg-card-bg" style="background-image:image-set(url('./sl-mirissa.avif') type('image/avif'), url('./sl-mirissa.webp') type('image/webp'), url('./sl-mirissa.jpg') type('image/jpeg'))"></div>
-      <div class="pg-card-grad"></div>
-      <div class="pg-card-body">
-        <div class="pg-flag">🇱🇰</div>
-        <h3>Sri Lanka</h3>
-        <p>Depth training and surf on the coast; jungle hikes and wild elephants inland.</p>
-      </div>
-    </article>
-
-    <article class="pg-card">
-      <div class="pg-card-bg" style="background-image:image-set(url('./ten-beach.avif') type('image/avif'), url('./ten-beach.webp') type('image/webp'), url('./ten-beach.jpg') type('image/jpeg'))"></div>
-      <div class="pg-card-grad"></div>
-      <div class="pg-card-body">
-        <div class="pg-flag">🇪🇸</div>
-        <h3>The Canary Islands</h3>
-        <p>Deep volcanic water off Tenerife and Gran Canaria.</p>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- CLOSING CTA -->
-<section class="story-cta">
-  <h2>Ready to <em>dive?</em></h2>
-  <p>First breath or your hundredth, there's a spot for you.</p>
-  <a href="/book" class="btn-primary">Book now</a>
-</section>
-
-<!-- FOOTER -->
-
-<!-- COMMUNITY -->
-<section class="bf-community" id="community">
-  <div class="bf-community-inner">
-    <p class="bf-book-eyebrow">Community</p>
-    <h2>A freediving community in Barcelona</h2>
-    <p>Freediving is built on trust, so we want people to meet reliable buddies, train together and keep the sport social as well as safe.</p>
-    <div class="bf-community-grid">
-      <div><h3>Find buddies</h3><p>Meet other freedivers for pool sessions, open-water dives and shared training. Nobody should practise breath-hold diving alone.</p></div>
-      <div><h3>Train together</h3><p>Dry practice, stretching, pool training and Mediterranean sessions, matched to your certification and experience.</p></div>
-      <div><h3>Start freediving</h3><p>Not certified yet? Meet people in the sport and join the beginners course when you are ready.</p></div>
-    </div>
-  </div>
-</section>
-
+<!-- /BF:BOOK -->
 <!-- BF:FOOTER -->
 <footer id="footer" class="bf-foot">
   <div class="bf-foot-grid">
@@ -338,6 +57,5 @@ footer{background:var(--deep2);border-top:1px solid var(--ln);padding:4rem 3.5re
   <div class="bf-foot-bottom"><span>&copy; 2026 Barcelona Freedivers &middot; Barcelona, Spain</span><span>AIDA freediving school</span></div>
 </footer>
 <!-- /BF:FOOTER -->
-
 </body>
 </html>
