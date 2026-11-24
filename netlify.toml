@@ -52,3 +52,59 @@
   to = "/expeditions"
   status = 301
   force = true
+
+# Removed pages
+[[redirects]]
+  from = "/athlete-mental-performance"
+  to = "/team-building"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/athlete-mental-performance/"
+  to = "/team-building"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/judge"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/judge/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/judge/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/freediving-and-adhd"
+  to = "/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/freediving-and-adhd/"
+  to = "/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/freediving-and-ptsd"
+  to = "/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/freediving-and-ptsd/"
+  to = "/blog"
+  status = 301
+  force = true
+

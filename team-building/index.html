@@ -447,6 +447,13 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 <!-- BF:HEAD -->
 <link rel="icon" type="image/png" href="/logo-mark.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/site.css?v=1"><script src="/site.js?v=1" defer></script>
 <!-- /BF:HEAD -->
+<style>
+.xp-fork.xp-single{display:block}
+.xp-fork.xp-single .xp-card{flex-direction:row;padding:0;overflow:hidden}
+.xp-fork.xp-single .xp-img{flex:0 0 52%;margin:0;height:380px;min-height:0}
+.xp-fork.xp-single .xp-body{padding:2.5rem;display:flex;flex-direction:column;justify-content:center}
+@media (max-width:760px){.xp-fork.xp-single{display:block !important;margin-right:0 !important;padding-right:0 !important}.xp-fork.xp-single .xp-card{flex-direction:column}.xp-fork.xp-single .xp-img{min-height:0;height:200px}.xp-fork.xp-single .xp-body{padding:1.5rem}}
+</style>
 </head>
 <body>
 
@@ -511,20 +518,13 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 <section class="core-truth" style="display:block">
   <p class="section-tag reveal">Who we work with</p>
   <h2 class="ct-h2 reveal" style="max-width:640px;margin-bottom:.5rem">Built for teams.<br><em>Adapted to your people.</em></h2>
-  <div class="xp-fork reveal">
+  <div class="xp-fork xp-single reveal">
     <a href="#team" class="xp-card">
-      <picture class="xp-img"><source srcset="/tb-corporate-team.avif" type="image/avif"><source srcset="/tb-corporate-team.webp" type="image/webp"><img src="/tb-corporate-team.jpg" alt="A smiling group of freedivers together in the water" width="825" height="1100" loading="lazy" decoding="async" style="object-position:center 46%"></picture>
+      <picture class="xp-img"><source srcset="/tb-corporate-team.avif" type="image/avif"><source srcset="/tb-corporate-team.webp" type="image/webp"><img src="/tb-corporate-team.jpg" alt="A smiling group of freedivers together in the water" width="825" height="1100" loading="lazy" decoding="async" style="object-position:center 46%"></picture><div class="xp-body">
       <p class="xp-tag">Corporate &amp; startup teams</p>
       <p class="xp-h3">Corporate team building</p>
       <p class="xp-desc">Turn a stretched, siloed team into one that trusts, communicates and stays calm together, through a shared day of calm, care and trust.</p>
-      <span class="xp-link">Explore team building &rarr;</span>
-    </a>
-    <a href="#athletic" class="xp-card teal">
-      <picture class="xp-img"><source srcset="/tb-athletic-monofin.avif" type="image/avif"><source srcset="/tb-athletic-monofin.webp" type="image/webp"><img src="/tb-athletic-monofin.jpg" alt="Monofin training in the pool" width="1400" height="1050" loading="lazy" decoding="async" style="object-position:center 42%"></picture>
-      <p class="xp-tag">Athletes &amp; coaches</p>
-      <p class="xp-h3">Athletic performance</p>
-      <p class="xp-desc">Train the mental game, composure, breath control, focus and recovery, that decides how you perform when the pressure is highest.</p>
-      <span class="xp-link">Explore athletic performance &rarr;</span>
+      <span class="xp-link">Explore team building &rarr;</span></div>
     </a>
   </div>
 </section>
@@ -565,27 +565,6 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
   </div>
   <div class="tb-duo reveal on-deep"><picture class="d-main"><source srcset="/commx-21.avif" type="image/avif"><source srcset="/commx-21.webp" type="image/webp"><img src="/commx-21.jpg" alt="Two freedivers descending together along the line" width="985" height="1100" loading="lazy" decoding="async"></picture><picture class="d-sub"><source srcset="/pl-band-3.avif" type="image/avif"><source srcset="/pl-band-3.webp" type="image/webp"><img src="/pl-band-3.jpg" alt="A buddy coaching a relaxed breath-hold in the pool" width="900" height="1200" loading="lazy" decoding="async"></picture></div>
   </div>
-</section>
-
-<!-- ATHLETIC EXPERIENCE -->
-<section class="core-truth accent-teal" id="athletic" style="display:block">
-  <p class="section-tag reveal">Athletic performance &middot; Athletes &amp; coaches</p>
-  <h2 class="ct-h2 reveal" style="max-width:640px;margin-bottom:1.25rem">The dive isn't the goal.<br><em>Performance is.</em></h2>
-  <div class="tb-split">
-  <div class="ct-body reveal">
-    <p class="m-clamp">Freediving is a controlled, high-stakes environment where the only variable is you. There's no opponent and no clock, just the athlete, a breath, and the pressure. It's a rare place to train the mental side of performance with real consequences and complete safety.</p>
-    <p>Athletes learn to down-regulate before a start, breathe through tension, recover between efforts, and hold focus when everything says to rush. The objective is never a deeper dive, it's a calmer, sharper athlete under pressure. We don't promise podiums, we give athletes practical, repeatable skills for performing under pressure.</p>
-  </div>
-  <div class="tb-duo wide reveal on-deep"><picture class="d-main"><source srcset="/pl-band-2.avif" type="image/avif"><source srcset="/pl-band-2.webp" type="image/webp"><img src="/pl-band-2.jpg" alt="Dynamic training in the pool" width="1200" height="900" loading="lazy" decoding="async"></picture><picture class="d-sub"><source srcset="/c2s-sea.avif" type="image/avif"><source srcset="/c2s-sea.webp" type="image/webp"><img src="/c2s-sea.jpg" alt="A freediver relaxed in freefall" width="1100" height="825" loading="lazy" decoding="async"></picture></div>
-  </div>
-  <p class="section-tag reveal" style="margin-top:3.5rem">What athletes train</p>
-  <div class="benefits-grid reveal">
-    <div class="benefit"><p class="b-num">01</p><p class="b-title">Competition mindset</p><p class="b-body">Meeting the biggest moment as a challenge to engage, not a threat to survive.</p></div>
-    <div class="benefit"><p class="b-num">02</p><p class="b-title">Performance under pressure</p><p class="b-body">Staying loose and precise when the stakes, and the heart rate, are highest.</p></div>
-    <div class="benefit"><p class="b-num">03</p><p class="b-title">Breath control</p><p class="b-body">Using the breath to steer arousal up for effort and down for recovery, on demand.</p></div>
-    <div class="benefit"><p class="b-num">04</p><p class="b-title">Focus &amp; recovery</p><p class="b-body">Narrowing attention when it matters, and switching off fully between efforts.</p></div>
-  </div>
-  <div style="margin-top:2.5rem"><a href="#enquire" class="btn-gold" style="font-size:var(--text-xs)">Explore athletic performance &rarr;</a></div>
 </section>
 
 <!-- WHAT YOU ACTUALLY DO -->
@@ -629,7 +608,6 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
     <details class="faq-item"><summary>Is it safe?</summary><p>Yes. Every session is led in person by Shebl, an AIDA Instructor Trainer, with strict buddy and safety protocols, shallow, controlled water, and small groups. Safety is the first thing everyone learns, and it's the point.</p></details>
     <details class="faq-item"><summary>Can this be a one-day experience or a retreat?</summary><p>Yes, both. We run full-day team experiences (morning to afternoon) and multi-day retreats in Barcelona or abroad. For teams we don't do shorter sessions: trust needs a full day to build.</p></details>
     <details class="faq-item"><summary>Is this breathwork, or actual freediving?</summary><p>Both, and the balance is yours. Everyone does the breathwork and dry regulation work; the pool and open-water dive are there for groups who want the full experience. The lessons are the same either way.</p></details>
-    <details class="faq-item"><summary>Can you tailor it for a sports team or individual athlete?</summary><p>Yes. The athletic experience is built around sport psychology, breath, focus, recovery and pressure, rather than team building. Tell us your sport and we'll shape it.</p></details>
   </div>
 </section>
 
@@ -646,19 +624,17 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
       <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
       <div class="eq-field"><label class="eq-label">Name</label><input type="text" name="name" placeholder="Your name" required aria-label="Your name"></div>
       <div class="eq-field"><label class="eq-label">Email</label><input type="email" name="email" placeholder="your@email.com" required aria-label="Your email address"></div>
-      <div class="eq-field"><label class="eq-label">Company / team / sport</label><input type="text" name="organisation" placeholder="Who are we hosting?" aria-label="Organisation name"></div>
+      <div class="eq-field"><label class="eq-label">Company / team</label><input type="text" name="organisation" placeholder="Who are we hosting?" aria-label="Organisation name"></div>
       <div class="eq-field"><label class="eq-label">Which experience?</label>
         <select name="team-type" required aria-label="Which experience">
           <option value="">Select one</option>
                     <option>Team building day &mdash; full day</option>
           <option>Team retreat &mdash; multi-day, Barcelona or abroad</option>
           <option>Startup / team offsite</option>
-          <option>Athletic performance &mdash; sports team</option>
-          <option>Athletic performance &mdash; individual athlete</option>
           <option>Not sure yet</option>
         </select>
       </div>
-      <div class="eq-field full"><label class="eq-label">Group size</label><input type="text" name="group-size" placeholder="Roughly how many people? e.g. 8-12, or 1 athlete" aria-label="Group size"></div>
+      <div class="eq-field full"><label class="eq-label">Group size</label><input type="text" name="group-size" placeholder="Roughly how many people? e.g. 8-12 people" aria-label="Group size"></div>
       <div class="eq-field full"><label class="eq-label">Tell us about your people and what you're looking for</label><textarea name="message" rows="2" placeholder="Goals, timing, location, any questions, the more context the better." aria-label="Your message"></textarea></div>
       <div class="eq-submit"><button type="submit">Send enquiry &rarr;</button></div>
     </form>

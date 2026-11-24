@@ -18,7 +18,7 @@
   var path=location.pathname.replace(/\/index\.html$/,'/').replace(/\.html$/,'').replace(/\/$/,'')||'/';
   var map=[['/packages','/packages'],['/courses','/packages'],['/freediving-course-barcelona','/packages'],['/es/curso','/packages'],
            ['/training','/training'],['/es/entrenamiento','/training'],['/expeditions','/expeditions'],['/freediving-trips','/expeditions'],
-           ['/team-building','/team-building'],['/corporate-team-building','/team-building'],['/athlete-mental','/team-building'],
+           ['/team-building','/team-building'],['/corporate-team-building','/team-building'],
            ['/about','/about'],['/barcelona','/about'],['/learn','/learn'],['/blog','/blog'],['/faq','/faq']];
   var key=null; map.forEach(function(m){if(!key&&path.indexOf(m[0])===0) key=m[1];});
   if(key) document.querySelectorAll('.bf-links a,.bf-mob a').forEach(function(a){if(a.getAttribute('href')===key) a.classList.add('active');});
