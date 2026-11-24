@@ -1,55 +1,35 @@
 [build]
   publish = "."
 
-[[redirects]]
-  from = "/blog"
-  to = "/blog/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/blog/"
-  to = "/blog/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/blog/:slug"
-  to = "/blog/:slug/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/blog/:slug/"
-  to = "/blog/:slug/index.html"
-  status = 200
-
 # Method depth consolidated into the MDR blog article (301 for SEO)
 [[redirects]]
   from = "/method"
-  to = "/blog/mammalian-dive-response"
+  to = "/learn/mammalian-dive-response"
   status = 301
   force = true
 
 [[redirects]]
   from = "/method/"
-  to = "/blog/mammalian-dive-response"
+  to = "/learn/mammalian-dive-response"
   status = 301
   force = true
 
 [[redirects]]
   from = "/method.html"
-  to = "/blog/mammalian-dive-response"
+  to = "/learn/mammalian-dive-response"
   status = 301
   force = true
 
 # Tenerife trip discontinued
 [[redirects]]
   from = "/freediving-trips/tenerife"
-  to = "/expeditions"
+  to = "/trips"
   status = 301
   force = true
 
 [[redirects]]
   from = "/freediving-trips/tenerife/"
-  to = "/expeditions"
+  to = "/trips"
   status = 301
   force = true
 
@@ -86,25 +66,206 @@
 
 [[redirects]]
   from = "/blog/freediving-and-adhd"
-  to = "/blog"
+  to = "/learn"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/freediving-and-adhd/"
-  to = "/blog"
+  to = "/learn"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/freediving-and-ptsd"
-  to = "/blog"
+  to = "/learn"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/freediving-and-ptsd/"
-  to = "/blog"
+  to = "/learn"
+  status = 301
+  force = true
+
+# Step 3 site structure
+[[redirects]]
+  from = "/freediving-course-barcelona"
+  to = "/beginners-course"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/freediving-course-barcelona/"
+  to = "/beginners-course"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/packages"
+  to = "/courses"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/packages/"
+  to = "/courses"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/packages.html"
+  to = "/courses"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/expeditions"
+  to = "/trips"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/expeditions/"
+  to = "/trips"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/expeditions.html"
+  to = "/trips"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog"
+  to = "/learn"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/"
+  to = "/learn"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/learn/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/courses/aida-1"
+  to = "/beginners-course"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/courses/aida-1/"
+  to = "/beginners-course"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/training/pool"
+  to = "/training"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/training/pool/"
+  to = "/training"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/training/open-water"
+  to = "/training"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/training/open-water/"
+  to = "/training"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/corporate-team-building-barcelona"
+  to = "/team-building"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/corporate-team-building-barcelona/"
+  to = "/team-building"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/barcelona/freediving-community"
+  to = "/about#community"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/barcelona/freediving-community/"
+  to = "/about#community"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/apnea-barcelona"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/apnea-barcelona/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/curso-aida-1-barcelona"
+  to = "/beginners-course"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/curso-aida-1-barcelona/"
+  to = "/beginners-course"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/curso-aida-2-barcelona"
+  to = "/courses/aida-2"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/curso-aida-2-barcelona/"
+  to = "/courses/aida-2"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/entrenamiento-apnea-barcelona"
+  to = "/training"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/entrenamiento-apnea-barcelona/"
+  to = "/training"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/*"
+  to = "/"
   status = 301
   force = true
 

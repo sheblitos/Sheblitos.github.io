@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book now | Barcelona Freedivers</title>
+<meta name="description" content="Book a freediving course, training session, winter trip or team day with Barcelona Freedivers. We reply within 48 hours.">
+<link rel="canonical" href="https://freedivingbrain.com/book">
+<link rel="stylesheet" href="/type-system.css?v=5">
+<!-- BF:HEAD -->
+<link rel="icon" type="image/png" href="/logo-mark.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/site.css?v=1"><script src="/site.js?v=1" defer></script>
+<!-- /BF:HEAD -->
+</head>
+<body>
+<!-- BF:NAV -->
+<nav id="navbar" class="bf-nav" aria-label="Main">
+  <a href="/" class="bf-logo" aria-label="Barcelona Freedivers home"><img src="/logo-mark.png" alt="" width="42" height="42"><span class="bf-word"><small>BARCELONA</small><b>FREEDIVERS</b></span></a>
+  <div class="bf-links"><a href="/beginners-course">Beginners course</a><a href="/courses">Courses</a><a href="/training">Training</a><a href="/trips">Trips</a><a href="/team-building">Teams</a><a href="/about">About</a><a href="/book" class="bf-cta">Book now</a></div>
+  <button class="bf-ham" id="navHam" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile"><span></span><span></span><span></span></button>
+</nav>
+<div class="bf-mob" id="navMobile"><a href="/beginners-course">Beginners course</a><a href="/courses">Courses</a><a href="/training">Training</a><a href="/trips">Trips</a><a href="/team-building">Teams</a><a href="/about">About</a><a href="/book" class="bf-cta">Book now</a></div>
+<!-- /BF:NAV -->
+<main class="bf-bookpage">
+  <div class="bf-bookpage-intro">
+    <p class="bf-book-eyebrow">Book now</p>
+    <h1>Tell us what you'd like to do</h1>
+    <p>Choose a course, training, trip or team day. We reply within 48 hours to confirm dates and details. Nothing is charged until your place is confirmed.</p>
+    <ul class="bf-bookpage-points"><li>Small groups</li><li>All equipment included on courses</li><li>Reply within 48 hours</li></ul>
+    <p class="bf-book-alt">Prefer to talk first? <a href="https://wa.me/34603083325" target="_blank" rel="noopener">Message us on WhatsApp</a></p>
+  </div>
+  <form class="bf-form" id="bookForm" novalidate>
+    <p hidden><label>Leave this empty <input name="bot-field"></label></p>
+    <label class="bf-field bf-full"><span>What would you like to book?</span>
+      <select name="booking" id="bookItem" required><option value="">Choose one</option><optgroup label="Beginners"><option value="beginners">Beginners course · AIDA 1 + AIDA 2 · €445</option></optgroup><optgroup label="Courses"><option value="aida-2">AIDA 2 · €360</option><option value="aida-3">AIDA 3 · €430</option><option value="aida-4">AIDA 4 · €575</option><option value="aida-2-3">AIDA 2 + AIDA 3 · €710</option><option value="aida-1-4">AIDA 1 to AIDA 4 · €1,310</option><option value="instructor">AIDA Instructor course · €1,440</option></optgroup><optgroup label="Training"><option value="training-pool">Pool training</option><option value="training-open-water">Open-water training</option></optgroup><optgroup label="Winter trips · dates announced soon"><option value="trip-dahab">Dahab, Egypt</option><option value="trip-indonesia">Indonesia</option><option value="trip-sri-lanka">Sri Lanka</option></optgroup><optgroup label="Teams"><option value="team">Team day or retreat for a company</option></optgroup><optgroup label="Other"><option value="other">Not sure yet / a question</option></optgroup></select></label>
+    <label class="bf-field"><span>Name</span><input type="text" name="name" autocomplete="name" required></label>
+    <label class="bf-field"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+    <label class="bf-field"><span>WhatsApp (optional)</span><input type="tel" name="phone" autocomplete="tel" placeholder="+34 ..."></label>
+    <label class="bf-field"><span>Preferred dates</span><input type="text" name="dates" placeholder="e.g. next month, weekends, flexible"></label>
+    <label class="bf-field bf-full" id="groupField" hidden><span>Group size</span><input type="text" name="group-size" placeholder="Roughly how many people?"></label>
+    <label class="bf-field bf-full"><span>Anything we should know?</span><textarea name="message" rows="3" placeholder="Questions, experience, goals..."></textarea></label>
+    <button type="submit" class="bf-btn bf-full" id="bookSend">Book now</button>
+    <p class="bf-form-note bf-full" id="bookNote">We'll reply within 48 hours. Nothing is charged until your place is confirmed.</p>
+  </form>
+</main>
+<script>
+(function(){
+  var sel=document.getElementById('bookItem'), group=document.getElementById('groupField'), form=document.getElementById('bookForm');
+  var want=new URLSearchParams(location.search).get('for');
+  if(want==='courses') want='';
+  if(want==='trips') want='trip-dahab';
+  if(want==='training') want='training-pool';
+  if(want && sel.querySelector('option[value="'+want+'"]')) sel.value=want;
+  function upd(){ group.hidden=!/^(team|trip-)/.test(sel.value); }
+  sel.addEventListener('change',upd); upd();
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(form.querySelector('[name="bot-field"]').value) return;
+    if(!form.checkValidity()){ form.reportValidity(); return; }
+    var fd=new FormData(form); fd.delete('bot-field');
+    fd.set('booking', sel.options[sel.selectedIndex].text);
+    fd.append('_subject','New booking request: '+sel.options[sel.selectedIndex].text);
+    fd.append('_template','table'); fd.append('_captcha','false');
+    fd.append('_autoresponse','Thanks for booking with Barcelona Freedivers! We have your request and will reply within 48 hours to confirm dates and details.');
+    var btn=document.getElementById('bookSend'); btn.disabled=true; btn.textContent='Sending...';
+    fetch('https://formsubmit.co/ajax/hello@freedivingbrain.com',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded','Accept':'application/json'},body:new URLSearchParams(fd).toString()})
+      .then(function(r){ if(!r.ok) throw 0; btn.textContent='Sent! We\'ll reply within 48 hours.'; })
+      .catch(function(){ btn.disabled=false; btn.textContent='Book now'; document.getElementById('bookNote').innerHTML='Something went wrong. Please try again or <a href="https://wa.me/34603083325">message us on WhatsApp</a>.'; });
+  });
+})();
+</script>
+<!-- BF:FOOTER -->
+<footer id="footer" class="bf-foot">
+  <div class="bf-foot-grid">
+    <div class="bf-foot-brand"><img src="/logo-full-white.png" alt="Barcelona Freedivers" width="140" height="155" loading="lazy"><p>AIDA freediving courses, training and trips in Barcelona and beyond. Calm first, depth follows.</p></div>
+    <div><h4>Courses</h4><ul><li><a href="/beginners-course">Beginners course</a></li><li><a href="/courses/aida-2">AIDA 2</a></li><li><a href="/courses/aida-3">AIDA 3</a></li><li><a href="/courses/aida-4">AIDA 4</a></li><li><a href="/courses/aida-instructor">Instructor course</a></li></ul></div>
+    <div><h4>Explore</h4><ul><li><a href="/training">Training</a></li><li><a href="/trips">Trips</a></li><li><a href="/team-building">Teams</a></li><li><a href="/learn">Learn</a></li><li><a href="/faq">FAQ</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li><a href="/book">Book now</a></li><li><a href="/about">About us</a></li><li><a href="/about/shebl">Shebl</a></li><li><a href="https://wa.me/34603083325" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="https://www.instagram.com/freediving_brain/" target="_blank" rel="noopener">Instagram</a></li><li><a href="mailto:hello@freedivingbrain.com">Email us</a></li></ul></div>
+  </div>
+  <div class="bf-foot-bottom"><span>&copy; 2026 Barcelona Freedivers &middot; Barcelona, Spain</span><span>AIDA freediving school</span></div>
+</footer>
+<!-- /BF:FOOTER -->
+</body>
+</html>

@@ -12,10 +12,9 @@ import glob, re, os, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
 
-LINKS = [("/packages", "Courses"), ("/training", "Training"), ("/expeditions", "Travel"),
-         ("/team-building", "Teams"), ("/about", "Our Story"), ("/learn", "Learn"),
-         ("/blog", "Blog"), ("/faq", "FAQ")]
-CTA = ("/packages", "Book now")
+LINKS = [("/beginners-course", "Beginners course"), ("/courses", "Courses"), ("/training", "Training"),
+         ("/trips", "Trips"), ("/team-building", "Teams"), ("/about", "About")]
+CTA = ("/book", "Book now")
 
 NAV = ('<!-- BF:NAV -->\n<nav id="navbar" class="bf-nav" aria-label="Main">\n'
        '  <a href="/" class="bf-logo" aria-label="Barcelona Freedivers home">'
@@ -31,12 +30,12 @@ NAV = ('<!-- BF:NAV -->\n<nav id="navbar" class="bf-nav" aria-label="Main">\n'
 FOOTER = ('<!-- BF:FOOTER -->\n<footer id="footer" class="bf-foot">\n  <div class="bf-foot-grid">\n'
           '    <div class="bf-foot-brand"><img src="/logo-full-white.png" alt="Barcelona Freedivers" width="140" height="155" loading="lazy">'
           '<p>AIDA freediving courses, training and trips in Barcelona and beyond. Calm first, depth follows.</p></div>\n'
-          '    <div><h4>Courses</h4><ul><li><a href="/freediving-course-barcelona">Beginner course</a></li><li><a href="/courses/aida-1">AIDA 1</a></li>'
+          '    <div><h4>Courses</h4><ul><li><a href="/beginners-course">Beginners course</a></li>'
           '<li><a href="/courses/aida-2">AIDA 2</a></li><li><a href="/courses/aida-3">AIDA 3</a></li><li><a href="/courses/aida-4">AIDA 4</a></li>'
           '<li><a href="/courses/aida-instructor">Instructor course</a></li></ul></div>\n'
-          '    <div><h4>Explore</h4><ul><li><a href="/training">Training</a></li><li><a href="/expeditions">Travel</a></li>'
-          '<li><a href="/team-building">Team building</a></li><li><a href="/learn">Learn</a></li><li><a href="/blog">Blog</a></li></ul></div>\n'
-          '    <div><h4>Contact</h4><ul><li><a href="/about">Our story</a></li><li><a href="/faq">FAQ</a></li>'
+          '    <div><h4>Explore</h4><ul><li><a href="/training">Training</a></li><li><a href="/trips">Trips</a></li>'
+          '<li><a href="/team-building">Teams</a></li><li><a href="/learn">Learn</a></li><li><a href="/faq">FAQ</a></li></ul></div>\n'
+          '    <div><h4>Contact</h4><ul><li><a href="/book">Book now</a></li><li><a href="/about">About us</a></li><li><a href="/about/shebl">Shebl</a></li>'
           '<li><a href="https://wa.me/34603083325" target="_blank" rel="noopener">WhatsApp</a></li>'
           '<li><a href="https://www.instagram.com/freediving_brain/" target="_blank" rel="noopener">Instagram</a></li>'
           '<li><a href="mailto:hello@freedivingbrain.com">Email us</a></li></ul></div>\n'
@@ -51,18 +50,18 @@ HEAD_LINKS = ('<!-- BF:HEAD -->\n<link rel="icon" type="image/png" href="/logo-m
 
 # pages whose first banner sits on a photo (gets light text)
 PHOTO_HERO = {
-    'index.html': 'class="hero"', 'packages.html': 'class="hero"', 'team-building/index.html': 'class="hero"',
-    'expeditions.html': 'class="hero"', 'freediving-course-barcelona/index.html': 'class="hero course-hero"',
+    'index.html': 'class="hero"', 'courses/index.html': 'class="hero"', 'team-building/index.html': 'class="hero"',
+    'trips.html': 'class="hero"', 'beginners-course/index.html': 'class="hero course-hero"',
     'training.html': 'class="tr-hero"', 'about.html': 'class="story-hero"',
-    'freediving-trips/dahab/index.html': 'class="hero"', 'freediving-trips/tenerife/index.html': 'class="hero"',
+    'freediving-trips/dahab/index.html': 'class="hero"',
 }
 
 # other blocks with text laid over a photo (exact class attribute)
 PHOTO_EXTRA = {
     'index.html': ['class="why"', 'class="course-card"', 'class="booking"'],
-    'expeditions.html': ['class="exp-card"'],
+    'trips.html': ['class="exp-card"'],
     'team-building/index.html': ['class="tb-band"'],
-    'freediving-course-barcelona/index.html': ['class="tb-band"'],
+    'beginners-course/index.html': ['class="tb-band"'],
     'training.html': ['class="tr-photoband reveal"'],
 }
 
@@ -172,7 +171,7 @@ def process(path):
         cls = PHOTO_HERO[path]
         if 'photo-hero' not in t:
             t = t.replace(cls, cls[:-1] + ' photo-hero"', 1)
-    if path.startswith('blog/') and path != 'blog/index.html':
+    if path.startswith('learn/') and path != 'learn/index.html':
         t = re.sub(r'class="article-hero"', 'class="article-hero photo-hero"', t, count=1)
     for cls in PHOTO_EXTRA.get(path, ()):
         t = re.sub(re.escape(cls[:-1]) + r'(?!\s*photo-hero)"', cls[:-1] + ' photo-hero"', t)

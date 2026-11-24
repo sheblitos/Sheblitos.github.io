@@ -167,3 +167,48 @@ a.cta:not(.ghost):hover,.btn-primary:hover,.btn-gold:hover,.lab-cta:not(.ghost):
 
 /* Wide tables scroll inside the article on phones instead of widening the page */
 @media (max-width:680px){table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}}
+
+/* =====================================================================
+   ONE CALL TO ACTION: "Book now" button, booking band, booking page
+   ===================================================================== */
+.bf-btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.85rem 1.8rem;border:0;border-radius:999px;background:var(--bf-brand);color:#fff !important;font:600 1rem/1 var(--font-body);text-decoration:none;cursor:pointer;transition:background .2s,transform .2s}
+.bf-btn:hover{background:var(--bf-brand-dark);transform:translateY(-1px)}
+.bf-btn:disabled{opacity:.7;cursor:default;transform:none}
+.bf-book-eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--bf-brand);margin:0 0 .9rem}
+.bf-book-alt{font-size:.92rem;color:var(--bf-ink2);margin:1.1rem auto 0}
+.bf-book-alt a{color:var(--bf-brand);font-weight:600}
+
+section.bf-book{background:var(--bf-bg-alt);border-top:1px solid var(--bf-line);border-bottom:1px solid var(--bf-line);padding:clamp(3.5rem,7vw,5.5rem) clamp(1rem,4vw,3rem);text-align:center}
+.bf-book-inner{max-width:640px;margin:0 auto}
+.bf-book h2{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;line-height:1.15;color:var(--bf-ink);margin:0 0 .9rem}
+.bf-book-inner>p:not(.bf-book-eyebrow):not(.bf-book-alt){color:var(--bf-ink2);font-size:1.05rem;line-height:1.7;margin:0 auto 1.75rem;max-width:52ch}
+
+.bf-bookpage{max-width:1120px;margin:0 auto;padding:clamp(2.5rem,6vw,5rem) clamp(1rem,4vw,3rem) clamp(3.5rem,7vw,6rem);display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
+.bf-bookpage h1{font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.1;color:var(--bf-ink);margin:0 0 1rem}
+.bf-bookpage-intro>p{color:var(--bf-ink2);line-height:1.75;font-size:1.05rem}
+.bf-bookpage-points{list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:.6rem}
+.bf-bookpage-points li{position:relative;padding-left:1.6rem;color:var(--bf-ink);font-weight:500}
+.bf-bookpage-points li::before{content:"";position:absolute;left:0;top:.45em;width:.75rem;height:.4rem;border-left:2px solid var(--bf-brand);border-bottom:2px solid var(--bf-brand);transform:rotate(-45deg)}
+.bf-bookpage-intro .bf-book-alt{margin-left:0}
+.bf-form{display:grid;grid-template-columns:1fr 1fr;gap:1rem;background:#fff;border:1px solid var(--bf-line);border-radius:16px;padding:clamp(1.25rem,3vw,2rem);box-shadow:var(--shadow-md)}
+.bf-field{display:flex;flex-direction:column;gap:.4rem}
+.bf-field span{font-size:.85rem;font-weight:600;color:var(--bf-ink)}
+.bf-field input,.bf-field select,.bf-field textarea{width:100%;font:inherit;font-size:1rem;color:var(--bf-ink);background:var(--bf-bg-alt);border:1px solid var(--bf-line2);border-radius:10px;padding:.8rem .9rem;outline:none;transition:border-color .2s,background .2s}
+.bf-field input:focus,.bf-field select:focus,.bf-field textarea:focus{border-color:var(--bf-brand);background:#fff}
+.bf-full{grid-column:1/-1}
+.bf-form .bf-btn{width:100%;margin-top:.25rem}
+.bf-form-note{font-size:.85rem;color:var(--bf-ink3);text-align:center;margin:0}
+@media (max-width:860px){.bf-bookpage{grid-template-columns:1fr}}
+@media (max-width:520px){.bf-form{grid-template-columns:1fr}}
+
+/* About: community */
+section.bf-community{background:var(--bf-bg-alt);padding:clamp(3.5rem,7vw,5.5rem) clamp(1rem,4vw,3rem);border-top:1px solid var(--bf-line)}
+.bf-community-inner{max-width:1100px;margin:0 auto}
+.bf-community h2{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;line-height:1.15;color:var(--bf-ink);margin:0 0 .9rem}
+.bf-community-inner>p{color:var(--bf-ink2);font-size:1.05rem;line-height:1.7;max-width:60ch}
+.bf-community-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.bf-community-grid>div{background:#fff;border:1px solid var(--bf-line);border-radius:14px;padding:1.5rem}
+.bf-community-grid h3{font-size:1.1rem;font-weight:700;color:var(--bf-brand);margin:0 0 .5rem}
+.bf-community-grid p{color:var(--bf-ink2);line-height:1.65;margin:0}
+@media (max-width:760px){.bf-community-grid{grid-template-columns:1fr}}
+.bf-field[hidden]{display:none !important}
