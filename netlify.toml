@@ -91,13 +91,13 @@
 # Step 3 site structure
 [[redirects]]
   from = "/freediving-course-barcelona"
-  to = "/beginners-course"
+  to = "/courses/beginners"
   status = 301
   force = true
 
 [[redirects]]
   from = "/freediving-course-barcelona/"
-  to = "/beginners-course"
+  to = "/courses/beginners"
   status = 301
   force = true
 
@@ -157,13 +157,13 @@
 
 [[redirects]]
   from = "/courses/aida-1"
-  to = "/beginners-course"
+  to = "/courses/beginners"
   status = 301
   force = true
 
 [[redirects]]
   from = "/courses/aida-1/"
-  to = "/beginners-course"
+  to = "/courses/beginners"
   status = 301
   force = true
 
@@ -229,13 +229,13 @@
 
 [[redirects]]
   from = "/es/curso-aida-1-barcelona"
-  to = "/beginners-course"
+  to = "/courses/beginners"
   status = 301
   force = true
 
 [[redirects]]
   from = "/es/curso-aida-1-barcelona/"
-  to = "/beginners-course"
+  to = "/courses/beginners"
   status = 301
   force = true
 
@@ -266,6 +266,19 @@
 [[redirects]]
   from = "/es/*"
   to = "/"
+  status = 301
+  force = true
+
+# Beginner course moved under Courses
+[[redirects]]
+  from = "/beginners-course"
+  to = "/courses/beginners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/beginners-course/"
+  to = "/courses/beginners"
   status = 301
   force = true
 

@@ -16,7 +16,7 @@
   if(nav){var onScroll=function(){nav.classList.toggle('scrolled',window.scrollY>10);};window.addEventListener('scroll',onScroll,{passive:true});onScroll();}
   /* highlight the current section */
   var path=location.pathname.replace(/\/index\.html$/,'/').replace(/\.html$/,'').replace(/\/$/,'')||'/';
-  var map=[['/beginners-course','/beginners-course'],['/courses','/courses'],['/training','/training'],
+  var map=[['/courses','/courses'],['/training','/training'],
            ['/trips','/trips'],['/freediving-trips','/trips'],['/team-building','/team-building'],['/about','/about']];
   var key=null; map.forEach(function(m){if(!key&&path.indexOf(m[0])===0) key=m[1];});
   if(key) document.querySelectorAll('.bf-links a,.bf-mob a').forEach(function(a){if(a.getAttribute('href')===key) a.classList.add('active');});

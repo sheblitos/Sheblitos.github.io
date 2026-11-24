@@ -255,6 +255,11 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
   letter-spacing: normal;
 }
 </style>
+<style>
+.pkg-grid.pkg-ladder{grid-template-columns:repeat(4,1fr)}
+@media (max-width:1100px) and (min-width:681px){.pkg-grid.pkg-ladder{grid-template-columns:repeat(2,1fr)}}
+.draft-note a{color:var(--teal);font-weight:600}
+</style>
 <!-- BF:HEAD -->
 <link rel="icon" type="image/png" href="/logo-mark.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/site.css?v=1"><script src="/site.js?v=1" defer></script>
 <!-- /BF:HEAD -->
@@ -268,10 +273,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 <!-- BF:NAV -->
 <nav id="navbar" class="bf-nav" aria-label="Main">
   <a href="/" class="bf-logo" aria-label="Barcelona Freedivers home"><img src="/logo-mark.png" alt="" width="42" height="42"><span class="bf-word"><small>BARCELONA</small><b>FREEDIVERS</b></span></a>
-  <div class="bf-links"><a href="/beginners-course">Beginners course</a><a href="/courses">Courses</a><a href="/training">Training</a><a href="/trips">Trips</a><a href="/team-building">Teams</a><a href="/about">About</a><a href="/book" class="bf-cta">Book now</a></div>
+  <div class="bf-links"><a href="/courses">Courses</a><a href="/training">Training</a><a href="/trips">Trips</a><a href="/team-building">Teams</a><a href="/about">About</a><a href="/book" class="bf-cta">Book now</a></div>
   <button class="bf-ham" id="navHam" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile"><span></span><span></span><span></span></button>
 </nav>
-<div class="bf-mob" id="navMobile"><a href="/beginners-course">Beginners course</a><a href="/courses">Courses</a><a href="/training">Training</a><a href="/trips">Trips</a><a href="/team-building">Teams</a><a href="/about">About</a><a href="/book" class="bf-cta">Book now</a></div>
+<div class="bf-mob" id="navMobile"><a href="/courses">Courses</a><a href="/training">Training</a><a href="/trips">Trips</a><a href="/team-building">Teams</a><a href="/about">About</a><a href="/book" class="bf-cta">Book now</a></div>
 <!-- /BF:NAV -->
 
 
@@ -292,14 +297,14 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 <!-- AIDA COURSES -->
 <section class="pkg-section" id="courses">
   <div class="pkg-head reveal">
-    <p class="section-tag">AIDA courses</p>
-    <h2>From first breath.<br><em>To master freediver.</em></h2>
-    <p>Five steps, each a full AIDA certification. Take them one at a time, or combine and save below. All theory, materials, and certification cards included. English instruction.</p>
+    <p class="section-tag">Freediving courses</p>
+    <h2>From beginner<br><em>to instructor.</em></h2>
+    <p>Four levels, each a full AIDA certification. Start as a complete beginner and go as far as you want. All theory, materials, certification cards and equipment included. English instruction.</p>
   </div>
-  <div class="pkg-grid reveal">
+  <div class="pkg-grid pkg-ladder reveal">
 
     <div class="pkg-card">
-      <p class="pkg-name">Beginners course</p>
+      <p class="pkg-name">Beginner</p>
       <p class="pkg-tag">AIDA 1 + AIDA 2 · no experience needed</p>
       <p class="pkg-desc">Your first freediving course: from your first calm breath-hold in the pool to guided dives in the Mediterranean.</p>
       <div class="pkg-price-row"><span class="pkg-price">€445</span></div>
@@ -310,29 +315,14 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
         <li>Open water to ~20m</li>
         <li>AIDA 1 + AIDA 2 certificates</li>
       </ul>
-      <a href="/beginners-course" class="btn-ghost">Course details →</a>
+      <a href="/courses/beginners" class="btn-ghost">Course details →</a>
       <a href="/book?for=beginners" class="btn-gold">Book now</a>
     </div>
 
-    <div class="pkg-card">
-      <p class="pkg-name">AIDA 2</p>
-      <p class="pkg-tag">Freediver</p>
-      <p class="pkg-desc">Your first real open-water dives to ~20m, calm and in control. No prior cert needed.</p>
-      <div class="pkg-price-row"><span class="pkg-price">€360</span></div>
-      <span class="pkg-save">Pool + sea · 2.5 days</span>
-      <ul class="pkg-list">
-        <li>Open water to ~20m</li>
-        <li>Equalisation &amp; finning</li>
-        <li>Rescue &amp; buddy safety</li>
-        <li>AIDA 2 certificate</li>
-      </ul>
-      <a href="/courses/aida-2" class="btn-ghost">Course details →</a>
-      <a href="/book?for=aida-2" class="btn-gold">Book now</a>
-    </div>
 
     <div class="pkg-card">
-      <p class="pkg-name">AIDA 3</p>
-      <p class="pkg-tag">Advanced · AIDA 2 required</p>
+      <p class="pkg-name">Intermediate</p>
+      <p class="pkg-tag">AIDA 3 · AIDA 2 required</p>
       <p class="pkg-desc">Freefall to ~30m and the mental game that quietly unlocks depth.</p>
       <div class="pkg-price-row"><span class="pkg-price">€430</span></div>
       <span class="pkg-save">Pool + sea · 3 days</span>
@@ -347,8 +337,8 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
     </div>
 
     <div class="pkg-card">
-      <p class="pkg-name">AIDA 4</p>
-      <p class="pkg-tag">Master · AIDA 3 + EFR</p>
+      <p class="pkg-name">Advanced · Master</p>
+      <p class="pkg-tag">AIDA 4 · AIDA 3 + first aid</p>
       <p class="pkg-desc">Deep freediving to ~40m, advanced rescue, and self-directed training.</p>
       <div class="pkg-price-row"><span class="pkg-price">€575</span></div>
       <span class="pkg-save">Pool + sea · 4 days</span>
@@ -363,8 +353,8 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
     </div>
 
     <div class="pkg-card">
-      <p class="pkg-name">AIDA Instructor</p>
-      <p class="pkg-tag">Professional · by application</p>
+      <p class="pkg-name">Instructor</p>
+      <p class="pkg-tag">AIDA Instructor · by application</p>
       <p class="pkg-desc">Become a certified AIDA instructor. Small cohorts, max 3 candidates, mentored end to end.</p>
       <div class="pkg-price-row"><span class="pkg-price">€1,440</span></div>
       <span class="pkg-save">10–21 days · max 3</span>
@@ -379,7 +369,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
     </div>
 
   </div>
-  <p class="draft-note">Current Barcelona pricing. Contact us to confirm upcoming course dates and availability.</p>
+  <p class="draft-note">Already have AIDA 1 or an equivalent certificate? <a href="/courses/aida-2">Book AIDA 2 on its own</a> (€360). We confirm course dates within 48 hours.</p>
 </section>
 
 <!-- COURSE BUNDLES -->
@@ -450,7 +440,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
     </div>
 
   </div>
-  <p class="draft-note">Current Barcelona pricing. Contact us to confirm upcoming course dates and availability.</p>
+  <p class="draft-note">Already have AIDA 1 or an equivalent certificate? <a href="/courses/aida-2">Book AIDA 2 on its own</a> (€360). We confirm course dates within 48 hours.</p>
 </section>
 
 <!-- ENQUIRY -->
@@ -471,7 +461,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600}
 <footer id="footer" class="bf-foot">
   <div class="bf-foot-grid">
     <div class="bf-foot-brand"><img src="/logo-full-white.png" alt="Barcelona Freedivers" width="140" height="155" loading="lazy"><p>AIDA freediving courses, training and trips in Barcelona and beyond. Calm first, depth follows.</p></div>
-    <div><h4>Courses</h4><ul><li><a href="/beginners-course">Beginners course</a></li><li><a href="/courses/aida-2">AIDA 2</a></li><li><a href="/courses/aida-3">AIDA 3</a></li><li><a href="/courses/aida-4">AIDA 4</a></li><li><a href="/courses/aida-instructor">Instructor course</a></li></ul></div>
+    <div><h4>Courses</h4><ul><li><a href="/courses">All courses</a></li><li><a href="/courses/beginners">Beginner · AIDA 1 + 2</a></li><li><a href="/courses/aida-3">Intermediate · AIDA 3</a></li><li><a href="/courses/aida-4">Advanced · AIDA 4</a></li><li><a href="/courses/aida-instructor">Instructor</a></li></ul></div>
     <div><h4>Explore</h4><ul><li><a href="/training">Training</a></li><li><a href="/trips">Trips</a></li><li><a href="/team-building">Teams</a></li><li><a href="/learn">Learn</a></li><li><a href="/faq">FAQ</a></li></ul></div>
     <div><h4>Contact</h4><ul><li><a href="/book">Book now</a></li><li><a href="/about">About us</a></li><li><a href="/about/shebl">Shebl</a></li><li><a href="https://wa.me/34603083325" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="https://www.instagram.com/freediving_brain/" target="_blank" rel="noopener">Instagram</a></li><li><a href="mailto:hello@freedivingbrain.com">Email us</a></li></ul></div>
   </div>

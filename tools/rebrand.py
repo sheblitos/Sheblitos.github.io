@@ -12,7 +12,7 @@ import glob, re, os, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
 
-LINKS = [("/beginners-course", "Beginners course"), ("/courses", "Courses"), ("/training", "Training"),
+LINKS = [("/courses", "Courses"), ("/training", "Training"),
          ("/trips", "Trips"), ("/team-building", "Teams"), ("/about", "About")]
 CTA = ("/book", "Book now")
 
@@ -30,9 +30,9 @@ NAV = ('<!-- BF:NAV -->\n<nav id="navbar" class="bf-nav" aria-label="Main">\n'
 FOOTER = ('<!-- BF:FOOTER -->\n<footer id="footer" class="bf-foot">\n  <div class="bf-foot-grid">\n'
           '    <div class="bf-foot-brand"><img src="/logo-full-white.png" alt="Barcelona Freedivers" width="140" height="155" loading="lazy">'
           '<p>AIDA freediving courses, training and trips in Barcelona and beyond. Calm first, depth follows.</p></div>\n'
-          '    <div><h4>Courses</h4><ul><li><a href="/beginners-course">Beginners course</a></li>'
-          '<li><a href="/courses/aida-2">AIDA 2</a></li><li><a href="/courses/aida-3">AIDA 3</a></li><li><a href="/courses/aida-4">AIDA 4</a></li>'
-          '<li><a href="/courses/aida-instructor">Instructor course</a></li></ul></div>\n'
+          '    <div><h4>Courses</h4><ul><li><a href="/courses">All courses</a></li><li><a href="/courses/beginners">Beginner · AIDA 1 + 2</a></li>'
+          '<li><a href="/courses/aida-3">Intermediate · AIDA 3</a></li><li><a href="/courses/aida-4">Advanced · AIDA 4</a></li>'
+          '<li><a href="/courses/aida-instructor">Instructor</a></li></ul></div>\n'
           '    <div><h4>Explore</h4><ul><li><a href="/training">Training</a></li><li><a href="/trips">Trips</a></li>'
           '<li><a href="/team-building">Teams</a></li><li><a href="/learn">Learn</a></li><li><a href="/faq">FAQ</a></li></ul></div>\n'
           '    <div><h4>Contact</h4><ul><li><a href="/book">Book now</a></li><li><a href="/about">About us</a></li><li><a href="/about/shebl">Shebl</a></li>'
@@ -51,7 +51,7 @@ HEAD_LINKS = ('<!-- BF:HEAD -->\n<link rel="icon" type="image/png" href="/logo-m
 # pages whose first banner sits on a photo (gets light text)
 PHOTO_HERO = {
     'index.html': 'class="hero"', 'courses/index.html': 'class="hero"', 'team-building/index.html': 'class="hero"',
-    'trips.html': 'class="hero"', 'beginners-course/index.html': 'class="hero course-hero"',
+    'trips.html': 'class="hero"', 'courses/beginners/index.html': 'class="hero course-hero"',
     'training.html': 'class="tr-hero"', 'about.html': 'class="story-hero"',
     'freediving-trips/dahab/index.html': 'class="hero"',
 }
@@ -61,7 +61,7 @@ PHOTO_EXTRA = {
     'index.html': ['class="why"', 'class="course-card"', 'class="booking"'],
     'trips.html': ['class="exp-card"'],
     'team-building/index.html': ['class="tb-band"'],
-    'beginners-course/index.html': ['class="tb-band"'],
+    'courses/beginners/index.html': ['class="tb-band"'],
     'training.html': ['class="tr-photoband reveal"'],
 }
 
