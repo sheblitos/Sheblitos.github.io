@@ -61,7 +61,7 @@ body{cursor:auto !important}
 .photo-hero{
   --txt:#fff; --txt2:rgba(255,255,255,.88); --txt3:rgba(255,255,255,.72);
   --ln:rgba(255,255,255,.22); --ln2:rgba(255,255,255,.4);
-  --teal:var(--bf-brand-light); --gold:var(--bf-brand-light); --accent:var(--bf-brand-light); --mint:var(--bf-brand-light);
+  --teal:var(--bf-brand-light); --teal2:#d3ecea; --gold:var(--bf-brand-light); --accent:var(--bf-brand-light); --mint:var(--bf-brand-light);
   --t:#fff; --t2:rgba(255,255,255,.88); --g:var(--bf-brand-light);
   color:#fff;
 }

@@ -39,3 +39,16 @@
   to = "/blog/mammalian-dive-response"
   status = 301
   force = true
+
+# Tenerife trip discontinued
+[[redirects]]
+  from = "/freediving-trips/tenerife"
+  to = "/expeditions"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/freediving-trips/tenerife/"
+  to = "/expeditions"
+  status = 301
+  force = true
