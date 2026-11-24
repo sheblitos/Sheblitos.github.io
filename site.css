@@ -164,3 +164,6 @@ a.cta:not(.ghost):hover,.btn-primary:hover,.btn-gold:hover,.lab-cta:not(.ghost):
 /* Trip pages: on phones the banner text sits under the photo, on a dark brand band */
 @media (max-width:760px){.hero.photo-hero:has(.hero-media){background:rgb(var(--bf-shade)) !important}}
 .photo-hero .facts li{background:rgba(3,38,42,.55) !important;color:#fff}
+
+/* Wide tables scroll inside the article on phones instead of widening the page */
+@media (max-width:680px){table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}}
