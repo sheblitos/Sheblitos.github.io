@@ -11,7 +11,7 @@ done = []
 # COURSES
 # =====================================================================
 LEVELS = [
-    ('Beginner', 'AIDA 1 + AIDA 2', '3.5 days · pool + sea · no experience needed', '€420', '/courses/beginners'),
+    ('Beginner', 'AIDA 1 + AIDA 2', '2.5 days · pool + sea · no experience needed', '€420', '/courses/beginners'),
     ('Intermediate', 'AIDA 3', '3 days · pool + sea · to ~30 m', '€460', '/courses/aida-3'),
     ('Advanced · Master', 'AIDA 4', '4 days · pool + sea · to ~40 m', '€575', '/courses/aida-4'),
     ('Instructor', 'AIDA Instructor', '10–21 days · max 3 candidates', '€1,500', '/courses/aida-instructor'),
@@ -44,10 +44,10 @@ done.append(page('courses/index.html', body, 'AIDA Freediving Courses in Barcelo
 
 COURSE_PAGES = {
  'courses/beginners/index.html': dict(
-    level='Beginner', aida='AIDA 1 + AIDA 2', price='€420', days='3.5 days', item='beginners', img='students-buoy-2', pos='center 45%',
+    level='Beginner', aida='AIDA 1 + AIDA 2', price='€420', days='2.5 days', item='beginners', img='students-buoy-2', pos='center 45%',
     title='Your first freediving course', em='From first breath to open water.',
-    lead='No experience needed. In 3.5 days you go from your first calm breath-hold in the pool to guided dives in the Mediterranean, and leave with two AIDA certificates.',
-    facts=['AIDA 1 + AIDA 2', '3.5 days', 'Pool + sea', '€420'],
+    lead='No experience needed. In 2.5 days you go from your first calm breath-hold in the pool to guided dives in the Mediterranean, and leave with two AIDA certificates.',
+    facts=['AIDA 1 + AIDA 2', '2.5 days', 'Pool + sea', '€420'],
     learn=['Breathing and relaxation before every dive', 'Longer, calmer breath-holds in the pool', 'Equalisation: clear your ears comfortably as you go down',
            'Finning and technique that save oxygen', 'Safety, rescue and the buddy system', 'Calm, guided open-water dives around 20 m'],
     steps=[('Day 1 · AIDA 1 in the pool', 'Breathing, relaxation and your first calm breath-holds. You feel the dive reflex and learn how freedivers keep each other safe.'),
@@ -133,7 +133,7 @@ body = (hero('tr-openwater', 'Training · certified freedivers', 'Freediving tra
               + session('students-buoy-openwater', 'Open water · ~2 hours', 'Mediterranean sessions', 'Buoy, line and open sea: depth repetitions, technique and the mental work of the real environment.',
                         '€72', 'per session', ['Mediterranean, buoy + line', 'All certified levels welcome', 'Safety lanyard included', 'Shebl in the water with you'], 'training-open-water')
               + '</div>', alt=True, sid='sessions')
-        + sec('<a class="bf-next" href="/courses/beginners"><span class="bf-eyebrow">Not certified yet?</span><b>Start with the Beginner course</b><span>AIDA 1 + AIDA 2 · 3.5 days · €420</span><em>Course details →</em></a>')
+        + sec('<a class="bf-next" href="/courses/beginners"><span class="bf-eyebrow">Not certified yet?</span><b>Start with the Beginner course</b><span>AIDA 1 + AIDA 2 · 2.5 days · €420</span><em>Course details →</em></a>')
         + book('Training', 'Book a training session', 'Choose pool or open water and tell us when you would like to train.', 'training-pool'))
 done.append(page('training.html', body, 'Freediving Training Barcelona | Pool €48 · Open Water €72',
                  'Freediving training in Barcelona for certified freedivers: pool sessions €48 and Mediterranean open-water sessions €72, guided by AIDA Instructor Trainer Shebl.'))
@@ -326,7 +326,7 @@ FAQS = [
    ('Is freediving safe?', 'Freediving is safe when practised with proper training, a qualified buddy and the right protocols, all covered from your first course. Every session is supervised by an AIDA Instructor Trainer, and we teach you to never dive alone.')]),
  ('Courses', [
    ('What is an AIDA freediving course?', 'An internationally recognised certification covering breath-hold technique, safety, equalisation and the mental game. We offer the Beginner course (AIDA 1 + AIDA 2), AIDA 3, AIDA 4 and the Instructor course, in Barcelona\'s pool and the Mediterranean.'),
-   ('How long does each course take?', 'Beginner (AIDA 1 + AIDA 2): 3.5 days. AIDA 3: 3 days. AIDA 4: 4 days. Instructor: 10 to 21 days. All include equipment and AIDA certification on completion.'),
+   ('How long does each course take?', 'Beginner (AIDA 1 + AIDA 2): 2.5 days. AIDA 3: 3 days. AIDA 4: 4 days. Instructor: 10 to 21 days. All include equipment and AIDA certification on completion.'),
    ('How deep do you dive?', 'The Beginner course works towards around 20 m, AIDA 3 around 30 m and AIDA 4 around 40 m. Depth is always a consequence of calm, never the goal itself.'),
    ('Are AIDA certifications recognised internationally?', 'Yes. They are accepted worldwide at dive sites, liveaboards and freediving schools, and they do not expire.'),
    ('I have a certificate from another school. Can I continue here?', 'Yes. Your certificate transfers directly and you start from your next level. Certified freedivers can also join our training sessions.')]),
@@ -355,7 +355,7 @@ import json
 CARDS = json.load(open('tools/content/learn/_cards.json'))
 body = (plain_head('Learn', 'Guides and articles<br><em>for every freediver.</em>', 'Technique, safety and the mental side of freediving, from your first breath-hold to deeper diving.')
         + sec(cards([(c['href'], c['img'], '', esc(c['title']), esc(c['ex']), esc(c['tag']), None) for c in CARDS], swipe=False), alt=True)
-        + book('Ready to learn in the water?', 'Book your first freediving course', 'The Beginner course takes you from your first breath-hold to the open sea in 3.5 days.', 'beginners'))
+        + book('Ready to learn in the water?', 'Book your first freediving course', 'The Beginner course takes you from your first breath-hold to the open sea in 2.5 days.', 'beginners'))
 done.append(page('learn/index.html', body, 'Learn Freediving | Guides & Articles · Barcelona Freedivers'))
 
 def article(slug):
@@ -376,7 +376,7 @@ def article(slug):
     fig = f'<div class="bf-wrap bf-narrow bf-article-fig">{pic(img, plain_title, "", "center 45%")}</div>' if img else ''
     body = (head + fig + f'<article class="bf-sec bf-prose-sec"><div class="bf-wrap bf-narrow bf-prose">{content}</div></article>'
             + sec(heading('Keep reading', 'Related articles') + cards([(c['href'], c['img'], '', esc(c['title']), esc(c['ex']), '', None) for c in rel]), alt=True)
-            + book('Learn in the water', 'Book your first freediving course', 'The Beginner course (AIDA 1 + AIDA 2) takes you from your first breath-hold to the open sea in 3.5 days.', 'beginners'))
+            + book('Learn in the water', 'Book your first freediving course', 'The Beginner course (AIDA 1 + AIDA 2) takes you from your first breath-hold to the open sea in 2.5 days.', 'beginners'))
     return page(path, body)
 for c in CARDS:
     done.append(article(c['slug']))

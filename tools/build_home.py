@@ -15,7 +15,7 @@ def pic(name, alt, cls='', pos=None, eager=False):
             f'<img src="/{name}.jpg" alt="{alt}" width="{w}" height="{h}" loading="{ld}" decoding="async"{st}></picture>')
 
 COURSES = [
-    ('Beginner', 'AIDA 1 + AIDA 2', '3.5 days · pool + sea · no experience needed', '€420', '/courses/beginners', 'beginners'),
+    ('Beginner', 'AIDA 1 + AIDA 2', '2.5 days · pool + sea · no experience needed', '€420', '/courses/beginners', 'beginners'),
     ('Intermediate', 'AIDA 3', '3 days · pool + sea · to ~30 m', '€460', '/courses/aida-3', 'aida-3'),
     ('Advanced · Master', 'AIDA 4', '4 days · pool + sea · to ~40 m', '€575', '/courses/aida-4', 'aida-4'),
     ('Instructor', 'AIDA Instructor', '10–21 days · max 3 candidates', '€1,500', '/courses/aida-instructor', 'instructor'),
@@ -92,7 +92,7 @@ page = f'''<!DOCTYPE html>
         <li><b>Technique &amp; safety</b><span>Equalisation, finning, rescue and buddy skills.</span></li>
         <li><b>The Mediterranean</b><span>Guided open-water dives, building towards around 20 m.</span></li>
       </ol>
-      <p class="bf-price-line"><strong>€420</strong> · 3.5 days · all equipment included</p>
+      <p class="bf-price-line"><strong>€420</strong> · 2.5 days · all equipment included</p>
       <div class="bf-actions"><a href="/book?for=beginners" class="bf-btn">Book now</a><a href="/courses/beginners" class="bf-link">Course details →</a></div>
     </div>
     <div class="bf-photo-stack">
