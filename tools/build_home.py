@@ -63,7 +63,7 @@ page = f'''<!DOCTYPE html>
 <meta property="og:description" content="AIDA freediving courses from beginner to instructor, in the pool and the Mediterranean. Small groups, all equipment included.">
 <meta property="og:image" content="{URL}/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preload" as="image" type="image/avif" href="/hero-surface.avif">
+<link rel="preload" as="image" type="image/avif" href="/commx-21.avif">
 <link rel="stylesheet" href="/type-system.css?v=5">
 {''.join('<script type="application/ld+json">' + json.dumps(x, ensure_ascii=False) + '</script>' for x in ld)}
 </head>
@@ -71,7 +71,7 @@ page = f'''<!DOCTYPE html>
 
 <!-- HERO -->
 <section class="bf-hero photo-hero">
-  {pic('hero-surface', 'A freediver gliding through green Mediterranean water', 'bf-hero-img', 'center 30%', eager=True)}
+  {pic('commx-21', 'Two freedivers descending together along the line', 'bf-hero-img', 'center 40%', eager=True)}
   <div class="bf-hero-inner">
     <p class="bf-eyebrow">AIDA freediving school · Barcelona</p>
     <h1>Learn to freedive<br><em>in Barcelona.</em></h1>
