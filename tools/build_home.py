@@ -76,18 +76,9 @@ page = f'''<!DOCTYPE html>
     <p class="bf-eyebrow">AIDA freediving school · Barcelona</p>
     <h1>Learn to freedive<br><em>in Barcelona.</em></h1>
     <p class="bf-hero-lead">Calm, small-group AIDA courses in the pool and the Mediterranean. No experience needed.</p>
-    <p class="bf-hero-offer"><strong>Beginner course</strong><span>AIDA 1 + AIDA 2</span><span>3.5 days</span><span>€420</span></p>
     <div class="bf-actions"><a href="/book?for=beginners" class="bf-btn">Book now</a><a href="/courses" class="bf-btn bf-btn-ghost">See all courses</a></div>
   </div>
 </section>
-
-<!-- TRUST -->
-<ul class="bf-trust">
-  <li><strong>160+</strong> freedivers certified</li>
-  <li><strong>AIDA</strong> Instructor Trainer &amp; Judge</li>
-  <li><strong>Small</strong> groups</li>
-  <li><strong>All</strong> equipment included</li>
-</ul>
 
 <!-- BEGINNER COURSE -->
 <section class="bf-sec">
