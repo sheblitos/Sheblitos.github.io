@@ -5,7 +5,7 @@ import html, os, re
 from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-URL = 'https://freedivingbrain.com'
+URL = 'https://barcelonafreedivers.com'
 WA = 'https://wa.me/34603083325'
 GA = ('<script async src="https://www.googletagmanager.com/gtag/js?id=G-VR5PT4F97R"></script>\n'
       "<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VR5PT4F97R');</script>")

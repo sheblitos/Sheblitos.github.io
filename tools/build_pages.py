@@ -98,6 +98,20 @@ COURSE_PAGES = {
     next=('Training', 'Pool and open water', '/training'),
     seo=('AIDA Instructor Course Barcelona | €1,500 · Max 3 Candidates', 'Become an AIDA freediving instructor in Barcelona. 10–21 day mentored programme with AIDA Instructor Trainer Shebl, max 3 candidates, €1,500.')),
 }
+GUIDES_FOR = {
+    'beginners': [('/learn/aida1-vs-aida2', 'AIDA 1 vs AIDA 2', 'What each level covers and why we teach them together.'),
+                  ('/learn/freediving-safety', 'Freediving safety', 'The buddy system and the rules every freediver lives by.'),
+                  ('/learn/how-to-hold-your-breath-longer', 'Hold your breath longer', 'The CO₂ method behind calm, longer breath-holds.')],
+    'aida-3': [('/learn/frenzel-equalization', 'Frenzel equalisation', 'The core technique for comfortable depth.'),
+               ('/learn/mouthfill-equalization', 'Mouthfill equalisation', 'Air management for deeper diving.'),
+               ('/learn/mental-training-freediving', 'Mental training', 'Freefall, calm and performance under pressure.')],
+    'aida-4': [('/learn/equalization-problems', 'Equalisation problems', 'Diagnose plateaus before forcing depth.'),
+               ('/learn/shallow-water-blackout', 'Shallow water blackout', 'Hypoxia, risk and advanced safety.'),
+               ('/learn/breath-hold-training', 'Breath-hold training', 'Safer, smarter training principles.')],
+    'instructor': [('/about/shebl', 'Meet Shebl', 'Your AIDA Instructor Trainer and mentor.'),
+                   ('/learn/freediving-safety', 'Freediving safety', 'The systems that underpin instruction.'),
+                   ('/learn/mammalian-dive-response', 'The dive reflex', 'The physiology you will teach.')],
+}
 for path, c in COURSE_PAGES.items():
     learn_html = heading("What you'll learn", 'In this course') + checklist(c['learn'])
     body = hero(c['img'], f"{c['level']} · {c['aida']} · Barcelona", f"{c['title']}<br><em>{c['em']}</em>", c['lead'], c['facts'],
@@ -112,6 +126,8 @@ for path, c in COURSE_PAGES.items():
         ('Group', 'Small groups' if c['item'] != 'instructor' else 'Max 3 candidates'), ('Requirement', c['requirement']), ('Instructor', 'Shebl, AIDA Instructor Trainer &amp; Judge')])
         + f'<div class="bf-actions" style="margin-top:1.5rem">{btn("/book?for=" + c["item"])}</div></div>'
         + '<div>' + heading('Good to know', 'Questions') + faq(c['faq']) + '</div></div>', alt=not c.get('steps'))
+    body += sec(heading('Learn more', 'Related guides') + '<div class="bf-tcards bf-cols-3 bf-swipe">' + ''.join(
+        f'<a class="bf-tcard" href="{h}"><b>{n}</b><span>{d}</span></a>' for h, n, d in GUIDES_FOR[c['item']]) + '</div>')
     nl, na, nh = c['next']
     body += sec(f'<a class="bf-next" href="{nh}"><span class="bf-eyebrow">Next step</span><b>{nl}</b><span>{na}</span><em>Explore →</em></a>', alt=bool(c.get('steps')))
     body += book(c['level'], f"Book {c['aida'] if c['item'] != 'beginners' else 'your Beginner course'}", 'Tell us when you would like to come. We confirm dates within 48 hours.', c['item'])

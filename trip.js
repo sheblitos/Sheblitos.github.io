@@ -71,7 +71,7 @@
     var fd = new FormData(form);
     fd.delete('_honey');
     fd.append('trip', TRIP.name || document.title);
-    fd.append('_subject', (TRIP.name || 'Trip') + ' enquiry · freedivingbrain.com');
+    fd.append('_subject', (TRIP.name || 'Trip') + ' enquiry · barcelonafreedivers.com');
     fd.append('_template', 'table');
     fd.append('_captcha', 'false');
     fd.append('_autoresponse', 'Thanks for your interest in the Freediving Brain ' + (TRIP.name || 'trip') + '! We have your message and will reply within 48 hours. Shebl & Rimi');

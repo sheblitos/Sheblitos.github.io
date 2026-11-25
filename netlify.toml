@@ -2,6 +2,19 @@
   publish = "."
 
 # Method depth consolidated into the MDR blog article (301 for SEO)
+# Old domain -> new domain (keep freedivingbrain.com attached in Netlify as an alias)
+[[redirects]]
+  from = "https://freedivingbrain.com/*"
+  to = "https://barcelonafreedivers.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.freedivingbrain.com/*"
+  to = "https://barcelonafreedivers.com/:splat"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/method"
   to = "/learn/mammalian-dive-response"

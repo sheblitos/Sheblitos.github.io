@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://freedivingbrain.com/sitemap.xml
+Sitemap: https://barcelonafreedivers.com/sitemap.xml

@@ -4,7 +4,7 @@ Writes index.html; run tools/rebrand.py afterwards for the shared header/footer.
 import json, os
 from PIL import Image
 os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-URL = 'https://freedivingbrain.com'
+URL = 'https://barcelonafreedivers.com'
 
 def pic(name, alt, cls='', pos=None, eager=False):
     w, h = Image.open(name + '.jpg').size
