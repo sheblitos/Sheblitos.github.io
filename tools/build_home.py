@@ -85,7 +85,7 @@ page = f'''<!DOCTYPE html>
   <div class="bf-wrap bf-split">
     <div>
       <p class="bf-eyebrow">Start here</p>
-      <h2>Your first freediving course</h2>
+      <h2>Your first freediving experience</h2>
       <p class="bf-lead">AIDA 1 and AIDA 2 in one course: pool first, then the sea. You leave with two AIDA certificates and the calm to keep going.</p>
       <ol class="bf-steps">
         <li><b>Day 1 · Pool</b><span>Breathing, relaxation and your first calm breath-holds.</span></li>
