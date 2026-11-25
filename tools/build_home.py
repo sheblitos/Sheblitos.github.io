@@ -160,24 +160,6 @@ page = f'''<!DOCTYPE html>
 </section>
 <!-- /BF:BOOK -->
 
-<!-- DIVE-DEPTH SCROLL INDICATOR -->
-<div class="dive-rope-panel" id="diveRope" aria-hidden="true">
-  <div class="dr-rope"></div>
-  <div id="drBubbles"></div>
-  <div class="dr-tick" data-depth="10"><span class="dr-tick-label">10m</span><i class="dr-dash"></i></div>
-  <div class="dr-tick" data-depth="20"><span class="dr-tick-label">20m</span><i class="dr-dash"></i></div>
-  <div class="dr-tick" data-depth="30"><span class="dr-tick-label">30m</span><i class="dr-dash"></i></div>
-  <div class="dr-tick" data-depth="40"><span class="dr-tick-label">40m</span><i class="dr-dash"></i></div>
-  <div class="dr-tick" data-depth="50"><span class="dr-tick-label">50m</span><i class="dr-dash"></i></div>
-  <div class="dr-tick" data-depth="60"><span class="dr-tick-label">60m</span><i class="dr-dash"></i></div>
-  <svg class="dr-diver" id="drDiver" viewBox="-215 -215 430 430" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
-    <g id="drRig">
-      <g id="drLegs"><image id="drLegImg" xlink:href="/diver-legs-2-teal.png" href="/diver-legs-2-teal.png" x="-1.8" y="-17.7" width="167" height="34"/></g>
-      <image id="drBody" xlink:href="/diver-body-teal.png" href="/diver-body-teal.png" x="-205.5" y="-27.3" width="207" height="39"/>
-    </g>
-  </svg>
-</div>
-<script src="/dive-rope.js?v=1" defer></script>
 </body>
 </html>
 '''
